@@ -1,31 +1,7 @@
-v0.2.1
-
-## CAMBIAMENTI
-- Cambiato il nome di Passo oscuro (shadow_step) in Teletrasporto dell'End (end_teleport), cambiata anche la sua icona in una perla dell'End.
-- Cambiato il nome di Acqua santa (holy_water) in Benedizione di miele (honey_blessing), cambiate le visual, icona e descrizione.
-- Cambiato il nome di Impulso magnetico (magnetic_impulse) in Richiamo del Nautilus (nautilus_call), per ora l'abilità non è mai stata implementata ma un cambio di tema rispetto ad Arena Brawl mi suonava meglio, l'effetto sarà lo stesso ma ci saranno suoni acquosi ed effetti di bolle ed un vortice di acqua.
-- Cambiata la descrizione di Onda Sismica, in modo che rifletta ciò che farà realmente.
-- Cambiata la descrizione (e l'icona) di Mela del Potere, e cambiato il nome da Mela del Potere a Melodia del Potere.
-- Cambiata la descrizione di Trappola Creeper, in modo che rifletta ciò che farà realmente.
-- Cambiato Lancia Melone (melon_launcher) in Esplosione Slime (slime_explosion).
+v0.2.2
 
 ## QOL
-- Migliorata l'interfaccia di selezione abilità: aggiunto uno sfondo, migliorata l'interfaccia di testo.
+- Reworked the feedback system of matchmaking 1v1.
 
-## PERFORMANCE
-- Migliorata la funzione tick:
-    - Alcune chiamate di funzione indiscriminate sono state poste sotto condizione;
-    - Alcune chiamate di funzione sono state spostate in singole chiamate a catena da altre directory ai ruoli consoni;
-    - Alcune chiamate di funzione sono state raggruppate in funzioni tick sotto la tick principale, alcune di queste limitate alle coordinate delle arene dove si svolgono le partite entro 128 blocchi.
-        - Skills, limitate alle coordinate dove vengono piazzate le arene dove si svolgono le partite, su distanza limite entro 128 blocchi.
-        - Stopwatches, orologi utili al gioco.
-        - Minecart, Utile per controllare che il giocatore stia selezionando o meno le abilità.
-        - 1second, controlla col predicato di 20 tick cosa deve succedere ogni 20s (-1s alle ricariche abilità, actionbar statistiche giocatore, quando avviene una modifica alle statistiche dei giocatori, viene forzata actionbar, giusto per sicurezza, che è meglio di farlo ogni tick)
-        - Antispam, controlli legati allo spam delle abilità se si ha la disponibilità di poterle usare o meno.
-Sono previsti ulteriori cambiamenti alla funzione tick, questa è solo la superficie.
-- Rimosse alcune funzioni vuote dentro certe directory.
-- Migliorata la funzione di ricerca bersagli di Cookie Blaster, esegue la ricerca solo se ci sono giocatori vicini.
-
-## BUGFIX
-- Sistemato un bug che non puliva l'interfaccia di selezione abilità tra un menù e l'altro se un altro giocatore stava selezionando le abilità allo stesso tempo.
-- Sistemato un bug che non prevedeva l'immissione dell'interfaccia nuova tramite l'opzione di uscita menù.
+## TECHNICAL
+- Added map .nbt files to match/structure directory.
