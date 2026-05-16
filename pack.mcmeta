@@ -1,7 +1,16 @@
+<<<<<<< HEAD
 {
     "pack": {
       "description": "AB Project v0.2.1 - by nevosjj",
       "pack_format": 94,
       "supported_formats": [94, 94]
     }
+=======
+{
+    "pack": {
+      "description": "AB Project - by nevosjj",
+      "pack_format": 94,
+      "supported_formats": [94, 94]
+    }
+>>>>>>> 572bdf045bdbae79f26167ae88f64a8e6397fc03
   }
