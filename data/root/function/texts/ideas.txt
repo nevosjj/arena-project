@@ -1,0 +1,59 @@
+ESTETICA:
+    > Crumble: quando i giocatori usano un'abilità molto forte, sulla destinazione i blocchi si "spaccano", creando una barrier
+        al posto del blocco e un block_display leggermente spiazzato per dare l'impressione del terreno che si è spaccato.
+    > Animazione morte giocatore
+    > Storage dati dei giocatori e dei round dell'ultima
+
+AGGIUNTE:
+    > Latte e Miele: abilità support
+    > Salto della Rana: abilità utility
+    > Catena vampirica: abilità support LEGACY (HALLOWEEN)
+    > Halloween: abilità ultimate, evoca zombi in un'area designata per pochi secondi (HALLOWEEN)
+    > Tornado: abilità ultimate, i nemici non possono uscirne e ne vengono disabilitate le abilità
+    > Squarcio del mare: abilità utility
+    > Esplosione slime: abilità offensiva, dopo un breve ritardo di pochi secondi crea un'esplosione ad area.
+    > Ciclone: abilità utility, i nemici non possono uscirne per la durata
+    > Nuvola: abilità support, cura ad area gli alleati ed interagisce con abilità di fuoco, colpo folgorante e fungo apocalittico.
+    > Scossa sismica: abilità utility, stordisce i giocatori e distrugge edifici.
+    > Carica di fuoco: abilità offensiva, carica in avanti a velocità maggiore, se cambi angolo troppo ampio si annulla.
+    > Morsa del ragno: abilità offensiva, ispirata a dropshock di megawalls, ti potenzia il salto e fa danno in  base ai blocchi percorsi cadendo, se fai danno ottieni un danno collaterale in percentuale.
+    > Ingegneria redstone: abilità ???, crea una connessione redstone, che si collega con quelle precedenti, creando periodicamente una barriera redstone.
+    > Canzone musicale: abilità supporto, qualcosa basato sulle note e musica, dato che mi piace la particella delle note.
+    > Dono della natura: 10% di evocare un animale che genera diversi effetti, gli eventi che triggerano l'abilità sono: essere colpiti, colpire.
+
+OGGETTI:
+    > Oggetto > ??? : 30% dei danni vengono convertiti in danni nel tempo.
+    > Oggetto > ??? : Aumenta di 1 l'energia ottenuta e aumenta il limite di +20.
+    > Oggetto > ??? : La tua abilità infligge cure dimezzate ai bersagli del 25% per 10 secondi.
+    > Oggetto > ??? : Quando attivi un'abilità una bolla di fuoco si crea intorno a te, infligge danni.
+    > Oggetto > ??? : 
+
+CAMBIAMENTI:
+    > Sparabiscotto: aggiungere lo spread casuale
+    > Sparabiscotto: aggiungere una funzione ricorsiva che aggiunge tanti biscotti quanto "abilityCount"
+    > Respiro congelante: aggiungere che puoi sparare sul piano verticale
+    > Pugno del Golem: aumenta lo scale a 1.25 durante la durata.
+    > Scudo osseo: aggiungere la durata
+
+LOBBY:
+    > Musica dei dischi di Minecraft nostalgici che cicla
+    > Opzioni di UI personalizzabili
+    > Poligono di tiro delle abilità
+    > Mettere dove possibile "LEGACY" nelle abilità legacy.
+    > Mettere un sistema di rankaggio delle abilità in base al loro uso (classifica uso abilità)
+
+EVENTO:
+    > Weather war, potenzia certi tipi di abilità
+    > Iron golem VS Enderman
+    > Natale
+
+PERFORMANCE:
+    > Quando viene aggiunta vita e/o esperienza, e si va oltre il limite, fa un calcolo che evita l'overflow di valori (es. da 95/100 con 15 di cura, cura 5 hp invece di 15, che poi toglierà dopo)
+    > Dividere lo storage di abilità in 4 tipi (off, uti, sup, ult) e popolarli delle giuste abilità, con la lore delle abilità e le loro info separate
+
+ACHIEVEMENT:
+    > Scudo osseo > Con lo scudo osseo attivo, assorbi 1 colpo che ti avrebbe inflitto 0 danni.
+    > Colpo folgorante > Colpisci almeno un nemico dopo aver sfruttato la massima distanza del Colpo Folgorante.
+    > Respiro Congelante > Usa Respiro Congelante 5 volte in ??? secondi. (Chat, qua vorrei che mi calcolassi in quanto tempo posso attivare respiro congelante contando che costa 90 energia e 7 energia viene ricaricata in 1,5s)
+    > Impulso magnetico > Nega un potenziamento quando vi è vicino un nemico nel raggio di 1 blocco.
+    > Passo Oscuro > Usa Passo Oscuro il secondo prima che lanci un proiettile sulla tua locazione prima di teletrasportarti, evitando il proiettile stesso (CRITICO, potrebbe procurare problemi di performance il check)

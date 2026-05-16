@@ -1,0 +1,85 @@
+## DOCUMENTAZIONE DEBUG
+    I testi di debug sono distribuiti tramite il comando "tellraw";
+    Vengono distribuiti a chi ha il tag "debug";
+    Iniziano con ">>>" in rosso maiuscolo.
+
+## DOCUMENTAZIONE MARKERS
+    I marker con nome "abilityDisplay.finder" sono quelli soggetti alla ricerca di bersagli,
+    cura o danno che sia.
+
+## DOCUMENTAZIONE PATCH
+
+    A seguire una lista dei tag importanti in ordine, da rilasciare nelle release:
+    
+FEATURES
+QOL
+BALANCE
+BUGFIX
+PERFORMANCE
+TECHNICAL
+REFACTOR
+REMOVED
+KNOWN ISSUES
+
+## DOCUMENTAZIONE MAPPA
+    POS MAPPA: 90 -30 0
+
+## POSIZIONAMENTO LOAD/SAVE MAPPE
+-- LATI
+LOAD
+
+grande di entrambi: 48, 23, 48
+punti di riferimento iniziali: (normal)x-3/(clockwise)+3, y-6, z+0
+
+
+Normal
+aether_side1 = -48, 0 ,0
+aether_side2 = -48, 0, -48
+
+Clockwise (180)
+aether_side1 = 48, 0, 0
+aether_side2 = 48, 0 ,48
+
+per posizionare tali strutture, bisogna fare:
+!!! execute positioned (coordinate POS MAPPA) run place template minecraft:nome coordinate: 
+	punti di riferimento iniziali + normal/clockwise (x,y,z)
+
+COMANDI FATTI:
+Normal
+/execute positioned 90 -30 0 run place template minecraft:aether_side1 ~-51 ~-6 ~ none none
+/execute positioned 90 -30 0 run place template minecraft:aether_side2 ~-51 ~-6 ~-48 none none
+Clockwise (180)
+/execute positioned 90 -30 0 run place template minecraft:aether_side1 ~51 ~-6 ~ 180 none
+/execute positioned 90 -30 0 run place template minecraft:aether_side2 ~51 ~-6 ~48 180 none
+
+-- CENTRO
+LOAD
+
+punto di riferimento iniziali: x+0, y-7, z+0
+aether_mid1 = 
+locazione: -3, +1, -40
+grandezza: 7, 16, 40
+
+aether_mid2 =
+locazione:-3, +1, +0
+grandezza: 7, 16, 41
+
+
+per posizionare tali strutture, bisogna fare:
+!!! execute positioned (coordinate POS MAPPA) run place template minecraft:nome coordinate:
+	punto di riferimento iniziali + normal (x,y,z)
+
+COMANDI FATTI:
+/execute positioned 90 -30 0 run place template minecraft:aether_mid1 ~-3 ~-6 ~-40 none none
+/execute positioned 90 -30 0 run place template minecraft:aether_mid2 ~-3 ~-6 ~ none none
+
+-- GIOCATORI
+/tp @s 139 -27 -9 90 0
+/tp @s 41 -27 9 -90 0
+
+-- POWERUP
+/tp @s 90 -28 0
+
+-- PORTE
+/fill 44 -27 5 44 -23 13 iron_bars replace air
+/fill 136 -27 -5 136 -23 -13 iron_bars replace air

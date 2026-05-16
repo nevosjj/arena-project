@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "use_skill_weapon": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:yellow_dye"],
+          "components": {
+            "minecraft:custom_data": {
+              "skill": {
+                "utility": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "skills:activations/types/utility"
+  }
+}

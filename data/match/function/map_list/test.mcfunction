@@ -1,0 +1,1 @@
+execute positioned 90 -30 0 run place template minecraft:test ~ ~ ~ none none

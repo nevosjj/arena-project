@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "use_skill_weapon": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": ["minecraft:orange_dye"],
+          "components": {
+            "minecraft:custom_data": {
+              "skill": {
+                "ultimate": true
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "skills:activations/types/ultimate"
+  }
+}
