@@ -2,11 +2,10 @@
 execute on attacker unless entity @s[tag=1v1.queued] at @s run return run function matchmaking:1v1/cant_dequeue
 
 # Rimuovi tag
-execute on attacker run tag @s remove 1v1.queued
+execute on attacker at @s run function matchmaking:1v1/dequeue
 
 # Rimozione attacco
 data remove entity @s attack
 
-# Altrimenti, esegui default
-execute unless entity @s[tag=queueing] run say true, removed
+# Rimuovi quantità giocatori in queue (scoreholder è il marker)
 execute unless entity @s[tag=queueing] run scoreboard players remove @s counter 1
