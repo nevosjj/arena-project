@@ -2,7 +2,7 @@
 execute as @a[tag=in_game] unless score @s death matches 1.. run scoreboard players add @s rounds 1
 
 # Controllo che la partita non sia finita
-execute as @a if score @s rounds >= #match rounds run return run function match:finish_match
+execute if score @s rounds >= #match rounds run return run function match:finish_match
 
 # Impostazione oggetti
 clear @a
@@ -10,7 +10,6 @@ item replace entity @a hotbar.4 with chest
 
 # Feedback
 tellraw @a [{"text":"\n> ","color":"red","bold":true},{"text":"è morto: ","color":"gold","bold":false},{selector:"@s","color":"gray","bold":false}]
-execute as @a at @s run playsound event.mob_effect.bad_omen voice @s ~ ~ ~ 10 0.9
 
 # Teletrasporto
 function match:teleport with storage arenaproject:map_data temporary

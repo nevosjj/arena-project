@@ -9,4 +9,5 @@ tellraw @a [\
 
 # Operazione
 scoreboard players operation @s stat.current_health = @s stat.max_health
-scoreboard players add @s[tag=in_game] death 1
+scoreboard players add @s death 1
+function match:death
