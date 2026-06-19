@@ -38,17 +38,21 @@ data modify storage arenaproject:map_data modes set value [ \
         modeName: "2v2", \
         map: [ \
             { \
-                mapName: "Egitto", \
+                mapName: "Tempio dell'Aether", \
                 mapID: 0, \
-                spawn1_x: 0, \
-                spawn1_y: 0, \
-                spawn1_z: 0, \
-                spawn2_x: 0, \
-                spawn2_y: 0, \
-                spawn2_z: 0 \
+                mapItem: "minecraft:quartz_pillar", \
+                mapOvertime: 180, \
+                powerupTimer: 45, \
+                mapRounds: 1,\
+                mapStructure: "aether",\
+                spawn1: "139 -27 -9 90 0", \
+                spawn2: "41 -27 9 -90 0", \
+                bars1: "44 -27 5 44 -23 13",\
+                bars2: "136 -27 -5 136 -23 -13",\
+                powerup: "90 -28 0",\
             }, \
             { \
-                mapName: "Landa dei dolciumi", \
+                mapName: "Egitto", \
                 mapID: 1, \
                 spawn1_x: 0, \
                 spawn1_y: 0, \

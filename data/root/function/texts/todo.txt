@@ -7,6 +7,7 @@
 6. Sistema feedback che informa i giocatori quanti danno hanno ricevuto negli ultimi secondi.
 7. Funzione ausiliaria che gestisce raycast abilità.
 8. Migliorare il sistema di selezione abilità (Per-player minecart, rimuovere la possibilità di droppare item)
+9. Funzione che da feedback di che abilità hanno i giocatori.
 
 # Pulizia
 1. Vedere dove mettere predicati per robe temporeggiate.

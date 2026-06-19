@@ -312,5 +312,19 @@ data modify storage arenaproject:ability_data skills set value {\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"8"}],\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"9s"}]],\
         }\
+        ,\
+        {\
+            abilityDisplay:"Incantamento",\
+            abilityName:"enchantment",\
+            abilityType:"ultimate",\
+            abilityID:3,\
+            abilityItem:"minecraft:book",\
+            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Incanta il tuo intero equipaggiamento."},\
+                    {"bold":false,"color":"gray","italic":false,"text":"i nemici nella zona e nega la rigenerazione"},\
+                        {"bold":false,"color":"gray","italic":false,"text":"di energia nel raggio."}," ",\
+                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"65s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"8"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"9s"}]],\
+        }\
     ]\
 }

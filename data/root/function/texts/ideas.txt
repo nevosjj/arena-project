@@ -1,3 +1,7 @@
+FEATURE:
+    > Aggiungi randomizzatore items add inizio partita casuale
+    > Aggiungere un metodo per dare feedback a che abilità ha un giocatore (feebdack)
+
 ESTETICA:
     > Crumble: quando i giocatori usano un'abilità molto forte, sulla destinazione i blocchi si "spaccano", creando una barrier
         al posto del blocco e un block_display leggermente spiazzato per dare l'impressione del terreno che si è spaccato.
@@ -27,6 +31,10 @@ OGGETTI:
     > Oggetto > ??? : La tua abilità infligge cure dimezzate ai bersagli del 25% per 10 secondi.
     > Oggetto > ??? : Quando attivi un'abilità una bolla di fuoco si crea intorno a te, infligge danni.
     > Oggetto > ??? : 
+    INFO ITEMS:
+
+    > Oggetto > ??? : A inizio round, sai che abilità ha preso il nemico.
+    > Oggetto > ??? : Quando sei rallentato, la percentuale di lentezza viene anche convertita in danno extra melee.
 
 CAMBIAMENTI:
     > Sparabiscotto: aggiungere lo spread casuale
