@@ -8,6 +8,9 @@ ESTETICA:
     > Animazione morte giocatore
     > Storage dati dei giocatori e dei round dell'ultima
 
+MAPPE:
+    > Miniera, le feature potrebbero essere una linea di ferro che viene lavorato e che produce potenziamenti.
+
 AGGIUNTE:
     > Latte e Miele: abilità support
     > Salto della Rana: abilità utility
@@ -65,3 +68,38 @@ ACHIEVEMENT:
     > Respiro Congelante > Usa Respiro Congelante 5 volte in ??? secondi. (Chat, qua vorrei che mi calcolassi in quanto tempo posso attivare respiro congelante contando che costa 90 energia e 7 energia viene ricaricata in 1,5s)
     > Impulso magnetico > Nega un potenziamento quando vi è vicino un nemico nel raggio di 1 blocco.
     > Passo Oscuro > Usa Passo Oscuro il secondo prima che lanci un proiettile sulla tua locazione prima di teletrasportarti, evitando il proiettile stesso (CRITICO, potrebbe procurare problemi di performance il check)
+
+EMBLEMI:
+Ci vogliono 4 emblemi che rappresentano la skill di un giocatore a fine partita.
+
+1. Aggressività
+2. Ingegnosità
+3. 
+
+modalità:
+
+giant VS all (uno contro tutti dove uno è gigante e stra potente e gli altri piccolini)
+draft (auto esplicativo)
+powerups (powerup delle abilita)
+custom (modificabile dai giocatori)
+ghost (aiutare l 'alleato post morte)
+
+Furia del Lupo -
+> +2 al danno melee. Durata 3s.
+> Ogni melee infligge anche danni melee ad area sul bersaglio. Raggio 5 blocchi.
+> La percentuale è del 50%.
+> Costo Energia: 75.
+
+Pietrificazione -
+> Crea un'area maledetta intorno a te. Raggio di 4 blocchi, durata di 7 secondi.
+> I nemici all'interno subiscono una stack di maledizione ogni secondo.
+> A 4 stack, i nemici vengono pietrificati per 6 secondi.
+> Pietrificazione: non puoi usare abilità, non puoi muoverti. Se subisci 100 danni durante la pietrificazione, te ne liberi.
+> Ricarica: 36s
+
+Impatto d'acqua
+> Il prossimo salto è potenziato del 100% per 2 secondi.
+> Appena atterri, crea un'area di impatto a forma di ciambella. 
+	Raggio di partenza: 3 blocchi da te, si estende per 2 blocchi.
+> I nemici coinvolti nella ciambella sono rallentati del 35% per 5 secondi.
+> Ricarica: 15s

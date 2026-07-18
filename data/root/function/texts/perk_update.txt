@@ -1,0 +1,55 @@
+Sono selezionabili fino a 2 perk per ogni abilità, minimo 0.
+Si potrebbe fare un achievement di vincere senza aver selezionato perk.
+Alcune combinazioni funzionano meglio insieme, altre peggio, è fatto apposta.
+Devono provvedere a vantaggi per counterare leggermente qualcosa che ha il nemico oppure migliorare quello che già funziona:
+i giocatori devono prendere questi potenziamenti prima che la partita inizi, e dopo il draft iniziale.
+
+> SCUDO OSSEO (Support)
+5 teschi cominciano a ruotare intorno a te per 4s. Assorbono il 50% di danno ricevuto.
+Cooldown: 12s.
+    1. Lingotto d'oro: i teschi ripristinano +25hp alla loro distruzione.
+    2. Ossa: +2 teschi.
+    3. Ossidiana: +25% riduzione danni.
+    4. Teschi wither: I teschi si rompono solo da danni da abilità.
+    5. Cactus: i teschi infliggono -20hp ai nemici che li distruggono.
+    6. Orologio: +2s durata.
+
+> MELODIA DEL POTERE (Support)
+(Ricordo che la generazione di exp per ora è 7energy ogni 1.5s, e +2 ogni melee.)
+Ottieni immunità dai debuff e velocità generazione exp 1,5x per 7s.
+Cooldown: 21s.
+    1. Disco musicale: generazione exp +0.75x.
+    2. Mela dorata: Ogni volta che si attiva la componente immunità debuff, ti curi di 75hp.
+    3. Stivali: +10% velocità di movimento.
+    4. Jukebox: generazione exp +1.0x, applicato a tutti nell'arena (nemici e alleati).
+    5. Libro: +1 generazione exp melee.
+    6. Orologio: +2s durata.
+
+> SCAMBIO MAGNETICO (Utility)
+Ti scambi di posizione con un bersaglio nemico, dopo un delay di 3s. Range di 25 blocchi.
+Cooldown: 40s.
+    1. Cera d'ape: il delay è del 50% più veloce.
+    2. Ramo secco: I nemici che si trovano in mezzo tra te e il bersaglio nel momento del teletrasporto, ricevono -50hp.
+    3. Lingotto di rame: il bersaglio è stordito durante il delay.
+    4. Libro: i buff e i debuff reciproci vengono scambiati.
+    5. Ripetitore pietrarossa: dopo il delay, il bersaglio è stordito per 2s.
+
+> SPARABISCOTTO (Offensiva)
+Lancia 7 biscotti ad alta velocità e corta gittata, con uno spread casuale.
+Infliggono -9hp ciascuno. Costo: 35 exp.
+    1. Zucchero: +50% gittata e velocità dei biscotti.
+    2. Fave di cacao: +1hp ogni biscotto andato a segno.
+    3. Grano: -2 costo exp.
+    4. Fornace: +2 biscotti.
+    5. Zappa: +33% di precisione spread.
+
+> RESPIRO CONGELANTE (Offensiva)
+Sferra una spirale elicoidale di ghiaccio di fronte a te. Infligge 180 danni e rallenta del 20% per 3s.
+Raggio di 5 blocchi. Se attraversa un muro, il danno viene ridotto del 50%. Può essere sferrata solo orizzontalmente
+(quindi non verso l'altro né verso il basso)
+Costo: 95 exp.
+    1. Ghiaccio: +2s debuff
+    2. Palla di neve: -10 costo exp.
+    3. Diamante: +50% raggio.
+    4. Piccone: Se incontra un muro, riappare verso l'altra parte del muro, una volta che ricomincia il percorso, raggio +20% e penalità danno -25%.
+    5. Pozione: Oltre al rallentamento, dà un debuff che dimezza di -1 il danno da melee (10 di default).
