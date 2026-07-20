@@ -2,7 +2,7 @@
 execute as @a[tag=in_game] unless score @s death matches 1.. run scoreboard players add @s rounds 1
 
 # Controllo che la partita non sia finita
-execute if score @s rounds >= #match rounds run return run function match:finish_match
+execute as @a[tag=in_game] unless score @s death matches 1.. if score @s rounds >= #match rounds run return run function match:finish_match
 
 # Impostazione oggetti
 clear @a
