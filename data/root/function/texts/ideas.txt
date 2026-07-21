@@ -103,3 +103,7 @@ Impatto d'acqua
 	Raggio di partenza: 3 blocchi da te, si estende per 2 blocchi.
 > I nemici coinvolti nella ciambella sono rallentati del 35% per 5 secondi.
 > Ricarica: 15s
+
+marchio del drago: ulti di zed
+
+provocazione: provacazione di sam
