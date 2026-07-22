@@ -3,10 +3,11 @@
 ##########################
 
 data modify storage match_recorder:data actual_match \
-    set value \ 
-    { \
-        match_id:" ",\
-        type:" ",\
-        map:" ",\
-        duration:" ",\
-}
+    set value \
+    {\
+        match_id:"",\
+        type:"",\
+        map:"",\ 
+        duration:"",\ 
+        timelines:[],\
+        players:[]}
