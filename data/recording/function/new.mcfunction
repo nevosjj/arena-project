@@ -10,4 +10,5 @@ data modify storage match_recorder:data actual_match \
         map:"",\ 
         duration:"",\ 
         timelines:[],\
-        players:[]}
+        players:[]\
+        }
