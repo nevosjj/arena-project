@@ -46,6 +46,6 @@ function recording:name_randomizer
 # per ora è una cassa con una sola testa..
 # l'idea è quella di creare un array di 9 partite registrate rotanti che si possono caricare e controllare i dati della partita.
 # creerò un modo per salvare una partita e caricarla in altri mondi di arena project, oppure renderla "MVP" tra le partite. (ergo non verrà eliminata)
-function recording:copy_from_match
+function recording:copy_from_match with storage match_recorder:data actual_match
 # Pulizia match recorder
 data remove storage match_recorder:data actual_match
