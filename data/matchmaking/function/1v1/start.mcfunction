@@ -37,6 +37,13 @@ execute as @a[tag=in_game] run attribute @s minecraft:knockback_resistance base 
 execute store result storage arenaproject:map_data temporary.mapIndex int 1.0 run random value 0..1
 function matchmaking:1v1/extract_info with storage arenaproject:map_data temporary
 
+# Creazione informazioni partita per il match_recorder
+function recording:new
+
+# Comando !!!!TEMPORANEO!!!! che imposta come type della partita 1v1
+# poi miglioro il sistema e refactoro questa parte intera della directory e del codice
+data modify storage match_recorder:data actual_match.type set value "1v1"
+
 # Impostazione condizione di vittoria
 function match:condition with storage arenaproject:map_data temporary
 

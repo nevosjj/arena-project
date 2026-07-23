@@ -71,6 +71,9 @@ scoreboard objectives add range dummy
 scoreboard objectives add rounds dummy
 scoreboard objectives add best_rounds dummy
 scoreboard objectives add player.amount dummy
+scoreboard objectives add match.duration dummy
+scoreboard objectives add match.seconds dummy
+scoreboard objectives add match.minutes dummy
 
 # Movimento proiettili
 scoreboard objectives add motion.x1 dummy

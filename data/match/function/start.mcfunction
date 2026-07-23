@@ -1,9 +1,6 @@
 # Booleana match: attivo
 scoreboard players set #match bool 1
 
-# Creazione informazioni partita
-function recording:new
-
 # Pulizia inventario
 clear @a[tag=in_game]
 

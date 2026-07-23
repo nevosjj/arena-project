@@ -1,3 +1,6 @@
+# Calcolo tempo partita
+function recording:time/recursive_time
+
 # Ritorno in lobby e feedback (debug per ora)
 tp @a 8 -59 8
 tellraw @a [{"text":"\n> ","color":"gray","bold":true},{"text":"Partita finita!","color":"gold","bold":false}]
@@ -36,3 +39,6 @@ execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier re
 effect give @a instant_health 1 255 true
 tag @a remove in_game
 function match:cleanup
+
+# Pulizia match recorder
+data remove storage match_recorder:data actual_match

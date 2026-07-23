@@ -13,3 +13,6 @@ execute as @a[tag=in_game] run title @s actionbar \
     {"color":"gray","score":{"name":"@s","objective":"cooldown.support_timer"},"shadow_color":-11184811}," ",\
     {"color":"gold","atlas":"minecraft:items","sprite":"item/orange_dye"}," ",\
     {"color":"gray","score":{"name":"@s","objective":"cooldown.ultimate_timer"},"shadow_color":-11184811}]
+
+# Durata partita++
+execute if score #match bool matches 1 run scoreboard players add #match match.duration 1
