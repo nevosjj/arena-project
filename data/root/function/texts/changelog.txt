@@ -1,7 +1,0 @@
-v0.2.2
-
-## QOL
-- Reworked the feedback system of matchmaking 1v1.
-
-## TECHNICAL
-- Added map .nbt files to match/structure directory.
