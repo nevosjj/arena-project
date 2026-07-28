@@ -190,17 +190,16 @@ data modify storage arenaproject:ability_data skills set value {\
             abilityType:"support",\
             abilityID:0,\
             abilityCount:5,\
-            abilityPower:25,\
+            abilityPower:50,\
             abilityDuration:12,\
             abilityCooldown:24,\
             abilityItem:"minecraft:bone",\
             abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Dei teschi ti circondano per una breve durata."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Bloccano le prossime istanze di danno."},\
-                    {"bold":false,"color":"gray","italic":false,"text":"Ogni teschio consumato ti cura."}," ",\
-                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"24s"}],\
+                {"bold":false,"color":"gray","italic":false,"text":"Bloccano di una percentuale i danni in arrivo."}, " ",\
+                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"12s"}],\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Teschi: "},{"bold":true,"color":"light_purple","italic":false,"text":"5"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Cura per teschio: "},{"bold":true,"color":"light_purple","italic":false,"text":"25"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"12s"}]],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Difesa conferita: "},{"bold":true,"color":"light_purple","italic":false,"text":"+50%"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"4s"}]],\
         },\
         {\
             abilityDisplay:"Albero vitale",\

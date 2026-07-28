@@ -10,7 +10,7 @@ execute unless score @s stat.defense matches 0 run function health:halve_damage
 
 # Scudo osseo
 # Interrompe la fonte di danno immediatamente
-execute if entity @s[tag=skill.bone_shield] run return run function skills:list/support/bone_shield/marker
+execute if entity @s[tag=skill.bone_shield] run function skills:list/support/bone_shield/marker
 
 # Feedback
 $execute if score @s ability_damage matches 1.. run \

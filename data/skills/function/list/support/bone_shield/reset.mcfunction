@@ -13,7 +13,7 @@ tag @s remove skill.bone_shield
 $tag @s remove owner_$(ID).bone_shield
 
 # Rimuovi score difesa
-$scoreboard players remove @s stat.defense $(abilityPower)
+scoreboard players remove @s stat.defense 50
 
 # Feedback
 playsound entity.skeleton.death player @a ~ ~ ~ 2 0.8
