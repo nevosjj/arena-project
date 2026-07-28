@@ -75,6 +75,11 @@ scoreboard objectives add match.duration dummy
 scoreboard objectives add match.seconds dummy
 scoreboard objectives add match.minutes dummy
 
+# Statistiche post-partita
+scoreboard objectives add poststat.heal_received dummy
+scoreboard objectives add poststat.melee_inflicted dummy
+scoreboard objectives add poststat.damage_received dummy
+
 # Movimento proiettili
 scoreboard objectives add motion.x1 dummy
 scoreboard objectives add motion.x2 dummy

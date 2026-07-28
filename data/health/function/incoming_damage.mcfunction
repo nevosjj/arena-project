@@ -5,6 +5,9 @@ scoreboard players operation #match temp2 += #match multiplier
 scoreboard players operation @s incoming_damage *= #match temp2
 scoreboard players operation @s incoming_damage /= #match temp
 
+# Rimozione danni resistenza danni
+execute unless score @s stat.defense matches 0 run function health:halve_damage
+
 # Scudo osseo
 # Interrompe la fonte di danno immediatamente
 execute if entity @s[tag=skill.bone_shield] run return run function skills:list/support/bone_shield/marker

@@ -6,6 +6,9 @@ scoreboard players operation @s temp2 /= @s temp
 # Inserimento score scudo.
 $scoreboard players set @p counter.support $(abilityCount)
 
+# Inserimento score scudo.
+$scoreboard players set @p stat.defense $(abilityPower)
+
 # Tag macro al giocatore per capire chi possiede lo scudo
 function skills:auxiliary/set_owner with entity @s data
 

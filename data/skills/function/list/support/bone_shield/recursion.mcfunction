@@ -1,4 +1,4 @@
-# Funzione ricorsiva
+# Funzione ricorsiva per evocare i teschi
 scoreboard players add @s temp 1
 
 $summon block_display ^ ^ ^2 {NoGravity:1b,Rotation:[$(boneDegreesRot)f,0f],Tags:["bone_shield.visual","bone_shield.id$(ID)"],data:{ID:$(ID),abilityName:$(abilityName)}, \

@@ -1,6 +1,3 @@
-# Applicazione cura
-$scoreboard players add @p[tag=owner_$(ID).bone_shield,limit=1,distance=..5] incoming_heal $(abilityPower)
-
 # Feedback
 $execute as @p[tag=owner_$(ID).bone_shield,limit=1,distance=..5] run tellraw @s [ \
     {"atlas":"minecraft:gui","sprite":"mob_effect/glowing"},\
@@ -12,12 +9,6 @@ $execute as @p[tag=owner_$(ID).bone_shield,limit=1,distance=..5] run tellraw @s 
     {"score":{objective:"incoming_heal","name":"@s"},"color":"dark_green","bold":false},\
     {"text":" guariti.","color":"gray","bold":false},\
     ]
-
-# Reset danni in arrivo
-$scoreboard players reset @p[tag=owner_$(ID).bone_shield,limit=1,distance=..5] incoming_damage
-$scoreboard players reset @p[tag=owner_$(ID).bone_shield,limit=1,distance=..5] melee_damage
-$scoreboard players reset @p[tag=owner_$(ID).bone_shield,limit=1,distance=..5] ability_damage
-$execute as @p[tag=owner_$(ID).bone_shield,limit=1,distance=..5] run function health:self_heal
 
 # Distruggi un osso
 $execute as @e[type=block_display,tag=bone_shield.id$(ID),sort=random,limit=1,distance=..5] at @s run function skills:list/support/bone_shield/destroy

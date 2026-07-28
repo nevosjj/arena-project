@@ -29,6 +29,8 @@ tag @a remove ultimate_down
 tag @a remove freeze_breath.slowed
 scoreboard players reset #match
 scoreboard players reset #memory
+scoreboard players reset #constant.100
+scoreboard players reset #damage_halver
 scoreboard players reset @a
 experience set @a 0 levels
 execute as @a[tag=in_game] run attribute @s minecraft:attack_damage base set 0.0
