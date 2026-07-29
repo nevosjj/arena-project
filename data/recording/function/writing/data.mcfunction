@@ -1,0 +1,2 @@
+# Inietta i dati di indice partita per trovare la partita giusta nell'array della match list dopo aver premuto una testa dell'elenco
+$data modify block 9 -55 39 Items[{Slot:$(chestIndex)b}].components."minecraft:custom_data" set value {headdata:1b,headIndex:$(index)}

@@ -42,7 +42,6 @@ effect give @a instant_health 1 255 true
 tag @a remove in_game
 function match:cleanup
 
-
 ## REGISTRAZIONE PARTITA
 
 # Impostazione nome random match recorder
@@ -52,10 +51,7 @@ function recording:name_randomizer
 function recording:writing/get_index
 
 # Copia i dati del match allo storage del salvapartite
-function recording:writing/storage with storage match_recorder:data actual_match
-function recording:writing/texture with storage match_recorder:data actual_match
-function recording:writing/name with storage match_recorder:data actual_match
-function recording:writing/lore with storage match_recorder:data actual_match
+function match:write_data/storage with storage match_recorder:data actual_match
 
 # Pulizia match recorder
 data remove storage match_recorder:data actual_match

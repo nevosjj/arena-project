@@ -13,6 +13,9 @@ execute as @a[tag=energy.activated] run function experience:tick
 # Eseguibile ogni 20 tick
 execute if score #match bool matches 1 as @a[tag=in_game,limit=1] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"periodic_tick":20}} run function root:ticks/1second
 
+# Controllo che i giocatori tengano in mano la testa di una partita per controllarne le statistiche
+execute as @a if items entity @s player.cursor player_head[custom_data={headdata:1b}] run function recording:check/select with entity @s SelectedItem.components."minecraft:custom_data"
+
 # Controllo condizioni matchmaking
 # 1v1
 execute as @e[type=interaction,tag=matchmaking.1v1] if data entity @s interaction run function matchmaking:1v1/interaction
