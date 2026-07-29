@@ -1,6 +1,5 @@
 # Estrazione minuti
 
-say minuto!
 # +1 minuto
 scoreboard players add #match match.minutes 1
 
