@@ -10,7 +10,7 @@ data modify storage match_recorder:randomizer pool \
     adjectives: \
         ["Epic ", "Unbelievable ", "Decisive ", "Chaotic ", "Ultimate ", "Forgotten "],\
     flavours: \
-        [" between warriors! "," made in Nether! "," for a single coin. "," for the glory!! ",", the final battle! ", ", where losers are idiots.. "],\
+        [" between warriors! ",", two truths, one winner. "," for a single coin. "," for the glory!! ",", the final battle! ", ", where losers are idiots.. "],\
     }
 
 # Randomizzazione indici

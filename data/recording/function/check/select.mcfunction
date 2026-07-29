@@ -13,4 +13,8 @@ item replace block 9 -55 39 container.14 with minecraft:player_head[minecraft:pr
 item replace block 9 -55 39 container.15 with black_stained_glass_pane
 item replace block 9 -55 39 container.16 with black_stained_glass_pane
 
+item replace block 9 -55 39 container.26 with barrier[custom_data={matchlist_back:1b},minecraft:custom_name={"text":"Torna indietro","color":"#fa2f2f","italic":false}]
+
+execute at @s run playsound minecraft:block.vault.reject_rewarded_player ui @s ~ ~ ~ 1 1.6
+
 clear @s player_head
