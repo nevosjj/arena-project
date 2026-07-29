@@ -1,0 +1,2 @@
+# Inietta il nome dello storage dentro "item_name" (apparirà dritto e non in corsivo!)
+$data modify block 9 -55 39 Items[{Slot:$(chestIndex)b}].components."minecraft:item_name" set string storage match_recorder:data actual_match.match_id

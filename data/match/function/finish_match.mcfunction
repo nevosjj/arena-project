@@ -42,12 +42,20 @@ effect give @a instant_health 1 255 true
 tag @a remove in_game
 function match:cleanup
 
+
+## REGISTRAZIONE PARTITA
+
 # Impostazione nome random match recorder
 function recording:name_randomizer
-# Copia TUTTI i dati del match recorder nel registratore della lobby
-# per ora è una cassa con una sola testa..
-# l'idea è quella di creare un array di 9 partite registrate rotanti che si possono caricare e controllare i dati della partita.
-# creerò un modo per salvare una partita e caricarla in altri mondi di arena project, oppure renderla "MVP" tra le partite. (ergo non verrà eliminata)
-function recording:copy_from_match with storage match_recorder:data actual_match
+
+# Ottieni indice dove salvare la partita
+function recording:writing/get_index
+
+# Copia i dati del match allo storage del salvapartite
+function recording:writing/storage with storage match_recorder:data actual_match
+function recording:writing/texture with storage match_recorder:data actual_match
+function recording:writing/name with storage match_recorder:data actual_match
+function recording:writing/lore with storage match_recorder:data actual_match
+
 # Pulizia match recorder
 data remove storage match_recorder:data actual_match

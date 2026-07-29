@@ -1,0 +1,2 @@
+# Imposta texture testa
+$data modify block 9 -55 39 Items append value {Slot:$(chestIndex)b,id:"minecraft:player_head",count:1,components:{"minecraft:profile":{properties:[{name:"textures",value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmI5Mzg3ZWY1MDc3NDI2M2NmMjFlNjBjYTcxZmZmMmE0ODQ1NWM4MjFhODE2YzlkYzNiMjBkNmMyYjBjZDEwMCJ9fX0="}]}}}
