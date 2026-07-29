@@ -1,5 +1,6 @@
 # Bone shield
-execute if entity @e[type=block_display,tag=bone_shield.visual,distance=..128] as @e[type=block_display,tag=bone_shield.visual] at @s run function skills:list/support/bone_shield/tick with entity @s data
+execute if entity @e[type=block_display,tag=bone_shield.visual,distance=..128] as @e[type=block_display,tag=bone_shield.visual] at @s run function skills:list/support/bone_shield/skill_tick with entity @s data
+execute if entity @e[type=player,limit=1,tag=skill.bone_shield] as @e[type=player,tag=skill.bone_shield] run function skills:list/support/bone_shield/tick
 
 # Cookie blaster
 execute if entity @e[type=item,tag=cookie.projectile,tag=ready,distance=..128] as @e[type=item,tag=cookie.projectile,tag=ready] at @s run \

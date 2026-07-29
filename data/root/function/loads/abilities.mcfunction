@@ -191,8 +191,8 @@ data modify storage arenaproject:ability_data skills set value {\
             abilityID:0,\
             abilityCount:5,\
             abilityPower:50,\
-            abilityDuration:12,\
-            abilityCooldown:24,\
+            abilityDuration:80,\
+            abilityCooldown:12,\
             abilityItem:"minecraft:bone",\
             abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Dei teschi ti circondano per una breve durata."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Bloccano di una percentuale i danni in arrivo."}, " ",\

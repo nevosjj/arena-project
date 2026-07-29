@@ -2,7 +2,7 @@
 function recording:time/recursive_time
 
 # Ritorno in lobby e feedback (debug per ora)
-tp @a 8 -59 8
+tp @a 22 -54 8 90 0
 tellraw @a [{"text":"\n> ","color":"gray","bold":true},{"text":"Partita finita!","color":"gold","bold":false}]
 execute as @a at @s run playsound ui.toast.challenge_complete voice @s ~ ~ ~ 10 0.9
 

@@ -1,3 +1,2 @@
-$execute positioned as @p[tag=owner_$(ID).$(abilityName)] run tp @s ^0.5 ^1 ^0.5 ~3 ~
-particle dust{color:[0.1,0.85,0.5],scale:0.4} ~ ~0.2 ~ 0.2 0.2 0.2 0 1 force
-particle copper_fire_flame ^ ^-0.7 ^0.6 0.3 0.3 0.3 0 1 force
+scoreboard players remove @s duration.support 1
+execute if score @s duration.support matches 0 at @s run function skills:list/support/bone_shield/marker_timer
