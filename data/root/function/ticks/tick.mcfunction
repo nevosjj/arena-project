@@ -20,9 +20,9 @@ execute as @a if items entity @s player.cursor player_head[custom_data~{headdata
 execute as @a if items entity @s player.cursor barrier[custom_data~{matchlist_back:1b}] run function recording:check/reset
 # Statistiche
 execute as @a if items entity @s player.cursor player_head[custom_data~{headstats:1b}] run function recording:check/stats
-execute as @a if items entity @s player.cursor player_head[custom_data~{headtimelines:1b}] run function recording:check/timelines
 execute as @a if items entity @s player.cursor player_head[custom_data~{headequips:1b}] run function recording:check/equips
-execute as @a if items entity @s player.cursor barrier[custom_data~{equiplist_back:1b}] run function recording:check/select
+execute as @a if items entity @s player.cursor barrier[custom_data~{infolist_back:1b}] run function recording:check/select
+execute as @a if items entity @s player.cursor player_head[custom_data~{headtimelines:1b}] run function recording:check/timelines
 
 # Controllo condizioni matchmaking
 # 1v1

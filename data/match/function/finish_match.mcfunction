@@ -51,10 +51,9 @@ function match:write_data/storage with storage match_recorder:data actual_match
 # Crea un record per ogni giocatore nell'array players[]
 execute as @a[tag=in_game] run function match:write_data/insert_player with storage match_recorder:data actual_match
 
-# Prendi nomi abilità dei giocatori e salvalo nello storage per ogni giocatore
-# La funzione from_id_to_index riceve il giocatore corrente, prepara il suo ID
-# e chiama poi abilities con il contesto corretto.
-execute as @a[tag=in_game] run function match:write_data/from_id_to_index
+# Metti tutte i dati necessari al salvataggio partita con la seguente funzione
+# Chiamerà l'ID del giocatore e metterà tutte le info necessarie in base al proprio id
+execute as @a[tag=in_game] run function match:write_data/id_search
 
 # Togli tag
 tag @a remove in_game

@@ -79,6 +79,7 @@ scoreboard objectives add match.minutes dummy
 scoreboard objectives add poststat.heal_received dummy
 scoreboard objectives add poststat.melee_inflicted dummy
 scoreboard objectives add poststat.damage_received dummy
+scoreboard objectives add poststat.damage_halved dummy
 
 # Movimento proiettili
 scoreboard objectives add motion.x1 dummy

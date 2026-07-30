@@ -1,5 +1,5 @@
 #########
-# chiamata da match:finish_match
+# chiamata da match:id_search
 #########
 
 # Inserisci nell'elemento della partita il nome dell'abilità usando l'ID del giocatore come chiave.

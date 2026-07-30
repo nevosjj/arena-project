@@ -33,6 +33,9 @@ function health:summon_text with storage arenaproject:game_memory damageFeedback
 # Rimozione
 scoreboard players operation @s stat.current_health -= @s incoming_damage
 
+# Accumula cure ricevute
+scoreboard players operation @s poststat.damage_received += @s incoming_damage
+
 # Aggiornamento actionbar
 title @s actionbar \
     [{"bold":false,"color":"red","italic":false,"shadow_color":-5636096,"text":"♥ "},\

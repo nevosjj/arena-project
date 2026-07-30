@@ -8,6 +8,9 @@ execute if score @s incoming_heal > @s heal_available run scoreboard players ope
 # Applica la guarigione (ora è sicura)
 scoreboard players operation @s stat.current_health += @s incoming_heal
 
+# Accumula cure ricevute
+scoreboard players operation @s poststat.heal_received += @s incoming_heal
+
 # Feedback
 $execute if score @s incoming_heal matches 1.. run \
     tellraw @s [ \
