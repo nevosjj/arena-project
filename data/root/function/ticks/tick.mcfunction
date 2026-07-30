@@ -13,9 +13,15 @@ execute as @a[tag=energy.activated] run function experience:tick
 # Eseguibile ogni 20 tick
 execute if score #match bool matches 1 as @a[tag=in_game,limit=1] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"periodic_tick":20}} run function root:ticks/1second
 
+## NAVIGAZIONE PARTITE
 # Controllo che i giocatori tengano in mano la testa di una partita per controllarne le statistiche
 execute as @a if items entity @s player.cursor player_head[custom_data~{headdata:1b}] run function recording:check/select
+# Torna indietro alla lista partite
 execute as @a if items entity @s player.cursor barrier[custom_data~{matchlist_back:1b}] run function recording:check/reset
+# Statistiche
+execute as @a if items entity @s player.cursor player_head[custom_data~{headstats:1b}] run function recording:check/stats
+execute as @a if items entity @s player.cursor player_head[custom_data~{headtimelines:1b}] run function recording:check/timelines
+execute as @a if items entity @s player.cursor player_head[custom_data~{headequips:1b}] run function recording:check/equips
 
 # Controllo condizioni matchmaking
 # 1v1
