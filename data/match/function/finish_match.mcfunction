@@ -15,9 +15,6 @@ tag @e[type=interaction,tag=matchmaking.1v1] remove can_spectate
 ## PULIZIA
 scoreboard objectives setdisplay below_name
 clear @a
-data remove storage arenaproject:map_data temporary
-data remove storage arenaproject:compact_game_memory players
-data remove storage arenaproject:game_memory players
 stopwatch remove match:break
 stopwatch remove match:sound
 stopwatch remove match:overtime
@@ -31,7 +28,6 @@ scoreboard players reset #match
 scoreboard players reset #memory
 scoreboard players reset #constant.100
 scoreboard players reset #damage_halver
-scoreboard players reset @a
 experience set @a 0 levels
 execute as @a[tag=in_game] run attribute @s minecraft:attack_damage base set 0.0
 execute as @a[tag=in_game] run attribute @s minecraft:knockback_resistance base set 1.0
@@ -39,8 +35,7 @@ execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier re
 execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier remove lightning_strike:jump
 execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier remove lightning_strike:slow
 effect give @a instant_health 1 255 true
-tag @a remove in_game
-function match:cleanup
+function match:skill_cleanup
 
 ## REGISTRAZIONE PARTITA
 
@@ -53,5 +48,22 @@ function recording:writing/get_index
 # Copia i dati del match allo storage del salvapartite
 function match:write_data/storage with storage match_recorder:data actual_match
 
-# Pulizia match recorder
+# Crea un record per ogni giocatore nell'array players[]
+execute as @a[tag=in_game] run function match:write_data/insert_player with storage match_recorder:data actual_match
+
+# Prendi nomi abilità dei giocatori e salvalo nello storage per ogni giocatore
+# La funzione from_id_to_index riceve il giocatore corrente, prepara il suo ID
+# e chiama poi abilities con il contesto corretto.
+execute as @a[tag=in_game] run function match:write_data/from_id_to_index
+
+# Togli tag
+tag @a remove in_game
+
+# Pulizia degli storage
 data remove storage match_recorder:data actual_match
+data remove storage arenaproject:map_data temporary
+data remove storage arenaproject:game_memory players
+data remove storage arenaproject:game_memory temp
+
+# Score resettati
+scoreboard players reset @a

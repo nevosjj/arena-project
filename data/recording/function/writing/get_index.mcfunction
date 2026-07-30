@@ -6,6 +6,9 @@
 execute store result score #match_index temp run data get storage api.nevosjj.lobby:match_list saveIndexChest
 execute store result score #match_index temp2 run data get storage api.nevosjj.lobby:match_list saveIndex
 
+# Salva un dato per poterlo usarlo dopo per prendere le abilità e le statistiche giocatore (prima che venga aggiornato)
+data modify storage arenaproject:game_memory temp.matchIndex set from storage api.nevosjj.lobby:match_list saveIndex
+
 # Inserimento dell'indice sullo storage match recorder
 execute store result storage match_recorder:data actual_match.chestIndex int 1.0 run scoreboard players get #match_index temp
 execute store result storage match_recorder:data actual_match.index int 1.0 run scoreboard players get #match_index temp2
