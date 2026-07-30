@@ -8,17 +8,12 @@
 execute at @s run playsound entity.zombie.attack_iron_door ui @s ~ ~ ~ 1 0.8
 
 # Metti sfondo di vetro
-function recording:check/put_glass
+function recording:insert/put_glass
 
 # Immisione di vetro rosso per slot vuoti
-item replace block 9 -55 39 container.10 with red_stained_glass_pane
-item replace block 9 -55 39 container.11 with red_stained_glass_pane
-item replace block 9 -55 39 container.12 with red_stained_glass_pane
-item replace block 9 -55 39 container.13 with red_stained_glass_pane
-item replace block 9 -55 39 container.14 with red_stained_glass_pane
-item replace block 9 -55 39 container.15 with red_stained_glass_pane
-item replace block 9 -55 39 container.16 with red_stained_glass_pane
+function recording:insert/put_missing_row
 
+# Barriera di ritorno indietro
 item replace block 9 -55 39 container.26 with barrier[custom_data={equiplist_back:1b},minecraft:custom_name={"text":"Torna indietro","color":"#fa2f2f","italic":false}]
 
 # Inizializzazione indice

@@ -1,4 +1,4 @@
-function recording:check/put_glass
+function recording:insert/put_glass
 function recording:insert/everything
 clear @s barrier
 playsound minecraft:block.vault.deactivate ui @s ~ ~ ~ 10 1.15

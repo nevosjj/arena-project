@@ -1,5 +1,8 @@
 ## Funzione di reinserimento lista partite nella chest
 
+# Vetro rosso estetico
+function recording:insert/put_missing_row
+
 # Metto lo score a 0
 scoreboard players set #match_list temp 0
 

@@ -7,10 +7,10 @@
 clear @s barrier
 
 # Svuota la chest per un attimo e metti vetro di sfondo
-function recording:check/put_glass
+function recording:insert/put_glass
 
 # Copia l'oggetto di registrazione per prendere i dati custom_data (se è una testa)
-execute if items entity @s player.cursor player_head run item replace entity @s enderchest.0 from entity @p player.cursor
+execute if items entity @s player.cursor player_head run item replace entity @s enderchest.0 from entity @s player.cursor
 
 # Ottieni l'indice dalla testa, per poterlo usare nella navigazione dei dati partita selezionata
 data modify storage api.nevosjj.lobby:match_list temp.cursorIndex set from entity @s EnderItems[0].components."minecraft:custom_data".headIndex
