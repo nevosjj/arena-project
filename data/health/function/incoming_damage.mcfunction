@@ -13,7 +13,7 @@ execute unless score @s stat.defense matches 0 run function health:halve_damage
 execute if entity @s[tag=skill.bone_shield] run function skills:list/support/bone_shield/marker
 
 # Feedback
-$execute if score @s ability_damage matches 1.. run \
+#$execute if score @s ability_damage matches 1.. run \
     tellraw @s [ \
     {"atlas":"minecraft:gui","sprite":"mob_effect/wither"},\
     {"text":" > ","color":"dark_gray","bold":false},\
@@ -33,19 +33,17 @@ function health:summon_text with storage arenaproject:game_memory damageFeedback
 # Rimozione
 scoreboard players operation @s stat.current_health -= @s incoming_damage
 
-# Accumula cure ricevute
+# Aumento danni recenti
+scoreboard players operation @s recent_damage += @s incoming_damage
+
+# Reset dei danni recenti
+scoreboard players set @s recent_damage.timer 1
+
+# Accumula danni ricevuti 
 scoreboard players operation @s poststat.damage_received += @s incoming_damage
 
 # Aggiornamento actionbar
-title @s actionbar \
-    [{"bold":false,"color":"red","italic":false,"shadow_color":-5636096,"text":"♥ "},\
-    {"color":"green","score":{"name":"@s","objective":"stat.current_health"},"shadow_color":-11184811} \
-    ," ",{"atlas":"minecraft:items","bold":false,"color":"yellow","italic":false,"sprite":"item/yellow_dye"}," ",\
-    {"color":"gray","score":{"name":"@s","objective":"cooldown.utility_timer"},"shadow_color":-11184811}," ",\
-    {"atlas":"minecraft:items","bold":false,"color":"green","italic":false,"sprite":"item/green_dye"}," ",\
-    {"color":"gray","score":{"name":"@s","objective":"cooldown.support_timer"},"shadow_color":-11184811}," ",\
-    {"color":"gold","atlas":"minecraft:items","sprite":"item/orange_dye"}," ",\
-    {"color":"gray","score":{"name":"@s","objective":"cooldown.ultimate_timer"},"shadow_color":-11184811}]
+function health:actionbar
 
 # Controllo morte
 execute if score @s stat.current_health matches ..0 at @s run function health:death

@@ -10,6 +10,9 @@ function root:ticks/stopwatches
 # Controllo esperienza
 execute as @a[tag=energy.activated] run function experience:tick
 
+# Controllo danno recente
+execute if entity @e[tag=in_game,scores={recent_damage=1..}] as @a[tag=in_game,scores={recent_damage=1..}] run function health:recent_damage
+
 # Eseguibile ogni 20 tick
 execute if score #match bool matches 1 as @a[tag=in_game,limit=1] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"periodic_tick":20}} run function root:ticks/1second
 

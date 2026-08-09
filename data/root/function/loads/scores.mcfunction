@@ -20,6 +20,8 @@ scoreboard objectives add stat.defense dummy
 scoreboard objectives add stat.attack dummy
 scoreboard objectives add stat.max_health dummy
 scoreboard objectives add stat.current_health dummy
+scoreboard objectives add stat.combo dummy
+scoreboard objectives add stat.hunger food
 
 # Operazioni vita
 scoreboard objectives add incoming_heal dummy
@@ -27,6 +29,8 @@ scoreboard objectives add heal_available dummy
 scoreboard objectives add incoming_damage dummy
 scoreboard objectives add melee_damage dummy
 scoreboard objectives add ability_damage dummy
+scoreboard objectives add recent_damage dummy
+scoreboard objectives add recent_damage.timer dummy
 
 # Operazioni esperienza
 scoreboard objectives add experience_gain dummy
