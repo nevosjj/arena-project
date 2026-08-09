@@ -6,7 +6,6 @@ data modify storage ability_data:offensive skills set value [\
             abilityEffect:"damage"\
         },\
         technical: {\
-            id:0,\
             cost:50,\
             range:1.5f,\
             power:9,\
@@ -34,7 +33,6 @@ data modify storage ability_data:offensive skills set value [\
             abilityEffect:"damage"\
         },\
         technical: {\
-            id:1,\
             cost:90,\
             range:0.0f,\
             distance:6f,\
@@ -64,7 +62,6 @@ data modify storage ability_data:offensive skills set value [\
             abilityEffect:"damage"\
         },\
         technical: {\
-            id:2,\
             cost:77,\
             range:2f,\
             length:24f,\
@@ -94,7 +91,6 @@ data modify storage ability_data:offensive skills set value [\
             abilityEffect:"damage"\
         },\
         technical: {\
-            id:3,\
             cost:20,\
             duration:0\
         },\
