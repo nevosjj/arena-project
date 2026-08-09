@@ -164,10 +164,11 @@ data modify storage arenaproject:ability_data skills set value {\
             abilityCooldown: 35,\
             abilityItem:"minecraft:wind_charge",\
             abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Evoca un tornado nell'area."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Intrappola e rallenta i nemici coinvolti."},\
-                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"35s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"6s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Rallentamento: "},{"bold":true,"color":"light_purple","italic":false,"text":"25%"}],\
+                {"bold":false,"color":"gray","italic":false,"text":"Avanza lentamente."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Arreca danni ad intervalli."},\
+                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"42s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"10s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Danni: "},{"bold":true,"color":"light_purple","italic":false,"text":"10/1s"}],\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"8 blocchi"}]]\
         },\
     ],\
@@ -178,15 +179,15 @@ data modify storage arenaproject:ability_data skills set value {\
             abilityType:"support",\
             abilityID:0,\
             abilityEffect:"heal",\
-            abilityPower:200,\
+            abilityPower:300,\
             abilityCooldown:18,\
+            abilityRange:5,\
             abilityItem:"minecraft:golden_apple",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Rigeneri un quantitativo di vita."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Ogni danno ricevuto ne dimezza la quantità."}," ",\
+            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Guarisci dei danni a te e agli alleati."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Rimuove i debuff."}," ",\
                             [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"18s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Velocità: "},{"bold":true,"color":"light_purple","italic":false,"text":"5/0,2s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Riduzione: "},{"bold":true,"color":"light_purple","italic":false,"text":"-10 a colpo"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Cura: "},{"bold":true,"color":"light_purple","italic":false,"text":"200"}]],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Cura: "},{"bold":true,"color":"light_purple","italic":false,"text":"300"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"5"}]],\
         },\
         {\
             abilityDisplay:"Scudo osseo",\
