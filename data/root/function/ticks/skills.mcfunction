@@ -9,6 +9,9 @@ function skills:list/offensive/cookie_blaster/tick with entity @s data
 # Freeze breath
 execute if entity @a[tag=freeze_breath.slowed,distance=..128] as @a[tag=freeze_breath.slowed] at @s run function skills:list/offensive/freeze_breath/remove
 
+# Magnetic impulse
+execute if entity @a[tag=magnetic_impulse.immobilized,distance=..128] as @a[tag=magnetic_impulse.immobilized] at @s run function skills:list/utility/magnetic_impulse/remove
+
 # Lightning strike
 execute if entity @e[type=marker,tag=lightning_strike.loading,distance=..128] as @e[type=marker,tag=lightning_strike.loading] at @s run \
     function skills:list/offensive/lightning_strike/tick with entity @s data

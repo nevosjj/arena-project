@@ -26,12 +26,36 @@ data modify storage arenaproject:ability_data skills set value {\
                                                 [{"bold":false,"color":"gold","italic":false,"text":"LEGACY"}],\
                                                 ],\
         },\
+                {\
+            abilityDisplay:"Respiro congelante",\
+            abilityName:"freeze_breath",\
+            abilityType:"offensive",\
+            abilityEffect:"damage",\
+            abilityID:1,\
+            abilityRange:0.0f,\
+            abilityDistance:6f,\
+            abilityPower:125,\
+            abilityPowerDown:80,\
+            abilitySlow:35,\
+            abilityDuration:60,\
+            abilityCost:90,\
+            abilityItem:"minecraft:packed_ice",\
+            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Crea un cono di fronte a te, che danneggia"},\
+                {"bold":false,"color":"gray","italic":false,"text":"e rallenta i nemici coinvolti."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Se il cono attraverso una parete, il danno si riduce."}," ",\
+                            [{"bold":false,"color":"green","italic":false,"text":"Energia: "},{"bold":true,"color":"light_purple","italic":false,"text":"90"}],\
+                                [{"bold":false,"color":"red","italic":false,"text":"Danno: "},{"bold":true,"color":"light_purple","italic":false,"text":"125"}],\
+                                    [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"6"}],\
+                                    [{"bold":false,"color":"yellow","italic":false,"text":"Rallentamento: "},{"bold":true,"color":"light_purple","italic":false,"text":"3s 35%"}],\
+                                    [{"bold":false,"color":"yellow","italic":false,"text":"Danno ridotto: "},{"bold":true,"color":"red","italic":false,"text":"80"}]," ",\
+                                            [{"bold":false,"color":"gold","italic":false,"text":"LEGACY"}]],\
+        },\
         {\
             abilityDisplay:"Colpo folgorante",\
             abilityName:"lightning_strike",\
             abilityType:"offensive",\
             abilityEffect:"damage",\
-            abilityID:1,\
+            abilityID:2,\
             abilityRange:2f,\
             abilityLength:24f,\
             abilityPower:77,\
@@ -52,65 +76,24 @@ data modify storage arenaproject:ability_data skills set value {\
                                 [{"bold":false,"color":"yellow","italic":false,"text":"Immobilizzazione: "},{"bold":true,"color":"light_purple","italic":false,"text":"2s"}]]\
         },\
         {\
-            abilityDisplay:"Trappola creeper",\
-            abilityName:"creeper_trap",\
-            abilityType:"offensive",\
-            abilityEffect:"damage",\
-            abilityID:2,\
-            abilityRange:4f,\
-            abilityPower:80,\
-            abilityCost:40,\
-            abilityItem:"minecraft:creeper_head",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Evoca un piccolo creeper in posizione."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Dopo un breve periodo, si innesca."},\
-                    {"bold":false,"color":"gray","italic":false,"text":"Esplode se ci sono nemici nel raggio."},\
-                    {"bold":false,"color":"gray","italic":false,"text":"Esiste un massimo, permane tra i round."}," ",\
-                        [{"bold":false,"color":"green","italic":false,"text":"Energia: "},{"bold":true,"color":"light_purple","italic":false,"text":"45"}],\
-                            [{"bold":false,"color":"red","italic":false,"text":"Danno: "},{"bold":true,"color":"light_purple","italic":false,"text":"80"}],\
-                                [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"4"}],\
-                                [{"bold":false,"color":"yellow","italic":false,"text":"Limite trappole: "},{"bold":true,"color":"light_purple","italic":false,"text":"3"}],\
-                                    [{"bold":false,"color":"yellow","italic":false,"text":"Innesco: "},{"bold":true,"color":"light_purple","italic":false,"text":"2s"}]],\
-        },\
-        {\
-            abilityDisplay:"Esplosione slime",\
-            abilityName:"slime_explosion",\
+            abilityDisplay:"Sputo d'inchiostro",\
+            abilityName:"ink_spit",\
             abilityType:"offensive",\
             abilityEffect:"damage",\
             abilityID:3,\
-            abilityRange:3f,\
-            abilityPower:90,\
-            abilityCost:75,\
-            abilityItem:"minecraft:slime_ball",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Entro pochi secondi, prepara una esplosione,"},\
-                {"bold":false,"color":"gray","italic":false,"text":"che infligge danno ai nemici nel raggio."}," ",\
-                            [{"bold":false,"color":"green","italic":false,"text":"Energia: "},{"bold":true,"color":"light_purple","italic":false,"text":"75"}],\
-                                [{"bold":false,"color":"red","italic":false,"text":"Danno: "},{"bold":true,"color":"light_purple","italic":false,"text":"90"}],\
-                                    [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"3"}]," ",\
-                                            ]\
-        },\
-        {\
-            abilityDisplay:"Respiro congelante",\
-            abilityName:"freeze_breath",\
-            abilityType:"offensive",\
-            abilityEffect:"damage",\
-            abilityID:4,\
-            abilityRange:0.0f,\
-            abilityDistance:6f,\
-            abilityPower:125,\
-            abilityPowerDown:90,\
-            abilitySlow:35,\
-            abilityDuration:60,\
-            abilityCost:90,\
-            abilityItem:"minecraft:packed_ice",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Crea un cono di fronte a te, che danneggia"},\
-                {"bold":false,"color":"gray","italic":false,"text":"e rallenta i nemici coinvolti."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Se il cono attraverso una parete, il danno si riduce."}," ",\
-                            [{"bold":false,"color":"green","italic":false,"text":"Energia: "},{"bold":true,"color":"light_purple","italic":false,"text":"90"}],\
-                                [{"bold":false,"color":"red","italic":false,"text":"Danno: "},{"bold":true,"color":"light_purple","italic":false,"text":"125"}],\
-                                    [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"6"}],\
-                                    [{"bold":false,"color":"yellow","italic":false,"text":"Rallentamento: "},{"bold":true,"color":"light_purple","italic":false,"text":"3s 35%"}],\
-                                    [{"bold":false,"color":"yellow","italic":false,"text":"Danno ridotto: "},{"bold":true,"color":"red","italic":false,"text":"80"}]," ",\
-                                            [{"bold":false,"color":"gold","italic":false,"text":"LEGACY"}],\
+            abilityCost:20,\
+            abilityItem:"minecraft:ink_sac",\
+            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Converti la tua energia in durata abilità."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Sputa inchiostro rapidamente verso la tua direzione,"},\
+                {"bold":false,"color":"gray","italic":false,"text":"se supera una certa durata, il danno aumenta."},\
+                {"bold":false,"color":"gray","italic":false,"text":"La produzione di energia si ferma durante l'uso."},\
+                            [{"bold":false,"color":"green","italic":false,"text":"Energia minima: "},{"bold":true,"color":"light_purple","italic":false,"text":"20"}],\
+                            [{"bold":false,"color":"green","italic":false,"text":"Conversione: "},{"bold":true,"color":"light_purple","italic":false,"text":"1s/20e"}],\
+                                [{"bold":false,"color":"red","italic":false,"text":"Danno: "},{"bold":true,"color":"light_purple","italic":false,"text":"2"}],\
+                                [{"bold":false,"color":"red","italic":false,"text":"Danno potenziato: "},{"bold":true,"color":"light_purple","italic":false,"text":"3"}],\
+                                    [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"4"}],\
+                                    [{"bold":false,"color":"yellow","italic":false,"text":"Potenziamento danno: "},{"bold":true,"color":"light_purple","italic":false,"text":"3s+, proiettili diventano arcobaleni"}],\
+                                    [{"bold":false,"color":"red","italic":false,"text":"Frequenza proiettili: "},{"bold":true,"color":"light_purple","italic":false,"text":"0,15s"}],\
                                             ]\
         }\
     ],\
@@ -131,14 +114,15 @@ data modify storage arenaproject:ability_data skills set value {\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Buff: "},{"bold":true,"color":"light_purple","italic":false,"text":"+25% per 5s"}]],\
         },\
         {\
-            abilityDisplay:"Richiamo del Nautilus",\
-            abilityName:"nautilus_call",\
+            abilityDisplay:"Impulso magnetico",\
+            abilityName:"magnetic_impulse",\
             abilityType:"utility",\
             abilityID:1,\
             abilityCooldown:32,\
             abilityDuration:3,\
             abilityRange:8f,\
-            abilityItem:"minecraft:nautilus_shell",\
+            abilityDuration:60,\
+            abilityItem:"minecraft:copper_ingot",\
             abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Attrai i nemici e i potenziamenti nel"},\
                 {"bold":false,"color":"gray","italic":false,"text":"raggio sulla tua posizione, immobilizza i nemici."}," ",\
                             [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"32s"}],\
@@ -146,49 +130,69 @@ data modify storage arenaproject:ability_data skills set value {\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"8"}]],\
         },\
         {\
-            abilityDisplay:"Pugno del Golem",\
-            abilityName:"golem_punch",\
+            abilityDisplay:"Scambio",\
+            abilityName:"swap",\
             abilityType:"utility",\
             abilityID:2,\
-            abilityCooldown:25,\
-            abilityDuration:3,\
-            abilityKnockback: 4.0,\
-            abilityAttackBuff:10,\
-            abilityItem:"minecraft:iron_golem_spawn_egg",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Per una breve durata, il tuo prossimo"},\
-                {"bold":false,"color":"gray","italic":false,"text":"attacco sul bersaglio è potenziato."}," ",\
-                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"25s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"3s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Attacco potenziato: "}],\
-                                [{"bold":false,"color":"gold","italic":false,"text":"    > +10 attacco, "}],\
-                                [{"bold":false,"color":"gold","italic":false,"text":"    > 4x contraccolpo, "}],\
-                                [{"bold":false,"color":"gold","italic":false,"text":"    > -30% velocità di movimento per 5s."}]]\
+            abilityCooldown:45,\
+            abilityItem:"minecraft:repeater",\
+            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Bersaglia un nemico nella tua direzione."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Dopo un breve ritardo, vi scambiate di posizione."}," ",\
+                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"45s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Ritardo: "},{"bold":true,"color":"light_purple","italic":false,"text":"3s"}]],\
         },\
         {\
-            abilityDisplay:"Onda sismica",\
-            abilityName:"seismic_wave",\
+            abilityDisplay:"Ragnatele",\
+            abilityName:"cobwebs",\
             abilityType:"utility",\
             abilityID:3,\
-            abilityCooldown: 15,\
-            abilityDuration: 3,\
-            abilityKnockback: 4.0,\
-            abilityAttackBuff: 40,\
-            abilityItem:"minecraft:dripstone_block",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Scatena un'onda sismica di fronte a te."},\
-                {"bold":false,"color":"gray","italic":false,"text":"I nemici coinvolti verranno storditi"},\
-                {"bold":false,"color":"gray","italic":false,"text":"per una breve durata."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Distrugge gli edifici istantaneamente."}," ",\
-                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"32s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata stordimento: "},{"bold":true,"color":"light_purple","italic":false,"text":"2s"}],\
+            abilityCooldown: 30,\
+            abilityItem:"minecraft:cobweb",\
+            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Spara di fronte a te delle ragnatele."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Creano un'area per un breve periodo che stordiscono."},\
+                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"30s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Velocità proiettili: "},{"bold":true,"color":"light_purple","italic":false,"text":"6"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Raggio area: "},{"bold":true,"color":"light_purple","italic":false,"text":"3"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata area: "},{"bold":true,"color":"light_purple","italic":false,"text":"9s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata stordimento: "},{"bold":true,"color":"light_purple","italic":false,"text":"2s"}]],\
+        },\
+        {\
+            abilityDisplay:"Tornado",\
+            abilityName:"tornado",\
+            abilityType:"utility",\
+            abilityID:4,\
+            abilityCooldown: 35,\
+            abilityItem:"minecraft:wind_charge",\
+            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Evoca un tornado nell'area."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Intrappola e rallenta i nemici coinvolti."},\
+                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"35s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"6s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Rallentamento: "},{"bold":true,"color":"light_purple","italic":false,"text":"25%"}],\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"8 blocchi"}]]\
         },\
     ],\
     support: [\
         {\
+            abilityDisplay:"Mela dorata",\
+            abilityName:"golden_apple",\
+            abilityType:"support",\
+            abilityID:0,\
+            abilityEffect:"heal",\
+            abilityPower:200,\
+            abilityCooldown:18,\
+            abilityItem:"minecraft:golden_apple",\
+            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Rigeneri un quantitativo di vita."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Ogni danno ricevuto ne dimezza la quantità."}," ",\
+                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"18s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Velocità: "},{"bold":true,"color":"light_purple","italic":false,"text":"5/0,2s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Riduzione: "},{"bold":true,"color":"light_purple","italic":false,"text":"-10 a colpo"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Cura: "},{"bold":true,"color":"light_purple","italic":false,"text":"200"}]],\
+        },\
+        {\
             abilityDisplay:"Scudo osseo",\
             abilityName:"bone_shield",\
             abilityType:"support",\
-            abilityID:0,\
+            abilityID:1,\
             abilityCount:5,\
             abilityPower:50,\
             abilityDuration:80,\
@@ -202,25 +206,21 @@ data modify storage arenaproject:ability_data skills set value {\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"4s"}]],\
         },\
         {\
-            abilityDisplay:"Albero vitale",\
-            abilityName:"life_tree",\
+            abilityDisplay:"Catena vampirica",\
+            abilityName:"vampiric_chain",\
             abilityType:"support",\
-            abilityID:1,\
+            abilityID:2,\
             abilityEffect:"heal",\
-            abilityRange:5f,\
-            abilityPower:20,\
+            abilityRange:6f,\
+            abilityPower:12,\
             abilityCooldown:40,\
             abilityItem:"minecraft:oak_sapling",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Pianta un germoglio in posizione."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Cresce nel tempo, curando nel raggio."},\
-                    {"bold":false,"color":"gray","italic":false,"text":"Alla fine della crescita, dà una cura finale."},\
-                    {"bold":false,"color":"gray","italic":false,"text":"Può essere distrutto dai nemici."}," ",\
+            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Concatena te ed il nemico più vicino."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Ti curi di una percentuale del danno arrecato."},\
+                    {"bold":false,"color":"gray","italic":false,"text":"Se il nemico esce dal raggio, la catena si spezza."},\
                             [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"40s"}],\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"6"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata crescita: "},{"bold":true,"color":"light_purple","italic":false,"text":"12s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Cura al secondo: "},{"bold":true,"color":"light_purple","italic":false,"text":"20"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Cura finale: "},{"bold":true,"color":"light_purple","italic":false,"text":"400"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Salute: "},{"bold":true,"color":"light_purple","italic":false,"text":"300"}]],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Percentuale cura: "},{"bold":true,"color":"light_purple","italic":false,"text":"12%"}]],\
         },\
         {\
             abilityDisplay:"Melodia del potere",\
@@ -235,25 +235,9 @@ data modify storage arenaproject:ability_data skills set value {\
                             [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"27s"}],\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"7s"}],\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Potenziamento: "}],\
-                                [{"bold":false,"color":"gold","italic":false,"text":"    > +20% difesa corpo a corpo,"}],\
-                                [{"bold":false,"color":"gold","italic":false,"text":"    > +10 cure per attacco base;"}],\
-                                [{"bold":false,"color":"gold","italic":false,"text":"    > +1 Esperienza per colpo."}]]\
-        },\
-        {\
-            abilityDisplay:"Benedizione di miele",\
-            abilityName:"honey_blessing",\
-            abilityType:"support",\
-            abilityID:3,\
-            abilityEffect:"heal",\
-            abilityPower:300,\
-            abilityCooldown:18,\
-            abilityRange:5,\
-            abilityItem:"minecraft:honey_bottle",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Cura gli alleati nel raggio"},\
-                {"bold":false,"color":"gray","italic":false,"text":"e ti liberi dei debuff."}," ",\
-                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"18s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"5"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Cura: "},{"bold":true,"color":"light_purple","italic":false,"text":"300"}]],\
+                                [{"bold":false,"color":"gold","italic":false,"text":"    > +20% difesa corpo a corpo"}],\
+                                [{"bold":false,"color":"gold","italic":false,"text":"    > 1.2x velocità generazione energia"}],\
+                                [{"bold":false,"color":"gold","italic":false,"text":"    > +1 energia per colpo"}]]\
         }\
     ],\
     ultimate: [\
@@ -267,7 +251,7 @@ data modify storage arenaproject:ability_data skills set value {\
             abilityCooldown:85,\
             abilityDuration:12,\
             abilityHealth:8,\
-            abilityItem:"minecraft:red_mushroom_block",\
+            abilityItem:"minecraft:brown_mushroom",\
             abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Pianta un fungo in posizione."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Cresce nel tempo, danneggiando nel raggio."},\
                     {"bold":false,"color":"gray","italic":false,"text":"Alla fine della crescita, esplode."},\
@@ -280,50 +264,17 @@ data modify storage arenaproject:ability_data skills set value {\
                             [{"bold":false,"color":"yellow","italic":false,"text":"Salute: "},{"bold":true,"color":"light_purple","italic":false,"text":"500"}]],\
         },\
         {\
-            abilityDisplay:"Singolarità",\
-            abilityName:"singularity",\
-            abilityType:"ultimate",\
-            abilityID:1,\
-            abilityPower:50,\
-            damage_boom:300,\
-            abilityCooldown:65,\
-            abilityDuration:12,\
-            abilityHealth:8,\
-            abilityItem:"minecraft:end_crystal",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Crea un buco nero che impedisce"},\
-                    {"bold":false,"color":"gray","italic":false,"text":"l'uso di abilità e il movimento dei nemici"},\
-                        {"bold":false,"color":"gray","italic":false,"text":"nel raggio per una breve durata."}," ",\
-                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"65s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"5"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"5s"}]],\
-        }\
-        ,\
-        {\
-            abilityDisplay:"Tornado",\
-            abilityName:"tornado",\
-            abilityType:"ultimate",\
-            abilityID:2,\
-            abilityItem:"minecraft:wind_charge",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Evoca un tornado che intrappola"},\
-                    {"bold":false,"color":"gray","italic":false,"text":"i nemici nella zona e nega la rigenerazione"},\
-                        {"bold":false,"color":"gray","italic":false,"text":"di energia nel raggio."}," ",\
-                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"65s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"8"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"9s"}]],\
-        }\
-        ,\
-        {\
             abilityDisplay:"Incantamento",\
             abilityName:"enchantment",\
             abilityType:"ultimate",\
-            abilityID:3,\
-            abilityItem:"minecraft:book",\
-            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Incanta il tuo intero equipaggiamento."},\
-                    {"bold":false,"color":"gray","italic":false,"text":"i nemici nella zona e nega la rigenerazione"},\
-                        {"bold":false,"color":"gray","italic":false,"text":"di energia nel raggio."}," ",\
-                            [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"65s"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Raggio: "},{"bold":true,"color":"light_purple","italic":false,"text":"8"}],\
-                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"9s"}]],\
+            abilityID:1,\
+            abilityItem:"minecraft:enchanting_table",\
+            abilityLore: [{"bold":false,"color":"gray","italic":false,"text":"Amplifica le proprietà"},\
+                    {"bold":false,"color":"gray","italic":false,"text":"delle tue abilità."},\
+                            [{"bold":false,"color":"green","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"20s"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Raggio abilità: "},{"bold":true,"color":"light_purple","italic":false,"text":"+20%"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Durata abilità: "},{"bold":true,"color":"light_purple","italic":false,"text":"+20%"}],\
+                            [{"bold":false,"color":"yellow","italic":false,"text":"Velocità proiettili: "},{"bold":true,"color":"light_purple","italic":false,"text":"+20%"}]],\
         }\
     ]\
 }

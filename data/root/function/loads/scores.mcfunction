@@ -97,6 +97,7 @@ scoreboard objectives add counter.selection dummy
 # Sensibili alle abilità
 scoreboard objectives add freeze_breath.counter dummy
 scoreboard objectives add lightning_strike.counter dummy
+scoreboard objectives add magnetic_impulse.counter dummy
 
 # Impostazioni
 scoreboard objectives modify stat.current_health numberformat styled {"color":"#57f727","bold":false}
