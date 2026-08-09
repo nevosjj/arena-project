@@ -1,5 +1,2 @@
 # Creazione temp
-data modify storage arenaproject:ability_data temporary set from storage arenaproject:ability_data skills.utility
-
-# Assegnazione score
-scoreboard players set @s selection.skill.type 1
+data modify storage arenaproject:selection temporary.skills set from storage ability_data:utility skills

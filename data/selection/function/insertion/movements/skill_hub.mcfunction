@@ -1,0 +1,8 @@
+# Vetro
+execute at @s run function selection:insertion/minecart/glass
+
+# Oggetti
+data modify entity @e[type=chest_minecart,tag=selection_minecart,limit=1,sort=nearest,distance=..2] Items append value {Slot:10b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_data":{select_offensive:true,select_item:true},"minecraft:item_model":"minecraft:iron_axe","minecraft:custom_name":{"bold":true,"color":"red","italic":false,"text":"Abilità offensive"}}}
+data modify entity @e[type=chest_minecart,tag=selection_minecart,limit=1,sort=nearest,distance=..2] Items append value {Slot:12b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_data":{select_utility:true,select_item:true},"minecraft:item_model":"minecraft:redstone","minecraft:custom_name":{"bold":true,"color":"yellow","italic":false,"text":"Abilità utilità"}}}
+data modify entity @e[type=chest_minecart,tag=selection_minecart,limit=1,sort=nearest,distance=..2] Items append value {Slot:14b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_data":{select_support:true,select_item:true},"minecraft:item_model":"minecraft:golden_carrot","minecraft:custom_name":{"bold":true,"color":"green","italic":false,"text":"Abilità di supporto"}}}
+data modify entity @e[type=chest_minecart,tag=selection_minecart,limit=1,sort=nearest,distance=..2] Items append value {Slot:16b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_data":{select_ultimate:true,select_item:true},"minecraft:item_model":"minecraft:diamond","minecraft:custom_name":{"bold":true,"color":"gold","italic":false,"text":"Abilità ultimate"}}}

@@ -1,4 +1,4 @@
-data modify storage arenaproject:ability_data skills.utility set value [\
+data modify storage ability_data:utility skills set value [\
     {\
         meta: {\
             abilityName:"end_teleport",\
@@ -13,8 +13,7 @@ data modify storage arenaproject:ability_data skills.utility set value [\
             name:"Teletrasporto dell'End",\
             item:"minecraft:ender_pearl",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Teletrasporto frontale che si ferma"},\
-                {"bold":false,"color":"gray","italic":false,"text":"davanti a blocchi solidi."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Ottieni velocità movimento extra."}," ",\
+                {"bold":false,"color":"gray","italic":false,"text":"davanti a blocchi solidi."}," ",\
                 [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"20s"}],\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"9"}],\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Buff: "},{"bold":true,"color":"light_purple","italic":false,"text":"+25% per 5s"}]]\
@@ -93,7 +92,7 @@ data modify storage arenaproject:ability_data skills.utility set value [\
             abilityEffect:"damage"\
         },\
         technical: {\
-            cooldown:35,\
+            cooldown:42,\
             duration:200,\
             damage:10,\
             range:8\

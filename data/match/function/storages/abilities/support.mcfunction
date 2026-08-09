@@ -1,4 +1,4 @@
-data modify storage arenaproject:ability_data skills.support set value [\
+data modify storage ability_data:support skills set value [\
     {\
         meta: {\
             abilityName:"golden_apple",\
@@ -56,7 +56,7 @@ data modify storage arenaproject:ability_data skills.support set value [\
         },\
         display: {\
             name:"Catena vampirica",\
-            item:"minecraft:oak_sapling",\
+            item:"minecraft:ghast_tear",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Concatena te ed il nemico più vicino."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Ti curi di una percentuale del danno arrecato."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Se il nemico esce dal raggio, la catena si spezza."},\

@@ -1,4 +1,4 @@
-data modify storage arenaproject:ability_data skills.ultimate set value [\
+data modify storage ability_data:ultimate skills set value [\
     {\
         meta: {\
             abilityName:"doom_shroom",\
