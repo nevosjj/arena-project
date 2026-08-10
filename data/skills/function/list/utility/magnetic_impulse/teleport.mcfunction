@@ -1,5 +1,5 @@
 # Tag di sicurezza
-$tag @a[tag=!magnetic_player,distance=..$(abilityRange)] add magnetic_tag$(ID)
+$tag @a[tag=!magnetic_player,distance=..$(range)] add magnetic_tag$(ID)
 
 # Teletrasporto
 $execute at @s run tp @a[tag=magnetic_tag$(ID)] @s

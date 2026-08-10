@@ -1,9 +1,9 @@
 # Ottenimento gittata ed impostazione moltiplicazione
-execute store result score @s temp run data get entity @s data.abilityDistance
+execute store result score @s temp run data get entity @s data.distance
 
 # Operazione (ablityRange * 20, se è a 6 allora sarà 120;
 # +5 per aggiungere quel piccolo di range per non mandare in brodo di giuggiole i giocatori quando vedono che la spirale li ha colpiti oltre il range)
-# In questo modo, ogni abilityDistance equivale a 1 blocco nella f(x) ricorsiva.
+# In questo modo, ogni distance equivale a 1 blocco nella f(x) ricorsiva.
 scoreboard players set @s temp2 25
 scoreboard players operation @s temp *= @s temp2
 

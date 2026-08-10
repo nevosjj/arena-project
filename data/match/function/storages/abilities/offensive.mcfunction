@@ -11,7 +11,6 @@ data modify storage ability_data:offensive skills set value [\
             power:9,\
             distance:9,\
             motion:17,\
-            duration:0\
         },\
         display: {\
             name:"Spara Biscotto",\

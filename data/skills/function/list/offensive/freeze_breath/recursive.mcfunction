@@ -8,10 +8,10 @@
 # Questo decide
     # 1. quando muore il marker
     # 2. a quale distanza deve stare ogni singola la particella per l'evocazione.
-    # 3. "abilityRange" serve a determinare il range dove trova il nemico.
+    # 3. "range" serve a determinare il range dove trova il nemico.
 scoreboard players add @s temp3 1
 execute store result entity @s data.particleDistance float 0.0175 run scoreboard players get @s temp3
-execute store result entity @s data.abilityRange float 0.025 run scoreboard players get @s temp3
+execute store result entity @s data.range float 0.025 run scoreboard players get @s temp3
 
 # Particella
     # Evocazione particella con la distanza decisa.
@@ -22,9 +22,9 @@ $particle minecraft:dust_color_transition{from_color:[0.15,0.1,0.45],to_color:[0
 execute unless entity @s[tag=breath.blocked] unless block ~ ~ ~ air run function skills:list/offensive/freeze_breath/block_reduction
 
 # Identificazione nemico
-$execute as @a[distance=..$(abilityRange)] unless entity @s[tag=freeze_breath_$(ID).victim] run \
+$execute as @a[distance=..$(range)] unless entity @s[tag=freeze_breath_$(ID).victim] run \
     function skills:auxiliary/search_damage \
-        with entity @e[type=marker,distance=..$(abilityRange),limit=1,sort=nearest,tag=freeze_breath.marker] data
+        with entity @e[type=marker,distance=..$(range),limit=1,sort=nearest,tag=freeze_breath.marker] data
 
 # Teletrasporto
     # Questo decide quanta distanza deve percorrere ogni ricorsione e quanto deve ruotare ogni metà della spirale.

@@ -7,7 +7,7 @@ playsound minecraft:block.bubble_column.whirlpool_inside voice @s ~ ~ ~ 2 0.7
 # distanceOrigin è unico di magnetic_impulse
 scoreboard players set @s temp 100
 data modify entity @s data.scale set value 100
-data modify entity @s data.distanceOrigin set from entity @e[type=marker,distance=..3,limit=1,sort=nearest,tag=magnetic_impulse.marker] data.abilityRange
+data modify entity @s data.distanceOrigin set from entity @e[type=marker,distance=..3,limit=1,sort=nearest,tag=magnetic_impulse.marker] data.range
 data modify entity @s data.distance set from entity @s data.distanceOrigin
 tp @s ~ ~3 ~
 # Chiamata funzione visual
