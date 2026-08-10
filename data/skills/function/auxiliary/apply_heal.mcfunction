@@ -1,5 +1,5 @@
 # Applicazione danno
-$scoreboard players add @s incoming_heal $(abilityPower)
+$scoreboard players add @s incoming_heal $(power)
 
 # Inserimento origine danno (giocatore)
 $function health:incoming_heal with entity @e[tag=$(abilityName).finder,distance=..$(range),sort=nearest,limit=1] data

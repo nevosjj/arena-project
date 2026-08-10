@@ -10,5 +10,5 @@ $tp @s ~ ~ ~ ~$(boneDegrees) ~
 scoreboard players operation @s temp3 += @s temp2
 execute store result entity @s data.boneDegreesRot int 1.0 run scoreboard players get @s temp3
 
-$execute if score @s temp matches $(abilityCount).. run return run function skills:list/support/bone_shield/end with entity @s data
-$execute if score @s temp matches ..$(abilityCount) at @s run return run function skills:list/support/bone_shield/recursion with entity @s data
+$execute if score @s temp matches $(count).. run return run function skills:list/support/bone_shield/end with entity @s data
+$execute if score @s temp matches ..$(count) at @s run return run function skills:list/support/bone_shield/recursion with entity @s data

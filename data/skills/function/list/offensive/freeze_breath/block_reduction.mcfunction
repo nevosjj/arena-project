@@ -1,2 +1,2 @@
-data modify entity @s data.abilityPower set from entity @s data.abilityPowerDown
+data modify entity @s data.power set from entity @s data.powerDown
 tag @s add breath.blocked

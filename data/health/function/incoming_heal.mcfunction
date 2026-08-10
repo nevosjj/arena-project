@@ -19,7 +19,7 @@ $execute if score @s incoming_heal matches 1.. run \
     {"text":"+","color":"green","bold":false},\
     {"score":{objective:"incoming_heal","name":"@s"},"color":"dark_green","bold":false},\
     {"text":" da ","color":"dark_aqua","bold":false},\
-    {"text":"$(abilityDisplay) ","color":"white","bold":false},\
+    {"text":"$(name) ","color":"white","bold":false},\
     {"text":" di ","color":"dark_aqua","bold":false},\
     {"text":"$(playerName)","color":"aqua","bold":false},\
     {"text":"!","color":"dark_aqua","bold":false},\

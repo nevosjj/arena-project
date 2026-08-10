@@ -4,5 +4,5 @@
 ############
 
 # Ricerca 
-execute as @e[type=marker,tag=honey_blessing.marker,distance=..2,sort=nearest,limit=1] at @s \
+execute as @e[type=marker,tag=golden_apple.marker,distance=..2,sort=nearest,limit=1] at @s \
     run function skills:list/support/golden_apple/marker with entity @s data

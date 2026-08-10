@@ -1,16 +1,16 @@
 # Ottenimento gradi circonferenza
-$scoreboard players set @s temp $(abilityCount)
+$scoreboard players set @s temp $(count)
 scoreboard players set @s temp2 360
 scoreboard players operation @s temp2 /= @s temp
 
 # Inserimento score scudo.
-$scoreboard players set @p counter.support $(abilityCount)
+$scoreboard players set @p counter.support $(count)
 
 # Inserimento difesa.
-$scoreboard players set @p stat.defense $(abilityPower)
+$scoreboard players set @p stat.defense $(power)
 
 # Inserimento durata.
-$scoreboard players set @p duration.support $(abilityDuration)
+$scoreboard players set @p duration.support $(duration)
 
 # Tag macro al giocatore per capire chi possiede lo scudo
 function skills:auxiliary/set_owner with entity @s data
