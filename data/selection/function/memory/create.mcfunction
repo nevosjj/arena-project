@@ -5,9 +5,7 @@ data remove storage arenaproject:game_memory temporary
 execute store result score @s ID store result storage arenaproject:game_memory temporary.ID int 1 run scoreboard players add #memory ID 1
 
 # Inizializza abilità
-data modify storage arenaproject:game_memory temporary.skills set value [\
-    {},{},{},{}\
-]
+data modify storage arenaproject:game_memory temporary.skills set value {offensive:{},support:{},utility:{},ultimate:{}}
 
 # Prendi il nome dell'utente (usando un item rinominato nell'enderchest
 loot replace entity @s enderchest.0 loot skills:player_name

@@ -5,8 +5,7 @@ item replace entity @s enderchest.0 from entity @s player.cursor
 data modify storage arenaproject:game_memory temporary.skill_id set from entity @s EnderItems[{Slot:0b}].components."minecraft:custom_data".item_skill_id
 # Leggi il Type (stringa offensive/utility/support/ultimate)
 data modify storage arenaproject:game_memory temporary.skill_type_str set from entity @s EnderItems[{Slot:0b}].components."minecraft:custom_data".item_skill_type
-# Leggi il Type (numerico) abilità e conservalo nella temp (lo score è stato ottenuto precedentemente dall'inserimento item in scorrimento da selection/insertion/init/tipo
-execute store result storage arenaproject:game_memory temporary.skill_type_num int 1 run scoreboard players get @s selection.skill.type
+
 # Metti ID GIOCATORE nella temp
 execute store result storage arenaproject:game_memory temporary.ID int 1 run scoreboard players get @s ID
 
@@ -22,3 +21,5 @@ function selection:insertion/movements/go_back
 
 # Chiama la funzione di ricerca skill con le macro appena ottenute per selezionare l'abilità giusta
 function selection:insertion/select/macro with storage arenaproject:game_memory temporary
+
+say a

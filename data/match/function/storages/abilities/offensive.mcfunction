@@ -62,10 +62,10 @@ data modify storage ability_data:offensive skills set value [\
             abilityEffect:"damage"\
         },\
         technical: {\
-            cost:77,\
+            cost:75,\
             range:2f,\
             length:24f,\
-            power:77,\
+            power:80,\
             duration:40,\
             charge:25\
         },\
@@ -108,6 +108,27 @@ data modify storage ability_data:offensive skills set value [\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"4"}],\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Potenziamento danno: "},{"bold":true,"color":"light_purple","italic":false,"text":"3s+, proiettili diventano arcobaleni"}],\
                 [{"bold":false,"color":"red","italic":false,"text":"Frequenza proiettili: "},{"bold":true,"color":"light_purple","italic":false,"text":"0,15s"}]]\
+        }\
+    },\
+    {\
+        meta: {\
+            abilityName:"flame_sword",\
+            abilityType:"offensive",\
+            abilityEffect:"damage"\
+        },\
+        technical: {\
+            cost:80,\
+        },\
+        display: {\
+            name:"Spada di fiamme",\
+            item:"minecraft:blaze_rod",\
+            lore:[{"bold":false,"color":"gray","italic":false,"text":"Avvolgi te e la tua spada in un'aura di fuoco."},\
+                {"bold":false,"color":"gray","italic":false,"text":"I tuoi colpi arrecano danni extra in base alla combo."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Se ricevi un certo numero di colpi corpo a corpo,"},\
+                {"bold":false,"color":"gray","italic":false,"text":"l'abilità si interrompe."},\
+                [{"bold":false,"color":"green","italic":false,"text":"Costo: "},{"bold":true,"color":"light_purple","italic":false,"text":"80"}],\
+                [{"bold":false,"color":"green","italic":false,"text":"Danno extra: "},{"bold":true,"color":"light_purple","italic":false,"text":"+1/combo"}],\
+                [{"bold":false,"color":"red","italic":false,"text":"Colpi all'interruzione: "},{"bold":true,"color":"light_purple","italic":false,"text":"3"}]],\
         }\
     }\
 ]
