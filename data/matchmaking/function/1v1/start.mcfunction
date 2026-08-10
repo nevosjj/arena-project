@@ -7,6 +7,17 @@
 tellraw @a[tag=in_game] [{"text":"\n> ","color":"gray","bold":true},{"text":"Partita cominciata.","color":"dark_green","bold":false}]
 execute as @a[tag=in_game] at @s run playsound block.note_block.pling voice @s ~ ~ ~ 1 0.9
 
+# Creazione storage abilità
+function match:storages/abilities/offensive
+function match:storages/abilities/utility
+function match:storages/abilities/support
+function match:storages/abilities/ultimate
+
+# Creazione storage mappa
+
+# Creazione storage match
+
+
 # Gestione interaction in lobby
 tag @e[type=interaction,tag=matchmaking.1v1] add can_spectate
 

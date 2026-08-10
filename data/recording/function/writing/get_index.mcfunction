@@ -17,7 +17,7 @@ execute store result storage match_recorder:data actual_match.index int 1.0 run 
 scoreboard players add #match_index temp 1
 
 # Se 17 (7) o più, torna a 10 (0)
-execute if score #match_index temp matches 17.. run scoreboard players set @s temp 10
+execute if score #match_index temp matches 17.. run scoreboard players set #match_index temp 10
 
 # Ottieni indice dell'array dello storage della match_list della lobby (-10)
 scoreboard players operation #match_index temp2 = #match_index temp

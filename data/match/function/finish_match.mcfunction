@@ -64,5 +64,10 @@ data remove storage arenaproject:map_data temporary
 data remove storage arenaproject:game_memory players
 data remove storage arenaproject:game_memory temp
 
+data remove storage ability_data:offensive skills
+data remove storage ability_data:support skills
+data remove storage ability_data:utility skills
+data remove storage ability_data:ultimate skills
+
 # Score resettati
 scoreboard players reset @a
