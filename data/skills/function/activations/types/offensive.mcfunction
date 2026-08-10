@@ -20,7 +20,6 @@ execute store result storage arenaproject:game_memory temporary.activation.abili
 function experience:remove with storage arenaproject:game_memory temporary.activation
 
 # Inserimento tipo
-data modify storage arenaproject:game_memory temporary.activation.skillTYPE_num set value 0
 data modify storage arenaproject:game_memory temporary.activation.skillTYPE_txt set value "offensive"
 
 # Chiamata di funzione

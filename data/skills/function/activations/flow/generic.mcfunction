@@ -14,7 +14,7 @@ execute store result storage arenaproject:game_memory temporary.activation.teamI
 # Inserimento nome giocatore dell'abilità
 function skills:activations/flow/player_name
 
-# Ricerca skillID del giocatore.
+# Ricerca skillIndex dell'abilità dal dynamicIndex del giocatore
 function skills:activations/flow/search_id with storage arenaproject:game_memory temporary.activation
 
 # Chiama la funzione di ricerca abilità tramite le informazioni appena acquisite

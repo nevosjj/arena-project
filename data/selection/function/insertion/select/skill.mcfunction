@@ -21,5 +21,3 @@ function selection:insertion/movements/go_back
 
 # Chiama la funzione di ricerca skill con le macro appena ottenute per selezionare l'abilità giusta
 function selection:insertion/select/macro with storage arenaproject:game_memory temporary
-
-say a
