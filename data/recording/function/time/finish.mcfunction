@@ -1,6 +1,5 @@
 # Valuta il match.duration rimanente a secondi
 
-say belin finito
 scoreboard players operation #match match.seconds = #match match.duration
 
 # Immagazzina nello storage nel recorder

@@ -1,12 +1,13 @@
 title @s actionbar \
-    [{"bold":false,"color":"red","italic":false,"shadow_color":-5636096,"text":"♥ "},\
+    [{"atlas":"minecraft:particles","bold":false,"italic":false,"sprite":"heart"}," ",\
     {"color":"dark_green","score":{"name":"@s","objective":"stat.current_health"},"shadow_color":-11184811},\
     {"color":"dark_gray","text":" ("},\
     {"color":"#c47777","score":{"name":"@s","objective":"recent_damage"},"shadow_color":-11184811},\
     {"color":"dark_gray","text":")"} \
-    ," ",{"atlas":"minecraft:items","bold":false,"color":"yellow","italic":false,"sprite":"item/yellow_dye"}," ",\
+    ," ",{"text":"|| ","color":"dark_gray","bold":true},\
+    {"text":"UTIL ","color":"green","bold":true},\
     {"color":"gray","score":{"name":"@s","objective":"cooldown.utility_timer"},"shadow_color":-11184811}," ",\
-    {"atlas":"minecraft:items","bold":false,"color":"green","italic":false,"sprite":"item/green_dye"}," ",\
+    {"text":"SUPP ","color":"green","bold":true},\
     {"color":"gray","score":{"name":"@s","objective":"cooldown.support_timer"},"shadow_color":-11184811}," ",\
-    {"color":"gold","atlas":"minecraft:items","sprite":"item/orange_dye"}," ",\
+    {"text":"ULT ","color":"gold","bold":true},\
     {"color":"gray","score":{"name":"@s","objective":"cooldown.ultimate_timer"},"shadow_color":-11184811}]

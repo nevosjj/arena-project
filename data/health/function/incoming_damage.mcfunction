@@ -13,14 +13,14 @@ execute unless score @s stat.defense matches 0 run function health:halve_damage
 execute if entity @s[tag=skill.bone_shield] run function skills:list/support/bone_shield/marker
 
 # Feedback
-#$execute if score @s ability_damage matches 1.. run \
+$execute if score @s ability_damage matches 1.. run \
     tellraw @s [ \
     {"atlas":"minecraft:gui","sprite":"mob_effect/wither"},\
     {"text":" > ","color":"dark_gray","bold":false},\
     {"text":"-","color":"red","bold":false},\
     {"score":{objective:"incoming_damage","name":"@s"},"color":"dark_red","bold":false},\
     {"text":" da ","color":"gray","bold":false},\
-    {"text":"$(abilityDisplay)"},\
+    {"text":"$(abilitySource)"},\
     {"text":" di ","color":"gray","bold":false},\
     {"text":"$(playerName)"},\
     {"text":"!","color":"gray","bold":false},\
