@@ -1,0 +1,1 @@
+$item replace entity @s hotbar.$(itemIndex) with $(itemDye)[minecraft:item_model="$(itemDisplay)",minecraft:custom_name=[{"text":"$(itemName)","color":"$(itemNameColor)","bold":true,"italic":false}],minecraft:blocks_attacks={},minecraft:custom_data={skill:{$(skillTYPE_txt):1b}}]

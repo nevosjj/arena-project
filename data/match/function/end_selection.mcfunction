@@ -3,7 +3,7 @@ function match:open with storage arenaproject:map_data temporary
 
 # Distribuzione oggetti da combattimento
 clear @a
-item replace entity @a hotbar.0 with blaze_rod[item_model="minecraft:copper_sword",minecraft:blocks_attacks={},attribute_modifiers=[{id:"offensive_sword",type:"attack_damage",amount:0,operation:"add_value"}],minecraft:custom_data={skill:{offensive:1b}}] 1
+item replace entity @a hotbar.0 with blaze_rod[item_model="minecraft:iron_sword",minecraft:blocks_attacks={},attribute_modifiers=[{id:"offensive_sword",type:"attack_damage",amount:0,operation:"add_value"}],minecraft:custom_data={skill:{offensive:1b}},custom_name=[{"text":"Spada offensiva","color":"#d36464","bold":true,"italic":false}]] 1
 item replace entity @a hotbar.1 with yellow_dye[minecraft:blocks_attacks={},minecraft:custom_data={skill:{utility:1b}}]
 item replace entity @a hotbar.2 with green_dye[minecraft:blocks_attacks={},minecraft:custom_data={skill:{support:1b}}]
 item replace entity @a hotbar.3 with orange_dye[minecraft:blocks_attacks={},minecraft:custom_data={skill:{ultimate:1b}}]

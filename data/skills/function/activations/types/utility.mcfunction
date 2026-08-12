@@ -13,9 +13,10 @@ scoreboard players operation @s cooldown.utility_timer = @s cooldown.utility
 tag @s add utility_down
 
 # Inserimento tipo
-# skillTYPE_num serve a cercare l'indice della skill tra i tipi dei players
+# hotbarIndex serve a cercare l'indice dell'abilità nella hotbar per sostituire l'item
 # skillTYPE serve a cercare l'indice del tipo della skill tra la lista abilità
-data modify storage arenaproject:game_memory temporary.activation.skillTYPE_num set value 1
+tag @s add execute_item_removal
+data modify storage arenaproject:game_memory temporary.activation.hotbarIndex set value 1
 data modify storage arenaproject:game_memory temporary.activation.skillTYPE_txt set value "utility"
 
 # Chiamata di funzione

@@ -5,14 +5,11 @@ scoreboard players reset @s cooldown.utility_timer
 # Feedback sonoro
 playsound entity.iron_golem.repair ui @s ~ ~ ~ 10 1.9
 
-# Titolo
-title @s times 3 4 3
-title @s title ""
-title @s subtitle [{"atlas":"minecraft:items","italic":false,"sprite":"item/yellow_dye"},{"atlas":"minecraft:gui","sprite":"container/beacon/confirm"}]
+# Inizializzazione ristorso oggetto e dati temporanei
+data modify storage arenaproject:game_memory temporary.restore merge value {itemIndex:"1",itemDye:"minecraft:yellow_dye",itemNameColor:"yellow",skillTYPE_txt:"utility"}
 
-# Feedback testo
-tellraw @s [\
-    {"atlas":"minecraft:gui","sprite":"icon/checkmark"},\
-    {"text":" >","color":"dark_gray"},\
-    {"text":" Abilità utilità pronta.","color":"gray"},\
-    ]
+# Estrai informazioni abilità
+function skills:restore/macro_call
+
+# Cleanup
+data remove storage arenaproject:game_memory temporary

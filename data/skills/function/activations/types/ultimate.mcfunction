@@ -13,9 +13,10 @@ scoreboard players operation @s cooldown.ultimate_timer = @s cooldown.ultimate
 tag @s add ultimate_down
 
 # Inserimento tipo
-# skillTYPE_num serve a cercare l'indice della skill tra i tipi dei players
+# hotbarIndex serve a cercare l'indice dell'abilità nella hotbar per sostituire l'item
 # skillTYPE serve a cercare l'indice del tipo della skill tra la lista abilità
-data modify storage arenaproject:game_memory temporary.activation.skillTYPE_num set value 3
+tag @s add execute_item_removal
+data modify storage arenaproject:game_memory temporary.activation.hotbarIndex set value 3
 data modify storage arenaproject:game_memory temporary.activation.skillTYPE_txt set value "ultimate"
 # Chiamata di funzione
 function skills:activations/flow/generic

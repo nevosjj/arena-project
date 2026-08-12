@@ -12,7 +12,7 @@ data modify storage ability_data:support skills set value [\
         },\
         display: {\
             name:"Mela dorata",\
-            item:"minecraft:golden_apple",\
+            item:"golden_apple",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Guarisci dei danni a te e agli alleati."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Rimuove i debuff."}," ",\
                 [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"18s"}],\
@@ -34,7 +34,7 @@ data modify storage ability_data:support skills set value [\
         },\
         display: {\
             name:"Scudo osseo",\
-            item:"minecraft:bone",\
+            item:"bone",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Dei teschi ti circondano per una breve durata."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Bloccano di una percentuale i danni in arrivo."}," ",\
                 [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"12s"}],\
@@ -56,7 +56,7 @@ data modify storage ability_data:support skills set value [\
         },\
         display: {\
             name:"Catena vampirica",\
-            item:"minecraft:ghast_tear",\
+            item:"ghast_tear",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Concatena te ed il nemico più vicino."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Ti curi di una percentuale del danno arrecato."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Se il nemico esce dal raggio, la catena si spezza."},\
@@ -77,7 +77,7 @@ data modify storage ability_data:support skills set value [\
         },\
         display: {\
             name:"Melodia del potere",\
-            item:"minecraft:note_block",\
+            item:"note_block",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Ottieni un potenziamento per"},\
                 {"bold":false,"color":"gray","italic":false,"text":"una breve durata."}," ",\
                 [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"27s"}],\

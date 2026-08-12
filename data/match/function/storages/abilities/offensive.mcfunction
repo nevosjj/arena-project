@@ -14,7 +14,7 @@ data modify storage ability_data:offensive skills set value [\
         },\
         display: {\
             name:"Spara Biscotto",\
-            item:"minecraft:cookie",\
+            item:"cookie",\
             lore:[[{"bold":false,"color":"gray","italic":false,"text":"Spara dei biscotti davanti a te."}],\
                 {"bold":false,"color":"gray","italic":false,"text":"Infliggono danni ciascuno."}," ",\
                 [{"bold":false,"color":"green","italic":false,"text":"Energia: "},{"bold":true,"color":"light_purple","italic":false,"text":"35"}],\
@@ -42,7 +42,7 @@ data modify storage ability_data:offensive skills set value [\
         },\
         display: {\
             name:"Respiro congelante",\
-            item:"minecraft:packed_ice",\
+            item:"packed_ice",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Crea un cono di fronte a te, che danneggia"},\
                 {"bold":false,"color":"gray","italic":false,"text":"e rallenta i nemici coinvolti."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Se il cono attraverso una parete, il danno si riduce."}," ",\
@@ -70,7 +70,7 @@ data modify storage ability_data:offensive skills set value [\
         },\
         display: {\
             name:"Colpo folgorante",\
-            item:"minecraft:glowstone_dust",\
+            item:"glowstone_dust",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Lungo la tua linea visiva, evoca"},\
                 {"bold":false,"color":"gray","italic":false,"text":"un fulmine sulla destinazione, che si"},\
                 {"bold":false,"color":"gray","italic":false,"text":"scatena dopo un breve ritardo."},\
@@ -95,7 +95,7 @@ data modify storage ability_data:offensive skills set value [\
         },\
         display: {\
             name:"Sputo d'inchiostro",\
-            item:"minecraft:ink_sac",\
+            item:"ink_sac",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Converti la tua energia in durata abilità."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Sputa inchiostro rapidamente verso la tua direzione,"},\
                 {"bold":false,"color":"gray","italic":false,"text":"se supera una certa durata, il danno aumenta."},\
@@ -120,7 +120,7 @@ data modify storage ability_data:offensive skills set value [\
         },\
         display: {\
             name:"Spada di fiamme",\
-            item:"minecraft:blaze_rod",\
+            item:"blaze_rod",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Avvolgi te e la tua spada in un'aura di fuoco."},\
                 {"bold":false,"color":"gray","italic":false,"text":"I tuoi colpi arrecano danni extra in base alla combo."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Se ricevi un certo numero di colpi corpo a corpo,"},\

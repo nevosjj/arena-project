@@ -15,7 +15,7 @@ data modify storage ability_data:ultimate skills set value [\
         },\
         display: {\
             name:"Fungo Apocalittico",\
-            item:"minecraft:brown_mushroom",\
+            item:"brown_mushroom",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Pianta un fungo in posizione."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Cresce nel tempo, danneggiando nel raggio."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Alla fine della crescita, esplode."},\
@@ -39,7 +39,7 @@ data modify storage ability_data:ultimate skills set value [\
         },\
         display: {\
             name:"Incantamento",\
-            item:"minecraft:enchanting_table",\
+            item:"enchanting_table",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Amplifica le proprietà"},\
                 {"bold":false,"color":"gray","italic":false,"text":"delle tue abilità."},\
                 [{"bold":false,"color":"green","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"20s"}],\

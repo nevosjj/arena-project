@@ -11,7 +11,7 @@ data modify storage ability_data:utility skills set value [\
         },\
         display: {\
             name:"Teletrasporto dell'End",\
-            item:"minecraft:ender_pearl",\
+            item:"ender_pearl",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Teletrasporto frontale che si ferma"},\
                 {"bold":false,"color":"gray","italic":false,"text":"davanti a blocchi solidi."}," ",\
                 [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"20s"}],\
@@ -33,7 +33,7 @@ data modify storage ability_data:utility skills set value [\
         },\
         display: {\
             name:"Impulso magnetico",\
-            item:"minecraft:copper_ingot",\
+            item:"copper_ingot",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Attrai i nemici e i potenziamenti nel"},\
                 {"bold":false,"color":"gray","italic":false,"text":"raggio sulla tua posizione, immobilizza i nemici."}," ",\
                 [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"32s"}],\
@@ -53,7 +53,7 @@ data modify storage ability_data:utility skills set value [\
         },\
         display: {\
             name:"Scambio",\
-            item:"minecraft:repeater",\
+            item:"repeater",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Bersaglia un nemico nella tua direzione."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Dopo un breve ritardo, vi scambiate di posizione."}," ",\
                 [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"45s"}],\
@@ -75,7 +75,7 @@ data modify storage ability_data:utility skills set value [\
         },\
         display: {\
             name:"Ragnatele",\
-            item:"minecraft:cobweb",\
+            item:"cobweb",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Spara di fronte a te delle ragnatele."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Creano un'area per un breve periodo che stordiscono."},\
                 [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"30s"}],\
@@ -99,7 +99,7 @@ data modify storage ability_data:utility skills set value [\
         },\
         display: {\
             name:"Tornado",\
-            item:"minecraft:wind_charge",\
+            item:"wind_charge",\
             lore:[{"bold":false,"color":"gray","italic":false,"text":"Evoca un tornado nell'area."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Avanza lentamente."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Arreca danni ad intervalli."},\

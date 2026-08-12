@@ -5,14 +5,11 @@ scoreboard players reset @s cooldown.ultimate_timer
 # Feedback sonoro
 playsound entity.wither.spawn ui @s ~ ~ ~ 10 1.9
 
-# Titolo
-title @s times 3 4 3
-title @s title ""
-title @s subtitle [{"atlas":"minecraft:items","italic":false,"sprite":"item/orange_dye"},{"atlas":"minecraft:gui","sprite":"container/beacon/confirm"}]
+# Inizializzazione ristorso oggetto e dati temporanei
+data modify storage arenaproject:game_memory temporary.restore merge value {itemIndex:"3",itemDye:"minecraft:orange_dye",itemNameColor:"gold",skillTYPE_txt:"ultimate"}
 
-# Feedback testo
-tellraw @s [\
-    {"atlas":"minecraft:gui","sprite":"icon/checkmark"},\
-    {"text":" >","color":"dark_gray"},\
-    {"text":" Abilità ultimate pronta.","color":"gray"},\
-    ]
+# Estrai informazioni abilità
+function skills:restore/macro_call
+
+# Cleanup
+data remove storage arenaproject:game_memory temporary

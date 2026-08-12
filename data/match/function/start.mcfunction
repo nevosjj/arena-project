@@ -37,5 +37,5 @@ tag @a[tag=in_game] add must_select.support
 tag @a[tag=in_game] add must_select.ultimate
 scoreboard players set @a[tag=in_game] counter.selection 0
 
-# INSERIRE QUA un codice in modo tale che metta un "preset" di abilità, cosi se i giocatori non hanno selezionato
-# almeno hanno delle abilità (coglioni)
+# Inserimento score
+scoreboard players set @a[tag=in_game] recent_damage 0
