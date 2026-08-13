@@ -2,10 +2,14 @@
 ## Called by match/low_timer
 ## Oppure se un giocatore decide di fare un random mix di abilità
 
+# Pulizia
+clear @s
+function selection:insertion/minecart/kill
+
 # Feedback
 tellraw @s [{"text":"AVVERTENZA","color":"red","bold":false}, \
     {"text":" > ","color":"dark_gray","bold":true}, \
-        {"text":" Selezione abilità casuali:","color":"gray","bold":false}]
+        {"text":" Risultati abilità casuali:","color":"gray","bold":false}]
 
 # Offensiva
 data modify storage arenaproject:game_memory temporary.randomSelection.abilityType set value "offensive"

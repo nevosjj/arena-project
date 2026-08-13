@@ -9,6 +9,7 @@ execute if items entity @s player.cursor *[custom_data~{select_offensive:true}] 
 execute if items entity @s player.cursor *[custom_data~{select_utility:true}] run function selection:insertion/types/utility
 execute if items entity @s player.cursor *[custom_data~{select_support:true}] run function selection:insertion/types/support
 execute if items entity @s player.cursor *[custom_data~{select_ultimate:true}] run function selection:insertion/types/ultimate
+execute if items entity @s player.cursor *[custom_data~{select_random_skill:true}] at @s run function selection:insertion/select/random_pick
 
 # Rimozione oggetti precedenti
 item replace entity @s player.cursor with air
