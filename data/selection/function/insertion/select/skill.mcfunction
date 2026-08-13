@@ -1,7 +1,7 @@
 # Sposta l'item dal cursore allo slot 0 dell'Ender Chest
 item replace entity @s enderchest.0 from entity @s player.cursor
 
-# Leggi l'ID dall'item e conservalo nello score (numero da 0 a 3)
+# Leggi l'ID dall'item e conservalo nello score
 data modify storage arenaproject:game_memory temporary.skill_id set from entity @s EnderItems[{Slot:0b}].components."minecraft:custom_data".item_skill_id
 # Leggi il Type (stringa offensive/utility/support/ultimate)
 data modify storage arenaproject:game_memory temporary.skill_type_str set from entity @s EnderItems[{Slot:0b}].components."minecraft:custom_data".item_skill_type

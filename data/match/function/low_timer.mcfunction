@@ -6,7 +6,7 @@ bossbar set match:timer color red
 scoreboard players set #match counter 5
 bossbar set match:timer value 5
 
-# Se c'è almeno un giocatore che NON ha selezionato tutte le abilità, allora metti quelle default (indice 0 per ogni tipo)
+# Se c'è almeno un giocatore che NON ha selezionato tutte le abilità
 execute unless score #match temp = #match player.amount as @a[tag=!done_selecting] run function selection:insertion/select/random_pick
 tag @a remove done_selecting
 

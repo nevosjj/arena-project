@@ -4,7 +4,7 @@ $data modify storage arenaproject:game_memory temporary.skill set from storage a
 # Salva nel player specifico dalla temporanea
 $data modify storage arenaproject:game_memory players[{ID:$(ID)}].skills.$(skill_type_str) set from storage arenaproject:game_memory temporary.skill
 
-# Salva nel player specifico dalla temporanea
+# Salva l'indice dinamico delle abilità
 $data modify storage arenaproject:game_memory players[{ID:$(ID)}].skills.$(skill_type_str).meta.dynamicIndex set from storage arenaproject:game_memory temporary.skill_id
 
 # counter.selection++ e rimozione tag (nel caso sia la prima volta che venga selezionata l'abilità nella partita casuale)
@@ -12,7 +12,8 @@ $scoreboard players add @s[tag=must_select.$(skill_type_str)] counter.selection 
 $tag @s[tag=must_select.$(skill_type_str)] remove must_select.$(skill_type_str)
 
 # SENSIBILE ALLE OFFENSIVE - Costo energia (esperienza)
-execute store result score @s experience_cost run data get storage arenaproject:game_memory temporary.skill.technical.cost
+execute if data storage arenaproject:game_memory temporary.skill.technical.cost \
+ store result score @s experience_cost run data get storage arenaproject:game_memory temporary.skill.technical.cost
 
 # SENSIBILE ALLE UTILITY, SUPPORT E ULTIMATE - Ricarica (secondi)
 $execute store result score @s cooldown.$(skill_type_str) run data get storage arenaproject:game_memory temporary.skill.technical.cooldown

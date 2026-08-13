@@ -7,24 +7,21 @@ tellraw @s [{"text":"AVVERTENZA","color":"red","bold":false}, \
     {"text":" > ","color":"dark_gray","bold":true}, \
         {"text":" Selezione abilità casuali:","color":"gray","bold":false}]
 
-# Metti ID giocatore nella temp
-execute store result storage arenaproject:game_memory temporary.randomSelection.ID int 1 run scoreboard players get @s ID
-
 # Offensiva
 data modify storage arenaproject:game_memory temporary.randomSelection.abilityType set value "offensive"
-execute if entity @s[tag=must_select.offensive] run function selection:insertion/select/random/pick_type with storage arenaproject:game_memory temporary.randomSelection
+execute if entity @s[tag=must_select.offensive] run function selection:insertion/select/random/pick_type
 
 # Utility
 data modify storage arenaproject:game_memory temporary.randomSelection.abilityType set value "utility"
-execute if entity @s[tag=must_select.utility] run function selection:insertion/select/random/pick_type with storage arenaproject:game_memory temporary.randomSelection
+execute if entity @s[tag=must_select.utility] run function selection:insertion/select/random/pick_type
 
 # Support
 data modify storage arenaproject:game_memory temporary.randomSelection.abilityType set value "support"
-execute if entity @s[tag=must_select.support] run function selection:insertion/select/random/pick_type with storage arenaproject:game_memory temporary.randomSelection
+execute if entity @s[tag=must_select.support] run function selection:insertion/select/random/pick_type
 
 # Ultimate
 data modify storage arenaproject:game_memory temporary.randomSelection.abilityType set value "ultimate"
-execute if entity @s[tag=must_select.ultimate] run function selection:insertion/select/random/pick_type with storage arenaproject:game_memory temporary.randomSelection
+execute if entity @s[tag=must_select.ultimate] run function selection:insertion/select/random/pick_type
 
 # Pulizia
 scoreboard players reset #array_dim
