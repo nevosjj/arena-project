@@ -6,6 +6,13 @@ tellraw @a [{"text":"[","color":"dark_gray"},{"text":"Scoreboard","color":"#f5ac
 scoreboard objectives add temp dummy
 scoreboard objectives add temp2 dummy
 scoreboard objectives add temp3 dummy
+scoreboard objectives add temp4 dummy
+scoreboard objectives add temp5 dummy
+scoreboard objectives add temp6 dummy
+scoreboard objectives add temp7 dummy
+scoreboard objectives add temp8 dummy
+scoreboard objectives add temp9 dummy
+scoreboard objectives add temp10 dummy
 
 # Giocatore
 scoreboard objectives add ID dummy
@@ -70,6 +77,9 @@ scoreboard objectives add death dummy
 scoreboard objectives add multiplier dummy
 scoreboard objectives add sound dummy
 scoreboard objectives add range dummy
+scoreboard objectives add iteration dummy
+scoreboard objectives add t dummy
+scoreboard objectives add max_t dummy
 
 # Info partita
 scoreboard objectives add rounds dummy

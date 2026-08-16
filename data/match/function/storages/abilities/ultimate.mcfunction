@@ -7,11 +7,6 @@ data modify storage ability_data:ultimate skills set value [\
         },\
         technical: {\
             cooldown:85,\
-            duration:12,\
-            range:15,\
-            power:50,\
-            damage_boom:300,\
-            health:8\
         },\
         display: {\
             name:"Fungo Apocalittico",\
@@ -35,7 +30,7 @@ data modify storage ability_data:ultimate skills set value [\
             abilityEffect:"buff"\
         },\
         technical: {\
-            duration:400\
+            cooldown:70,\
         },\
         display: {\
             name:"Incantamento",\
@@ -46,6 +41,25 @@ data modify storage ability_data:ultimate skills set value [\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Raggio abilità: "},{"bold":true,"color":"light_purple","italic":false,"text":"+20%"}],\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Durata abilità: "},{"bold":true,"color":"light_purple","italic":false,"text":"+20%"}],\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Velocità proiettili: "},{"bold":true,"color":"light_purple","italic":false,"text":"+20%"}]]\
+        }\
+    },\
+    {\
+        meta: {\
+            abilityName:"steal_chest",\
+            abilityType:"ultimate",\
+            abilityEffect:"buff"\
+        },\
+        technical: {\
+            cooldown:40,\
+        },\
+        display: {\
+            name:"Cassa del furto",\
+            item:"ender_chest",\
+            lore:[{"bold":false,"color":"gray","italic":false,"text":"Copia l'ultima abilità usata"},\
+                {"bold":false,"color":"gray","italic":false,"text":"dal nemico più vicino."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Ha proprietà potenziate."},\
+                [{"bold":false,"color":"green","italic":false,"text":"Carica: "},{"bold":true,"color":"light_purple","italic":false,"text":"40s"}],\
+                [{"bold":false,"color":"yellow","italic":false,"text":"Potenziamento proprietà: "},{"bold":true,"color":"light_purple","italic":false,"text":"+10%"}]],\
         }\
     }\
 ]

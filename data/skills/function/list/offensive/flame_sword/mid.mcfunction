@@ -1,33 +1,29 @@
-scoreboard players set #test temp3 2
+scoreboard players set #flame_sword temp3 2
 
-# P1.X = (P0.X + P2.X) / 2
+# temp.p1.X = (P0.X + temp.p2.X) / 2
+# Le coordinate sono in centesimi di blocco, quindi qui l'unità è 1/100 block
+execute store result score #flame_sword temp run data get storage arenaproject:ability_data temp.p0.x
+execute store result score #flame_sword temp2 run data get storage arenaproject:ability_data temp.p2.x
 
-execute store result score #test temp run data get storage test:curva p0.x 1000
-execute store result score #test temp2 run data get storage test:curva p2.x 1000
+scoreboard players operation #flame_sword temp += #flame_sword temp2
+scoreboard players operation #flame_sword temp /= #flame_sword temp3
 
-scoreboard players operation #test temp += #test temp2
-scoreboard players operation #test temp /= #test temp3
+execute store result storage arenaproject:ability_data temp.p1.x int 1 run scoreboard players get #flame_sword temp
 
-execute store result storage test:curva p1.x double 0.001 run scoreboard players get #test temp
+# temp.p1.Y = (P0.Y + temp.p2.Y) / 2
+execute store result score #flame_sword temp run data get storage arenaproject:ability_data temp.p0.y
+execute store result score #flame_sword temp2 run data get storage arenaproject:ability_data temp.p2.y
 
+scoreboard players operation #flame_sword temp += #flame_sword temp2
+scoreboard players operation #flame_sword temp /= #flame_sword temp3
 
-# P1.Y = (P0.Y + P2.Y) / 2
+execute store result storage arenaproject:ability_data temp.p1.y int 1 run scoreboard players get #flame_sword temp
 
-execute store result score #test temp run data get storage test:curva p0.y 1000
-execute store result score #test temp2 run data get storage test:curva p2.y 1000
+# temp.p1.Z = (P0.Z + temp.p2.Z) / 2
+execute store result score #flame_sword temp run data get storage arenaproject:ability_data temp.p0.z
+execute store result score #flame_sword temp2 run data get storage arenaproject:ability_data temp.p2.z
 
-scoreboard players operation #test temp += #test temp2
-scoreboard players operation #test temp /= #test temp3
+scoreboard players operation #flame_sword temp += #flame_sword temp2
+scoreboard players operation #flame_sword temp /= #flame_sword temp3
 
-execute store result storage test:curva p1.y double 0.001 run scoreboard players get #test temp
-
-
-# P1.Z = (P0.Z + P2.Z) / 2
-
-execute store result score #test temp run data get storage test:curva p0.z 1000
-execute store result score #test temp2 run data get storage test:curva p2.z 1000
-
-scoreboard players operation #test temp += #test temp2
-scoreboard players operation #test temp /= #test temp3
-
-execute store result storage test:curva p1.z double 0.001 run scoreboard players get #test temp
+execute store result storage arenaproject:ability_data temp.p1.z int 1 run scoreboard players get #flame_sword temp
