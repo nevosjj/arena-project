@@ -4,7 +4,6 @@ tellraw @a [{"text":"[","color":"dark_gray"},{"text":"AB PROJECT","color":"red",
 
 function root:loads/gamerules
 function root:loads/scores
-function root:loads/abilities
 function root:loads/match
 function root:loads/maps
 

@@ -18,7 +18,7 @@ data modify storage ability_data:offensive skills set value [\
             lore:[[{"bold":false,"color":"gray","italic":false,"text":"Spara dei biscotti davanti a te."}],\
                 {"bold":false,"color":"gray","italic":false,"text":"Infliggono danni ciascuno."}," ",\
                 [{"bold":false,"color":"green","italic":false,"text":"Energia: "},{"bold":true,"color":"light_purple","italic":false,"text":"35"}],\
-                [{"bold":false,"color":"red","italic":false,"text":"Danno per biscotto: "},{"bold":true,"color":"light_purple","italic":false,"text":"15"}],\
+                [{"bold":false,"color":"red","italic":false,"text":"Danno per biscotto: "},{"bold":true,"color":"light_purple","italic":false,"text":"9"}],\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Biscotti: "},{"bold":true,"color":"light_purple","italic":false,"text":"7"}],\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"9"}],\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Velocità proiettile: "},{"bold":true,"color":"light_purple","italic":false,"text":"17"}]," ",\
@@ -117,17 +117,25 @@ data modify storage ability_data:offensive skills set value [\
         },\
         technical: {\
             cost:80,\
+            duration:40,\
+            hit:2,\
+            range: 3.0,\
         },\
         display: {\
             name:"Spada di fiamme",\
             item:"blaze_rod",\
-            lore:[{"bold":false,"color":"gray","italic":false,"text":"Avvolgi te e la tua spada in un'aura di fuoco."},\
+            lore:[{"bold":false,"color":"gray","italic":false,"text":"L'energia smette di generarsi e aumenta il range d'attacco."},\
                 {"bold":false,"color":"gray","italic":false,"text":"I tuoi colpi arrecano danni extra in base alla combo."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Se ricevi un certo numero di colpi corpo a corpo,"},\
-                {"bold":false,"color":"gray","italic":false,"text":"l'abilità si interrompe."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Si interrompe se ricevi colpi, non attacchi in tempo, "},\
+                {"bold":false,"color":"gray","italic":false,"text":"oppure raggiungi il limite."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Alla fine, ottieni effetti extra in base alla combo."},\
                 [{"bold":false,"color":"green","italic":false,"text":"Costo: "},{"bold":true,"color":"light_purple","italic":false,"text":"80"}],\
+                [{"bold":false,"color":"green","italic":false,"text":"Raggio d'attacco: "},{"bold":true,"color":"light_purple","italic":false,"text":"+10%"}],\
                 [{"bold":false,"color":"green","italic":false,"text":"Danno extra: "},{"bold":true,"color":"light_purple","italic":false,"text":"+1/combo"}],\
-                [{"bold":false,"color":"red","italic":false,"text":"Colpi all'interruzione: "},{"bold":true,"color":"light_purple","italic":false,"text":"3"}]],\
+                [{"bold":false,"color":"green","italic":false,"text":"Limite combo: "},{"bold":true,"color":"light_purple","italic":false,"text":"9"}],\
+                [{"bold":false,"color":"green","italic":false,"text":"Tempo di esaurimento: "},{"bold":true,"color":"light_purple","italic":false,"text":"2s"}],\
+                [{"bold":false,"color":"red","italic":false,"text":"Colpi all'interruzione: "},{"bold":true,"color":"light_purple","italic":false,"text":"2"}],\
+                [{"bold":false,"color":"green","italic":false,"text":"Effetto alla fine: "},{"bold":true,"color":"light_purple","italic":false,"text":"+2 energia/combo"}]],\
         }\
     }\
 ]

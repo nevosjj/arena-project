@@ -4,14 +4,14 @@
 
 # P0 = attaccante
 # Tutti i punti sono salvati in centesimi di blocco: 1.23 => 123
-execute store result storage arenaproject:ability_data temp.p0.x int 100 run data get entity @e[tag=p0,limit=1] Pos[0]
-execute store result storage arenaproject:ability_data temp.p0.y int 100 run data get entity @e[tag=p0,limit=1] Pos[1]
-execute store result storage arenaproject:ability_data temp.p0.z int 100 run data get entity @e[tag=p0,limit=1] Pos[2]
+execute store result storage arenaproject:ability_data temp.p0.x int 100 run data get entity @e[type=player,tag=flame_sword.p0,limit=1] Pos[0]
+execute store result storage arenaproject:ability_data temp.p0.y int 100 run data get entity @e[type=player,tag=flame_sword.p0,limit=1] Pos[1]
+execute store result storage arenaproject:ability_data temp.p0.z int 100 run data get entity @e[type=player,tag=flame_sword.p0,limit=1] Pos[2]
 
 # P2 = vittima
-execute store result storage arenaproject:ability_data temp.p2.x int 100 run data get entity @e[tag=p2,limit=1] Pos[0]
-execute store result storage arenaproject:ability_data temp.p2.y int 100 run data get entity @e[tag=p2,limit=1] Pos[1]
-execute store result storage arenaproject:ability_data temp.p2.z int 100 run data get entity @e[tag=p2,limit=1] Pos[2]
+execute store result storage arenaproject:ability_data temp.p2.x int 100 run data get entity @e[type=player,tag=flame_sword.p2,limit=1] Pos[0]
+execute store result storage arenaproject:ability_data temp.p2.y int 100 run data get entity @e[type=player,tag=flame_sword.p2,limit=1] Pos[1]
+execute store result storage arenaproject:ability_data temp.p2.z int 100 run data get entity @e[type=player,tag=flame_sword.p2,limit=1] Pos[2]
 
 # P1 = punto medio
 function skills:list/offensive/flame_sword/mid

@@ -3,6 +3,9 @@
 # Melee inflitti
 $data modify block 9 -55 39 Items[{Slot:$(playerIndexChest)b}].components."minecraft:lore" append value {"text":"Melee inflitti: ","color":"gray","bold":false,"italic":false,"extra":[{"text":"$(melee_done)","color":"gold"}]}
 
+# Miglior combo
+$data modify block 9 -55 39 Items[{Slot:$(playerIndexChest)b}].components."minecraft:lore" append value {"text":"Miglior combo: ","color":"gray","bold":false,"italic":false,"extra":[{"text":"$(best_combo)","color":"red"}]}
+
 # Cure ricevute
 $data modify block 9 -55 39 Items[{Slot:$(playerIndexChest)b}].components."minecraft:lore" append value {"text":"Cure ricevute: ","color":"gray","bold":false,"italic":false,"extra":[{"text":"$(heal_received)","color":"green"}]}
 

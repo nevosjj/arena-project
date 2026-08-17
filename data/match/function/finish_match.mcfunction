@@ -24,6 +24,10 @@ tag @a remove support_down
 tag @a remove utility_down
 tag @a remove ultimate_down
 tag @a remove freeze_breath.slowed
+tag @a remove magnetic_impulse.immobilized
+tag @a remove flame_sword.energy
+tag @a remove flame_sword.p0
+tag @a remove flame_sword.p2
 scoreboard players reset #match
 scoreboard players reset #memory
 scoreboard players reset #constant.100
@@ -32,8 +36,10 @@ experience set @a 0 levels
 execute as @a[tag=in_game] run attribute @s minecraft:attack_damage base set 0.0
 execute as @a[tag=in_game] run attribute @s minecraft:knockback_resistance base set 1.0
 execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier remove freeze_breath:slow
-execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier remove lightning_strike:jump
+execute as @a[tag=in_game] run attribute @s minecraft:jump_strength modifier remove lightning_strike:jump
 execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier remove lightning_strike:slow
+execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier remove magnetic_impulse:immobilize
+execute as @a[tag=in_game] run attribute @s minecraft:jump_strength modifier remove magnetic_impulse:immobilize
 effect give @a instant_health 1 255 true
 function match:skill_cleanup
 

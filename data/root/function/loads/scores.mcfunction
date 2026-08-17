@@ -48,9 +48,13 @@ scoreboard objectives add experience_cost dummy
 
 # Contatori abilità
 scoreboard objectives add counter.support dummy
+scoreboard objectives add counter.offensive dummy
+scoreboard objectives add counter.offensive2 dummy
 
 # Durata abilità
 scoreboard objectives add duration.support dummy
+scoreboard objectives add duration.offensive dummy
+scoreboard objectives add duration.offensive2 dummy
 
 # Cooldown abilità (Quanto ci mette a ricaricarsi in secondi, per settare i timer delle cooldown)
 scoreboard objectives add cooldown.offensive dummy
@@ -94,6 +98,7 @@ scoreboard objectives add poststat.heal_received dummy
 scoreboard objectives add poststat.melee_inflicted dummy
 scoreboard objectives add poststat.damage_received dummy
 scoreboard objectives add poststat.damage_halved dummy
+scoreboard objectives add poststat.best_combo dummy
 
 # Movimento proiettili
 scoreboard objectives add motion.x1 dummy

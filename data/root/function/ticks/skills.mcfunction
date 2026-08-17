@@ -16,3 +16,6 @@ execute if entity @a[tag=magnetic_impulse.immobilized,distance=..128] as @a[tag=
 execute if entity @e[type=marker,tag=lightning_strike.loading,distance=..128] as @e[type=marker,tag=lightning_strike.loading] at @s run \
     function skills:list/offensive/lightning_strike/tick with entity @s data
 execute if entity @a[tag=lightning_strike.immobilized] as @a[tag=lightning_strike.immobilized] at @s run function skills:list/offensive/lightning_strike/remove
+
+# Flame sword
+execute if entity @e[type=player,limit=1,tag=flame_sword.energy] as @e[type=player,tag=flame_sword.energy] at @s run function skills:list/offensive/flame_sword/tick

@@ -6,6 +6,9 @@ $data modify storage api.nevosjj.lobby:match_list temp.heal_received set from st
 # Danni melee inflitti
 $data modify storage api.nevosjj.lobby:match_list temp.melee_done set from storage api.nevosjj.lobby:match_list elements[$(cursorIndex)].players[$(playerIndex)].stats.melee_done
 
+# Miglior combo
+$data modify storage api.nevosjj.lobby:match_list temp.best_combo set from storage api.nevosjj.lobby:match_list elements[$(cursorIndex)].players[$(playerIndex)].stats.best_combo
+
 # Danni dimezzati
 $data modify storage api.nevosjj.lobby:match_list temp.damage_halved set from storage api.nevosjj.lobby:match_list elements[$(cursorIndex)].players[$(playerIndex)].stats.damage_halved
 
