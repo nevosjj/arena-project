@@ -66,7 +66,7 @@ tag @a remove in_game
 
 # Pulizia degli storage
 data remove storage match_recorder:data actual_match
-data remove storage arenaproject:map_data temporary
+data remove storage map_data:1v1 temporary
 data remove storage arenaproject:game_memory players
 data remove storage arenaproject:game_memory temp
 

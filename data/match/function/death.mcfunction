@@ -12,10 +12,10 @@ item replace entity @a hotbar.4 with chest
 tellraw @a [{"text":"\n> ","color":"red","bold":true},{"text":"è morto: ","color":"gold","bold":false},{selector:"@s","color":"gray","bold":false}]
 
 # Teletrasporto
-function match:teleport with storage arenaproject:map_data temporary
+function match:teleport with storage map_data:1v1 temporary
 
 # Chiusura cancelli
-function match:bars with storage arenaproject:map_data temporary
+function match:bars with storage map_data:1v1 temporary
 
 # Stopwatch apertura cancelli
 stopwatch create match:break

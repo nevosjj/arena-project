@@ -14,9 +14,10 @@ function match:storages/abilities/support
 function match:storages/abilities/ultimate
 
 # Creazione storage mappa
+function matchmaking:storages/maps/1v1
 
-# Creazione storage match
-
+# Creazione storage modalità
+function matchmaking:storages/modes/1v1
 
 # Gestione interaction in lobby
 tag @e[type=interaction,tag=matchmaking.1v1] add can_spectate
@@ -47,8 +48,8 @@ execute as @a[tag=in_game] run attribute @s minecraft:knockback_resistance base 
 # Estrai un indice random in temporary sottoforma di mapIndex
 # Poi estrai le informazioni della mappa giusta utilizzando mapIndex come macro
 # DESTINAZIONE: temporary di map_data
-execute store result storage arenaproject:map_data temporary.mapIndex int 1.0 run random value 0..1
-function matchmaking:1v1/extract_info with storage arenaproject:map_data temporary
+execute store result storage map_data:1v1 temporary.mapIndex int 1.0 run random value 0..1
+function matchmaking:1v1/extract_info with storage map_data:1v1 temporary
 
 # Creazione informazioni partita per il match_recorder
 function recording:new
@@ -58,16 +59,16 @@ function recording:new
 data modify storage match_recorder:data actual_match.type set value "1v1"
 
 # Impostazione condizione di vittoria
-function match:condition with storage arenaproject:map_data temporary
+function match:condition with storage map_data:1v1 temporary
 
 # Piazzamento struttura
-function match:structure with storage arenaproject:map_data temporary
+function match:structure with storage map_data:1v1 temporary
 
 # Teletrasporto
-function match:teleport with storage arenaproject:map_data temporary
+function match:teleport with storage map_data:1v1 temporary
 
 # Cancelli
-function match:bars with storage arenaproject:map_data temporary
+function match:bars with storage map_data:1v1 temporary
 
 # Inizalizzazione funzione di selezione
 function match:start

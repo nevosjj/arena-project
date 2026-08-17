@@ -1,5 +1,5 @@
 # Rimozione cancelli
-function match:open with storage arenaproject:map_data temporary
+function match:open with storage map_data:1v1 temporary
 
 # Distribuzione oggetti da combattimento
 clear @a
