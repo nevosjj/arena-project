@@ -18,6 +18,9 @@ scoreboard objectives add temp10 dummy
 scoreboard objectives add ID dummy
 scoreboard objectives add teamID dummy
 
+# Display di lato
+scoreboard objectives add game_display dummy [{"text":"Arena Project","color":"#eee094"}]
+
 # Selezione abilità
 scoreboard objectives add selection.skill.type dummy
 scoreboard objectives add selection.skill.id dummy

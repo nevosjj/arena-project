@@ -13,12 +13,13 @@ fill 39 -14 48 142 -40 -42 air
 tag @e[type=interaction,tag=matchmaking.1v1] remove can_spectate
 
 ## PULIZIA
-scoreboard objectives setdisplay below_name
+scoreboard objectives setdisplay sidebar
 clear @a
 stopwatch remove match:break
 stopwatch remove match:sound
 stopwatch remove match:overtime
 kill @e[type=marker]
+team leave @a[tag=in_game]
 tag @a remove energy.activated
 tag @a remove support_down
 tag @a remove utility_down
@@ -42,6 +43,9 @@ execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier re
 execute as @a[tag=in_game] run attribute @s minecraft:jump_strength modifier remove magnetic_impulse:immobilize
 effect give @a instant_health 1 255 true
 function match:skill_cleanup
+
+# togli actionbar subito
+title @a[tag=in_game] actionbar ""
 
 ## REGISTRAZIONE PARTITA
 
@@ -67,6 +71,8 @@ tag @a remove in_game
 # Pulizia degli storage
 data remove storage match_recorder:data actual_match
 data remove storage map_data:1v1 temporary
+data remove storage map_data:1v1 list
+data remove storage match_data:1v1 list
 data remove storage arenaproject:game_memory players
 data remove storage arenaproject:game_memory temp
 

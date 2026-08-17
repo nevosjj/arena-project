@@ -42,6 +42,9 @@ scoreboard players set @s recent_damage.timer 1
 # Accumula danni ricevuti 
 scoreboard players operation @s poststat.damage_received += @s incoming_damage
 
+# Aggiornamento sidebar
+function match:display/update
+
 # Aggiornamento actionbar
 function health:actionbar
 

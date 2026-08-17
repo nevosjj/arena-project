@@ -35,8 +35,8 @@ bossbar set match:timer visible true
 # Rimozione overtime
 stopwatch remove match:overtime
 
-# Cleanup eventuale
-function match:cleanup
+# Cleanup eventuale di skill
+function match:skill_cleanup
 
 # Reset
 scoreboard players reset #match multiplier

@@ -23,6 +23,18 @@ bossbar set match:timer players @a[tag=in_game]
 bossbar set match:timer value 30
 bossbar set match:timer visible true
 
+# Sidebar
+function match:display/setup
+function match:display/update
+
+# Team
+team add in_game "In gioco"
+team modify in_game collisionRule never
+team modify in_game color red
+team modify in_game friendlyFire true
+team modify in_game nametagVisibility always
+team join in_game @a[tag=in_game]
+
 # Inserimento chest di HUD selezione
 item replace entity @a hotbar.4 with chest
 
