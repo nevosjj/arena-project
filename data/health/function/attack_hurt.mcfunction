@@ -18,8 +18,8 @@ scoreboard players set @s stat.combo 0
 # Ricevimento danno spada di fuoco
 execute if entity @s[tag=flame_sword.energy] run function skills:list/offensive/flame_sword/get_damage
 
-# Attivazione spada di fuoco
-execute if entity @e[type=player,tag=damage.dealer,tag=flame_sword.energy] run function skills:list/offensive/flame_sword/apply_damage
+# Controlla se l'attaccante è un utente della spada di fuoco
+execute on attacker if entity @s[tag=flame_sword.energy] as @s run function skills:list/offensive/flame_sword/apply_damage
 
 # Operazione
 scoreboard players operation @a[tag=damage.victim] melee_damage += @a[tag=damage.dealer] stat.attack

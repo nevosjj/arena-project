@@ -9,3 +9,7 @@ tag @a[tag=damage.dealer] add flame_sword.p2
 function skills:list/offensive/flame_sword/get_points
 # Feedback
 execute at @a[tag=damage.victim] run playsound entity.blaze.hurt hostile @a ~ ~ ~ 2 0.75
+# Aumento limite colpo
+scoreboard players add @s counter.offensive4 1
+# Controllo raggiunta limite colpi
+execute if score @s counter.offensive3 = @s counter.offensive4 run function skills:list/offensive/flame_sword/reset

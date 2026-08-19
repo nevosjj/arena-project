@@ -119,6 +119,7 @@ data modify storage ability_data:offensive skills set value [\
             cost:80,\
             duration:40,\
             hit:2,\
+            max_hit:9,\
             range: 3.0,\
         },\
         display: {\

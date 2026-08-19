@@ -25,7 +25,7 @@ bossbar set match:timer visible true
 
 # Sidebar
 function match:display/setup
-function match:display/update
+execute as @a[tag=in_game] run function match:display/update
 
 # Team
 team add in_game "In gioco"
