@@ -93,9 +93,11 @@ data modify storage ability_data:utility skills set value [\
         },\
         technical: {\
             cooldown:42,\
-            duration:200,\
+            duration:180,\
+            power:8,\
             damage:10,\
-            range:8\
+            range:7,\
+            interval:20\
         },\
         display: {\
             name:"Tornado",\

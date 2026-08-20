@@ -28,7 +28,7 @@ $execute if score @s ability_damage matches 1.. run \
 
 # Feedback in-game text_display
 execute store result storage arenaproject:game_memory damageFeedback.text int 1.0 run scoreboard players get @s incoming_damage
-function health:summon_text with storage arenaproject:game_memory damageFeedback
+execute at @s run function health:summon_text with storage arenaproject:game_memory damageFeedback
 
 # Rimozione
 scoreboard players operation @s stat.current_health -= @s incoming_damage

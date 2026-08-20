@@ -19,3 +19,6 @@ execute if entity @a[tag=lightning_strike.immobilized] as @a[tag=lightning_strik
 
 # Flame sword
 execute if entity @e[type=player,limit=1,tag=flame_sword.energy] as @e[type=player,tag=flame_sword.energy] at @s run function skills:list/offensive/flame_sword/tick
+
+# Tornado
+execute if entity @e[type=marker,tag=tornado.marker,distance=..128] as @e[type=marker,tag=tornado.marker] at @s run function skills:list/utility/tornado/tick

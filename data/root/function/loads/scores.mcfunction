@@ -50,16 +50,19 @@ scoreboard objectives add experience_level dummy
 scoreboard objectives add experience_cost dummy
 
 # Contatori abilità
-scoreboard objectives add counter.support dummy
 scoreboard objectives add counter.offensive dummy
 scoreboard objectives add counter.offensive2 dummy
 scoreboard objectives add counter.offensive3 dummy
 scoreboard objectives add counter.offensive4 dummy
+scoreboard objectives add counter.support dummy
+scoreboard objectives add counter.utility dummy
+scoreboard objectives add counter.utility2 dummy
 
 # Durata abilità
 scoreboard objectives add duration.support dummy
 scoreboard objectives add duration.offensive dummy
 scoreboard objectives add duration.offensive2 dummy
+scoreboard objectives add duration.utility dummy
 
 # Cooldown abilità (Quanto ci mette a ricaricarsi in secondi, per settare i timer delle cooldown)
 scoreboard objectives add cooldown.offensive dummy

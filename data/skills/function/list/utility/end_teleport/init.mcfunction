@@ -6,7 +6,6 @@
 # Feedback d'origine
 function skills:list/utility/end_teleport/visual
 
-
 # Marker di riferimento (facing)
 summon marker ^ ^1 ^3 {Tags:["shadow.objective"]}
 summon marker ~ ~1 ~ {Tags:["shadow.recursion"]} 
