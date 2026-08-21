@@ -25,6 +25,9 @@ $execute if score @s incoming_heal matches 1.. run \
     {"text":"!","color":"dark_aqua","bold":false},\
     ]
 
+# Aggiornamento sidebar
+function match:display/update
+
 # Aggiornamento actionbar
 function health:actionbar
 
