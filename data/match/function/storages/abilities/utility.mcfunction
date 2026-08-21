@@ -95,20 +95,19 @@ data modify storage ability_data:utility skills set value [\
             cooldown:42,\
             duration:180,\
             power:8,\
-            damage:10,\
             range:7,\
             interval:20\
         },\
         display: {\
             name:"Tornado",\
             item:"wind_charge",\
-            lore:[{"bold":false,"color":"gray","italic":false,"text":"Evoca un tornado nell'area."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Avanza lentamente."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Arreca danni ad intervalli."},\
+            lore:[{"bold":false,"color":"gray","italic":false,"text":"Evoca un tornado per un breve periodo."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Arreca danni ad intervalli"},\
+                {"bold":false,"color":"gray","italic":false,"text":"e lancia in alto i proiettili nell'area."},\
                 [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"42s"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"10s"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Danni: "},{"bold":true,"color":"light_purple","italic":false,"text":"10/1s"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"8 blocchi"}]]\
+                [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"9s"}],\
+                [{"bold":false,"color":"yellow","italic":false,"text":"Danni: "},{"bold":true,"color":"light_purple","italic":false,"text":"8/s"}],\
+                [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"7 blocchi"}]]\
         }\
     }\
 ]
