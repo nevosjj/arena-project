@@ -8,7 +8,7 @@ playsound minecraft:entity.guardian.death voice @a ~ ~ ~ 2 1
 particle flame ~ ~1 ~ 0.3 0.6 0.3 0 15 force
 
 # Imposta obiettivo del setup
-tag @s add flame_sword.score
+tag @s add flame_sword.setup
 
 # Settaggio statistiche
 execute as @e[type=marker,distance=..4,limit=1,tag=flame_sword.marker] at @s run function skills:list/offensive/flame_sword/setup with entity @s data

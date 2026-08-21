@@ -15,7 +15,7 @@ function skills:list/offensive/flame_sword/get_points
 execute at @a[tag=damage.victim] run playsound entity.blaze.hurt hostile @a ~ ~ ~ 2 0.75
 
 # Aumento limite colpo
-scoreboard players remove @s counter.offensive3 1
+scoreboard players remove @s counter.offensive2 1
 
 # Controllo raggiunta limite colpi
-execute if score @s counter.offensive3 matches 0 run function skills:list/offensive/flame_sword/reset
+execute if score @s counter.offensive2 matches 0 at @s run function skills:list/offensive/flame_sword/reset
