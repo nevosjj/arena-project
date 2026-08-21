@@ -5,6 +5,9 @@
 # Trasformazione danni
 scoreboard players operation @s incoming_damage += @s ability_damage
 
+# Display danno
+damage @s 0.0000001 generic
+
 # Feedback
 $data modify storage arenaproject:game_memory damageFeedback.abilitySource set value "$(name)"
 $data modify storage arenaproject:game_memory damageFeedback.playerName set value "$(playerName)"

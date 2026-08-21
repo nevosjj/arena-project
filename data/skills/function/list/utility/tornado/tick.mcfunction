@@ -16,5 +16,4 @@ execute if score @s counter.utility matches ..0 run function skills:list/utility
 function skills:list/utility/tornado/rotation with entity @s data
 
 # Disorientamento proiettili
-
-# Disorientamento visione
+$execute if entity @e[tag=projectile,distance=..$(range)] as @e[tag=projectile,distance=..$(range)] run data modify entity @s Motion[1] set value 2.5
