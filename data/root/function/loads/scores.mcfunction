@@ -100,6 +100,7 @@ scoreboard objectives add player.amount dummy
 scoreboard objectives add match.duration dummy
 scoreboard objectives add match.seconds dummy
 scoreboard objectives add match.minutes dummy
+scoreboard objectives add player.hearts dummy
 
 # Statistiche post-partita
 scoreboard objectives add poststat.heal_received dummy

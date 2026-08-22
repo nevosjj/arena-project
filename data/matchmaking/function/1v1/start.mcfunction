@@ -33,17 +33,12 @@ execute as @a[tag=in_game] run function selection:memory/create
 execute as @a[tag=in_game] run scoreboard players operation @s teamID = @s ID
 
 # Operazione statistiche
-scoreboard objectives setdisplay below_name stat.current_health
-scoreboard players set @a[tag=in_game] stat.max_health 2000
-scoreboard players set @a[tag=in_game] stat.current_health 2000
-scoreboard players set @a[tag=in_game] stat.attack 10
-scoreboard players set @a[tag=in_game] stat.defense 0
-scoreboard players set @a[tag=in_game] stat.combo 0
-scoreboard players set @a[tag=in_game] poststat.best_combo 0
-scoreboard players set @a[tag=in_game] experience_limit 25
-scoreboard players set @a[tag=in_game] experience_gain 7
-execute as @a[tag=in_game] run attribute @s minecraft:attack_damage base set 0.00000001
-execute as @a[tag=in_game] run attribute @s minecraft:knockback_resistance base set 0.6
+function matchmaking:create/objectives
+
+# Attributi giocatori
+# Prima di chiamare, moltiplica x2 le vite dei giocatori (su MC un cuore equivale a 2.0 hp)
+execute store result storage match_data:1v1 list.1v1.playerLives float 2.0 run data get storage match_data:1v1 list.1v1.playerLives
+function matchmaking:create/attributes with storage match_data:1v1 list.1v1
 
 # Estrai un indice random in temporary sottoforma di mapIndex
 # Poi estrai le informazioni della mappa giusta utilizzando mapIndex come macro

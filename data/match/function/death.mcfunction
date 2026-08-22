@@ -8,9 +8,6 @@ execute as @a[tag=in_game] unless score @s death matches 1.. if score @s rounds 
 clear @a
 item replace entity @a hotbar.4 with chest
 
-# Feedback
-tellraw @a [{"text":"\n> ","color":"red","bold":true},{"text":"è morto: ","color":"gold","bold":false},{selector:"@s","color":"gray","bold":false}]
-
 # Teletrasporto
 function match:teleport with storage map_data:1v1 temporary
 

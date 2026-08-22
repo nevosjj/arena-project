@@ -5,7 +5,7 @@ execute if score @s range matches 32.. run return run kill @s
 scoreboard players add @s range 1
 
 # Rotazione e inclinazione per far apparire una spirale più evidente
-tp @s ~ ~-0.1 ~ ~16 ~
+tp @s ~ ~-0.1 ~ ~21 ~
 
 # Particella
 $particle dust_color_transition{from_color:[1.000,0.557,0.169],to_color:[0.251,1.000,0.576],scale:2.5} ^ ^ ^$(distance) 0.1 0.1 0.1 0 3 force
