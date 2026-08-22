@@ -10,6 +10,7 @@ data modify storage map_data:1v1 list set value [\
                 powerupTimer: 45, \
                 mapRounds: 1,\
                 mapStructure: "aether",\
+                mapBars: "iron_bars",\
                 spawn1: "139 -27 -9 90 0", \
                 spawn2: "41 -27 9 -90 0", \
                 bars1: "44 -27 5 44 -23 13",\
@@ -24,6 +25,7 @@ data modify storage map_data:1v1 list set value [\
                 powerupTimer: 45, \
                 mapRounds: 1,\
                 mapStructure: "claydusk",\
+                mapBars: "waxed_copper_bars",\
                 spawn1: "93 -22 20 -90 0", \
                 spawn2: "135 -22 20 90 0", \
                 bars1: "132 -22 22 132 -18 18",\
