@@ -129,14 +129,12 @@ data modify storage ability_data:offensive skills set value [\
                 {"bold":false,"color":"gray","italic":false,"text":"I tuoi colpi arrecano danni extra in base alla combo."},\
                 {"bold":false,"color":"gray","italic":false,"text":"Si interrompe se ricevi colpi, non attacchi in tempo, "},\
                 {"bold":false,"color":"gray","italic":false,"text":"oppure raggiungi il limite."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Alla fine, ottieni effetti extra in base alla combo."},\
                 [{"bold":false,"color":"green","italic":false,"text":"Costo: "},{"bold":true,"color":"light_purple","italic":false,"text":"80"}],\
-                [{"bold":false,"color":"green","italic":false,"text":"Raggio d'attacco: "},{"bold":true,"color":"light_purple","italic":false,"text":"+10%"}],\
+                [{"bold":false,"color":"green","italic":false,"text":"Raggio d'attacco: "},{"bold":true,"color":"light_purple","italic":false,"text":"+3 blocchi"}],\
                 [{"bold":false,"color":"green","italic":false,"text":"Danno extra: "},{"bold":true,"color":"light_purple","italic":false,"text":"+1/combo"}],\
                 [{"bold":false,"color":"green","italic":false,"text":"Limite combo: "},{"bold":true,"color":"light_purple","italic":false,"text":"9"}],\
                 [{"bold":false,"color":"green","italic":false,"text":"Tempo di esaurimento: "},{"bold":true,"color":"light_purple","italic":false,"text":"2s"}],\
-                [{"bold":false,"color":"red","italic":false,"text":"Colpi all'interruzione: "},{"bold":true,"color":"light_purple","italic":false,"text":"2"}],\
-                [{"bold":false,"color":"green","italic":false,"text":"Effetto alla fine: "},{"bold":true,"color":"light_purple","italic":false,"text":"+2 energia/combo"}]],\
+                [{"bold":false,"color":"red","italic":false,"text":"Colpi all'interruzione: "},{"bold":true,"color":"light_purple","italic":false,"text":"2"}]],\
         }\
     }\
 ]

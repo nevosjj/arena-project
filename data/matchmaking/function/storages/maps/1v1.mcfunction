@@ -17,17 +17,17 @@ data modify storage map_data:1v1 list set value [\
                 powerup: "90 -28 0",\
             }, \
             { \
-                mapName: "Laboratorio dei Test", \
+                mapName: "Claydusk", \
                 mapID: 1, \
-                mapItem: "minecraft:diamond", \
+                mapItem: "minecraft:red_sand", \
                 mapOvertime: 180, \
                 powerupTimer: 45, \
                 mapRounds: 1,\
-                mapStructure: "test",\
-                spawn1: "136 -29 31 90 0", \
-                spawn2: "94 -29 4 -90 0", \
-                bars1: "134 -29 34 134 -26 28",\
-                bars2: "98 -29 1 98 -26 7",\
+                mapStructure: "claydusk",\
+                spawn1: "93 -22 20 -90 0", \
+                spawn2: "135 -22 20 90 0", \
+                bars1: "132 -22 22 132 -18 18",\
+                bars2: "96 -22 18 96 -18 22",\
             } \
         ] \
     } \
