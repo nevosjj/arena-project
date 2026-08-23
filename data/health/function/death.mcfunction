@@ -14,6 +14,14 @@ scoreboard players add @s death 1
 # Modalità spettatore per il perdente
 gamemode spectator @s
 
+# Imposta score globale per prevenire tutti i danni in incoming_damage
+## INCOMPATIBILE PER 2V2, BISOGNERA RIPENSARE AL SISTEMA IN BASE A QUANTI GIOCATORI SONO MORTI IN UN TEAM ##
+## Bisogna far si che 
+## Se sono vivi in un team, per esempio, 2v1, il team con 2 membri può ancora ricevere danni e il team con 1 membro pure
+## ma quello che è morto non più.
+## Ma se la situazione è tipo 2v0/1v0, quindi se in un team ci sono al più 0 players, tutti i danni sono disabilitati
+scoreboard players set #round_ended bool 1
+
 # Inserimento tag della morte per evitare di chiamare più di una volta questo flusso
 # La prevenzione viene fatta in health:incoming_damage
 tag @s add round.dead

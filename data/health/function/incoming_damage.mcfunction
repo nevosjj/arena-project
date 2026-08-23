@@ -1,3 +1,10 @@
+#######################################################################
+## La funzione gestisce il danno totale ricevuto tra melee e abilità ##
+#######################################################################
+
+# Ignora completamente se il round è finito
+execute if score #round_ended bool matches 1 run function health:nullify
+
 # Moltiplicatore overtime
 scoreboard players set #match temp 100
 scoreboard players set #match temp2 100

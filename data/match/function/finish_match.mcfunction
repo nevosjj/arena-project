@@ -37,6 +37,7 @@ tag @a remove flame_sword.energy
 tag @a remove flame_sword.p0
 tag @a remove flame_sword.p2
 scoreboard players reset #match
+scoreboard players reset #round_ended
 scoreboard players reset #memory
 scoreboard players reset #constant.100
 scoreboard players reset #damage_halver
