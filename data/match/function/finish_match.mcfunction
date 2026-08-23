@@ -7,7 +7,7 @@ tellraw @a [{"text":"\n> ","color":"gray","bold":true},{"text":"Partita finita!"
 execute as @a at @s run playsound ui.toast.challenge_complete voice @s ~ ~ ~ 10 0.9
 
 # Filla aria
-fill 39 -13 48 142 -40 -42 air
+fill 39 -13 48 142 -39 -42 air
 
 # Ristorazione interaction in lobby
 tag @e[type=interaction,tag=matchmaking.1v1] remove can_spectate
