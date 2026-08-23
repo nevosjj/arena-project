@@ -1,5 +1,5 @@
 ## INFO
-## Called by match/low_timer
+## Called by match/events/low_timer
 ## Oppure se un giocatore decide di fare un random mix di abilità
 
 # Pulizia

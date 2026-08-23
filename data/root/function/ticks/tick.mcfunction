@@ -18,13 +18,13 @@ execute if score #match bool matches 1 as @a[tag=in_game,limit=1] if predicate {
 
 ## NAVIGAZIONE PARTITE
 # Controllo che i giocatori tengano in mano la testa di una partita per controllarne le statistiche
-execute as @a if items entity @s player.cursor player_head[custom_data~{headdata:1b}] run function recording:check/select
+execute as @a if items entity @s player.cursor player_head[custom_data~{headdata:1b}] run function recording:check/init/select
 # Torna indietro alla lista partite
-execute as @a if items entity @s player.cursor barrier[custom_data~{matchlist_back:1b}] run function recording:check/reset
+execute as @a if items entity @s player.cursor barrier[custom_data~{matchlist_back:1b}] run function recording:check/auxiliary/reset
 # Statistiche
-execute as @a if items entity @s player.cursor player_head[custom_data~{headstats:1b}] run function recording:check/stats
-execute as @a if items entity @s player.cursor player_head[custom_data~{headequips:1b}] run function recording:check/equips
-execute as @a if items entity @s player.cursor barrier[custom_data~{infolist_back:1b}] run function recording:check/select
+execute as @a if items entity @s player.cursor player_head[custom_data~{headstats:1b}] run function recording:check/stats/stats
+execute as @a if items entity @s player.cursor player_head[custom_data~{headequips:1b}] run function recording:check/equip/equips
+execute as @a if items entity @s player.cursor barrier[custom_data~{infolist_back:1b}] run function recording:check/init/select
 
 # Controllo condizioni matchmaking
 # 1v1

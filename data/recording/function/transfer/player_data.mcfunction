@@ -1,5 +1,5 @@
 ##########################################
-## Chiamata da recorder:start_recording  ##
+## Chiamata da recording:start_recording  ##
 ## La funzione prende l'ID di ogni       ##
 ## giocatore e comincia ad estrarre le   ##
 ## proprie info legate alla partita      ##

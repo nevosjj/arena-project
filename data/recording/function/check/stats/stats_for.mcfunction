@@ -4,13 +4,13 @@
 $execute unless data storage api.nevosjj.lobby:match_list elements[$(cursorIndex)].players[$(playerIndex)] run return run data remove storage api.nevosjj.lobby:match_list temp
 
 # Prendi dati del giocatore dall'indice
-function recording:check/get_basic_info with storage api.nevosjj.lobby:match_list temp
+function recording:check/auxiliary/get_basic_info with storage api.nevosjj.lobby:match_list temp
 # Immetti la testa del giocatore
-function recording:check/player_head with storage api.nevosjj.lobby:match_list temp
+function recording:check/auxiliary/player_head with storage api.nevosjj.lobby:match_list temp
 # Prendi stataggiamento del giocatore dall'indice
-function recording:check/get_stats with storage api.nevosjj.lobby:match_list temp
+function recording:check/stats/get_stats with storage api.nevosjj.lobby:match_list temp
 # Immetti l'stataggiamento del giocatore
-function recording:check/put_stats with storage api.nevosjj.lobby:match_list temp
+function recording:check/stats/put_stats with storage api.nevosjj.lobby:match_list temp
 
 # Aggiorna indice
 execute store result score #stat_index temp run data get storage api.nevosjj.lobby:match_list temp.playerIndex
@@ -22,4 +22,4 @@ execute store result storage api.nevosjj.lobby:match_list temp.playerIndexChest 
 scoreboard players reset #stat_index temp
 
 # Ricorsione
-function recording:check/stats_for with storage api.nevosjj.lobby:match_list temp
+function recording:check/stats/stats_for with storage api.nevosjj.lobby:match_list temp

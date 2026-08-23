@@ -1,5 +1,5 @@
 ##########################################
-## Chiamata da recorder:start_recording  ##
+## Chiamata da recording:start_recording  ##
 ## La funzione viene chiamata da ogni    ##
 ## giocatore con tag=in_game             ##
 ## Crea un nuovo elemento nell'array     ##

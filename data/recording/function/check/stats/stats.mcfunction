@@ -2,10 +2,10 @@
 # Chiamata da root:tick
 ##########
 
-## La funzione inserisce la lista di giocatori + il loro equipaggiamento
+## La funzione inserisce la lista di giocatori + le loro statistiche
 
 # Feedback audio
-execute at @s run playsound entity.zombie.attack_iron_door ui @s ~ ~ ~ 1 0.8
+execute at @s run playsound minecraft:entity.villager.work_cartographer voice @a ~ ~ ~ 1 1
 
 # Metti sfondo di vetro
 function recording:insert/put_glass
@@ -27,4 +27,4 @@ data modify storage api.nevosjj.lobby:match_list temp.username set value "Null"
 clear @s player_head
 
 # Inizializza lo scorrimento
-function recording:check/equip_for with storage api.nevosjj.lobby:match_list temp
+function recording:check/stats/stats_for with storage api.nevosjj.lobby:match_list temp
