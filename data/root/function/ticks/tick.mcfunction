@@ -41,4 +41,4 @@ execute positioned 90 -30 0 run function root:ticks/skills
 
 ## Animazioni
 # Morte
-execute if entity @e[type=mannequin,tag=death_mannequin] as @e[type=mannequin,tag=death_mannequin] at @s run function animation:deaths/general/tick with entity @s data
+execute if entity @e[type=mannequin,tag=death_mannequin,tag=death_mannequin.tick] as @e[type=mannequin,tag=death_mannequin,tag=death_mannequin.tick] at @s run function animation:deaths/general/tick with entity @s data

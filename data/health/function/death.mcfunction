@@ -15,10 +15,21 @@ scoreboard players add @s death 1
 gamemode spectator @s
 
 # Inserimento tag della morte per evitare di chiamare più di una volta questo flusso
+# La prevenzione viene fatta in health:incoming_damage
 tag @s add round.dead
 
 # Ottenimento cuori giocatori in uno score
 execute store result score @s player.hearts run attribute @s max_health base get
 
-# Chiamata di funzione per capire se far continuare la partita
-function match:check_life
+## Inserimento dati animazione morte
+# ID
+execute store result storage arenaproject:game_memory animationTemp.ID int 1.0 run scoreboard players get @s ID
+# Nome profilo
+loot replace entity @s enderchest.0 loot animation:player_name
+data modify storage arenaproject:game_memory animationTemp.profileName set from entity @s EnderItems[0].components."minecraft:custom_name".hover_event.name
+# Animazione equipaggiata
+## PER ORA L'ANIMAZIONE NON è DINAMICA E CE N'è SOLO UNA ##
+data modify storage arenaproject:game_memory animationTemp.death_animation set value "standard"
+
+# Animazione morte
+function animation:deaths/general/create_mannequin with storage arenaproject:game_memory animationTemp
