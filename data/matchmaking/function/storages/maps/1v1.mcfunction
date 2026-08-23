@@ -3,16 +3,16 @@ data modify storage map_data:1v1 list set value [\
         modeName: "1v1", \
         map: [ \
             { \
-                mapName: "Tempio dell'Aether", \
+                mapName: "Justice temple", \
                 mapID: 0, \
                 mapItem: "minecraft:quartz_pillar", \
-                mapStructure: "aether",\
+                mapStructure: "justicetemple",\
                 mapBars: "iron_bars",\
-                spawn1: "139 -27 -9 90 0", \
-                spawn2: "41 -27 9 -90 0", \
-                bars1: "44 -27 5 44 -23 13",\
-                bars2: "136 -27 -5 136 -23 -13",\
-                powerup: "90 -28 0",\
+                spawn1: "97 -16 24 180 0", \
+                spawn2: "131 -16 24 0 0", \
+                bars1: "95 -16 21 99 -13 21",\
+                bars2: "133 -16 27 129 -13 27",\
+                powerup: "114 -16 24",\
                 immediateDeath: "x y z",\
             }, \
             { \
