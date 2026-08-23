@@ -1,6 +1,6 @@
 #################################################
 ## La funzione crea un ambiente per un nuovo round
-## Chiamato da match:check_life
+## Chiamato da match:events/check_life
 ################################################
 
 # Impostazione nuova vita dei giocatori morti
@@ -13,10 +13,10 @@ clear @a[tag=in_game]
 gamemode adventure @a[tag=in_game]
 
 # Teletrasporto
-function match:teleport with storage map_data:1v1 temporary
+function match:map_editor/teleport with storage map_data:1v1 temporary
 
 # Chiusura cancelli
-function match:bars with storage map_data:1v1 temporary
+function match:map_editor/bars with storage map_data:1v1 temporary
 
 # Stopwatch apertura cancelli
 stopwatch create match:break
@@ -35,7 +35,7 @@ bossbar set match:timer visible true
 
 # Rimozione overtime
 stopwatch remove match:overtime
-stopwatch remove match:win_break
+stopwatch remove match:round_break
 
 # Cleanup eventuale di skill
 function match:cleanup

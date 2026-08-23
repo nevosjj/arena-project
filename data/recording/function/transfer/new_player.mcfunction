@@ -1,6 +1,10 @@
-#########
-# Chiamata da match:finish_match
-#########
+##########################################
+## Chiamata da recorder:start_recording  ##
+## La funzione viene chiamata da ogni    ##
+## giocatore con tag=in_game             ##
+## Crea un nuovo elemento nell'array     ##
+## del salva partite                     ##
+##########################################
 
 # Crea un record del giocatore nella partita salvata
 # Il campo ID è usato poi come chiave per scrivere abilità e altri dati.

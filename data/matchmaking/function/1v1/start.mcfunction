@@ -47,23 +47,20 @@ execute store result storage map_data:1v1 temporary.mapIndex int 1.0 run random 
 function matchmaking:1v1/extract_info with storage map_data:1v1 temporary
 
 # Creazione informazioni partita per il match_recorder
-function recording:new
+function recording:actions/new
 
 # Comando !!!!TEMPORANEO!!!! che imposta come type della partita 1v1
 # poi miglioro il sistema e refactoro questa parte intera della directory e del codice
 data modify storage match_recorder:data actual_match.type set value "1v1"
 
-# Impostazione condizione di vittoria
-function match:condition with storage map_data:1v1 temporary
-
 # Piazzamento struttura
-function match:structure with storage map_data:1v1 temporary
+function match:map_editor/place_map with storage map_data:1v1 temporary
 
 # Teletrasporto
-function match:teleport with storage map_data:1v1 temporary
+function match:map_editor/teleport with storage map_data:1v1 temporary
 
 # Cancelli
-function match:bars with storage map_data:1v1 temporary
+function match:map_editor/bars with storage map_data:1v1 temporary
 
 # Inizalizzazione funzione di selezione
-function match:start
+function match:events/start

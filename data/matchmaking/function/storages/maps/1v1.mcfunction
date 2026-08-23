@@ -13,7 +13,7 @@ data modify storage map_data:1v1 list set value [\
                 bars1: "95 -16 21 99 -13 21",\
                 bars2: "133 -16 27 129 -13 27",\
                 powerup: "114 -16 24",\
-                immediateDeath: "x y z",\
+                immediateDeath: "-20",\
             }, \
             { \
                 mapName: "Claydusk", \

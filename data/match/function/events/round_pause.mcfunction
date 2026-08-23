@@ -1,11 +1,11 @@
 ###################################
-## Chiamata da match:check_life
+## Chiamata da match:events/check_life
 ## La funzione crea un stopwatch di 3 secondi prima di passare al nuovo round
 ## annunciando chi ha vinto
 ###################################
 
 # Stopwatch
-stopwatch create match:win_break
+stopwatch create match:round_break
 
 # Distribuzione tag
 # Perdente

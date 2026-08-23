@@ -11,3 +11,9 @@ execute if score #match bool matches 1 run scoreboard players add #match match.d
 
 # Debug fame, toglierò quando il gioco sarà completo
 execute as @a[tag=in_game] if score @s stat.hunger matches ..19 run effect give @s saturation 1 0 true
+
+############################################################
+## Controllo che i giocatori scendono sotto una certa y   ##
+############################################################
+
+execute as @e[type=player,distance=..128,tag=in_game,tag=!round.dead] at @s run function health:void_death with storage map_data:1v1 temporary

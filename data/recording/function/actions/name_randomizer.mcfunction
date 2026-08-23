@@ -20,7 +20,7 @@ execute store result storage match_recorder:randomizer indexes.flavour int 1.0 r
 execute store result storage match_recorder:randomizer indexes.matchID int 1.0 run random value 00001..99999
 
 # Chiamata di funzione
-function recording:declare_name with storage match_recorder:randomizer indexes
+function recording:actions/declare_name with storage match_recorder:randomizer indexes
 
 # Pulizia pool
 data remove storage match_recorder:randomizer pool

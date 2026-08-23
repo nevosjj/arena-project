@@ -10,7 +10,7 @@ $data modify storage match_recorder:randomizer temp.flavour set from storage mat
 $data modify storage match_recorder:randomizer temp.matchID set value "$(matchID)"
 
 # Unisci tutte le stringhe estratte e il numero ID direttamente dentro la stringa finale
-function recording:merge_name with storage match_recorder:randomizer temp
+function recording:actions/merge_name with storage match_recorder:randomizer temp
 
 # Pulizia indici
 data remove storage match_recorder:randomizer indexes

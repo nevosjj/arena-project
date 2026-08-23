@@ -1,5 +1,5 @@
 # Rimozione cancelli
-function match:open with storage map_data:1v1 temporary
+function match:map_editor/open with storage map_data:1v1 temporary
 
 # Distribuzione oggetti da combattimento
 clear @a
@@ -24,7 +24,7 @@ tag @a[tag=in_game] add ultimate_down
 stopwatch remove match:first_timer
 stopwatch remove match:break
 stopwatch remove match:sound
-stopwatch remove match:opening
+stopwatch remove match:map_editor/opening
 
 # Reset
 scoreboard players reset #match counter

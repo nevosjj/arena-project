@@ -10,7 +10,7 @@ scoreboard players remove @s player.hearts 2
 execute store result storage arenaproject:game_memory temporary.newLives float 1.0 run scoreboard players get @s player.hearts
 
 # Caso in cui il giocatore ha ancora vita
-execute if score @s player.hearts matches 1.. run return run function match:round_pause
+execute if score @s player.hearts matches 1.. run return run function match:events/round_pause
 
 # Caso in cui il giocatore non ha più vita
-execute if score @s player.hearts matches ..0 run return run function match:finish_match
+execute if score @s player.hearts matches ..0 run return run function match:end/win

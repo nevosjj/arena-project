@@ -92,6 +92,7 @@ scoreboard objectives add range dummy
 scoreboard objectives add iteration dummy
 scoreboard objectives add t dummy
 scoreboard objectives add max_t dummy
+scoreboard objectives add void dummy
 
 # Info partita
 scoreboard objectives add rounds dummy

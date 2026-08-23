@@ -1,5 +1,5 @@
 ##########################
-# Chiamata da: match:finish_match
+# Chiamata da: match:end/win
 ##########################
 
 # Caso base

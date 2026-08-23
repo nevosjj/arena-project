@@ -1,4 +1,4 @@
-# Booleana match: attivo
+# Booleana match attivo
 scoreboard players set #match bool 1
 
 # Pulizia inventario

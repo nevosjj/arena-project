@@ -1,6 +1,7 @@
-#########
-# chiamata da match:id_search
-#########
+#################################################
+## chiamata da recording:transfer/player_data  ##
+## Raccolta statistiche                        ##
+#################################################
 
 # Inserisci nell'elemento della partita le statistiche dagli score.
 $execute store result storage api.nevosjj.lobby:match_list elements[$(matchIndex)].players[{ID:$(ID)}].stats.heal_received int 1.0 run scoreboard players get @s poststat.heal_received

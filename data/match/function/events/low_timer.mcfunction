@@ -12,7 +12,7 @@ tag @a remove done_selecting
 
 # Stopwatches
 stopwatch remove match:first_timer
-stopwatch create match:opening
+stopwatch create match:map_editor/opening
 
 # Feedback di testo
 tellraw @a [{"text":"TIMER","color":"red","bold":false}, \
