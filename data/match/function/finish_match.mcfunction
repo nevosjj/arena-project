@@ -84,6 +84,8 @@ data remove storage map_data:1v1 list
 data remove storage match_data:1v1 list
 data remove storage arenaproject:game_memory players
 data remove storage arenaproject:game_memory temp
+data remove storage arenaproject:game_memory temporary
+data remove storage arenaproject:game_memory animationTemp
 
 data remove storage ability_data:offensive skills
 data remove storage ability_data:support skills
