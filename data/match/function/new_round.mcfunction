@@ -1,6 +1,6 @@
 #################################################
 ## La funzione crea un ambiente per un nuovo round
-## Chiamato da match:death
+## Chiamato da match:check_life
 ################################################
 
 # Impostazione nuova vita dei giocatori morti
@@ -8,6 +8,9 @@ $execute as @a[tag=in_game] if score @s death matches 1.. run attribute @s max_h
 
 # Impostazione oggetti
 clear @a[tag=in_game]
+
+# Modalità giusta
+gamemode adventure @a[tag=in_game]
 
 # Teletrasporto
 function match:teleport with storage map_data:1v1 temporary
@@ -32,9 +35,13 @@ bossbar set match:timer visible true
 
 # Rimozione overtime
 stopwatch remove match:overtime
+stopwatch remove match:win_break
 
 # Cleanup eventuale di skill
-function match:skill_cleanup
+function match:cleanup
+
+# Cleanup temporary game_memory
+data remove storage arenaproject:game_memory temporary
 
 # Reset
 scoreboard players reset #match multiplier
@@ -43,7 +50,7 @@ scoreboard players reset @a cooldown.support_timer
 scoreboard players reset @a cooldown.utility_timer
 scoreboard players reset @a cooldown.ultimate_timer
 scoreboard players reset @a player.hearts
-execute as @a run scoreboard players operation @s stat.current_health = @s stat.max_health
+execute as @a[tag=in_game] run scoreboard players operation @s stat.current_health = @s stat.max_health
 
 # Rimozione permessi energia
 scoreboard players set @a[tag=in_game] experience_timer 0
@@ -51,6 +58,8 @@ scoreboard players set @a[tag=in_game] experience_level 0
 experience set @a[tag=in_game] 0 levels
 tag @a[tag=in_game] remove energy.activated
 tag @a[tag=in_game,tag=round.dead] remove round.dead
+tag @a[tag=in_game,tag=round.loser] remove round.loser
+tag @a[tag=in_game,tag=round.winner] remove round.winner
 
 # Aggiornamento vita
 execute as @a[tag=in_game] run function match:display/update

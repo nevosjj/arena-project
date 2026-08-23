@@ -127,6 +127,9 @@ scoreboard objectives add freeze_breath.counter dummy
 scoreboard objectives add lightning_strike.counter dummy
 scoreboard objectives add magnetic_impulse.counter dummy
 
+# Animazione
+scoreboard objectives add animation dummy
+
 # Impostazioni
 scoreboard objectives modify stat.current_health numberformat styled {"color":"#57f727","bold":false}
 scoreboard objectives modify stat.current_health displayname {"text":"♥","color":"red","bold":false}

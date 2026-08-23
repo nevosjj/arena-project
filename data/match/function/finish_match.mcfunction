@@ -12,14 +12,21 @@ fill 39 -13 48 142 -40 -42 air
 # Ristorazione interaction in lobby
 tag @e[type=interaction,tag=matchmaking.1v1] remove can_spectate
 
+# Modalità giusta
+gamemode adventure @a[tag=in_game]
+
 ## PULIZIA
 scoreboard objectives setdisplay sidebar
 clear @a
 stopwatch remove match:break
 stopwatch remove match:sound
 stopwatch remove match:overtime
+stopwatch remove match:win_break
 kill @e[type=marker]
 team leave @a[tag=in_game]
+tag @a remove round.dead
+tag @a remove round.loser
+tag @a remove round.winner
 tag @a remove energy.activated
 tag @a remove support_down
 tag @a remove utility_down

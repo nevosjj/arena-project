@@ -11,6 +11,9 @@ tellraw @a [\
 scoreboard players operation @s stat.current_health = @s stat.max_health
 scoreboard players add @s death 1
 
+# Modalità spettatore per il perdente
+gamemode spectator @s
+
 # Inserimento tag della morte per evitare di chiamare più di una volta questo flusso
 tag @s add round.dead
 
@@ -18,4 +21,4 @@ tag @s add round.dead
 execute store result score @s player.hearts run attribute @s max_health base get
 
 # Chiamata di funzione per capire se far continuare la partita
-function match:death
+function match:check_life

@@ -18,3 +18,7 @@ execute if stopwatch match:opening 5.. run function match:end_selection
 # Overtime, impostato dinamicamente in futuro mappa per mappa.
 # Per ora non è impostato dinamicamente!
 execute if stopwatch match:overtime 210.. run function match:overtime
+
+# Pausa dopo che un round è finito alla segutito della morte di qualcuno
+# Dopo crea un nuovo round, se disponibile
+execute if stopwatch match:win_break 3.. run function match:new_round with storage arenaproject:game_memory temporary

@@ -43,50 +43,6 @@ data modify storage ability_data:utility skills set value [\
     },\
     {\
         meta: {\
-            abilityName:"swap",\
-            abilityType:"utility",\
-            abilityEffect:"movement"\
-        },\
-        technical: {\
-            cooldown:45,\
-            delay:60\
-        },\
-        display: {\
-            name:"Scambio",\
-            item:"repeater",\
-            lore:[{"bold":false,"color":"gray","italic":false,"text":"Bersaglia un nemico nella tua direzione."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Dopo un breve ritardo, vi scambiate di posizione."}," ",\
-                [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"45s"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Ritardo: "},{"bold":true,"color":"light_purple","italic":false,"text":"3s"}]]\
-        }\
-    },\
-    {\
-        meta: {\
-            abilityName:"cobwebs",\
-            abilityType:"utility",\
-            abilityEffect:"control"\
-        },\
-        technical: {\
-            cooldown:30,\
-            projectileSpeed:6,\
-            areaRange:3,\
-            areaDuration:180,\
-            stunDuration:40\
-        },\
-        display: {\
-            name:"Ragnatele",\
-            item:"cobweb",\
-            lore:[{"bold":false,"color":"gray","italic":false,"text":"Spara di fronte a te delle ragnatele."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Creano un'area per un breve periodo che stordiscono."},\
-                [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"30s"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Velocità proiettili: "},{"bold":true,"color":"light_purple","italic":false,"text":"6"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Raggio area: "},{"bold":true,"color":"light_purple","italic":false,"text":"3"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Durata area: "},{"bold":true,"color":"light_purple","italic":false,"text":"9s"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Durata stordimento: "},{"bold":true,"color":"light_purple","italic":false,"text":"2s"}]]\
-        }\
-    },\
-    {\
-        meta: {\
             abilityName:"tornado",\
             abilityType:"utility",\
             abilityEffect:"damage"\
@@ -109,5 +65,24 @@ data modify storage ability_data:utility skills set value [\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Danni: "},{"bold":true,"color":"light_purple","italic":false,"text":"8/s"}],\
                 [{"bold":false,"color":"yellow","italic":false,"text":"Gittata: "},{"bold":true,"color":"light_purple","italic":false,"text":"7 blocchi"}]]\
         }\
-    }\
+    },\
+    {\
+        meta: {\
+            abilityName:"swap",\
+            abilityType:"utility",\
+            abilityEffect:"movement"\
+        },\
+        technical: {\
+            cooldown:45,\
+            delay:60\
+        },\
+        display: {\
+            name:"Scambio",\
+            item:"repeater",\
+            lore:[{"bold":false,"color":"gray","italic":false,"text":"Bersaglia un nemico nella tua direzione."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Dopo un breve ritardo, vi scambiate di posizione."}," ",\
+                [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"45s"}],\
+                [{"bold":false,"color":"yellow","italic":false,"text":"Ritardo: "},{"bold":true,"color":"light_purple","italic":false,"text":"3s"}]]\
+        }\
+    },\
 ]
