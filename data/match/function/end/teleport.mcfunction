@@ -3,8 +3,13 @@
 ## pulisce l'ambiente della partita                     ##
 ##########################################################
 
-# Ritorno in lobby e feedback (debug per ora)
+# Rimozione stopwatch
+stopwatch remove match:win_break
+
+# Ritorno in lobby
 tp @a 22 -54 8 90 0
+
+# Feedback
 execute as @a at @s run playsound block.portal.travel ui @s ~ ~ ~ 0.5 0.8
 tellraw @a [{"text":"\n> ","color":"gray","bold":true},{"text":"Teletrasporto in lobby.","color":"gold","bold":false}]
 

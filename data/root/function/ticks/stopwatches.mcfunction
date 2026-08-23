@@ -24,4 +24,4 @@ execute if stopwatch match:overtime 210.. run function match:events/overtime
 execute if stopwatch match:round_break 3.. run function match:events/new_round with storage arenaproject:game_memory temporary
 
 # Pausa dopo che una partita è stata vinta
-execute if stopwatch match:win_break 5.. run function match:end/win
+execute if stopwatch match:win_break 5.. run function match:end/teleport
