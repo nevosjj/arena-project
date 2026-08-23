@@ -5,12 +5,15 @@
 ## Attributi non dinamici
 
 # Attacco basso
-execute as @a[tag=in_game] run attribute @s minecraft:attack_damage base set 0.00000001
+attribute @s minecraft:attack_damage base set 0.00000001
 
 ## Attributi dinamici
 
 # Knockback
-$execute as @a[tag=in_game] run attribute @s minecraft:knockback_resistance base set $(knockbackResistance)
+$attribute @s minecraft:knockback_resistance base set $(knockbackResistance)
 
 # Cuori giocatori
-$execute as @a[tag=in_game] run attribute @s minecraft:max_health base set $(playerLives)
+$attribute @s minecraft:max_health base set $(playerLives)
+
+# Effetto di guarigione
+effect give @s regeneration 10 5 true

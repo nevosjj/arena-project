@@ -38,7 +38,7 @@ function matchmaking:create/objectives
 # Attributi giocatori
 # Prima di chiamare, moltiplica x2 le vite dei giocatori (su MC un cuore equivale a 2.0 hp)
 execute store result storage match_data:1v1 list.1v1.playerLives float 2.0 run data get storage match_data:1v1 list.1v1.playerLives
-function matchmaking:create/attributes with storage match_data:1v1 list.1v1
+execute as @a[tag=in_game] run function matchmaking:create/attributes with storage match_data:1v1 list.1v1
 
 # Estrai un indice random in temporary sottoforma di mapIndex
 # Poi estrai le informazioni della mappa giusta utilizzando mapIndex come macro

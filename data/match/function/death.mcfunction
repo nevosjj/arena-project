@@ -1,50 +1,16 @@
-# Aggiungimento di round al giocatore che ha vinto.
-execute as @a[tag=in_game] unless score @s death matches 1.. run scoreboard players add @s rounds 1
+###################################
+## Chiamata da health:death
+## La funzione cerca di capire se far continuare la partita
+###################################
 
-# Controllo che la partita non sia finita
-execute as @a[tag=in_game] unless score @s death matches 1.. if score @s rounds >= #match rounds run return run function match:finish_match
+# Simula la perdita di una vita (un round, quindi 2 cuori vanilla)
+scoreboard players remove @s player.hearts 2
 
-# Impostazione oggetti
-clear @a
-item replace entity @a hotbar.4 with chest
+# Nel caso che la partita debba continuare, si inserisce lo score in uno storage per applicare la nuova vita
+execute store result storage arenaproject:game_memory temporary.newLives float 1.0 run scoreboard players get @s player.hearts
 
-# Teletrasporto
-function match:teleport with storage map_data:1v1 temporary
+# Caso in cui il giocatore ha ancora vita
+execute if score @s player.hearts matches 1.. run function match:new_round with storage arenaproject:game_memory temporary
 
-# Chiusura cancelli
-function match:bars with storage map_data:1v1 temporary
-
-# Stopwatch apertura cancelli
-stopwatch create match:break
-stopwatch create match:sound
-
-# Punteggio timer
-scoreboard players set #match counter 10
-
-# Bossbar
-bossbar add match:timer [{"text":"Apertura","color":"red"}]
-bossbar set match:timer color red
-bossbar set match:timer max 10
-bossbar set match:timer players @a[tag=in_game]
-bossbar set match:timer value 10
-bossbar set match:timer visible true
-
-# Rimozione overtime
-stopwatch remove match:overtime
-
-# Cleanup eventuale di skill
-function match:skill_cleanup
-
-# Reset
-scoreboard players reset #match multiplier
-scoreboard players reset @a death
-scoreboard players reset @a cooldown.support_timer
-scoreboard players reset @a cooldown.utility_timer
-scoreboard players reset @a cooldown.ultimate_timer
-execute as @a run scoreboard players operation @s stat.current_health = @s stat.max_health
-
-# Rimozione permessi energia
-scoreboard players set @a[tag=in_game] experience_timer 0
-scoreboard players set @a[tag=in_game] experience_level 0
-experience set @a[tag=in_game] 0 levels
-tag @e[tag=in_game] remove energy.activated
+# Caso in cui il giocatore non ha più vita
+execute if score @s player.hearts matches ..0 run function match:finish_match

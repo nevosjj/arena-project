@@ -49,10 +49,13 @@ function match:display/update
 function health:actionbar
 
 # Controllo morte
-execute if score @s stat.current_health matches ..0 at @s run function health:death
+execute if score @s[tag=!round.dead] stat.current_health matches ..0 at @s run function health:death
 
 # Reset
 data remove storage arenaproject:game_memory damageFeedback
 scoreboard players reset @s melee_damage
 scoreboard players reset @s ability_damage
 scoreboard players reset @s incoming_damage
+
+# Cura
+effect give @s instant_health 1 10 true

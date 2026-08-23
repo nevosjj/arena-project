@@ -7,7 +7,7 @@ tellraw @a [{"text":"\n> ","color":"gray","bold":true},{"text":"Partita finita!"
 execute as @a at @s run playsound ui.toast.challenge_complete voice @s ~ ~ ~ 10 0.9
 
 # Filla aria
-fill 39 -14 48 142 -40 -42 air
+fill 39 -13 48 142 -40 -42 air
 
 # Ristorazione interaction in lobby
 tag @e[type=interaction,tag=matchmaking.1v1] remove can_spectate
@@ -35,14 +35,15 @@ scoreboard players reset #constant.100
 scoreboard players reset #damage_halver
 experience set @a 0 levels
 execute as @a[tag=in_game] run attribute @s minecraft:attack_damage base set 0.0
+execute as @a[tag=in_game] run attribute @s minecraft:max_health base set 10.0
 execute as @a[tag=in_game] run attribute @s minecraft:knockback_resistance base set 1.0
 execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier remove freeze_breath:slow
 execute as @a[tag=in_game] run attribute @s minecraft:jump_strength modifier remove lightning_strike:jump
 execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier remove lightning_strike:slow
 execute as @a[tag=in_game] run attribute @s minecraft:movement_speed modifier remove magnetic_impulse:immobilize
 execute as @a[tag=in_game] run attribute @s minecraft:jump_strength modifier remove magnetic_impulse:immobilize
-effect give @a instant_health 1 255 true
-function match:skill_cleanup
+effect give @a regeneration 10 10 true
+function match:cleanup
 
 # togli actionbar subito
 title @a[tag=in_game] actionbar ""
