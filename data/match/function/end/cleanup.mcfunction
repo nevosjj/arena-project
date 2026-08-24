@@ -46,6 +46,7 @@ tag @s remove skill.bone_shield
 tag @s remove round.dead
 tag @s remove round.loser
 tag @s remove round.winner
+tag @s remove game.winner
 tag @s remove energy.activated
 tag @s remove support_down
 tag @s remove utility_down
