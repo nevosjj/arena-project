@@ -67,25 +67,23 @@ data modify storage ability_data:support skills set value [\
     },\
     {\
         meta: {\
-            abilityName:"melody_of_power",\
+            abilityName:"regen_dispenser",\
             abilityType:"support",\
-            abilityEffect:"buff"\
+            abilityEffect:"buff",\
         },\
         technical: {\
-            cooldown:27,\
-            duration:140\
+            cooldown:38,\
+            duration:180\
         },\
         display: {\
-            name:"Melodia del potere",\
-            item:"note_block",\
-            lore:[{"bold":false,"color":"gray","italic":false,"text":"Ottieni un potenziamento per"},\
-                {"bold":false,"color":"gray","italic":false,"text":"una breve durata."}," ",\
-                [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"27s"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"7s"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Potenziamento: "}],\
-                [{"bold":false,"color":"gold","italic":false,"text":"    > +20% difesa corpo a corpo"}],\
-                [{"bold":false,"color":"gold","italic":false,"text":"    > 1.2x velocità generazione energia"}],\
-                [{"bold":false,"color":"gold","italic":false,"text":"    > +1 energia per colpo"}]]\
+            name:"Distributore rigenerativo",\
+            item:"dispenser",\
+            lore:[{"bold":false,"color":"gray","italic":false,"text":"Evoca un distributore volante che guarda"},\
+                {"bold":false,"color":"gray","italic":false,"text":"verso la tua direzione, entro il raggio."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Spara periodicamente un proiettile che ti cura."},\
+                {"bold":false,"color":"gray","italic":false,"text":"Può essere distrutto e ha una durata."},\
+                [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"38s"}],\
+                [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"9s"}]],\
         }\
     }\
 ]

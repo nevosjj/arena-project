@@ -2,10 +2,12 @@
 execute if items entity @s weapon.mainhand chest run scoreboard players set @s inventory.selection 1
 execute unless items entity @s weapon.mainhand chest run scoreboard players set @s inventory.selection 0
 
+# TP chest minecart sul suo giocatore
+execute as @e[type=chest_minecart,tag=selection_minecart] run function selection:insertion/minecart/teleport with entity @s data
+
 # Controllo booleane
 execute if score @s inventory.selection matches 1 if score @s inventory_prev.selection matches 0 at @s run \
-    summon chest_minecart ~ ~1 ~ \
-    {NoGravity:1b,Silent:1b,Invulnerable:1b,Tags:["selection_minecart"]}
+    function selection:insertion/minecart/spawn
 execute if score @s inventory.selection matches 1 if score @s inventory_prev.selection matches 0 at @s run function selection:insertion/movements/skill_hub
 
 execute if score @s inventory.selection matches 0 if score @s inventory_prev.selection matches 1 at @s run function selection:insertion/minecart/kill
