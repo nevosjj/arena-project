@@ -9,7 +9,7 @@ scoreboard players display numberformat .space1 game_display blank
 scoreboard players display numberformat .space2 game_display blank
 
 # Imposta l'ordine
-scoreboard players display name .space0 game_display [{"text":"made by nevosjj","color":"#d4aa30","italic":true}]
+scoreboard players display name .space0 game_display [{"text":"made by nevosjj","color":"gray"}]
 scoreboard players display name .space1 game_display ""
 scoreboard players display name .space2 game_display ""
 

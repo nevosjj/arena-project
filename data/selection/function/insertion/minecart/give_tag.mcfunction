@@ -1,1 +1,1 @@
-$tag @e[type=player,limit=1,sort=nearest,distance=..2,tag=player.select_request] add minecraft_couple_$(ID)
+$tag @e[type=player,limit=1,sort=nearest,distance=..2,tag=player.select_request] add minecart_couple_$(ID)

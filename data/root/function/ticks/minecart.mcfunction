@@ -3,7 +3,7 @@ execute if items entity @s weapon.mainhand chest run scoreboard players set @s i
 execute unless items entity @s weapon.mainhand chest run scoreboard players set @s inventory.selection 0
 
 # TP chest minecart sul suo giocatore
-execute as @e[type=chest_minecart,tag=selection_minecart] run function selection:insertion/minecart/teleport with entity @s data
+execute as @e[type=block_display,tag=selection_block_display] at @s run function selection:insertion/minecart/teleport with entity @s data
 
 # Controllo booleane
 execute if score @s inventory.selection matches 1 if score @s inventory_prev.selection matches 0 at @s run \

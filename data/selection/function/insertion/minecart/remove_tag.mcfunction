@@ -1,1 +1,1 @@
-$tag @e[type=player,limit=1,sort=nearest,distance=..2,tag=player.select_request] remove minecraft_couple_$(ID)
+$tag @e[type=player,limit=1,sort=nearest,distance=..2,tag=minecart_couple_$(ID)] remove minecart_couple_$(ID)
