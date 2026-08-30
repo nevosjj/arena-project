@@ -5,4 +5,4 @@ execute at @s run playsound entity.chicken.egg ui @s ~ ~ ~ 10 1.9
 item replace entity @s player.cursor with air
 
 # Inserimento menu principale di selezione
-execute at @s run function selection:insertion/movements/skill_hub
+execute at @s run function selection:insertion/movements/confirm_skill_hub
