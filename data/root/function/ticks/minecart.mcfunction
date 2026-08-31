@@ -8,7 +8,7 @@ execute as @e[type=block_display,tag=selection_block_display] at @s run function
 # Controllo booleane
 execute if score @s inventory.selection matches 1 if score @s inventory_prev.selection matches 0 at @s run \
     function selection:insertion/minecart/spawn
-execute if score @s inventory.selection matches 1 if score @s inventory_prev.selection matches 0 at @s run function selection:insertion/movements/confirm_skill_hub
+execute if score @s inventory.selection matches 1 if score @s inventory_prev.selection matches 0 at @s run function selection:insertion/movements/skill_hub
 
 execute if score @s inventory.selection matches 0 if score @s inventory_prev.selection matches 1 at @s run function selection:insertion/minecart/kill
 scoreboard players operation @s inventory_prev.selection = @s inventory.selection
