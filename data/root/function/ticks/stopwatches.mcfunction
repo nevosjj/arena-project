@@ -17,7 +17,7 @@ execute if stopwatch match:map_editor/opening 5.. run function match:events/end_
 
 # Overtime, impostato dinamicamente in futuro mappa per mappa.
 # Per ora non è impostato dinamicamente!
-execute if stopwatch match:overtime 210.. run function match:events/overtime
+execute if stopwatch match:overtime 210.. run function match:events/overtime with storage match_data:1v1 list.1v1
 
 # Pausa dopo che un round è finito al seguito della morte di qualcuno
 # Dopo crea un nuovo round, se disponibile
