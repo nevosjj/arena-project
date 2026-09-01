@@ -30,7 +30,7 @@ scoreboard players operation @a[tag=damage.victim] melee_damage += @a[tag=damage
 # Accumulo score a chi ha attaccato
 execute on attacker run scoreboard players operation @s poststat.melee_inflicted += @s stat.attack
 # Chiamata funzione
-function health:melee_damage
+function health:types/melee_damage
 # Reset tags
 execute on attacker run tag @s remove damage.dealer
 tag @s remove damage.victim

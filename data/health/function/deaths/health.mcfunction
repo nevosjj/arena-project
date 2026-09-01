@@ -23,7 +23,7 @@ gamemode spectator @s
 scoreboard players set #round_ended bool 1
 
 # Inserimento tag della morte per evitare di chiamare più di una volta questo flusso
-# La prevenzione viene fatta in health:incoming_damage
+# La prevenzione viene fatta in health:math/incoming_damage
 tag @s add round.dead
 
 # Ottenimento cuori giocatori in uno score

@@ -12,6 +12,6 @@
     }
   },
   "rewards": {
-    "function": "health:attack_hurt"
+    "function": "health:auxiliary/attack_hurt"
   }
 }

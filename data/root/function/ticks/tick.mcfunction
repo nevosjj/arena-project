@@ -11,7 +11,7 @@ function root:ticks/stopwatches
 execute as @a[tag=energy.activated] run function experience:tick
 
 # Controllo danno recente
-execute if entity @e[tag=in_game,scores={recent_damage=1..}] as @a[tag=in_game,scores={recent_damage=1..}] run function health:recent_damage
+execute if entity @e[tag=in_game,scores={recent_damage=1..}] as @a[tag=in_game,scores={recent_damage=1..}] run function health:auxiliary/recent_damage
 
 # Eseguibile ogni 20 tick
 execute if score #match bool matches 1 as @a[tag=in_game,limit=1] if predicate {"condition":"minecraft:entity_properties","entity":"this","predicate":{"periodic_tick":20}} run function root:ticks/1second
@@ -33,7 +33,7 @@ execute as @e[type=interaction,tag=matchmaking.1v1] if data entity @s attack run
 execute as @e[type=interaction,tag=matchmaking.1v1] if score @s counter matches 2.. run function matchmaking:1v1/stopwatch
 
 # Controllo text_display danno
-execute if entity @e[type=text_display,tag=text.damage] as @e[type=text_display,tag=text.damage] at @s run function health:text_damage
+execute if entity @e[type=text_display,tag=feedback_text] as @e[type=text_display,tag=feedback_text] at @s run function health:texts/tick
 
 ## Skills
 # Coordinate 90 -30 0, distanza 128.

@@ -3,7 +3,7 @@
 #######################################################################
 
 # Ignora completamente se il round è finito
-execute if score #round_ended bool matches 1 run function health:nullify
+execute if score #round_ended bool matches 1 run function health:math/nullify
 
 # Moltiplicatore overtime
 scoreboard players set #match temp 100
@@ -13,7 +13,7 @@ scoreboard players operation @s incoming_damage *= #match temp2
 scoreboard players operation @s incoming_damage /= #match temp
 
 # Rimozione danni resistenza danni
-execute unless score @s stat.defense matches 0 run function health:halve_damage
+execute unless score @s stat.defense matches 0 run function health:math/halve_damage
 
 # Scudo osseo
 # Interrompe la fonte di danno immediatamente
@@ -35,7 +35,7 @@ $execute if score @s ability_damage matches 1.. run \
 
 # Feedback in-game text_display
 execute store result storage arenaproject:game_memory damageFeedback.text int 1.0 run scoreboard players get @s incoming_damage
-execute at @s run function health:summon_text with storage arenaproject:game_memory damageFeedback
+execute at @s run function health:texts/damage with storage arenaproject:game_memory damageFeedback
 
 # Rimozione
 scoreboard players operation @s stat.current_health -= @s incoming_damage
@@ -53,10 +53,10 @@ scoreboard players operation @s poststat.damage_received += @s incoming_damage
 function match:display/update
 
 # Aggiornamento actionbar
-function health:actionbar
+function health:auxiliary/actionbar
 
 # Controllo morte
-execute if score @s[tag=!round.dead] stat.current_health matches ..0 at @s run function health:death
+execute if score @s[tag=!round.dead] stat.current_health matches ..0 at @s run function health:deaths/health
 
 # Reset
 data remove storage arenaproject:game_memory damageFeedback

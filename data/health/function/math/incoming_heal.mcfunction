@@ -18,18 +18,23 @@ $execute if score @s incoming_heal matches 1.. run \
     {"text":" > ","color":"dark_gray","bold":false},\
     {"text":"+","color":"green","bold":false},\
     {"score":{objective:"incoming_heal","name":"@s"},"color":"dark_green","bold":false},\
-    {"text":" da ","color":"dark_aqua","bold":false},\
+    {"text":" da ","color":"gray","bold":false},\
     {"text":"$(name) ","color":"white","bold":false},\
-    {"text":" di ","color":"dark_aqua","bold":false},\
+    {"text":" di ","color":"gray","bold":false},\
     {"text":"$(playerName)","color":"aqua","bold":false},\
-    {"text":"!","color":"dark_aqua","bold":false},\
+    {"text":"!","color":"gray","bold":false},\
     ]
+
+# Feedback in-game text_display
+# Feedback in-game text_display
+execute store result storage arenaproject:game_memory healFeedback.text int 1.0 run scoreboard players get @s incoming_heal
+execute at @s run function health:texts/heal with storage arenaproject:game_memory healFeedback
 
 # Aggiornamento sidebar
 function match:display/update
 
 # Aggiornamento actionbar
-function health:actionbar
+function health:auxiliary/actionbar
 
 # Reset
 scoreboard players reset @s incoming_heal

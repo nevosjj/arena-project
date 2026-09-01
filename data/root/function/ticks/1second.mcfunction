@@ -4,7 +4,7 @@ execute as @a[tag=in_game,tag=support_down] run function skills:cooldowns/suppor
 execute as @a[tag=in_game,tag=ultimate_down] run function skills:cooldowns/ultimate
 
 # Actionbar in-game
-execute as @a[tag=in_game] run function health:actionbar
+execute as @a[tag=in_game] run function health:auxiliary/actionbar
 
 # Durata partita++
 execute if score #match bool matches 1 run scoreboard players add #match match.duration 1
@@ -16,4 +16,4 @@ execute as @a[tag=in_game] if score @s stat.hunger matches ..19 run effect give 
 ## Controllo che i giocatori scendono sotto una certa y   ##
 ############################################################
 
-execute as @e[type=player,distance=..128,tag=in_game,tag=!round.dead] at @s run function health:void_death with storage map_data:1v1 temporary
+execute as @e[type=player,distance=..128,tag=in_game,tag=!round.dead] at @s run function health:deaths/void with storage map_data:1v1 temporary

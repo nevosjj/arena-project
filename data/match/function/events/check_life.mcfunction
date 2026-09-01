@@ -1,5 +1,5 @@
 ###################################
-## Chiamata da health:death
+## Chiamata da health:deaths/health
 ## La funzione cerca di capire se far continuare la partita
 ###################################
 

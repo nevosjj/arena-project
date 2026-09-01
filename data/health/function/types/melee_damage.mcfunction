@@ -10,4 +10,4 @@ data modify storage arenaproject:game_memory damageFeedback.abilitySource set va
 data modify storage arenaproject:game_memory damageFeedback.playerName set value "null"
 
 # Funzione danni
-function health:incoming_damage with storage arenaproject:game_memory damageFeedback
+function health:math/incoming_damage with storage arenaproject:game_memory damageFeedback

@@ -7,4 +7,4 @@
 execute store result score @s void run data get entity @s Pos[1]
 
 # Controllo
-$execute if score @s void matches ..$(immediateDeath) run function health:death
+$execute if score @s void matches ..$(immediateDeath) run function health:deaths/health
