@@ -8,7 +8,12 @@ scoreboard players operation @a[tag=damage.victim] melee_damage += @a[tag=damage
 tag @a[tag=damage.victim] add flame_sword.p0
 tag @a[tag=damage.dealer] add flame_sword.p2
 
-# Inizializza
+# Visual fuoco
+summon marker ~ ~1 ~ {Tags:["flame_sword.hit_visual"]}
+scoreboard players set @e[type=marker,limit=1,sort=nearest,distance=..2,tag=flame_sword.hit_visual] temp 0
+execute as @e[type=marker,limit=1,sort=nearest,distance=..2,tag=flame_sword.hit_visual] at @s run function skills:list/offensive/flame_sword/visual_fire
+
+# Visuale bezier (inizializza)
 function skills:list/offensive/flame_sword/get_points
 
 # Feedback

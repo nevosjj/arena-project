@@ -1,11 +1,11 @@
 ## Caso base
-execute if score @s temp matches 12.. run return run kill @s
+execute if score @s temp matches 24.. run return run kill @s
 
 # Tp
-tp @s ~ ~ ~ ~30 ~
+tp @s ~ ~ ~ ~15 ~
 
 # Particella
-execute facing ^ ^ ^10000 run particle minecraft:large_smoke ~ ~1 ~ ^ ^ ^1000000 0.0000005 0
+execute facing ^ ^ ^10000 run particle minecraft:large_smoke ~ ~0.25 ~ ^ ^ ^1000000 0.0000005 0
 
 # Aumento
 scoreboard players add @s temp 1

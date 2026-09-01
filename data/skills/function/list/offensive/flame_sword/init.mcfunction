@@ -5,7 +5,6 @@
 
 # Feedback
 playsound minecraft:entity.guardian.death voice @a ~ ~ ~ 2 1
-particle flame ~ ~1 ~ 0.3 0.6 0.3 0 15 force
 
 # Imposta obiettivo del setup
 tag @s add flame_sword.setup
