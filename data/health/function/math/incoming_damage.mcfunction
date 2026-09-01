@@ -1,4 +1,5 @@
 #######################################################################
+## Chiamato da health:types/melee_damage || ability_damage           ##
 ## La funzione gestisce il danno totale ricevuto tra melee e abilità ##
 #######################################################################
 
