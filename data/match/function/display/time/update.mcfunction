@@ -1,0 +1,1 @@
+$scoreboard players display name .timetitle game_display [{"text":"ᴛᴇᴍᴘᴏ $(minutes):$(seconds)","color":"gold","bold":false}]

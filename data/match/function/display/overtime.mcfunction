@@ -3,11 +3,11 @@
 ## La funzione attiva il sistema di overtime ##
 ###############################################
 
-# Aggiunta del testo di overtime
-scoreboard players set .overtime game_display -1002
+# Abilitazione neon
+scoreboard players set #overtime counter 1
 
-# Imposta gli spazi vuoti
-scoreboard players display numberformat .overtime game_display blank
+# Booleana
+scoreboard players set #overtime bool 1
 
 # Imposta l'ordine
-$scoreboard players display name .overtime game_display [{"text":">> ","color":"dark_red","bold":true},{"text":"ᴏᴠᴇʀᴛɪᴍᴇ +$(overtimeDamage)%","color":"red","bold":true},{"text":" <<","color":"dark_red","bold":true}]
+$scoreboard players display name .overtime game_display [{"text":">> ","color":"dark_red","bold":true},{"text":"ᴏᴠᴇʀᴛɪᴍᴇ +$(overtimeDamage)%","color":"red","bold":false},{"text":" <<","color":"dark_red","bold":true}]

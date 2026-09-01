@@ -9,7 +9,7 @@ execute if score #round_ended bool matches 1 run function health:math/nullify
 # Moltiplicatore overtime
 scoreboard players set #match temp 100
 scoreboard players set #match temp2 100
-scoreboard players operation #match temp2 += #match multiplier
+scoreboard players operation #match temp2 += #overtime multiplier
 scoreboard players operation @s incoming_damage *= #match temp2
 scoreboard players operation @s incoming_damage /= #match temp
 

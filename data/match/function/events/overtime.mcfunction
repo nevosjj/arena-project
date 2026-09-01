@@ -20,7 +20,7 @@ execute as @a at @s run playsound entity.ghast.scream ui @s ~ ~ ~ 10 0
 function match:display/overtime with storage match_data:1v1 list.1v1
 
 # Aumento danno
-$scoreboard players add #match multiplier $(overtimeDamage)
+$scoreboard players add #overtime multiplier $(overtimeDamage)
 
 # Rimozione stopwatch
 stopwatch remove match:overtime

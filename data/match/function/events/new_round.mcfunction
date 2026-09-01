@@ -42,7 +42,6 @@ data remove storage arenaproject:game_memory temporary
 
 # Reset
 scoreboard players reset #round_ended
-scoreboard players reset #match multiplier
 scoreboard players reset @a death
 scoreboard players reset @a cooldown.support_timer
 scoreboard players reset @a cooldown.utility_timer

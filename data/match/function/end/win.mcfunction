@@ -6,6 +6,9 @@
 # Identificazione vincitore
 ## NON FUNZIONA BENE, SOLO 1V1
 
+# Ferma l'overtime
+function match:events/overtime/stop
+
 # Creazione stopwatch
 stopwatch create match:win_break
 

@@ -4,6 +4,9 @@
 ## annunciando chi ha vinto
 ###################################
 
+# Ferma l'overtime
+function match:events/overtime/stop
+
 # Stopwatch
 stopwatch create match:round_break
 
