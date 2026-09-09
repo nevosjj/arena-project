@@ -17,3 +17,4 @@ gamerule keep_inventory true
 gamerule log_admin_commands true
 gamerule lava_source_conversion false
 gamerule natural_health_regeneration false
+gamerule immediate_respawn true
