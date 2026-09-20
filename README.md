@@ -26,14 +26,32 @@ Players' `vanilla hearts` indicate how many lives they have left before losing t
 
 Players can lose `match health` from melee attacks, which are treated as `melee_damage`, or from damaging abilities, which are treated as `ability_damage`.
 
-`incoming_damage` represents the final form of damage applied to a player. It is calculated from the different damage sources before being applied to the player's `match health`.
+`incoming_damage` represents the final form of damage applied to a player. Both `melee_damage` and `ability_damage` are first combined into `incoming_damage`.
 
-The damage calculation follows the following formula:
+Before the damage is applied to the player's `match health`, the system processes the damage through several modifiers and defensive mechanics.
 
-**[Insert exact damage formula here]**
+The base damage calculation is:
 
-The system also allows additional modifiers and mechanics, such as defense, shields and other damage-related effects, to be applied before the final amount is subtracted from the player's `match health`.
+$$\text{incoming\_damage} = (\text{ability\_damage} + \text{melee\_damage}) \times \frac{100 + \text{overtime multiplier}}{100}$$
 
+If the player has damage resistance through `stat.defense`, the resulting damage is halved.
+
+Therefore, when defense is active:
+
+$$\text{incoming\_damage} = (\text{ability\_damage} + \text{melee\_damage}) \times \frac{100 + \text{overtime multiplier}}{100} \times 0.5$$
+
+The system also supports defensive mechanics such as `bone_shield`, which can interrupt the damage source before the damage is applied.
+
+After the final damage value has been calculated, it is:
+
+* displayed to the player through in-game feedback;
+* subtracted from `stat.current_health`;
+* added to `recent_damage`;
+* added to `poststat.damage_received`;
+* used to update the match health display;
+* checked against the player's remaining health to determine whether they have died.
+
+Finally, the temporary damage scoreboards are reset and the player's vanilla health is restored so that Minecraft's vanilla hearts can continue to represent the player's remaining lives rather than their actual match health.
 ### Per-Player Data
 
 [UNDER DEVELOPMENT]
