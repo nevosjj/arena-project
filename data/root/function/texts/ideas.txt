@@ -1,42 +1,34 @@
-MAPPE:
-    > Miniera, le feature potrebbero essere una linea di ferro che viene lavorato e che produce potenziamenti.
+/// MAPPE:
+    //// Miniera, le feature potrebbero essere una linea di ferro che viene lavorato e che produce potenziamenti.
 
-AGGIUNTE:
-    > Salto della Rana: abilità utility
-    > Catena vampirica: abilità support LEGACY (HALLOWEEN)
-    > Halloween: abilità ultimate, evoca zombi in un'area designata per pochi secondi (HALLOWEEN)
-    > Tornado: abilità ultimate, i nemici non possono uscirne e ne vengono disabilitate le abilità
-    > Squarcio del mare: abilità utility
-    > Esplosione slime: abilità offensiva, dopo un breve ritardo di pochi secondi crea un'esplosione ad area.
-    > Ciclone: abilità utility, i nemici non possono uscirne per la durata
-    > Nuvola: abilità support, cura ad area gli alleati ed interagisce con abilità di fuoco, colpo folgorante e fungo apocalittico.
-    > Scossa sismica: abilità utility, stordisce i giocatori e distrugge edifici.
-    > Carica di fuoco: abilità offensiva, carica in avanti a velocità maggiore, se cambi angolo troppo ampio si annulla.
-    > Morsa del ragno: abilità offensiva, ispirata a dropshock di megawalls, ti potenzia il salto e fa danno in  base ai blocchi percorsi cadendo, se fai danno ottieni un danno collaterale in percentuale.
-    > Ingegneria redstone: abilità ???, crea una connessione redstone, che si collega con quelle precedenti, creando periodicamente una barriera redstone.
-    > Canzone musicale: abilità supporto, qualcosa basato sulle note e musica, dato che mi piace la particella delle note.
-    > Dono della natura: 10% di evocare un animale che genera diversi effetti, gli eventi che triggerano l'abilità sono: essere colpiti, colpire.
+/// AGGIUNTE:
+    /// ABILITA NUOVE:
+        > Salto del Golem - UTILITY - Il tuo prossimo salto è potenziato per 5 secondi (1,5x). Quando atterri, genera un'onda d'urto di fronte a te. La distanza e il danno sono
+        proporzionali alla distanza percorsa durante la caduta (minimo 3 blocchi di caduta), ma ricevi una porzione (30%) del danno che farebbe l'onda d'urto. Ricarica di 35s.
+        Danno doppio alle strutture (Fungo apocalittico, e simili)
+        > Nuvola di pioggia - SUPPORT - Crea una nuvola sopra di te, che dopo pochi secondi comincia a far cadere acqua. Cura tutti i giocatori al di sotto di essa di 20/s.
+        Dura 10 secondi, raggio di 4 blocchi. Ricarica di 30s.
+        > Assorbi-anima - SUPPORT - Ti infliggi il 20% di vita massima + 100 HP. Ogni tuo colpo ti ristora 25 HP, fino a 300. Dura 9 secondi. Ricarica di 28s.
+        > Tesla Redstone - UTILITY - Crea una mini tesla di redstone. Non puoi creare una tesla più vicina di 3 blocchi da un'altra. Non puoi creare più di 3 tesle. Ricarica di 9 secondi.
+        La tesla in mezzo ha la testa del giocatore per capire di chi è. Dopo 5 secondi, si accende.
+        Quando la cima di una tesla viene colpita da un giocatore, si attiva, creando un impulso che ruba 20 energia e la regala al possessore della tesla, e danneggia per 10 hp. 
+        Raggio di 7 blocchi, se altre tesle vacanti sono nell'area, attiva quella più vicina.
+        > Marchio dell'Avvizzimento - ULTIMATE - In un cono di fronte a te, marchi il primo nemico più vicino. Le guarigioni del nemico sono dimezzate del 50%, e dopo 10 secondi,
+        ricevono il 30% di danno extra del danno ricevuto in quell'arco di tempo.
 
-Furia del Lupo -
-> +2 al danno melee. Durata 3s.
-> Ogni melee infligge anche danni melee ad area sul bersaglio. Raggio 5 blocchi.
-> La percentuale è del 50%.
-> Costo Energia: 75.
-
-Pietrificazione -
-> Crea un'area maledetta intorno a te. Raggio di 4 blocchi, durata di 7 secondi.
-> I nemici all'interno subiscono una stack di maledizione ogni secondo.
-> A 4 stack, i nemici vengono pietrificati per 6 secondi.
-> Pietrificazione: non puoi usare abilità, non puoi muoverti. Se subisci 100 danni durante la pietrificazione, te ne liberi.
-> Ricarica: 36s
-
-Impatto d'acqua
-> Il prossimo salto è potenziato del 100% per 2 secondi.
-> Appena atterri, crea un'area di impatto a forma di ciambella. 
-	Raggio di partenza: 3 blocchi da te, si estende per 2 blocchi.
-> I nemici coinvolti nella ciambella sono rallentati del 35% per 5 secondi.
-> Ricarica: 15s
-
-marchio del drago: ulti di zed
-
-provocazione: provacazione di sam
+    /// OGGETTI:
+    Gli oggetti possono essere comprati tra un round e l'altro. Conferiscono statistiche ed effetti unici.
+    Per capire meglio l'economia, anche se è solo un'idea, 1 oro si guadagna per ogni round di base, 1 oro extra per round vinto, si può guadagnare 1 oro come powerup durante il round.
+    > Busto di ferro - STATISTICHE: +10% Resistenza dai colpi basici - COSTO: 1 oro
+    > Infusore di Potenza - STATISTICHE: +5% Danni abilità - EFFETTO: Il primo uso della tua abilità offensiva infligge il 100% di danni extra. - COSTO: 3 oro
+    > Stivali di diamante - STATISTICHE: +10% Velocità di movimento - COSTO: 1 oro
+    > Orologio del Tempo - EFFETTO: Le abilità con ricarica hanno una ricarica dimezzata del 10% - COSTO: 2 oro
+    > Bottiglia di Esperienza - EFFETTO: Limite esperienza +10 - COSTO: 2 oro
+    > Gambali della Protezione - STATISTICHE: +10% Resistenza abilità - EFFETTO: Quando ricevi un'istanza di controllo (CC), ricevi una barriera di 100 HP per 5 secondi,
+    un singolo utilizzo per round. - COSTO: 2 oro
+    > Pozione dell'allargamento - EFFETTO: Aumenta del 25% la gittata delle tue abilità. - COSTO: 2 oro
+    > Fiamma del Nether - EFFETTO: Le abilità offensive riducono le guarigioni dei nemici del 30% per 5 secondi. COSTO: 3 oro
+    
+/// MODIFICHE:
+    /// ABILITA:
+        > Tornado - (NUOVO) I nemici non possono usare le abilità di movimento dentro il raggio d'azione
