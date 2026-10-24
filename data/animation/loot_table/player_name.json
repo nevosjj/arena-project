@@ -1,22 +1,21 @@
 {
-    "pools": [
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
         {
-            "rolls":1,
-            "entries": [
-                {
-                    "type":"minecraft:item",
-                    "name":"minecraft:emerald",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_name",
-                            "entity":"this",
-                            "name": {"selector":"@s"}
-                        }
-                    ]
-                }
-
-            ]
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "modifier": {
+            "type": "minecraft:set_name",
+            "entity": "this",
+            "name": {
+              "selector": "@s",
+              "italic": false
+            }
+          }
         }
-    ],
-    "functions": []
+      ]
+    }
+  ]
 }

@@ -8,7 +8,7 @@ execute store result score @s ID store result storage arenaproject:game_memory t
 data modify storage arenaproject:game_memory temporary.skills set value {offensive:{},support:{},utility:{},ultimate:{}}
 
 # Prendi il nome dell'utente (usando un item rinominato nell'enderchest
-loot replace entity @s enderchest.0 loot skills:player_name
+loot replace entity @s enderchest.0 loot selection:player_name
 data modify storage arenaproject:game_memory temporary.username set from entity @s EnderItems[0].components."minecraft:custom_name".hover_event.name
 
 # Assegna storage

@@ -15,7 +15,7 @@ execute store result storage arenaproject:game_memory player_entry.ID int 1.0 ru
 data modify storage arenaproject:game_memory player_entry.skills set value ["","","",""]
 
 # Inserisci username
-loot replace entity @s enderchest.0 loot skills:player_name
+loot replace entity @s enderchest.0 loot recording:player_name
 data modify storage arenaproject:game_memory player_entry.username set from entity @s EnderItems[0].components."minecraft:custom_name".hover_event.name
 
 $data modify storage api.nevosjj.lobby:match_list elements[$(index)].players append from storage arenaproject:game_memory player_entry
