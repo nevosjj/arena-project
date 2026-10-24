@@ -32,3 +32,4 @@
 /// MODIFICHE:
     /// ABILITA:
         > Tornado - (NUOVO) I nemici non possono usare le abilità di movimento dentro il raggio d'azione
+        > Scambio - (NUOVO) Nelle 2v2, puoi fare scambio anche con gli alleati, senza lo stun.
