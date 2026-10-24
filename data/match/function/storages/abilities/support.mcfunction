@@ -42,7 +42,7 @@ data modify storage ability_data:support skills set value [\
         },\
         technical: {\
             cooldown:40,\
-            range:6f,\
+            range:12f,\
             power:12\
         },\
         display: {\
