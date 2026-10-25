@@ -15,6 +15,9 @@
         Raggio di 7 blocchi, se altre tesle vacanti sono nell'area, attiva quella più vicina.
         > Marchio dell'Avvizzimento - ULTIMATE - In un cono di fronte a te, marchi il primo nemico più vicino. Le guarigioni del nemico sono dimezzate del 50%, e dopo 10 secondi,
         ricevono il 30% di danno extra del danno ricevuto in quell'arco di tempo.
+        > Pietrificazione - - Crea una zona maledetta di fronte a te a forma di cono per 3 secondi. Se esponi un nemico per almeno 2
+        secondi a questa zona, lo pietrifichi per 4s. I nemici pietrificati non possono muoversi, attaccare o usare abilità, ma guadagnano
+        100% di resistenza melee, 90%  resistenza abilità e guariscono 10hp al secondo.
 
     /// OGGETTI:
     Gli oggetti possono essere comprati tra un round e l'altro. Conferiscono statistiche ed effetti unici.

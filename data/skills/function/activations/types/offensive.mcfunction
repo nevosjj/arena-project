@@ -1,4 +1,9 @@
-# Revocazione advancement
+###################################
+## Chiamato da ADVANCEMENT       ##
+## ADVANCEMENT: skills:offensive ##
+###################################
+
+## Revocazione advancement
 advancement revoke @s only skills:offensive
 
 # Check tra un uso e l'altro (Il cui feedback NON viene restituito al player per evitare spam)

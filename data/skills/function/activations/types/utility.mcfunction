@@ -1,3 +1,8 @@
+###################################
+## Chiamato da ADVANCEMENT       ##
+## ADVANCEMENT: skills:utility   ##
+###################################
+
 # Revocazione advancement
 advancement revoke @s only skills:utility
 

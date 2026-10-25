@@ -1,3 +1,8 @@
+###################################
+## Chiamato da ADVANCEMENT       ##
+## ADVANCEMENT: skills:ultimate  ##
+###################################
+
 # Revocazione advancement
 advancement revoke @s only skills:ultimate
 
