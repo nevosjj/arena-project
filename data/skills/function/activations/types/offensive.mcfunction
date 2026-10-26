@@ -23,6 +23,7 @@ scoreboard players set @s cooldown.offensive 5
 data modify storage arenaproject:game_memory temporary.condition.skillTYPE_txt set value "offensive"
 data modify storage arenaproject:game_memory temporary.condition.skillRange set value 24
 execute store result storage arenaproject:game_memory temporary.condition.ID int 1 run scoreboard players get @s ID
+execute store result storage arenaproject:game_memory temporary.condition.teamID int 1 run scoreboard players get @s teamID
 # Condizione 1: N/A
 # Condizione 2: Raycast
 # Condizione 3: Bersaglio nella zona

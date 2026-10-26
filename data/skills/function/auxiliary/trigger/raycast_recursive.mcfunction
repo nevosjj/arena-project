@@ -2,11 +2,9 @@
 ## Caso base
 execute if score @s temp matches ..0 run return run function skills:auxiliary/trigger/raycast_fail with entity @s data
 
-particle firework ~ ~ ~
-
 ## Controllo nemico
-execute if entity @e[type=player,limit=1,sort=nearest,distance=..1] \
-    unless score @s ID = @e[type=player,limit=1,sort=nearest,distance=..1] ID run \ 
+execute if entity @e[type=player,limit=1,sort=nearest,distance=..1.25] \
+    unless score @s teamID = @e[type=player,limit=1,sort=nearest,distance=..1.25] teamID run \ 
     return run function skills:auxiliary/trigger/raycast_success with entity @s data
 
 ## Teletrasporto
