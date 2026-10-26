@@ -18,6 +18,9 @@
         > Pietrificazione - - Crea una zona maledetta di fronte a te a forma di cono per 3 secondi. Se esponi un nemico per almeno 2
         secondi a questa zona, lo pietrifichi per 4s. I nemici pietrificati non possono muoversi, attaccare o usare abilità, ma guadagnano
         100% di resistenza melee, 90%  resistenza abilità e guariscono 10hp al secondo.
+        > Pollo di lava - OFFENSIVE - Lancia un pollo che segue la direzione del tuo cursore. Lascia una zona bruciante per 3s. COSTO: 35xp.
+        > Scheletro Guerriero - OFFENSIVE - Lancia lungo una lunga distanza uno scheletro con 50hp. Dopo un breve ritardo si agguerrisce, infliggendo 10hp di melee. Esiste per 7s.
+        COSTO: 30XP. Se esiste già lo scheletro, ti scambi di posizione, facendo danno ad area sia sulla posizione dello scheletro che la tua. 
 
     /// OGGETTI:
     Gli oggetti possono essere comprati tra un round e l'altro. Conferiscono statistiche ed effetti unici.

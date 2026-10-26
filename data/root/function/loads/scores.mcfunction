@@ -64,6 +64,10 @@ scoreboard objectives add duration.offensive dummy
 scoreboard objectives add duration.offensive2 dummy
 scoreboard objectives add duration.utility dummy
 
+# Condizioni abilità
+scoreboard objectives add condition.offensive dummy
+scoreboard objectives add condition.support dummy
+
 # Cooldown abilità (Quanto ci mette a ricaricarsi in secondi, per settare i timer delle cooldown)
 scoreboard objectives add cooldown.offensive dummy
 scoreboard objectives add cooldown.utility dummy
