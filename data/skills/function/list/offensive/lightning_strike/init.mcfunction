@@ -4,11 +4,7 @@
 ############
 
 # Feedback sonoro
-playsound block.crafter.craft player @a ~ ~ ~ 2 1
-
-# Marker di riferimento (facing)
-summon marker ^ ^1.2 ^5 {Tags:["lightning_strike.objective"]}
-execute anchored eyes run summon marker ~ ~1 ~ {Tags:["lightning_strike.recursion"]} 
+playsound block.crafter.craft ui @s ~ ~ ~ 2 1
 
 # Setup
 execute as @e[type=marker,distance=..4,tag=lightning_strike.recursion] at @s run function skills:list/offensive/lightning_strike/setup

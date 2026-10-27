@@ -8,19 +8,21 @@
         Danno doppio alle strutture (Fungo apocalittico, e simili)
         > Nuvola di pioggia - SUPPORT - Crea una nuvola sopra di te, che dopo pochi secondi comincia a far cadere acqua. Cura tutti i giocatori al di sotto di essa di 20/s.
         Dura 10 secondi, raggio di 4 blocchi. Ricarica di 30s.
-        > Assorbi-anima - SUPPORT - Ti infliggi il 20% di vita massima + 100 HP. Ogni tuo colpo ti ristora 25 HP, fino a 300. Dura 9 secondi. Ricarica di 28s.
+        > Legame dell'anima - SUPPORT - Bersaglia un alleato. Ti curi ogni 0,5s per 3s del 7% di differenza della vita (nel momento del bersagliamento) 
+        tra te e il tuo alleato. Range: 35, Ricarica: 20s
         > Tesla Redstone - UTILITY - Crea una mini tesla di redstone. Non puoi creare una tesla più vicina di 3 blocchi da un'altra. Non puoi creare più di 3 tesle. Ricarica di 9 secondi.
         La tesla in mezzo ha la testa del giocatore per capire di chi è. Dopo 5 secondi, si accende.
         Quando la cima di una tesla viene colpita da un giocatore, si attiva, creando un impulso che ruba 20 energia e la regala al possessore della tesla, e danneggia per 10 hp. 
         Raggio di 7 blocchi, se altre tesle vacanti sono nell'area, attiva quella più vicina.
-        > Marchio dell'Avvizzimento - ULTIMATE - In un cono di fronte a te, marchi il primo nemico più vicino. Le guarigioni del nemico sono dimezzate del 50%, e dopo 10 secondi,
-        ricevono il 30% di danno extra del danno ricevuto in quell'arco di tempo.
         > Pietrificazione - - Crea una zona maledetta di fronte a te a forma di cono per 3 secondi. Se esponi un nemico per almeno 2
         secondi a questa zona, lo pietrifichi per 4s. I nemici pietrificati non possono muoversi, attaccare o usare abilità, ma guadagnano
         100% di resistenza melee, 90%  resistenza abilità e guariscono 10hp al secondo.
-        > Pollo di lava - OFFENSIVE - Lancia un pollo che segue la direzione del tuo cursore. Lascia una zona bruciante per 3s. COSTO: 35xp.
-        > Scheletro Guerriero - OFFENSIVE - Lancia lungo una lunga distanza uno scheletro con 50hp. Dopo un breve ritardo si agguerrisce, infliggendo 10hp di melee. Esiste per 7s.
-        COSTO: 30XP. Se esiste già lo scheletro, ti scambi di posizione, facendo danno ad area sia sulla posizione dello scheletro che la tua. 
+        > Pollo di lava - OFFENSIVE - Lancia un pollo che segue la direzione del tuo cursore. Infligge 42 danni.
+        Lascia una zona bruciante per 3s sulla zona d'impatto, infligge 3 danni al secondo. COSTO: 35xp.
+        > Scheletro Guerriero - OFFENSIVE - Lancia lungo una lunga distanza uno scheletro. Può essere ucciso con le abilità e melee.
+        Dopo un breve ritardo si agguerrisce, statistiche: 8 danni melee e 25 HP. Esiste per 7s.
+        Se esiste già lo scheletro, ti scambi di posizione, facendo 25 danni ad area 3x3 sia sulla posizione dello scheletro che la tua.
+        COSTO: 40xp 
 
     /// OGGETTI:
     Gli oggetti possono essere comprati tra un round e l'altro. Conferiscono statistiche ed effetti unici.
