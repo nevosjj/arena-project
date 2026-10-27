@@ -21,10 +21,10 @@ scoreboard players set @s cooldown.offensive 5
 ## CHECK CONDIZIONE DI ATTIVAZIONE
 # Prepara ambiente nel datapath
 execute if score @s condition.offensive matches 1 run data modify storage arenaproject:game_memory temporary.condition.skillTYPE_txt set value "offensive"
-execute if score @s condition.offensive matches 1 run function skills:auxiliary/trigger/setup with storage arenaproject:game_memory temporary.condition
+execute if score @s condition.offensive matches 1 run function skills:auxiliary/trigger/general/setup with storage arenaproject:game_memory temporary.condition
 
 # Fail del check
-execute if score @s condition.offensive matches 2 run return run function skills:auxiliary/trigger/block with storage arenaproject:game_memory temporary.condition
+execute if score @s condition.offensive matches 2 run return run function skills:auxiliary/trigger/general/block with storage arenaproject:game_memory temporary.condition
 
 # Aggiunta dei dati sensibili al costo
 execute store result storage arenaproject:game_memory temporary.activation.abilityCost int 1.0 run scoreboard players get @s experience_cost
