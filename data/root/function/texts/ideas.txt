@@ -6,17 +6,16 @@
         > Salto del Golem - UTILITY - Il tuo prossimo salto è potenziato per 5 secondi (1,5x). Quando atterri, genera un'onda d'urto di fronte a te. La distanza e il danno sono
         proporzionali alla distanza percorsa durante la caduta (minimo 3 blocchi di caduta), ma ricevi una porzione (30%) del danno che farebbe l'onda d'urto. Ricarica di 35s.
         Danno doppio alle strutture (Fungo apocalittico, e simili)
-        > Nuvola di pioggia - SUPPORT - Crea una nuvola sopra di te, che dopo pochi secondi comincia a far cadere acqua. Cura tutti i giocatori al di sotto di essa di 20/s.
-        Dura 10 secondi, raggio di 4 blocchi. Ricarica di 30s.
-        > Legame dell'anima - SUPPORT - Bersaglia un alleato. Ti curi ogni 0,5s per 3s del 7% di differenza della vita (nel momento del bersagliamento) 
+        > Legame dell'anima - SUPPORT - (Disponibile solo in 2v2) Bersaglia un alleato. Ti curi ogni 0,5s per 3s del 7% di differenza della vita (nel momento del bersagliamento) 
         tra te e il tuo alleato. Range: 35, Ricarica: 20s
         > Tesla Redstone - UTILITY - Crea una mini tesla di redstone. Non puoi creare una tesla più vicina di 3 blocchi da un'altra. Non puoi creare più di 3 tesle. Ricarica di 9 secondi.
         La tesla in mezzo ha la testa del giocatore per capire di chi è. Dopo 5 secondi, si accende.
         Quando la cima di una tesla viene colpita da un giocatore, si attiva, creando un impulso che ruba 20 energia e la regala al possessore della tesla, e danneggia per 10 hp. 
         Raggio di 7 blocchi, se altre tesle vacanti sono nell'area, attiva quella più vicina.
-        > Pietrificazione - - Crea una zona maledetta di fronte a te a forma di cono per 3 secondi. Se esponi un nemico per almeno 2
-        secondi a questa zona, lo pietrifichi per 4s. I nemici pietrificati non possono muoversi, attaccare o usare abilità, ma guadagnano
-        100% di resistenza melee, 90%  resistenza abilità e guariscono 10hp al secondo.
+        > Pietrificazione - UTILITY - Bersaglia un nemico, pietrificandolo per 5s.
+        Ai nemici pietrificati spariscono tutti i buff e debuff, non possono muoversi, attaccare o usare abilità, ma guadagnano
+        100% di resistenza melee, 90%  resistenza abilità e guariscono 10hp al secondo. La pietrificazione può svanire in anticipo
+        se alleati o nemici lo colpiscono 3 volte.
         > Pollo di lava - OFFENSIVE - Lancia un pollo che segue la direzione del tuo cursore. Infligge 42 danni.
         Lascia una zona bruciante per 3s sulla zona d'impatto, infligge 3 danni al secondo. COSTO: 35xp.
         > Scheletro Guerriero - OFFENSIVE - Lancia lungo una lunga distanza uno scheletro. Può essere ucciso con le abilità e melee.
@@ -40,4 +39,4 @@
 /// MODIFICHE:
     /// ABILITA:
         > Tornado - (NUOVO) I nemici non possono usare le abilità di movimento dentro il raggio d'azione
-        > Scambio - (NUOVO) Nelle 2v2, puoi fare scambio anche con gli alleati, senza lo stun.
+        > Scambio - (NUOVO) Nelle 2v2, puoi fare scambio anche con gli alleati, senza lo stun. ATTENZIONE: è disponibile in 1v1, ma questa funzione è esclusiva nel 2v2.
