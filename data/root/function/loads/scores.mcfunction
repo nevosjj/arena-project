@@ -73,6 +73,11 @@ scoreboard objectives add range.utility dummy
 scoreboard objectives add condition.offensive dummy
 scoreboard objectives add condition.support dummy
 
+# Gittata raycast condizioni
+scoreboard objectives add condition_range.offensive dummy
+scoreboard objectives add condition_range.support dummy
+scoreboard objectives add condition_range.utility dummy
+
 # Cooldown abilità (Quanto ci mette a ricaricarsi in secondi, per settare i timer delle cooldown)
 scoreboard objectives add cooldown.offensive dummy
 scoreboard objectives add cooldown.utility dummy

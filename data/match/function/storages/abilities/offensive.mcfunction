@@ -48,10 +48,10 @@ data modify storage ability_data:offensive skills set value [\
         technical: {\
             cost:75,\
             range:2f,\
-            length:24f,\
             power:80,\
             duration:40,\
-            charge:25\
+            charge:25,\
+            condition:{raycast:"true",range:24f}\
         },\
         display: {\
             name:"Colpo folgorante",\

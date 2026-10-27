@@ -15,7 +15,7 @@ execute if score @s cooldown.support_timer matches 1.. unless score @s antispam.
 ## CHECK CONDIZIONE DI ATTIVAZIONE
 # Prepara ambiente nel datapath
 data modify storage arenaproject:game_memory temporary.condition.skillTYPE_txt set value "support"
-execute store result storage arenaproject:game_memory temporary.condition.skillRange int 1.0 run scoreboard players get @s range.support
+execute store result storage arenaproject:game_memory temporary.condition.skillRange int 1.0 run scoreboard players get @s condition_range.support
 execute store result storage arenaproject:game_memory temporary.condition.ID int 1 run scoreboard players get @s ID
 execute store result storage arenaproject:game_memory temporary.condition.teamID int 1 run scoreboard players get @s teamID
 # Condizione 1: N/A
