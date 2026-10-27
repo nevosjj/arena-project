@@ -3,33 +3,17 @@
 ## ADVANCEMENT: skills:support   ##
 ###################################
 
-# Revocazione advancement
-advancement revoke @s only skills:support
+## Preparazione datapath specifico
+data modify storage arenaproject:game_memory temporary.cd_check.skillTYPE_txt set value "support"
 
-## CHECK RICARICA (Silent)
-execute if score @s cooldown.support_timer matches 1.. if score @s antispam.support matches 1.. run return fail
+## Inizializza controllo ricariche 
+function skills:activations/check/cooldown with storage arenaproject:game_memory temporary.cd_check
 
-## CHECK RICARICA (Feedback)
-execute if score @s cooldown.support_timer matches 1.. unless score @s antispam.support matches 1.. run return run function skills:activations/limit/support
-
-## Impsotazione antispam
-scoreboard players set @s antispam.support 20
-
-## CHECK CONDIZIONE DI ATTIVAZIONE
-# Prepara ambiente nel datapath
+## Inizalizza controllo condizioni
 data modify storage arenaproject:game_memory temporary.condition.skillTYPE_txt set value "support"
-execute store result storage arenaproject:game_memory temporary.condition.skillRange int 1.0 run scoreboard players get @s condition_range.support
-execute store result storage arenaproject:game_memory temporary.condition.ID int 1 run scoreboard players get @s ID
-execute store result storage arenaproject:game_memory temporary.condition.teamID int 1 run scoreboard players get @s teamID
-# Condizione 1: N/A
-# Condizione 2: Raycast
-# Condizione 3: Bersaglio nella zona
-execute if score @s condition.support matches 1 run function skills:auxiliary/trigger/tree with storage arenaproject:game_memory temporary.condition
+function skills:activations/check/condition with storage arenaproject:game_memory temporary.condition
 
 ## Check fail
-# 0 = l'abilità non usa check
-# 1 = l'abilità usa check
-# 2 = l'abilità usa check e lo ha fallito, lo farà tornare a 1 dopo il feedback
 execute if score @s condition.support matches 2 run return run function skills:auxiliary/trigger/block with storage arenaproject:game_memory temporary.condition
 
 ## Impostazione ricarica

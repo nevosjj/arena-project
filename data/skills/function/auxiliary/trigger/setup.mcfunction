@@ -5,7 +5,7 @@
 ##############################################
 
 ## Ottieni il range della condizione dallo score del giocatore
-$execute store result storage arenaproject:game_memory temporary.condition.skillRange int 1.0 run scoreboard players get @s condition_range.$(skillTYPE_str)
+$execute store result storage arenaproject:game_memory temporary.condition.skillRange int 1.0 run scoreboard players get @s condition_range.$(skillTYPE_txt)
 
 ## Ottieni ID del giocatore
 execute store result storage arenaproject:game_memory temporary.condition.ID int 1 run scoreboard players get @s ID

@@ -5,6 +5,12 @@
 ## Prende tutti i dati dell'abilità scelta     ##
 #################################################
 
+## Reset dei dati precedenti
+$tag @s remove $(skill_type_str).condition.raycast
+$tag @s remove $(skill_type_str).condition.area
+$scoreboard players reset @s condition.$(skill_type_str)
+$scoreboard players reset @s condition_range.$(skill_type_str)
+
 ## Estrazione dati skill nella temporanea
 $data modify storage arenaproject:game_memory temporary.skill set from storage ability_data:$(skill_type_str) skills[$(skill_id)]
 
@@ -36,8 +42,8 @@ $execute store result score @s condition_range.$(skill_type_str) run data get st
 # Ha la condizione? Poni lo score bool a 1
 $execute if data storage arenaproject:game_memory temporary.skill.technical.condition run scoreboard players set @s condition.$(skill_type_str) 1
 # Che condizione ha? RAYCAST || AREA (tag)
-$execute if data storage arenaproject:game_memory temporary.skill.tecnical.condition.raycast run tag @s add $(skill_type_str).condition.raycast
-$execute if data storage arenaproject:game_memory temporary.skill.tecnical.condition.area run tag @s add $(skill_type_str).condition.area
+$execute if data storage arenaproject:game_memory temporary.skill.technical.condition.raycast run tag @s add $(skill_type_str).condition.raycast
+$execute if data storage arenaproject:game_memory temporary.skill.technical.condition.area run tag @s add $(skill_type_str).condition.area
 # Range condizione
 $execute if data storage arenaproject:game_memory temporary.skill.technical.condition store result score @s condition_range.$(skill_type_str) run \
 data get storage arenaproject:game_memory temporary.skill.technical.condition.range
