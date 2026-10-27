@@ -8,10 +8,6 @@ item replace entity @a hotbar.1 with red_stained_glass_pane[custom_name=[{"text"
 item replace entity @a hotbar.2 with red_stained_glass_pane[custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
 item replace entity @a hotbar.3 with red_stained_glass_pane[custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
 
-#item replace entity @a hotbar.1 with yellow_dye[minecraft:blocks_attacks={},minecraft:custom_data={skill:{utility:1b}}]
-#item replace entity @a hotbar.2 with green_dye[minecraft:blocks_attacks={},minecraft:custom_data={skill:{support:1b}}]
-#item replace entity @a hotbar.3 with orange_dye[minecraft:blocks_attacks={},minecraft:custom_data={skill:{ultimate:1b}}]
-
 # Ricarica iniziale
 scoreboard players set @a[tag=in_game] cooldown.support_timer 5
 scoreboard players set @a[tag=in_game] cooldown.utility_timer 5

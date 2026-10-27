@@ -9,11 +9,11 @@
 execute if score @s temp matches ..0 run return run function skills:auxiliary/trigger/raycast/fail with entity @s data
 
 ## Muro
-execute unless block ~ ~ ~ air run return run function skills:auxiliary/trigger/raycast/fail with entity @s data
+execute unless block ~ ~1 ~ air run return run function skills:auxiliary/trigger/raycast/fail with entity @s data
 
 ## Controllo nemico
-execute if entity @e[type=player,limit=1,sort=nearest,distance=..1.25] \
-    unless score @s teamID = @e[type=player,limit=1,sort=nearest,distance=..1.25] teamID run \ 
+execute if entity @e[type=player,limit=1,sort=nearest,distance=..1.5] \
+    unless score @s teamID = @e[type=player,limit=1,sort=nearest,distance=..1.5] teamID run \ 
     return run function skills:auxiliary/trigger/raycast/success with entity @s data
 
 ## Teletrasporto

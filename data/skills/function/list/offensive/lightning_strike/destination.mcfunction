@@ -1,5 +1,16 @@
-# Reset score
+#############################################################
+## Chiamato da skills:list/offensive/lightning_strike/init ##
+## Inizalizza l'attacco e le stat                          ##
+#############################################################
+
+# Distribuzione tag per trovare danno
+tag @s add lightning_strike.finder
+
+# Reset temp
 scoreboard players reset @s temp
+
+# Impostazione teamID
+execute store result score @s teamID run data get entity @s data.teamID
 
 # Impostazione data suono
 data modify entity @s data.soundName set value "minecraft:entity.breeze.land"
