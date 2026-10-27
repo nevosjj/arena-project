@@ -12,7 +12,7 @@ $summon marker ~ ~ ~ {Tags:["$(skillTYPE_txt).marker.check","new_condition_marke
 
 ## Raycast
 $execute if entity @s[tag=$(skillTYPE_txt).condition.raycast] as @e[type=marker,limit=1,sort=nearest,tag=new_condition_marker] at @s run \
-    return run function skills:auxiliary/trigger/raycast/init
+    return run function skills:activations/trigger/raycast/init
 
 ## Area
-$execute if entity @s[tag=$(skillTYPE_txt).condition.area] run return run function skills:auxiliary/trigger/area/init
+$execute if entity @s[tag=$(skillTYPE_txt).condition.area] run return run function skills:activations/trigger/area/init

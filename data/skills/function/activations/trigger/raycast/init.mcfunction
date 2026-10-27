@@ -17,4 +17,4 @@ execute store result score @s teamID run data get entity @s data.teamID
 execute store result score @s temp run data get entity @s data.skillRange 2.0
 
 ## Inizializzazione raycast ricorsivo
-execute at @s run function skills:auxiliary/trigger/raycast/recursion with entity @s data
+execute at @s run function skills:activations/trigger/raycast/recursion with entity @s data

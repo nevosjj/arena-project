@@ -14,7 +14,7 @@ data modify storage arenaproject:game_memory temporary.condition.skillTYPE_txt s
 function skills:activations/check/condition with storage arenaproject:game_memory temporary.condition
 
 ## Check fail
-execute if score @s condition.support matches 2 run return run function skills:auxiliary/trigger/general/block with storage arenaproject:game_memory temporary.condition
+execute if score @s condition.support matches 2 run return run function skills:activations/trigger/general/block with storage arenaproject:game_memory temporary.condition
 
 ## Impostazione ricarica
 scoreboard players operation @s cooldown.support_timer = @s cooldown.support
