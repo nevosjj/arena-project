@@ -3,19 +3,22 @@
 ## ADVANCEMENT: skills:ultimate  ##
 ###################################
 
-# Revocazione advancement
-advancement revoke @s only skills:ultimate
+## Preparazione datapath specifico
+data modify storage arenaproject:game_memory temporary.cd_check.skillTYPE_txt set value "ultimate"
 
-# Check ricarica (Il cui feedback NON viene restituito al player per evitare spam)
-execute if score @s cooldown.ultimate_timer matches 1.. if score @s antispam.ultimate matches 1.. run return fail
+## Inizializza controllo ricariche 
+function skills:activations/check/cooldown with storage arenaproject:game_memory temporary.cd_check
 
-# Check ricarica (Il cui feedback viene restituito al player)
-execute if score @s cooldown.ultimate_timer matches 1.. unless score @s antispam.ultimate matches 1.. run return run function skills:activations/limit/ultimate
+## Inizalizza controllo condizioni
+data modify storage arenaproject:game_memory temporary.condition.skillTYPE_txt set value "ultimate"
+function skills:activations/check/condition with storage arenaproject:game_memory temporary.condition
 
-# Impostazione ricarica (L'antispam impostato serve a non dire al giocatore subito dopo aver attivato l'abilità che non possono usarla)
-scoreboard players set @s antispam.ultimate 20
-scoreboard players operation @s cooldown.ultimate_timer = @s cooldown.ultimate
-tag @s add ultimate_down
+## Check fail
+execute if score @s condition.ultimate matches 2 run data modify storage arenaproject:game_memory temporary.condition.skillTYPE_txt set value "ultimate"
+execute if score @s condition.ultimate matches 2 run return run function skills:activations/trigger/general/block with storage arenaproject:game_memory temporary.condition
+
+## Impostazione ricarica
+# NON ESISTE, LA ULTIMATE VA USATA UNA VOLTA SOLA
 
 # Inserimento tipo
 # hotbarIndex serve a cercare l'indice dell'abilità nella hotbar per sostituire l'item

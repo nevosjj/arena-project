@@ -64,14 +64,11 @@ scoreboard objectives add duration.offensive dummy
 scoreboard objectives add duration.offensive2 dummy
 scoreboard objectives add duration.utility dummy
 
-# Range abilità
-scoreboard objectives add range.offensive dummy
-scoreboard objectives add range.support dummy
-scoreboard objectives add range.utility dummy
-
 # Condizioni abilità
+scoreboard objectives add condition.utility dummy
 scoreboard objectives add condition.offensive dummy
 scoreboard objectives add condition.support dummy
+scoreboard objectives add condition.ultimate dummy
 
 # Gittata raycast condizioni
 scoreboard objectives add condition_range.offensive dummy
