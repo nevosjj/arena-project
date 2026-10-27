@@ -12,6 +12,9 @@ execute if score @s cooldown.support_timer matches 1.. if score @s antispam.supp
 ## CHECK RICARICA (Feedback)
 execute if score @s cooldown.support_timer matches 1.. unless score @s antispam.support matches 1.. run return run function skills:activations/limit/support
 
+## Impsotazione antispam
+scoreboard players set @s antispam.support 20
+
 ## CHECK CONDIZIONE DI ATTIVAZIONE
 # Prepara ambiente nel datapath
 data modify storage arenaproject:game_memory temporary.condition.skillTYPE_txt set value "support"
@@ -23,14 +26,13 @@ execute store result storage arenaproject:game_memory temporary.condition.teamID
 # Condizione 3: Bersaglio nella zona
 execute if score @s condition.support matches 1 run function skills:auxiliary/trigger/tree with storage arenaproject:game_memory temporary.condition
 
-# Check fail
+## Check fail
 # 0 = l'abilità non usa check
 # 1 = l'abilità usa check
 # 2 = l'abilità usa check e lo ha fallito, lo farà tornare a 1 dopo il feedback
 execute if score @s condition.support matches 2 run return run function skills:auxiliary/trigger/block with storage arenaproject:game_memory temporary.condition
 
-# Impostazione ricarica (L'antispam impostato serve a non dire al giocatore subito dopo aver attivato l'abilità che non possono usarla)
-scoreboard players set @s antispam.support 20
+## Impostazione ricarica
 scoreboard players operation @s cooldown.support_timer = @s cooldown.support
 tag @s add support_down
 
