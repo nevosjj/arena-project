@@ -3,5 +3,7 @@ tellraw @s [\
     {"text":" >","color":"red"},\
     {"text":" Non hai abbastanza energia.","color":"gray"},\
     ]
+
+tag @s remove offensive.cooldown.failed
 playsound block.note_block.bass ui @s ~ ~ ~ 1 0
 scoreboard players set @s antispam.offensive 30

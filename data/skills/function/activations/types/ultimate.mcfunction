@@ -9,6 +9,9 @@ data modify storage arenaproject:game_memory temporary.cd_check.skillTYPE_txt se
 ## Inizializza controllo ricariche 
 function skills:activations/check/cooldown with storage arenaproject:game_memory temporary.cd_check
 
+## Check fail
+execute if entity @s[tag=ultimate.cooldown.failed] run return run function skills:activations/limit/ultimate
+
 ## Inizalizza controllo condizioni
 data modify storage arenaproject:game_memory temporary.condition.skillTYPE_txt set value "ultimate"
 function skills:activations/check/condition with storage arenaproject:game_memory temporary.condition

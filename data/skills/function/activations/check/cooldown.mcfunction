@@ -12,7 +12,7 @@ $advancement revoke @s only skills:$(skillTYPE_txt)
 $execute if score @s cooldown.$(skillTYPE_txt)_timer matches 1.. if score @s antispam.$(skillTYPE_txt) matches 1.. run return fail
 
 ## CHECK RICARICA (Feedback)
-$execute if score @s cooldown.$(skillTYPE_txt)_timer matches 1.. unless score @s antispam.$(skillTYPE_txt) matches 1.. run return run function skills:activations/limit/$(skillTYPE_txt)
+$execute if score @s cooldown.$(skillTYPE_txt)_timer matches 1.. unless score @s antispam.$(skillTYPE_txt) matches 1.. run return run tag @s add $(skillTYPE_txt).cooldown.failed
 
 ## Impsotazione antispam
 $scoreboard players set @s antispam.$(skillTYPE_txt) 20

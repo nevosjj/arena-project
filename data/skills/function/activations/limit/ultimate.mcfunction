@@ -4,5 +4,6 @@ tellraw @s [\
     {"text":" L'abilità è in ricarica.","color":"gray"},\
     ]
 
+tag @s remove ultimate.cooldown.failed
 playsound block.note_block.bass ui @s ~ ~ ~ 1 0
 scoreboard players set @s antispam.ultimate 30
