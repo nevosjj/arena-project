@@ -9,7 +9,7 @@
 execute if score @s temp matches ..0 run return run function skills:activations/trigger/raycast/fail with entity @s data
 
 ## Muro
-execute unless block ~ ~1 ~ air run return run function skills:activations/trigger/raycast/fail with entity @s data
+execute unless block ~ ~ ~ #skills:raycast run return run function skills:activations/trigger/raycast/fail with entity @s data
 
 ## Controllo nemico
 execute if entity @e[type=player,limit=1,sort=nearest,distance=..1.5] \

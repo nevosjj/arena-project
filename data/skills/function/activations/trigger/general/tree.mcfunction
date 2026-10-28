@@ -6,6 +6,7 @@
 
 # Tag di target
 $tag @s add $(skillTYPE_txt).condition.user_$(ID)
+tag @s add condition.rotation.target
 
 # Crea un marker di controllo
 $summon marker ~ ~ ~ {Tags:["$(skillTYPE_txt).marker.check","new_condition_marker"]}
