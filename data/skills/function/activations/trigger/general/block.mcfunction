@@ -8,11 +8,8 @@
 # Reimpostazione punteggio
 $scoreboard players set @s condition.$(skillTYPE_txt) 1
 
+# Feedback
+$execute unless score @s antispam_target.$(skillTYPE_txt) matches 1.. run function skills:activations/trigger/general/feedback with storage arenaproject:game_memory temporary.condition
+
 # Reset
 data remove storage arenaproject:game_memory temporary.condition
-
-# Feedback
-$execute unless score @s antispam_target.$(skillTYPE_txt) matches 1.. run function skills:activations/trigger/general/feedback
-
-# Impostazione antispam
-$execute unless score @s antispam_target.$(skillTYPE_txt) matches 1.. run scoreboard players set @s antispam_target.$(skillTYPE_txt) 10
