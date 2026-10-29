@@ -26,3 +26,6 @@ execute if entity @e[type=marker,tag=tornado.marker,distance=..128] as @e[type=m
 
 # Catena vampirica
 execute if entity @e[type=marker,tag=vampiric_chain.marker,distance=..128] as @e[type=marker,tag=vampiric_chain.marker] at @s run function skills:list/support/vampiric_chain/tick with entity @s data
+
+# Switch
+execute if entity @e[type=marker,tag=switch.marker,distance=..128,tag=ready] as @e[type=marker,tag=switch.marker,tag=ready] at @s run function skills:list/utility/switch/tick with entity @s data

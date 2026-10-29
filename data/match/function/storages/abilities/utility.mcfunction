@@ -54,13 +54,16 @@ data modify storage ability_data:utility skills set value [\
     },\
     {\
         meta: {\
-            abilityName:"swap",\
+            abilityName:"switch",\
             abilityType:"utility",\
             abilityEffect:"movement"\
         },\
         technical: {\
             cooldown:45,\
-            delay:60\
+            charge:60,\
+            duration:40,\
+            immobilization:3,\
+            condition:{raycast:"true",range:15f},\
         },\
         display: {\
             name:"Scambio",\
