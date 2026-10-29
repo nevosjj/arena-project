@@ -61,8 +61,6 @@ data modify storage ability_data:utility skills set value [\
         technical: {\
             cooldown:45,\
             charge:60,\
-            duration:40,\
-            immobilization:3,\
             condition:{raycast:"true",range:15f},\
         },\
         display: {\

@@ -2,12 +2,14 @@
 ## La funzione cerca il bersaglio di Catena Vampirica ##
 ########################################################
 
-# Dai il tag al proprietario
-$tag @e[type=player,distance=..2,limit=1,sort=nearest,tag=vampiric_chain.temp] add vampiric_chain_user.ID_$(ID)
+# Crea il bersaglio
+$tag @e[type=player,limit=1,sort=nearest,tag=support.skill_target.$(ID)] add vampiric_chain_target.$(ID)
 
-# Dai il tag di target
-# NON ESCLUDE GLI ALLEATI!
-$tag @e[type=player,distance=..$(range),limit=1,sort=nearest,tag=!vampiric_chain.temp] add vampiric_chain_target.ID_$(ID)
+# Rimuovi tag al bersaglio
+$tag @e[type=player,limit=1,sort=nearest,tag=support.skill_target.$(ID)] remove support.skill_target.$(ID)
 
-# Rimozione tag temp proprietario
-tag @e[type=player,distance=..2,limit=1,sort=nearest,tag=vampiric_chain.temp] remove vampiric_chain.temp
+# Aggiungi tag utente
+$tag @e[type=player,limit=1,distance=..2,sort=nearest,tag=vampiric_chain_user] add vampiric_chain_user.$(ID)
+
+# Inizializza tick
+tag @s add ready
