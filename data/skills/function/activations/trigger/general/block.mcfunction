@@ -12,7 +12,7 @@ $scoreboard players set @s condition.$(skillTYPE_txt) 1
 data remove storage arenaproject:game_memory temporary.condition
 
 # Feedback
-$execute if score @s antispam.$(skillTYPE_txt) matches ..0 run function skills:activations/trigger/general/feedback
+$execute unless score @s antispam_target.$(skillTYPE_txt) matches 1.. run function skills:activations/trigger/general/feedback
 
 # Impostazione antispam
-$scoreboard players set @s antispam.$(skillTYPE_txt) 5
+$execute unless score @s antispam_target.$(skillTYPE_txt) matches 1.. run scoreboard players set @s antispam_target.$(skillTYPE_txt) 10

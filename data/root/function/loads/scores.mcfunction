@@ -93,6 +93,12 @@ scoreboard objectives add antispam.utility dummy
 scoreboard objectives add antispam.support dummy
 scoreboard objectives add antispam.ultimate dummy
 
+# Antispam abilità (feedback "nessun bersaglio")
+scoreboard objectives add antispam_target.offensive dummy
+scoreboard objectives add antispam_target.utility dummy
+scoreboard objectives add antispam_target.support dummy
+scoreboard objectives add antispam_target.ultimate dummy
+
 # Utilità
 scoreboard objectives add bool dummy
 scoreboard objectives add roll dummy

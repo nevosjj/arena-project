@@ -12,3 +12,9 @@ execute if score @s antispam.support matches 1.. run scoreboard players remove @
 
 ## Ultimate
 execute if score @s antispam.ultimate matches 1.. run scoreboard players remove @s antispam.ultimate 1
+
+## Nessun bersaglio (tutti i tipi)
+execute if score @s antispam_target.offensive matches 1.. run scoreboard players remove @s antispam_target.offensive 1
+execute if score @s antispam_target.utility matches 1.. run scoreboard players remove @s antispam_target.utility 1
+execute if score @s antispam_target.support matches 1.. run scoreboard players remove @s antispam_target.support 1
+execute if score @s antispam_target.ultimate matches 1.. run scoreboard players remove @s antispam_target.ultimate 1

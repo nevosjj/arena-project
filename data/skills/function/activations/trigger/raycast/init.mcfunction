@@ -7,7 +7,7 @@
 ## Rimozione tag di targeting
 tag @s remove new_condition_marker
 execute rotated as @p[tag=condition.rotation.target] run tp @s ~ ~1.25 ~ ~ ~
-tag @e[type=player,limit=1,sort=nearest,distance=..3] remove condition.rotation.target
+tag @e[type=player,limit=1,sort=nearest,distance=..3,tag=condition.rotation.target] remove condition.rotation.target
 
 ## Trasferimento dati
 data modify entity @s data set from storage arenaproject:game_memory temporary.condition
