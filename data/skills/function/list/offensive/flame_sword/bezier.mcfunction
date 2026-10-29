@@ -27,49 +27,49 @@ scoreboard players operation #flame_sword temp7 = #flame_sword t
 scoreboard players operation #flame_sword temp7 *= #flame_sword t
 
 # X = (coeff0*P0.x + coeff1*P1.x + coeff2*P2.x) / 10000
-execute store result score #flame_sword temp8 run data get storage arenaproject:ability_data temp.p0.x
+execute store result score #flame_sword temp8 run data get storage arenaproject:game_memory bezierTemp.p0.x
 scoreboard players operation #flame_sword temp8 *= #flame_sword temp5
 
-execute store result score #flame_sword temp9 run data get storage arenaproject:ability_data temp.p1.x
+execute store result score #flame_sword temp9 run data get storage arenaproject:game_memory bezierTemp.p1.x
 scoreboard players operation #flame_sword temp9 *= #flame_sword temp6
 
-execute store result score #flame_sword temp10 run data get storage arenaproject:ability_data temp.p2.x
+execute store result score #flame_sword temp10 run data get storage arenaproject:game_memory bezierTemp.p2.x
 scoreboard players operation #flame_sword temp10 *= #flame_sword temp7
 
 scoreboard players operation #flame_sword temp8 += #flame_sword temp9
 scoreboard players operation #flame_sword temp8 += #flame_sword temp10
 scoreboard players operation #flame_sword temp8 /= #flame_sword temp3
 scoreboard players operation #flame_sword temp8 /= #flame_sword temp3
-execute store result storage arenaproject:ability_data temp.resultPos.x float 0.01 run scoreboard players get #flame_sword temp8
+execute store result storage arenaproject:game_memory bezierTemp.resultPos.x float 0.01 run scoreboard players get #flame_sword temp8
 
 # Y = (coeff0*P0.y + coeff1*P1.y + coeff2*P2.y) / 10000
-execute store result score #flame_sword temp8 run data get storage arenaproject:ability_data temp.p0.y
+execute store result score #flame_sword temp8 run data get storage arenaproject:game_memory bezierTemp.p0.y
 scoreboard players operation #flame_sword temp8 *= #flame_sword temp5
 
-execute store result score #flame_sword temp9 run data get storage arenaproject:ability_data temp.p1.y
+execute store result score #flame_sword temp9 run data get storage arenaproject:game_memory bezierTemp.p1.y
 scoreboard players operation #flame_sword temp9 *= #flame_sword temp6
 
-execute store result score #flame_sword temp10 run data get storage arenaproject:ability_data temp.p2.y
+execute store result score #flame_sword temp10 run data get storage arenaproject:game_memory bezierTemp.p2.y
 scoreboard players operation #flame_sword temp10 *= #flame_sword temp7
 
 scoreboard players operation #flame_sword temp8 += #flame_sword temp9
 scoreboard players operation #flame_sword temp8 += #flame_sword temp10
 scoreboard players operation #flame_sword temp8 /= #flame_sword temp3
 scoreboard players operation #flame_sword temp8 /= #flame_sword temp3
-execute store result storage arenaproject:ability_data temp.resultPos.y float 0.01 run scoreboard players get #flame_sword temp8
+execute store result storage arenaproject:game_memory bezierTemp.resultPos.y float 0.01 run scoreboard players get #flame_sword temp8
 
 # Z = (coeff0*P0.z + coeff1*P1.z + coeff2*P2.z) / 10000
-execute store result score #flame_sword temp8 run data get storage arenaproject:ability_data temp.p0.z
+execute store result score #flame_sword temp8 run data get storage arenaproject:game_memory bezierTemp.p0.z
 scoreboard players operation #flame_sword temp8 *= #flame_sword temp5
 
-execute store result score #flame_sword temp9 run data get storage arenaproject:ability_data temp.p1.z
+execute store result score #flame_sword temp9 run data get storage arenaproject:game_memory bezierTemp.p1.z
 scoreboard players operation #flame_sword temp9 *= #flame_sword temp6
 
-execute store result score #flame_sword temp10 run data get storage arenaproject:ability_data temp.p2.z
+execute store result score #flame_sword temp10 run data get storage arenaproject:game_memory bezierTemp.p2.z
 scoreboard players operation #flame_sword temp10 *= #flame_sword temp7
 
 scoreboard players operation #flame_sword temp8 += #flame_sword temp9
 scoreboard players operation #flame_sword temp8 += #flame_sword temp10
 scoreboard players operation #flame_sword temp8 /= #flame_sword temp3
 scoreboard players operation #flame_sword temp8 /= #flame_sword temp3
-execute store result storage arenaproject:ability_data temp.resultPos.z float 0.01 run scoreboard players get #flame_sword temp8
+execute store result storage arenaproject:game_memory bezierTemp.resultPos.z float 0.01 run scoreboard players get #flame_sword temp8

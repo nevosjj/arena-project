@@ -9,7 +9,7 @@ execute if score #flame_sword t matches 100.. run return run function skills:lis
 function skills:list/offensive/flame_sword/bezier
 
 # Particella nella posizione calcolata
-function skills:list/offensive/flame_sword/particle with storage arenaproject:ability_data temp.resultPos
+function skills:list/offensive/flame_sword/particle with storage arenaproject:game_memory bezierTemp.resultPos
 
 # Avanza t in modo costante e coerente, in scala intera 0..100
 scoreboard players add #flame_sword iteration 1
