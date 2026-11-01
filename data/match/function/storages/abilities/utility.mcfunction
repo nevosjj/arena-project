@@ -66,10 +66,7 @@ data modify storage ability_data:utility skills set value [\
         display: {\
             name:"Scambio",\
             item:"repeater",\
-            lore:[{"bold":false,"color":"gray","italic":false,"text":"Bersaglia un nemico nella tua direzione."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Dopo un breve ritardo, vi scambiate di posizione."}," ",\
-                [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"45s"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Ritardo: "},{"bold":true,"color":"light_purple","italic":false,"text":"3s"}]]\
-        }\
+            chestItems:{Items:[{Slot:3b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"light_purple","italic":false,"text":"Ricarica"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 45 secondi"}]],"minecraft:item_model":"book"}},{Slot:4b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Tempo di scambio"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 3 secondi"}]],"minecraft:item_model":"clock"}},{Slot:5b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Gittata d'aggancio"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 15 blocchi"}]],"minecraft:item_model":"compass"}},{Slot:10b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"gold","italic":false,"text":"Scambio"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Aggancia un nemico visibile di fronte a te"}],[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Dopo un breve ritardo, vi scambiate di posizione"}]],"minecraft:item_model":"repeater"}}]},\
+            }\
     },\
 ]
