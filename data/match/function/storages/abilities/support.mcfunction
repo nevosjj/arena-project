@@ -43,7 +43,7 @@ data modify storage ability_data:support skills set value [\
         technical: {\
             cooldown:40,\
             range:12f,\
-            power:12,\
+            power:35,\
             condition:{raycast:"true",range:7f},\
         },\
         display: {\

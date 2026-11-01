@@ -13,7 +13,7 @@ $tp @e[type=player,limit=1,sort=nearest,tag=switch_target.$(ID)] @e[type=player,
 $tp @e[type=player,limit=1,sort=nearest,tag=switch_user.$(ID)] @e[type=marker,limit=1,sort=nearest,tag=switch_teleport.marker.$(ID)]
 
 # Pulizia
-$tag @a[tag=switch_target.] remove switch_target.$(ID)
-$tag @a[tag=switch_user.] remove switch_user.$(ID)
+$tag @a[tag=switch_target.$(ID)] remove switch_target.$(ID)
+$tag @a[tag=switch_user.$(ID)] remove switch_user.$(ID)
 $kill @e[type=marker,limit=1,sort=nearest,tag=switch_teleport.marker.$(ID)]
 kill @s

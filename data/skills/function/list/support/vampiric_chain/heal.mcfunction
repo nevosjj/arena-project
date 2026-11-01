@@ -26,6 +26,9 @@ execute if score @s temp2 matches 0 run scoreboard players set @s temp2 1
 $scoreboard players operation @e[type=player,limit=1,tag=vampiric_chain_user.$(ID)] incoming_heal += @s temp2
 $execute as @e[type=player,limit=1,tag=vampiric_chain_user.$(ID)] run function health:math/incoming_heal {name:"$(name)",playerName:"$(playerName)"}
 
+# Feedback
+playsound entity.skeleton_horse.ambient player @a ~ ~ ~ 2 2
+
 # Reset
 scoreboard players reset @s temp2
 scoreboard players reset @s temp3
