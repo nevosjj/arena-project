@@ -38,6 +38,10 @@ $execute if score @s ability_damage matches 1.. run \
 execute store result storage arenaproject:game_memory damageFeedback.text int 1.0 run scoreboard players get @s incoming_damage
 execute at @s run function health:texts/damage with storage arenaproject:game_memory damageFeedback
 
+## ABILITA
+# Catena Vampirica check
+execute at @s as @e[type=marker,tag=vampiric_chain.marker,distance=..96] run function skills:list/support/vampiric_chain/heal with entity @s data
+
 # Rimozione
 scoreboard players operation @s stat.current_health -= @s incoming_damage
 
