@@ -13,5 +13,5 @@ $execute if entity @e[type=player,distance=$(range)..,limit=1,tag=vampiric_chain
 ## temp++ 
 scoreboard players add @s temp 1
 
-## Creazione raggio d'azione catena
-execute if score @s temp matches 5.. run function skills:list/support/vampiric_chain/radius with entity @s data
+## Creazione catena (ogni 2 tick)
+execute if score @s temp matches 2.. run function skills:list/support/vampiric_chain/chain with entity @s data

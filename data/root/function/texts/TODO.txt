@@ -1,5 +1,6 @@
 1. IMPLEMENTARE
-    1.1 vampiric_chain (guarigione)
+    1.1 Grafica switch
+    1.2 Grafica vampiric_chain (sia cura che durante)
 2. COOKIE_BLASTER distribuzione randomica e quantità biscotti con ricorsione
 3. Togliere cooldown alle ultimate
 4. Mettere il controllo raycast muri per cookie_blaster ed end_teleport con il tag/blocks #skills:raycast
