@@ -16,3 +16,7 @@ $execute at @e[type=player,limit=1,sort=nearest,tag=switch_user.$(ID)] run parti
 
 # Feedback particellare (bersaglio)
 $execute at @e[type=player,limit=1,sort=nearest,tag=switch_target.$(ID)] run particle firework ~ ~1 ~ 0.5 0.5 0.5 0 1 force
+
+# Scia di scambio (ogni 2 tick)
+scoreboard players add @s temp2 1
+execute if score @s temp2 matches 2.. run function skills:list/utility/switch/chain with entity @s data

@@ -4,7 +4,9 @@
 ############
 
 # Suono di attivazione
-playsound entity.ghast.hurt hostile @a ~ ~ ~ 2 0
+playsound block.chain.place player @a ~ ~ ~ 2 0.75
+playsound item.trident.return player @a ~ ~ ~ 2 1.2
+playsound entity.ghastling.death player @a ~ ~ ~ 2 0.7
 
 # Tag proprietario
 tag @s add vampiric_chain_user

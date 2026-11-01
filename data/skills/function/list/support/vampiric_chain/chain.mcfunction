@@ -7,8 +7,11 @@
 #################################################################
 
 ## Direzione
-$execute unless score @s temp6 matches 1 run function skills:list/support/vampiric_chain/coords {from:"vampiric_chain_target.$(ID)",to:"vampiric_chain_user.$(ID)",color:6491927,duration:8,count:4}
-$execute if score @s temp6 matches 1 run function skills:list/support/vampiric_chain/coords {from:"vampiric_chain_user.$(ID)",to:"vampiric_chain_target.$(ID)",color:6491927,duration:8,count:4}
+$execute unless score @s temp6 matches 1 run function skills:list/support/vampiric_chain/trail {from:"vampiric_chain_target.$(ID)",to:"vampiric_chain_user.$(ID)",color:6491927,duration:8,count:4}
+$execute if score @s temp6 matches 1 run function skills:list/support/vampiric_chain/trail {from:"vampiric_chain_user.$(ID)",to:"vampiric_chain_target.$(ID)",color:6491927,duration:8,count:4}
+
+# Suono di sottofondo
+playsound minecraft:block.chain.place player @a ~ ~ ~ 0.1 1.6
 
 ## Alterna temp6 (0/assente -> 1, 1 -> 0)
 execute store success score @s temp6 unless score @s temp6 matches 1

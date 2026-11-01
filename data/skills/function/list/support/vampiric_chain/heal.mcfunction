@@ -28,6 +28,8 @@ $execute as @e[type=player,limit=1,tag=vampiric_chain_user.$(ID)] run function h
 
 # Feedback
 playsound entity.skeleton_horse.ambient player @a ~ ~ ~ 2 2
+playsound minecraft:block.chain.fall player @a ~ ~ ~ 2 0.8
+$execute at @e[type=player,limit=1,tag=vampiric_chain_user.$(ID)] run particle dust{color:[0.1,0.7,0.25],scale:0.8} ~ ~1 ~ 0.35 0.7 0.35 0 25 force
 
 # Reset
 scoreboard players reset @s temp2
