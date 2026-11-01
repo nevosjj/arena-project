@@ -1,4 +1,5 @@
 # Uccisione singolo proiettile
+scoreboard players reset @e[type=item,tag=cookie.projectile,limit=1,sort=nearest,distance=..3]
 kill @e[type=item,tag=cookie.projectile,limit=1,sort=nearest,distance=..3]
 
 # Feedback particellare
