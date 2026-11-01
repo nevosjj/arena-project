@@ -7,11 +7,14 @@ data modify entity @s data set from entity @e[type=marker,distance=..3,tag=cooki
 # Aggiunta deviazione
 function skills:list/offensive/cookie_blaster/offset with entity @s data
 
-# Sistema movimento
-execute facing entity @e[type=marker,tag=cookie.objective,limit=1,sort=nearest] eyes run function skills:auxiliary/set_motion with entity @s data
+# Sistema movimento (con deviazione)
+function skills:list/offensive/cookie_blaster/aim with storage arenaproject:game_memory cookieTemp
 
 # Integrazione punteggio
 execute store result score @s teamID run data get entity @s data.teamID
+
+# Pulizia
+data remove storage arenaproject:game_memory cookieTemp
 
 # Rimozione tag
 tag @s remove new.projectile

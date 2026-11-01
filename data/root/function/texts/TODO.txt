@@ -1,7 +1,87 @@
-1. IMPLEMENTARE
-    1.1 Grafica switch
-    1.2 Grafica vampiric_chain (sia cura che durante)
 2. COOKIE_BLASTER distribuzione randomica e quantità biscotti con ricorsione
-3. Togliere cooldown alle ultimate
 4. Mettere il controllo raycast muri per cookie_blaster ed end_teleport con il tag/blocks #skills:raycast
 5. Inizalizza un dialogue: prova a metterlo da qualche parte!
+
+Ho letto tutti i file di cookie_blaster, la voce nello storage, set_motion, search_damage e il raycast delle condizioni. Non ho modificato niente. Prima ti segnalo i bug che ho trovato, poi ti propongo come procedere.
+
+Bug e problemi trovati
+
+1. Il controllo dell'aria in tick.mcfunction:2 in pratica non controlla l'aria
+execute unless blocks ~0.3 ~0.3 ~0.3 ~-0.3 ~-0.3 ~-0.3 ~ ~ ~ all run ...
+blocks confronta una regione con un'altra regione di destinazione, non con l'aria. In questo caso la destinazione ~ ~ ~ cade dentro o accanto alla regione di partenza, quindi il comando confronta la zona con sé stessa spostata di zero o un blocco. A volte risulta uguale e a volte no, a seconda di dove si trova il biscotto dentro il blocco: non dipende dal fatto che stia toccando un muro.
+
+2. Un item non entra mai in un blocco solido. Gli item hanno una collisione fisica: quando arrivano contro un muro si fermano accanto, in un blocco d'aria. Quindi anche un semplice unless block ~ ~ ~ #skills:raycast non scatterebbe quasi mai. Va controllato attorno al biscotto (vedi sotto).
+
+3. In tick.mcfunction manca il return. Le righe 2 e 3 possono chiamare end tutte e due nello stesso tick (particelle e suoni doppi). Dopo il kill @s la riga 4 continua comunque a girare, quindi un biscotto appena distrutto può ancora cercare bersagli. Conviene usare return run function ...end in tutte e due.
+
+4. Nello storage manca count. spawning.mcfunction:2 legge data.count, ma in technical di cookie_blaster ci sono solo cost, range, power, distance, motion. Con la parte nuova attivata, temp varrebbe 0 e non uscirebbe nessun biscotto.
+
+5. La ricorsione nuova usa la rotazione sbagliata. In init.mcfunction:13 e recursive.mcfunction:11 c'è as marker + at @s. at @s prende la posizione e la rotazione del marker. Il marker viene evocato con summon marker ~ ~1 ~, quindi ha rotazione 0/0 e le coordinate ^ puntano sempre verso sud, qualunque cosa guardi il giocatore. In più, siccome ogni passo riparte da at @s, l'offset positioned ^ ^0.6 ^-0.3 non si accumula mai: tutti i biscotti nascono nello stesso punto. Questo di per sé va bene, purché sia una scelta voluta.
+
+6. offset.mcfunction esiste ma è vuoto. setup lo chiama già, quindi oggi non fa nulla. Non dà errore, ma lo spread manca.
+
+7. Le descrizioni nello storage sono scritte a mano ("7 biscotti", "11°"). Quando aggiungi count e spread ricordati di aggiornarle.
+
+8. Da verificare: data sugli item. Nativamente il campo data esiste solo sui marker. Se il biscotto funziona già in gioco (tick e danno leggono with entity @s data), allora va bene nella tua versione. Se però trovi comportamenti strani, il primo sospetto è che l'item non conservi data. Per questo qui sotto, per lo spread, ti propongo di usare lo storage.
+
+Nota positiva: PickupDelay:32767 è proprio il valore che impedisce agli item di unirsi in una pila. Tienilo così, soprattutto ora che i biscotti nascono tutti nello stesso punto.
+
+Come procedere
+
+1. Evocazione ricorsiva con quantità personalizzata
+
+Nello storage aggiungi count:7 e spread:11 in technical.
+
+init: mantieni il contesto del giocatore (occhi + rotazione) e cambia solo l'esecutore:
+mcfunction
+execute anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=cookie_blaster.marker,distance=..3,limit=1,sort=nearest] run function skills:list/offensive/cookie_blaster/spawning with entity @s data
+spawning (macro):
+mcfunction
+$scoreboard players set @s temp $(count)
+function skills:list/offensive/cookie_blaster/recursive
+recursive: niente at @s e niente with (non serve):
+mcfunction
+execute if score @s temp matches ..0 run return fail
+summon item ^ ^-0.5 ^0.3 {PickupDelay:32767,Invulnerable:1b,Tags:["projectile","cookie.projectile","new.projectile"],Item:{id:"minecraft:cookie",count:1}}
+scoreboard players remove @s temp 1
+function skills:list/offensive/cookie_blaster/recursive
+Poi elimini spawn.mcfunction, cioè la parte legacy.
+
+2. Spread casuale
+
+Il punto chiave è che dopo facing entity ... puoi aggiungere rotated ~X ~Y: la rotazione relativa si somma a quella appena calcolata. Siccome una macro riceve un solo compound, metti tutto nello storage.
+
+offset (macro, chiamata with entity @s data come adesso). Il trucco $(spread)0 dà decimi di grado:
+mcfunction
+$execute store result storage arenaproject:game_memory cookieTemp.yaw float 0.1 run random value -$(spread)0..$(spread)0
+$execute store result storage arenaproject:game_memory cookieTemp.pitch float 0.1 run random value -$(spread)0..$(spread)0
+data modify storage arenaproject:game_memory cookieTemp.motion set from entity @s data.motion
+aim (nuovo file, al posto della riga 11 di setup):
+mcfunction
+$execute facing entity @e[type=marker,tag=cookie.objective,limit=1,sort=nearest] feet rotated ~$(yaw) ~$(pitch) run function skills:auxiliary/set_motion {motion:$(motion)}
+Alla fine di setup aggiungi data remove storage arenaproject:game_memory cookieTemp.
+
+Lo spread viene "quadrato": in diagonale arriva a circa 15,5° invece di 11°. Per un'abilità del genere va benissimo. Se lo vuoi circolare servono seno e coseno, e non ne vale la pena.
+
+3. Controllo muri con #skills:raycast
+
+Per via del punto 2, controlla attorno al biscotto e non al centro. La hitbox dell'item è 0,25, quindi 0,3 basta per "toccare" il blocco vicino. Ti conviene un file helper, così lo riusi anche per end_teleport come hai scritto nel TODO:
+mcfunction
+# cookie_blaster/wall_check
+execute unless block ~0.3 ~ ~ #skills:raycast run return 1
+execute unless block ~-0.3 ~ ~ #skills:raycast run return 1
+execute unless block ~ ~ ~0.3 #skills:raycast run return 1
+execute unless block ~ ~ ~-0.3 #skills:raycast run return 1
+execute unless block ~ ~0.3 ~ #skills:raycast run return 1
+execute unless block ~ ~-0.1 ~ #skills:raycast run return 1
+return fail
+E in tick:
+mcfunction
+execute if function skills:list/offensive/cookie_blaster/wall_check run return run function skills:list/offensive/cookie_blaster/end
+Il pavimento usa ~-0.1 perché un item appoggiato a terra ha la Y esattamente sulla superficie del blocco. Come bonus, il tag include già erba alta e fiori, che gli item attraversano senza collisione, quindi il comportamento resta coerente.
+
+Ordine che ti consiglio: prima i fix 3 e 4 (return e count), poi la ricorsione, e la provi da sola con spread 0. Poi lo spread, e infine il controllo muri. Così, se qualcosa si rompe, sai subito quale passaggio è stato.
+
+✻ Churned for 1m 59s · done 7:08 PM
+
+※ recap: Stai rifacendo cookie_blaster con evocazione ricorsiva, spread casuale e controllo muri con #skills:raycast; finora ho solo analizzato, senza modificare niente. Primo passo: aggiungere i return in tick.mcfunction e count nello storage. (disable recaps in /config)

@@ -1,0 +1,1 @@
+$execute facing entity @e[type=marker,tag=cookie.objective,limit=1,sort=nearest] feet rotated ~$(yaw) ~$(pitch) run function skills:auxiliary/set_motion {motion:$(motion)}

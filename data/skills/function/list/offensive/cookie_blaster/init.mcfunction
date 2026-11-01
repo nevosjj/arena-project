@@ -9,11 +9,9 @@ playsound entity.lightning_bolt.impact player @a ~ ~ ~ 2 1.8
 # Spawn riferimento
 execute anchored eyes run summon marker ^ ^ ^3 {Tags:["cookie.objective"]}
 
-# Evocazione (nuovo)
-#execute as @e[type=marker,distance=..3,tag=cookie_blaster.marker,limit=1,sort=nearest] run function skills:list/offensive/cookie_blaster/spawning with entity @s data
-
-# Evocazione (legacy)
-execute anchored eyes run function skills:list/offensive/cookie_blaster/spawn
+# Evocazione
+execute anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=cookie_blaster.marker,distance=..3,limit=1,sort=nearest] run \
+function skills:list/offensive/cookie_blaster/spawn with entity @s data
 
 # Settaggio statistiche
 execute as @e[type=item,distance=..4,tag=cookie.projectile,tag=new.projectile] at @s run function skills:list/offensive/cookie_blaster/setup
