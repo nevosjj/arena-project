@@ -29,6 +29,4 @@ scoreboard players reset @s ability_damage
 scoreboard players reset @s incoming_damage
 
 # Feedback custom dell'evocazione: skills:list/<abilityType>/<abilityName>/hit
-scoreboard players operation #summon summon.ID = @s summon.ID
-execute at @s as @e[type=marker,tag=summon.brain,distance=..16] if score @s summon.ID = #summon summon.ID run function health:summon/hit with entity @s data
-scoreboard players reset #summon summon.ID
+execute at @s run function health:summon/hit with entity @s data

@@ -1,14 +1,11 @@
 ###################################################################################
 ## Chiamata da health:summon/melee_hit e skills:auxiliary/targeting/apply_damage ##
-## Esecutore: la hitbox distrutta                                                ##
-## Chiama la destroyed dell'abilità come e al cervello, poi elimina la hitbox.   ##
-## Cervello e visual sono a carico della destroyed.                              ##
+## Esecutore: l'evocazione distrutta                                             ##
+## Chiama la destroyed dell'abilità (feedback e visual), poi elimina la hitbox.  ##
 ###################################################################################
 
-# Cervello
-scoreboard players operation #summon summon.ID = @s summon.ID
-execute at @s as @e[type=marker,tag=summon.brain,distance=..16] if score @s summon.ID = #summon summon.ID at @s run function health:summon/destroyed with entity @s data
-scoreboard players reset #summon summon.ID
+# Distruzione (posizione: la hitbox, anche quando il danno arriva da un'abilità lontana)
+execute at @s run function health:summon/destroyed with entity @s data
 
 # Hitbox
 function skills:auxiliary/summon/kill

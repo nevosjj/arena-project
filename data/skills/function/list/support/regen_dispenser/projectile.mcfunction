@@ -1,14 +1,16 @@
-###########################################################
-## Chiamata da skills:list/support/regen_dispenser/shoot ##
-## Esecutore: il cervello, ruotato verso il bersaglio    ##
-## Posizione: il cervello | Macro: i suoi data           ##
-###########################################################
+##############################################################################
+## Chiamata da skills:list/support/regen_dispenser/shoot                    ##
+## Esecutore: l'evocazione, ruotata verso il bersaglio | Macro: i suoi data ##
+## Posizione: il centro del dispenser                                       ##
+##############################################################################
 
 # Evocazione
 summon item ^ ^ ^0.4 {PickupDelay:32767,Invulnerable:1b,Tags:["projectile","summon.part","regen_dispenser.projectile","new.projectile"],Item:{id:"minecraft:golden_apple",count:1}}
 
-# Dati del cervello (power, range, distance, abilityName, ID, teamID...)
+# Dati dell'evocazione (power, distance, abilityName, ID, teamID...)
 data modify entity @e[type=item,tag=new.projectile,distance=..1,limit=1] data set from entity @s data
+# Per il proiettile "range" è il raggio di collisione (letto dal targeting in projectile_tick)
+data modify entity @e[type=item,tag=new.projectile,distance=..1,limit=1] data.range set from entity @s data.projectileRange
 
 # Item casuale: mela d'oro (1), carota d'oro (2), pozione splash di guarigione (3)
 execute as @e[type=item,tag=new.projectile,distance=..1,limit=1] store result score @s temp run random value 1..3

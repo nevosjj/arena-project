@@ -1,8 +1,7 @@
-################################################################
-## Chiamata da health:summon/incoming_damage                  ##
-## Esecutore: il cervello | Posizione: la hitbox colpita      ##
-## Macro: i data del cervello                                 ##
-## Chiama skills:list/<abilityType>/<abilityName>/hit (suono) ##
-################################################################
+######################################################################
+## Chiamata da health:summon/incoming_damage                        ##
+## Esecutore e posizione: l'evocazione colpita | Macro: i suoi data ##
+## Chiama skills:list/<abilityType>/<abilityName>/hit (suono)       ##
+######################################################################
 
 $function skills:list/$(abilityType)/$(abilityName)/hit

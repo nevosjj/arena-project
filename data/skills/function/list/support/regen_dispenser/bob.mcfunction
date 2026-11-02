@@ -1,9 +1,9 @@
-####################################################################
-## Chiamata da skills:list/support/regen_dispenser/tick           ##
-## Esecutore e posizione: il cervello | Macro: y, blade           ##
-## Sposta dispenser ed elica su/giù con interpolazione (20 tick). ##
-## blade = y - 0.085 (pale un po' sotto il fondo del dispenser)   ##
-####################################################################
+####################################################################################
+## Chiamata da skills:list/support/regen_dispenser/tick                           ##
+## Esecutore: l'evocazione | Posizione: il centro del dispenser | Macro: y, blade ##
+## Sposta dispenser ed elica su/giù con interpolazione (20 tick).                 ##
+## blade = y - 0.085 (pale un po' sotto il fondo del dispenser)                   ##
+####################################################################################
 
 # Dispenser
 $data modify entity @e[type=block_display,tag=regen_dispenser.visual,distance=..0.1,limit=1] transformation.translation set value [-0.2f,$(y),-0.2f]

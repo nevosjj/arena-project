@@ -34,23 +34,23 @@
     skills:auxiliary/summon/ = vita dell'entità (creazione, rimozione, tick)
     health:summon/           = matematica dei danni (melee, abilità, morte)
 
-    Struttura: un "cervello" (marker con data abilityName, abilityType, ID, teamID) + una hitbox interaction "player_summon",
-    collegati dallo score summon.ID. Tutte le parti hanno il tag "summon.part" (anche i visual: vanno aggiunti a mano).
-    REGOLA: il cervello deve restare entro 16 blocchi dalla sua hitbox (le ricerche usano distance=..16),
-    altrimenti la hitbox viene considerata orfana ed eliminata.
-        - create {width, height, health} -> come il cervello, nella posizione della hitbox
-        - resize {width, height}          -> come il cervello
-        - remove                          -> come il cervello, toglie la hitbox SENZA destroyed (es. fine durata)
+    Struttura: l'evocazione È la hitbox, una interaction "player_summon" autonoma che porta i data dell'abilità
+    (abilityName, abilityType, ID, teamID e i technical). Niente cervello, niente score di collegamento.
+    Tutte le parti hanno il tag "summon.part" (anche visual e proiettili: vanno aggiunti a mano).
+    I visual si ritrovano per posizione (distance=..0.1 dal punto in cui sono stati evocati).
+        - create (with entity @s data)   -> come il marker dell'abilità (data: width, height, health), ai piedi della hitbox.
+                                            L'interaction nasce col tag "summon.new": il setup dell'abilità la prende e lo toglie.
+                                            Poi il marker dell'abilità si può uccidere, come nelle altre abilità.
+        - resize {width, height}          -> come l'evocazione
+        - kill                            -> rimozione pulita (score + kill), es. fine durata: SENZA destroyed
         - cleanup                         -> elimina tutto, a inizio round e a fine partita
-    Score della hitbox: summon.health, summon.iframes (10 tick dopo un melee), summon.ID, ID, teamID.
+    Score dell'evocazione: summon.health, summon.iframes (10 tick dopo un melee), ID, teamID.
     Melee: danno = stat.attack dell'attaccante, nessun bonus/energia/combo, conta in poststat.melee_inflicted_summon.
     Abilità: testo danno sì, notifica "!!!" no. Overtime applicato, danni annullati a round finito.
-    Morte: skills:list/<abilityType>/<abilityName>/destroyed eseguita come e al cervello (deve uccidere cervello e visual).
-    Colpo: skills:list/<abilityType>/<abilityName>/hit eseguita come il cervello, alla posizione della hitbox (suono custom).
+    Colpo: skills:list/<abilityType>/<abilityName>/hit, come e all'evocazione (suono custom).
+    Morte: skills:list/<abilityType>/<abilityName>/destroyed, come e all'evocazione (feedback + visual);
+           la hitbox la elimina poi health:summon/death.
     OGNI abilità con evocazioni deve avere sia "hit" che "destroyed".
-    Se il cervello è il marker dell'abilità, NON va ucciso in init (a differenza delle altre abilità):
-    senza cervello la hitbox diventa orfana e summon/tick la elimina subito.
-    Hitbox senza cervello: si elimina da sola.
 
 ## DOCUMENTAZIONE PATCH
 

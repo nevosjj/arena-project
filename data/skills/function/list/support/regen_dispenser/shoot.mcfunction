@@ -1,12 +1,12 @@
-#######################################################################
-## Chiamata da skills:list/support/regen_dispenser/tick              ##
-## Esecutore e posizione: il cervello | Macro: i suoi data           ##
-## Mira all'alleato più vicino entro aimRange (anche dietro i muri). ##
-## Senza bersaglio non ricarica: riprova al tick dopo (attesa).      ##
-#######################################################################
+#######################################################################################
+## Chiamata da skills:list/support/regen_dispenser/tick                              ##
+## Esecutore: l'evocazione | Posizione: il centro del dispenser | Macro: i suoi data ##
+## Mira all'alleato più vicino entro range (anche dietro i muri).                    ##
+## Senza bersaglio non ricarica: riprova al tick dopo (attesa).                      ##
+#######################################################################################
 
-# Bersaglio (range = aimRange, solo per la mira)
-$function skills:auxiliary/targeting/select_allies_single {range:$(aimRange),abilityName:"$(abilityName)",ID:$(ID)}
+# Bersaglio: alleato più vicino entro range (i data dell'evocazione bastano al targeting)
+function skills:auxiliary/targeting/select_allies_single with entity @s data
 
 # Nessun bersaglio: attesa
 execute unless entity @a[tag=target.selected] run return run function skills:auxiliary/targeting/clear

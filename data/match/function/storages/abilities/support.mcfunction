@@ -65,8 +65,8 @@ data modify storage ability_data:support skills set value [\
             delay:60,\
             health:50,\
             motion:9,\
-            aimRange:7f,\
-            range:1.3f,\
+            range:7f,\
+            projectileRange:1.3f,\
             distance:15,\
             width:0.5f,\
             height:0.5\

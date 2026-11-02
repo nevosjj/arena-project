@@ -1,8 +1,8 @@
-##################################################################################
-## Chiamata da skills:auxiliary/summon/*, health:summon/death e dalle destroyed ##
-## Esecutore: una parte di evocazione (hitbox, cervello o visual)               ##
-## Rimozione pulita, senza score fantasma.                                      ##
-##################################################################################
+########################################################################################
+## Chiamata da health:summon/death, summon/cleanup e dalle abilità (fine durata ecc.) ##
+## Esecutore: una parte di evocazione (hitbox, visual, proiettile)                    ##
+## Rimozione pulita, senza score fantasma.                                            ##
+########################################################################################
 
 scoreboard players reset @s
 kill @s

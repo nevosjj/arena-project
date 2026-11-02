@@ -1,27 +1,20 @@
-###########################################################################################
-## Chiamata dalle abilità con evocazioni (es. skills:list/support/regen_dispenser/setup) ##
-## Esecutore: il cervello (marker con data abilityName, abilityType, ID, teamID)         ##
-## Posizione: i piedi della hitbox                                                       ##
-## Uso: function skills:auxiliary/summon/create {width, height, health}                  ##
-## Crea la hitbox "player_summon" e la collega al cervello tramite summon.ID.            ##
-## Alla morte: skills:list/<abilityType>/<abilityName>/destroyed come il cervello.       ##
-###########################################################################################
-
-# Nuovo identificativo
-scoreboard players add #summon_counter summon.ID 1
-scoreboard players operation @s summon.ID = #summon_counter summon.ID
-tag @s add summon.brain
-tag @s add summon.part
+###########################################################################################################
+## Chiamata dalle abilità con evocazioni (es. skills:list/support/regen_dispenser/init)                  ##
+## Uso: function skills:auxiliary/summon/create with entity @s data                                      ##
+## Esecutore: il marker dell'abilità (data: abilityName, abilityType, ID, teamID, width, height, health) ##
+## Posizione: i piedi della hitbox                                                                       ##
+## Crea l'evocazione: una interaction "player_summon" autonoma, con i data dell'abilità.                 ##
+## Resta col tag "summon.new": il setup dell'abilità la prende in carico e lo toglie.                    ##
+###########################################################################################################
 
 # Hitbox
 $summon interaction ~ ~ ~ {width:$(width)f,height:$(height)f,response:1b,Tags:["player_summon","summon.part","summon.new"]}
 
-# Statistiche
-$scoreboard players set @e[type=interaction,tag=summon.new,distance=..1] summon.health $(health)
-scoreboard players set @e[type=interaction,tag=summon.new,distance=..1] summon.iframes 0
-scoreboard players operation @e[type=interaction,tag=summon.new,distance=..1] summon.ID = @s summon.ID
-scoreboard players operation @e[type=interaction,tag=summon.new,distance=..1] ID = @s ID
-scoreboard players operation @e[type=interaction,tag=summon.new,distance=..1] teamID = @s teamID
+# Dati dell'abilità
+data modify entity @e[type=interaction,tag=summon.new,distance=..0.1,limit=1] data set from entity @s data
 
-# Pulizia
-tag @e[type=interaction,tag=summon.new,distance=..1] remove summon.new
+# Statistiche
+$scoreboard players set @e[type=interaction,tag=summon.new,distance=..0.1,limit=1] summon.health $(health)
+scoreboard players set @e[type=interaction,tag=summon.new,distance=..0.1,limit=1] summon.iframes 0
+scoreboard players operation @e[type=interaction,tag=summon.new,distance=..0.1,limit=1] ID = @s ID
+scoreboard players operation @e[type=interaction,tag=summon.new,distance=..0.1,limit=1] teamID = @s teamID
