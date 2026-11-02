@@ -112,6 +112,7 @@ scoreboard objectives add death dummy
 scoreboard objectives add multiplier dummy
 scoreboard objectives add sound dummy
 scoreboard objectives add range dummy
+scoreboard objectives add raycast dummy
 scoreboard objectives add iteration dummy
 scoreboard objectives add t dummy
 scoreboard objectives add max_t dummy
