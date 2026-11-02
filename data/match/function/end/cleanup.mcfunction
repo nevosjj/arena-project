@@ -39,6 +39,10 @@ execute as @s[tag=in_game] run attribute @s minecraft:jump_strength modifier rem
 # Effetto di rigenerazione dopo la redistribuzione di vita
 effect give @s regeneration 10 10 true
 
+## Tag con ID (prima del reset degli obiettivi, serve lo score ID)
+execute store result storage arenaproject:game_memory temporary.cleanup.ID int 1 run scoreboard players get @s ID
+function match:end/clean_macro_tags with storage arenaproject:game_memory temporary.cleanup
+
 ## Obiettivi
 scoreboard players reset *
 
@@ -54,9 +58,32 @@ tag @s remove utility_down
 tag @s remove ultimate_down
 tag @s remove freeze_breath.slowed
 tag @s remove magnetic_impulse.immobilized
+tag @s remove lightning_strike.immobilized
+tag @s remove end_teleport.player
 tag @s remove flame_sword.energy
 tag @s remove flame_sword.p0
 tag @s remove flame_sword.p2
+
+# Selezione (se la partita finisce durante la selezione)
+tag @s remove selecting
+tag @s remove done_selecting
+tag @s remove must_select.offensive
+tag @s remove must_select.utility
+tag @s remove must_select.support
+tag @s remove must_select.ultimate
+
+# Condizioni di attivazione
+tag @s remove offensive.condition.raycast
+tag @s remove offensive.condition.area
+tag @s remove utility.condition.raycast
+tag @s remove utility.condition.area
+tag @s remove support.condition.raycast
+tag @s remove support.condition.area
+tag @s remove ultimate.condition.raycast
+tag @s remove ultimate.condition.area
+tag @s remove condition.rotation.target
+tag @s remove silent.cooldown.feedback
+
 
 ## STORAGE
 
