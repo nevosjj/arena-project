@@ -6,9 +6,9 @@
 #################################################################################
 
 # Cervello
-scoreboard players operation #summon summon.id = @s summon.id
-execute as @e[tag=summon.brain] if score @s summon.id = #summon summon.id at @s run function health:summon/destroyed with entity @s data
-scoreboard players reset #summon summon.id
+scoreboard players operation #summon summon.ID = @s summon.ID
+execute at @s as @e[type=marker,tag=summon.brain,distance=..16] if score @s summon.ID = #summon summon.ID at @s run function health:summon/destroyed with entity @s data
+scoreboard players reset #summon summon.ID
 
 # Hitbox
 function skills:auxiliary/summon/kill

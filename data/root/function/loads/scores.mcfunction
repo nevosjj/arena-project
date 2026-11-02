@@ -102,7 +102,7 @@ scoreboard objectives add antispam_target.ultimate dummy
 # Statistiche summon
 scoreboard objectives add summon.health dummy
 scoreboard objectives add summon.iframes dummy
-scoreboard objectives add summon.id dummy
+scoreboard objectives add summon.ID dummy
 
 # Utilità
 scoreboard objectives add bool dummy

@@ -1,5 +1,9 @@
-# Evocazioni (iframes, melee, hitbox orfane)
-execute if entity @e[type=interaction,tag=player_summon,distance=..128] as @e[type=interaction,tag=player_summon] at @s run function skills:auxiliary/summon/tick
+###################################
+## Lista tick utile alle abilità ##
+###################################
+
+# Interaction (Evocazioni)
+execute if entity @e[type=interaction,tag=player_summon,distance=..128] as @e[type=interaction,tag=player_summon,distance=..128] at @s run function skills:auxiliary/summon/tick
 
 # Bone shield
 execute if entity @e[type=block_display,tag=bone_shield.visual,distance=..128] as @e[type=block_display,tag=bone_shield.visual] at @s run function skills:list/support/bone_shield/skill_tick with entity @s data

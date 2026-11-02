@@ -9,7 +9,7 @@
 function skills:auxiliary/targeting/select_enemies with entity @s data
 
 # Danno
-execute as @e[tag=target.selected] run function skills:auxiliary/targeting/apply_damage with storage arenaproject:game_memory targetSource
+$execute as @e[tag=target.selected,distance=..$(range)] run function skills:auxiliary/targeting/apply_damage with storage arenaproject:game_memory targetSource
 
 # Chiusura
 function skills:auxiliary/targeting/clear

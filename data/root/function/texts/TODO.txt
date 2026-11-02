@@ -6,10 +6,10 @@
         Risposte: a. cartelle separate | b. ignoreSummons:1b (magnetic_impulse) | c. poststat.melee_inflicted_summon
                   d. cleanup a inizio round e a fine partita | e. hitbox del distributore ferma
         Da fare dopo i test: cancellare skills:list/debug/summon_dummy/ ; mostrare melee_done_summon nelle statistiche (recording:check/stats)
-        Vincolo: le interaction NON hanno "data" -> ogni evocazione ha un marker "cervello" collegato tramite score summon.id
+        Vincolo: le interaction NON hanno "data" -> ogni evocazione ha un marker "cervello" collegato tramite score summon.ID
                  (contatore globale #summon_counter). Per il distributore il cervello è il marker dell'abilità.
         skills:auxiliary/summon/
-            - create (macro, eseguita come il cervello): evoca interaction con width/height/health, assegna summon.id/ID/teamID, tag player_summon + summon.part
+            - create (macro, eseguita come il cervello): evoca interaction con width/height/health, assegna summon.ID/ID/teamID, tag player_summon + summon.part
             - resize (macro): cambia width/height (es. doom_shroom che cresce)
             - remove: rimozione senza distruzione (fine durata)
             - tick: scala summon.iframes, legge il melee, uccide interaction orfane
@@ -26,7 +26,7 @@
             - damage_consequence di freeze_breath e lightning_strike: righe attributi protette con @s[type=player]; freeze_breath/end toglie victim con @e
         Colpiscono le evocazioni: cookie_blaster, freeze_breath, tornado, area di lightning_strike
         NON le colpiscono: raycast di lightning_strike, switch, vampiric_chain, magnetic_impulse, golden_apple
-        Score nuovi in root:loads/scores: summon.health, summon.iframes, summon.id. Tick in root:ticks/skills.
+        Score nuovi in root:loads/scores: summon.health, summon.iframes, summon.ID. Tick in root:ticks/skills.
         Test: evocazione di prova temporanea skills:list/debug/summon_dummy/ (init + destroyed), da cancellare dopo.
         DOMANDE APERTE:
             a. Cartelle: skills:auxiliary/summon/ + health:summon/, oppure tutto in un posto?

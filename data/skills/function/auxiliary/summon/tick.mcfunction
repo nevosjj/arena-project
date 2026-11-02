@@ -5,11 +5,11 @@
 #################################################################
 
 # Hitbox orfana (cervello sparito senza remove): si elimina
-scoreboard players operation #summon summon.id = @s summon.id
+scoreboard players operation #summon summon.ID = @s summon.ID
 scoreboard players set #summon_linked temp 0
-execute as @e[tag=summon.brain] if score @s summon.id = #summon summon.id run scoreboard players set #summon_linked temp 1
+execute as @e[type=marker,tag=summon.brain,distance=..16] if score @s summon.ID = #summon summon.ID run scoreboard players set #summon_linked temp 1
 execute if score #summon_linked temp matches 0 run function skills:auxiliary/summon/kill
-scoreboard players reset #summon summon.id
+scoreboard players reset #summon summon.ID
 execute if score #summon_linked temp matches 0 run return run scoreboard players reset #summon_linked temp
 scoreboard players reset #summon_linked temp
 

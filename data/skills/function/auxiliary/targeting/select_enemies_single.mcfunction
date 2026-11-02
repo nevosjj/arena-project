@@ -23,5 +23,5 @@ $execute unless data entity @s data{ignoreSummons:1b} as @e[type=interaction,tag
     unless score @s teamID = #source teamID run tag @s add target.candidate
 
 # Selezione del più vicino
-tag @e[tag=target.candidate,sort=nearest,limit=1] add target.selected
-tag @e[tag=target.candidate] remove target.candidate
+$tag @e[tag=target.candidate,distance=..$(range),sort=nearest,limit=1] add target.selected
+$tag @e[tag=target.candidate,distance=..$(range)] remove target.candidate

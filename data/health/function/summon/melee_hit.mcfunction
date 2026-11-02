@@ -20,5 +20,5 @@ playsound entity.player.small_fall player @a ~ ~ ~ 1 1.2
 # Flusso danni
 function health:summon/incoming_damage
 
-# Morte
-function health:summon/death_check
+# Controllo morte
+execute if score @s summon.health matches ..0 run function health:summon/death
