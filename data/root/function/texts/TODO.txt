@@ -36,7 +36,7 @@
             e. Hitbox del distributore ferma (copre tutta l'oscillazione) o segue il movimento? (proposta: ferma)
 
     FASE 4 - REGEN_DISPENSER -- IMPLEMENTATA, DA TESTARE IN GIOCO
-        Fatto: oscillazione con interpolazione della translation (non teleport_duration), primo sparo immediato,
+        Fatto: oscillazione con interpolazione della translation, primo sparo dopo delay, mira continua del visual, motion 9,
                technical: aimRange:7f (mira), range:1.3f (collisione), distance:15 (tick di vita del proiettile).
         Da fare: elica; lore "raggio di mira 7 blocchi" nei chestItems.
         Entità: marker cervello (tick in root:ticks/skills) + block_display dispenser + interaction (50 HP, via summon/create).

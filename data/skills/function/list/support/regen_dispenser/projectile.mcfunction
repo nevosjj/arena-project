@@ -24,4 +24,8 @@ tag @e[type=item,tag=new.projectile,distance=..1] remove new.projectile
 
 # Feedback
 playsound block.dispenser.launch player @a ~ ~ ~ 1.5 1.3
-particle happy_villager ^ ^ ^0.4 0.1 0.1 0.1 0 3 force
+# Sbuffo di fumo bianco verso il bersaglio (scia lungo la direzione di sparo)
+particle white_smoke ^ ^ ^0.4 0.03 0.03 0.03 0.01 3 force
+particle white_smoke ^ ^ ^0.7 0.05 0.05 0.05 0.02 3 force
+particle white_smoke ^ ^ ^1.0 0.08 0.08 0.08 0.03 3 force
+particle white_smoke ^ ^ ^1.3 0.1 0.1 0.1 0.03 2 force

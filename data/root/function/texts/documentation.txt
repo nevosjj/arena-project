@@ -48,6 +48,8 @@
     Morte: skills:list/<abilityType>/<abilityName>/destroyed eseguita come e al cervello (deve uccidere cervello e visual).
     Colpo: skills:list/<abilityType>/<abilityName>/hit eseguita come il cervello, alla posizione della hitbox (suono custom).
     OGNI abilità con evocazioni deve avere sia "hit" che "destroyed".
+    Se il cervello è il marker dell'abilità, NON va ucciso in init (a differenza delle altre abilità):
+    senza cervello la hitbox diventa orfana e summon/tick la elimina subito.
     Hitbox senza cervello: si elimina da sola.
 
 ## DOCUMENTAZIONE PATCH

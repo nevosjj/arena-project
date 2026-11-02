@@ -5,7 +5,7 @@
 #########################################################
 
 # Feedback
-particle block{block_state:"minecraft:dispenser"} ~ ~ ~ 0.3 0.3 0.3 0.2 30 force
+particle block{block_state:"minecraft:dispenser"} ~ ~ ~ 0.3 0.3 0.3 0.4 15 force
 particle explosion ~ ~ ~ 0 0 0 0 1 force
 playsound block.stone.break player @a ~ ~ ~ 2 0.6
 playsound entity.generic.explode player @a ~ ~ ~ 1 1.6
