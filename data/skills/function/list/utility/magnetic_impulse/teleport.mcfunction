@@ -2,7 +2,7 @@
 function skills:auxiliary/targeting/select_enemies with entity @s data
 
 # Teletrasporto
-tp @a[tag=target.selected] @s
+execute as @a[tag=target.selected] run tp @s ~ ~ ~
 
 # Stordimento
 # -1 add_multiplied_total = x0: resta 0 anche se stackato con altre immobilizzazioni
