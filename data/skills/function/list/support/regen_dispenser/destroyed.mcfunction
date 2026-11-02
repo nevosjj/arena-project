@@ -12,4 +12,5 @@ playsound entity.breeze.death player @a ~ ~ ~ 2 1.6
 
 # Pulizia (la hitbox la elimina health:summon/death)
 kill @e[type=block_display,tag=regen_dispenser.visual,distance=..0.1,limit=1]
+kill @e[type=block_display,tag=regen_dispenser.propeller,distance=..0.1]
 function skills:auxiliary/summon/kill

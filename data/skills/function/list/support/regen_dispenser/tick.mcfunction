@@ -9,8 +9,8 @@ scoreboard players remove @s duration.support 1
 
 # Oscillazione (giù a 20, su a 40, ciclo di 40 tick)
 scoreboard players add @s counter.support2 1
-execute if score @s counter.support2 matches 20 run function skills:list/support/regen_dispenser/bob {y:-0.45f}
-execute if score @s counter.support2 matches 40.. run function skills:list/support/regen_dispenser/bob {y:-0.15f}
+execute if score @s counter.support2 matches 20 run function skills:list/support/regen_dispenser/bob {y:-0.45f,blade:-0.535f}
+execute if score @s counter.support2 matches 40.. run function skills:list/support/regen_dispenser/bob {y:-0.15f,blade:-0.235f}
 execute if score @s counter.support2 matches 40.. run scoreboard players set @s counter.support2 0
 
 # Mira continua: il visual guarda l'alleato più vicino entro aimRange

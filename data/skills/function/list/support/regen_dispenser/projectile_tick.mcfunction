@@ -5,6 +5,10 @@
 ## Lo uccide la heal_consequence, oppure projectile_end (muro o fine gittata). ##
 #################################################################################
 
+# Feedback
+playsound entity.item.pickup ambient @a ~ ~ ~ 2 0.7
+
+# Check
 scoreboard players add @s temp 1
 execute if function skills:auxiliary/wall_check run return run function skills:list/support/regen_dispenser/projectile_end
 $execute if score @s temp matches $(distance).. run return run function skills:list/support/regen_dispenser/projectile_end

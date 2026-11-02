@@ -1,11 +1,11 @@
-######################################################################################
-## Chiamata dalle abilità con evocazioni (es. skills:list/debug/summon_dummy/setup) ##
-## Esecutore: il cervello (marker con data abilityName, abilityType, ID, teamID)    ##
-## Posizione: i piedi della hitbox                                                  ##
-## Uso: function skills:auxiliary/summon/create {width, height, health}             ##
-## Crea la hitbox "player_summon" e la collega al cervello tramite summon.ID.       ##
-## Alla morte: skills:list/<abilityType>/<abilityName>/destroyed come il cervello.  ##
-######################################################################################
+###########################################################################################
+## Chiamata dalle abilità con evocazioni (es. skills:list/support/regen_dispenser/setup) ##
+## Esecutore: il cervello (marker con data abilityName, abilityType, ID, teamID)         ##
+## Posizione: i piedi della hitbox                                                       ##
+## Uso: function skills:auxiliary/summon/create {width, height, health}                  ##
+## Crea la hitbox "player_summon" e la collega al cervello tramite summon.ID.            ##
+## Alla morte: skills:list/<abilityType>/<abilityName>/destroyed come il cervello.       ##
+###########################################################################################
 
 # Nuovo identificativo
 scoreboard players add #summon_counter summon.ID 1
