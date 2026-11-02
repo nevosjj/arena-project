@@ -4,6 +4,6 @@ particle instant_effect{color:[1.0,0.0,0.0],power:1.0} ~ ~1 ~ 0 0 0 0.1 10 force
 
 # Applicazione lentezza
 tag @s add lightning_strike.immobilized
-attribute @s minecraft:movement_speed modifier add lightning_strike:slow -100 add_multiplied_base
-attribute @s minecraft:jump_strength modifier add lightning_strike:jump -100 add_multiplied_base
+attribute @s minecraft:movement_speed modifier add lightning_strike:slow -1 add_multiplied_total
+attribute @s minecraft:jump_strength modifier add lightning_strike:jump -1 add_multiplied_total
 $scoreboard players set @s lightning_strike.counter $(duration)

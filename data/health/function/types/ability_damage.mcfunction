@@ -1,7 +1,7 @@
-###############################################
-## Funzione che applica danni di abilità     ##
-## Chiamato da skills:auxiliary/apply_damage ##
-###############################################
+#########################################################
+## Funzione che applica danni di abilità               ##
+## Chiamato da skills:auxiliary/targeting/apply_damage ##
+#########################################################
 
 
 ## Operazione moltiplicatori

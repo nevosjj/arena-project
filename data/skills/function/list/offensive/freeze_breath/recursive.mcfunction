@@ -22,9 +22,8 @@ $particle minecraft:dust_color_transition{from_color:[0.15,0.1,0.45],to_color:[0
 execute unless entity @s[tag=breath.blocked] unless block ~ ~ ~ air run function skills:list/offensive/freeze_breath/block_reduction
 
 # Identificazione nemico
-$execute as @a[distance=..$(range)] unless entity @s[tag=freeze_breath_$(ID).victim] run \
-    function skills:auxiliary/search_damage \
-        with entity @e[type=marker,distance=..$(range),limit=1,sort=nearest,tag=freeze_breath.marker] data
+# Le vittime già colpite (freeze_breath_ID.victim) vengono escluse dalla ricerca stessa
+function skills:auxiliary/targeting/search_damage with entity @s data
 
 # Teletrasporto
     # Questo decide quanta distanza deve percorrere ogni ricorsione e quanto deve ruotare ogni metà della spirale.

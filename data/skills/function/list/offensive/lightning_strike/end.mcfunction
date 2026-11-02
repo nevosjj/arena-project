@@ -5,7 +5,7 @@ scoreboard players reset @s temp2
 scoreboard players reset @s temp3
 
 # Ricerca danni
-function skills:auxiliary/search_damage with entity @s data
+function skills:auxiliary/targeting/search_damage with entity @s data
 execute positioned ~ ~0.7 ~ run function skills:auxiliary/ability_range with entity @s data
 
 # Feedback

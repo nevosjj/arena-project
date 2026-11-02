@@ -99,6 +99,10 @@ scoreboard objectives add antispam_target.utility dummy
 scoreboard objectives add antispam_target.support dummy
 scoreboard objectives add antispam_target.ultimate dummy
 
+# Statistiche summon
+scoreboard objectives add summon.health dummy
+scoreboard objectives add summon.iframes dummy
+
 # Utilità
 scoreboard objectives add bool dummy
 scoreboard objectives add roll dummy

@@ -1,5 +1,5 @@
 # Ricerca danno
-function skills:auxiliary/search_damage with entity @s data
+function skills:auxiliary/targeting/search_damage with entity @s data
 
 # Feedback sonoro
 playsound entity.breeze.land hostile @a ~ ~ ~ 0.5 0 0.1

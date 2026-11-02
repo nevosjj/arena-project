@@ -6,7 +6,7 @@ $summon marker ~ ~ ~ {Tags:[range.marker],data:{particles:damage_indicator,dista
 execute as @e[type=marker,limit=1,tag=range.marker,distance=..2] at @s run function skills:auxiliary/ability_range with entity @s data
 
 # Ricerca 
-function skills:auxiliary/search_heal \
+function skills:auxiliary/targeting/search_heal \
     with entity @s data
 
 # Cleanup

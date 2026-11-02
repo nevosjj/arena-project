@@ -59,18 +59,17 @@ data modify storage ability_data:support skills set value [\
             abilityEffect:"buff",\
         },\
         technical: {\
-            cooldown:38,\
-            duration:180\
+            cooldown:28,\
+            duration:180,\
+            power:75,\
+            delay:60,\
+            health:50,\
+            motion:26\
         },\
         display: {\
             name:"Distributore rigenerativo",\
             item:"dispenser",\
-            lore:[{"bold":false,"color":"gray","italic":false,"text":"Evoca un distributore volante che guarda"},\
-                {"bold":false,"color":"gray","italic":false,"text":"verso la tua direzione, entro il raggio."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Spara periodicamente un proiettile che ti cura."},\
-                {"bold":false,"color":"gray","italic":false,"text":"Può essere distrutto e ha una durata."},\
-                [{"bold":false,"color":"green","italic":false,"text":"Ricarica: "},{"bold":true,"color":"light_purple","italic":false,"text":"38s"}],\
-                [{"bold":false,"color":"yellow","italic":false,"text":"Durata: "},{"bold":true,"color":"light_purple","italic":false,"text":"9s"}]],\
-        }\
+            chestItems:{Items:[{Slot:3b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"light_purple","italic":false,"text":"Ricarica"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 28 secondi"}]],"minecraft:item_model":"book"}},{Slot:4b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_green","italic":false,"text":"Vita guarita"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 75 punti salute per proiettile"}]],"minecraft:item_model":"glistering_melon_slice"}},{Slot:5b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Durata"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 9 secondi"}]],"minecraft:item_model":"clock"}},{Slot:10b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"gold","italic":false,"text":"Distributore rigenerativo"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Evoca un distributore volante che mira all'alleato più vicino"}],[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Spara periodicamente un rapido proiettile"}],[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Il proiettile cura il primo bersaglio alleato che trova"}],[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Può essere distrutto da attacchi corpo a corpo e da abilità"}]],"minecraft:item_model":"dispenser"}},{Slot:12b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Intervallo di sparo"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Ogni 3 secondi"}]],"minecraft:item_model":"repeater"}},{Slot:13b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Vita del distributore"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 50 punti salute"}]],"minecraft:item_model":"shield"}},{Slot:14b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Velocità proiettili"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 26 velocità in aria"}]],"minecraft:item_model":"iron_boots"}}]},\
+            }\
     }\
 ]

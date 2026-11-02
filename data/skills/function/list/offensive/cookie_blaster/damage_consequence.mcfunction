@@ -1,6 +1,6 @@
-# Uccisione singolo proiettile
-scoreboard players reset @e[type=item,tag=cookie.projectile,limit=1,sort=nearest,distance=..3]
-kill @e[type=item,tag=cookie.projectile,limit=1,sort=nearest,distance=..3]
+# Uccisione del proiettile che ha colpito (la fonte della ricerca)
+scoreboard players reset @e[type=item,tag=target.source,limit=1]
+kill @e[type=item,tag=target.source,limit=1]
 
 # Feedback particellare
 particle cloud ~ ~ ~ 0 0 0 0.1 1 force
