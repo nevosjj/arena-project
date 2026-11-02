@@ -2,7 +2,7 @@
     FATTO: dati in match/storages/abilities/support (technical + chestItems), refactor targeting (skills:auxiliary/targeting/), fix stack immobilizzazioni.
     Si procede UNA fase alla volta, solo con l'ok dell'utente.
 
-    FASE 3 - EVOCAZIONI DANNEGGIABILI ("player_summon") -- IMPLEMENTATA, DA TESTARE IN GIOCO (vedi documentation.txt)
+    FASE 3 - EVOCAZIONI DANNEGGIABILI ("player_summon") -- FATTA E TESTATA (vedi documentation.txt)
         Risposte: a. cartelle separate | b. ignoreSummons:1b (magnetic_impulse) | c. poststat.melee_inflicted_summon
                   d. cleanup a inizio round e a fine partita | e. hitbox del distributore ferma
         Da fare dopo i test: cancellare skills:list/debug/summon_dummy/ ; mostrare melee_done_summon nelle statistiche (recording:check/stats)
@@ -35,7 +35,10 @@
             d. A fine round le evocazioni vive spariscono? (oggi new_round non pulisce le entità delle abilità)
             e. Hitbox del distributore ferma (copre tutta l'oscillazione) o segue il movimento? (proposta: ferma)
 
-    FASE 4 - REGEN_DISPENSER (dopo la fase 3)
+    FASE 4 - REGEN_DISPENSER -- IMPLEMENTATA, DA TESTARE IN GIOCO
+        Fatto: oscillazione con interpolazione della translation (non teleport_duration), primo sparo immediato,
+               technical: aimRange:7f (mira), range:1.3f (collisione), distance:15 (tick di vita del proiettile).
+        Da fare: elica; lore "raggio di mira 7 blocchi" nei chestItems.
         Entità: marker cervello (tick in root:ticks/skills) + block_display dispenser + interaction (50 HP, via summon/create).
         Spawn tra busto e piedi del caster, resta sul posto e oscilla su/giù (teleport_duration). Elica: più avanti.
         Mira: alleato più vicino entro 7 blocchi (caster incluso, anche a vita piena, anche dietro i muri) via select_allies_single.

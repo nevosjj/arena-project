@@ -55,6 +55,7 @@ scoreboard objectives add counter.offensive2 dummy
 scoreboard objectives add counter.offensive3 dummy
 scoreboard objectives add counter.offensive4 dummy
 scoreboard objectives add counter.support dummy
+scoreboard objectives add counter.support2 dummy
 scoreboard objectives add counter.utility dummy
 scoreboard objectives add counter.utility2 dummy
 

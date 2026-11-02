@@ -17,4 +17,4 @@ execute if entity @s[tag=player_summon] run function health:summon/ability_damag
 $execute at @s run function skills:list/$(abilityType)/$(abilityName)/damage_consequence with storage arenaproject:game_memory targetSource
 
 # Morte evocazione (dopo la consequence, che può ancora riferirsi a lei)
-execute if entity @s[tag=player_summon] run function health:summon/death_check
+execute if entity @s[tag=player_summon] if score @s summon.health matches ..0 run function health:summon/death

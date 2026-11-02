@@ -34,5 +34,9 @@ execute if entity @e[type=marker,tag=tornado.marker,distance=..128] as @e[type=m
 # Catena vampirica
 execute if entity @e[type=marker,tag=vampiric_chain.marker,distance=..128,tag=ready] as @e[type=marker,tag=vampiric_chain.marker,tag=ready] at @s run function skills:list/support/vampiric_chain/tick with entity @s data
 
+# Distributore rigenerativo
+execute if entity @e[type=marker,tag=regen_dispenser.brain,distance=..128] as @e[type=marker,tag=regen_dispenser.brain,distance=..128] at @s run function skills:list/support/regen_dispenser/tick with entity @s data
+execute if entity @e[type=item,tag=regen_dispenser.projectile,distance=..128] as @e[type=item,tag=regen_dispenser.projectile,distance=..128] at @s run function skills:list/support/regen_dispenser/projectile_tick with entity @s data
+
 # Switch
 execute if entity @e[type=marker,tag=switch.marker,distance=..128,tag=ready] as @e[type=marker,tag=switch.marker,tag=ready] at @s run function skills:list/utility/switch/tick with entity @s data

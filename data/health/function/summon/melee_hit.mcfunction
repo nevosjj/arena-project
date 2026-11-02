@@ -14,9 +14,6 @@ execute as @a[tag=summon.attacker] run scoreboard players operation @s poststat.
 # Iframes
 scoreboard players set @s summon.iframes 10
 
-# Feedback sonoro
-playsound entity.player.small_fall player @a ~ ~ ~ 1 1.2
-
 # Flusso danni
 function health:summon/incoming_damage
 

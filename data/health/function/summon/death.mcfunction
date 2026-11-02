@@ -1,9 +1,9 @@
-#################################################################################
-## Chiamata da health:summon/death_check                                       ##
-## Esecutore: la hitbox distrutta                                              ##
-## Chiama la destroyed dell'abilità come e al cervello, poi elimina la hitbox. ##
-## Cervello e visual sono a carico della destroyed.                            ##
-#################################################################################
+###################################################################################
+## Chiamata da health:summon/melee_hit e skills:auxiliary/targeting/apply_damage ##
+## Esecutore: la hitbox distrutta                                                ##
+## Chiama la destroyed dell'abilità come e al cervello, poi elimina la hitbox.   ##
+## Cervello e visual sono a carico della destroyed.                              ##
+###################################################################################
 
 # Cervello
 scoreboard players operation #summon summon.ID = @s summon.ID

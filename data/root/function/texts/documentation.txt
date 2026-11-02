@@ -46,6 +46,8 @@
     Melee: danno = stat.attack dell'attaccante, nessun bonus/energia/combo, conta in poststat.melee_inflicted_summon.
     Abilità: testo danno sì, notifica "!!!" no. Overtime applicato, danni annullati a round finito.
     Morte: skills:list/<abilityType>/<abilityName>/destroyed eseguita come e al cervello (deve uccidere cervello e visual).
+    Colpo: skills:list/<abilityType>/<abilityName>/hit eseguita come il cervello, alla posizione della hitbox (suono custom).
+    OGNI abilità con evocazioni deve avere sia "hit" che "destroyed".
     Hitbox senza cervello: si elimina da sola.
 
 ## DOCUMENTAZIONE PATCH

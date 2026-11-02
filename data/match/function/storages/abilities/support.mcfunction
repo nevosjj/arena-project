@@ -64,7 +64,10 @@ data modify storage ability_data:support skills set value [\
             power:75,\
             delay:60,\
             health:50,\
-            motion:26\
+            motion:26,\
+            aimRange:7f,\
+            range:1.3f,\
+            distance:15\
         },\
         display: {\
             name:"Distributore rigenerativo",\
