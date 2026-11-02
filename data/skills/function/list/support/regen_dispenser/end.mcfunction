@@ -6,7 +6,8 @@
 
 # Feedback
 particle poof ~ ~ ~ 0.2 0.2 0.2 0.02 10 force
-playsound block.beacon.deactivate player @a ~ ~ ~ 1.5 2
+playsound block.vault.reject_rewarded_player player @a ~ ~ ~ 1.5 2
+playsound entity.breeze.death player @a ~ ~ ~ 2 1.6
 
 # Pulizia
 function skills:auxiliary/summon/remove

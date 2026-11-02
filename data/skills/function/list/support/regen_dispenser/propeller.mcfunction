@@ -4,4 +4,4 @@
 ## Elica: per ora solo il suono, poi la rotazione.      ##
 ##########################################################
 
-playsound block.note_block.hat player @a ~ ~ ~ 0.25 1.8
+playsound minecraft:entity.breeze.slide player @a ~ ~ ~ 1 1.7

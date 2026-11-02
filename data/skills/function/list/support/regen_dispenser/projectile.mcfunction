@@ -23,7 +23,9 @@ scoreboard players set @e[type=item,tag=new.projectile,distance=..1,limit=1] tem
 tag @e[type=item,tag=new.projectile,distance=..1] remove new.projectile
 
 # Feedback
-playsound block.dispenser.launch player @a ~ ~ ~ 1.5 1.3
+playsound block.piston.extend player @a ~ ~ ~ 1.5 1.3
+playsound minecraft:block.vault.insert_item player @a ~ ~ ~ 2 2
+
 # Sbuffo di fumo bianco verso il bersaglio (scia lungo la direzione di sparo)
 particle white_smoke ^ ^ ^0.4 0.03 0.03 0.03 0.01 3 force
 particle white_smoke ^ ^ ^0.7 0.05 0.05 0.05 0.02 3 force

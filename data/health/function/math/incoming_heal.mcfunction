@@ -26,9 +26,8 @@ $execute if score @s incoming_heal matches 1.. run \
     ]
 
 # Feedback in-game text_display
-# Feedback in-game text_display
 execute store result storage arenaproject:game_memory healFeedback.text int 1.0 run scoreboard players get @s incoming_heal
-execute at @s run function health:texts/heal with storage arenaproject:game_memory healFeedback
+execute if score @s incoming_heal matches 1.. at @s run function health:texts/heal with storage arenaproject:game_memory healFeedback
 
 # Aggiornamento sidebar
 function match:display/update
