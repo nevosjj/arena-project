@@ -12,4 +12,4 @@ execute store result entity @s data.ID int 1.0 run scoreboard players get @s ID
 function selection:insertion/minecart/give_tag with entity @s data
 
 # Pulizia tag
-tag @s remove new_selection_minecart
+tag @s remove new_selection_block_display
