@@ -1,7 +1,7 @@
-############
-# INFO
-# CHIAMATA DA skills/activations/research
-############
+################################################
+## Chiamata da skills:activations/flow/marker ##
+## Esecutore: il caster                       ##
+################################################
 
 # Feedback
 playsound entity.lightning_bolt.impact player @a ~ ~ ~ 2 1.8

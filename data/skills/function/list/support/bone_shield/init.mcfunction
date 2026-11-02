@@ -1,7 +1,7 @@
-############
-# INFO
-# CHIAMATA DA skills/activations/marker
-############
+################################################
+## Chiamata da skills:activations/flow/marker ##
+## Esecutore: il caster                       ##
+################################################
 
 # Tag
 tag @s add skill.bone_shield

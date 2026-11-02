@@ -1,3 +1,9 @@
+##############################################################################
+## Chiamata da skills:list/utility/end_teleport/init e da sé stessa         ##
+## Esecutore e posizione: il marker "shadow.recursion" | Macro: i suoi data ##
+## Avanza di un blocco per ciclo finché trova un muro o raggiunge il range. ##
+##############################################################################
+
 scoreboard players add @s temp 1
 particle smoke ~ ~ ~ 0 0.8 0 0 10 force
 tp @s ^ ^ ^1

@@ -1,6 +1,7 @@
-# ============================================================
-# CURVA - BEZIER QUADRATICA RICORSIVA
-# ============================================================
+################################################################################
+## Chiamata da skills:list/offensive/flame_sword/get_points e da sé stessa    ##
+## Curva di Bézier quadratica ricorsiva: un punto e una particella per ciclo. ##
+################################################################################
 
 # Case base: t=100 significa fine della curva, senza uscire dal range
 execute if score #flame_sword t matches 100.. run return run function skills:list/offensive/flame_sword/reset_data
@@ -15,4 +16,4 @@ function skills:list/offensive/flame_sword/particle with storage arenaproject:ga
 scoreboard players add #flame_sword iteration 1
 scoreboard players add #flame_sword t 5
 
-function skills:list/offensive/flame_sword/recursive
+function skills:list/offensive/flame_sword/recursion

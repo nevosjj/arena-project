@@ -1,7 +1,7 @@
-############
-# INFO
-# CHIAMATA DA skills/activations/research
-############
+################################################
+## Chiamata da skills:activations/flow/marker ##
+## Esecutore: il caster                       ##
+################################################
 
 # Feedback
 playsound minecraft:entity.guardian.death voice @a ~ ~ ~ 2 1

@@ -21,4 +21,4 @@ tag @s add test.down
 data modify entity @s data.particleDistance set value 0.0
 
 # Inizio ricorsione
-function skills:list/offensive/freeze_breath/recursive with entity @s data
+function skills:list/offensive/freeze_breath/recursion with entity @s data

@@ -1,7 +1,7 @@
-############
-# INFO
-# CHIAMATA DA skills/activations/research
-############
+################################################
+## Chiamata da skills:activations/flow/marker ##
+## Esecutore: il caster                       ##
+################################################
 
 # Feedback sonoro
 playsound block.crafter.craft ui @s ~ ~ ~ 2 1

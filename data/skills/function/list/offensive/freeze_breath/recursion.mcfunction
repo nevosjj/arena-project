@@ -1,8 +1,11 @@
-# INFO
-# IMPOSTAZIONI:
-    # 1. Meno lag ma meno visualmente consistente.
-    # 0.35 float scale; teleport di 0.12; rotazione 15/-15; morte temp 60.
-    # 2. Altrimenti, dividi a metà i valori sopra per una visuale più sharp ma più laggosa (impostazione attuale)
+#########################################################################################
+## Chiamata da skills:list/offensive/freeze_breath/setup e da sé stessa                ##
+## Esecutore e posizione: il finder della spirale | Macro: i suoi data                 ##
+## IMPOSTAZIONI:                                                                       ##
+##   1. Meno lag ma meno visualmente consistente:                                      ##
+##      0.35 float scale; teleport di 0.12; rotazione 15/-15; morte temp 60.           ##
+##   2. Altrimenti, valori sopra dimezzati: visuale più sharp ma più laggosa (attuale) ##
+#########################################################################################
 
 # Aumento score
 # Questo decide
@@ -38,4 +41,4 @@ execute if entity @s[x_rotation=-90] run function skills:list/offensive/freeze_b
 execute if score @s temp3 >= @s temp run return run function skills:list/offensive/freeze_breath/end with entity @s data
 
 # Ricorsione
-execute if score @s temp3 < @s temp at @s run return run function skills:list/offensive/freeze_breath/recursive with entity @s data
+execute if score @s temp3 < @s temp at @s run return run function skills:list/offensive/freeze_breath/recursion with entity @s data

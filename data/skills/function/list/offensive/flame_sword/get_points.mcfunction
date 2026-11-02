@@ -25,4 +25,4 @@ scoreboard players set #flame_sword t 4
 scoreboard players set #flame_sword max_t 100
 
 # Inizio ricorsione
-function skills:list/offensive/flame_sword/recursive
+function skills:list/offensive/flame_sword/recursion

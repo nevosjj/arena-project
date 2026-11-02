@@ -1,7 +1,7 @@
-############
-# INFO
-# CHIAMATA DA skills/activations/marker
-############
+################################################
+## Chiamata da skills:activations/flow/marker ##
+## Esecutore: il caster                       ##
+################################################
 
 # Suono di attivazione
 playsound block.chain.place player @a ~ ~ ~ 2 0.75

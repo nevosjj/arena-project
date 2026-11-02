@@ -1,7 +1,7 @@
-############
-# INFO
-# CHIAMATA DA skills/activations/research
-############
+################################################
+## Chiamata da skills:activations/flow/marker ##
+## Esecutore: il caster                       ##
+################################################
 
 # Feedback audio
 function skills:list/offensive/freeze_breath/feedback

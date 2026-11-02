@@ -1,4 +1,9 @@
-# Funzione ricorsiva per evocare i teschi
+######################################################################
+## Chiamata da skills:list/support/bone_shield/setup e da sé stessa ##
+## Esecutore: il marker dell'abilità | Macro: i suoi data           ##
+## Evoca i teschi ruotando attorno al caster.                       ##
+######################################################################
+
 scoreboard players add @s temp 1
 
 $summon block_display ^ ^ ^2 {NoGravity:1b,Rotation:[$(boneDegreesRot)f,0f],Tags:["bone_shield.visual","bone_shield.id$(ID)"],data:{ID:$(ID),abilityName:$(abilityName)}, \

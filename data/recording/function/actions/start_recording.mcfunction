@@ -6,7 +6,7 @@
 ####################################
 
 # Calcolo tempo
-function recording:time/recursive_time
+function recording:time/recursion_time
 
 # Impostazione nome random match recorder
 function recording:actions/name_randomizer

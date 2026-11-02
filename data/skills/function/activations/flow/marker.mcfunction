@@ -1,7 +1,8 @@
-############
-# INFO
-# CHIAMATA DA skills/activations/macro_call
-############
+###############################################################################################
+## Chiamata da skills:activations/flow/macro_call                                            ##
+## Macro: meta dell'abilità (abilityName, abilityType)                                       ##
+## Evoca il marker dell'abilità, gli inietta i dati e chiama skills:list/<tipo>/<nome>/init. ##
+###############################################################################################
 
 # Evoca marker che contiene le informazioni
 $summon marker ~ ~1 ~ {Tags:["new_marker","$(abilityName).marker"]}

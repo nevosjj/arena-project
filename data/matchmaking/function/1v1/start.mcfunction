@@ -1,7 +1,7 @@
-############
-# INFO
-# CHIAMATA DA matchmaking/1v1/check
-############
+########################################################################################
+## Chiamata da matchmaking:1v1/check                                                  ##
+## Avvia la partita 1v1: storage di abilità, mappa e modalità, squadre, mappa scelta. ##
+########################################################################################
 
 # Feedback
 tellraw @a[tag=in_game] [{"text":"\n> ","color":"gray","bold":true},{"text":"Partita cominciata.","color":"dark_green","bold":false}]

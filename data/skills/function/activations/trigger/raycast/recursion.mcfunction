@@ -1,9 +1,8 @@
-#########################################################
-## Funzione ausiliaria                                 ##
-## Chiamato da skills:activations/trigger/raycast/init   ##
-## Ricorsione di controllo raycast                     ##
-## UTENTE VS NEMICI (teamID)                           ##
-#########################################################
+########################################################################
+## Chiamata da skills:activations/trigger/raycast/init e da sé stessa ##
+## Esecutore e posizione: il raycast | Macro: i suoi data             ##
+## Ricorsione di controllo raycast: utente vs nemici (teamID).        ##
+########################################################################
 
 ## Caso base
 execute if score @s temp matches ..0 run return run function skills:activations/trigger/raycast/fail with entity @s data

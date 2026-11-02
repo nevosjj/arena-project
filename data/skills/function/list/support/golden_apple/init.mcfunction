@@ -1,7 +1,7 @@
-############
-# INFO
-# CHIAMATA DA skills/activations/marker
-############
+################################################
+## Chiamata da skills:activations/flow/marker ##
+## Esecutore: il caster                       ##
+################################################
 
 # Ricerca 
 execute as @e[type=marker,tag=golden_apple.marker,distance=..2,sort=nearest,limit=1] at @s \

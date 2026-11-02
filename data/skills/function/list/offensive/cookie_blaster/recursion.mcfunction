@@ -1,3 +1,9 @@
+###########################################################################
+## Chiamata da skills:list/offensive/cookie_blaster/spawn e da sé stessa ##
+## Esecutore: il marker dell'abilità | Score temp = proiettili rimasti   ##
+## Evoca un proiettile per ciclo.                                        ##
+###########################################################################
+
 # Caso base
 execute if score @s temp matches ..0 run return fail
 
