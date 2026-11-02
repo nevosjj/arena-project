@@ -1,44 +1,51 @@
-#########################################################################################
-## Chiamata da skills:list/offensive/freeze_breath/setup e da sé stessa                ##
-## Esecutore e posizione: il finder della spirale | Macro: i suoi data                 ##
-## IMPOSTAZIONI:                                                                       ##
-##   1. Meno lag ma meno visualmente consistente:                                      ##
-##      0.35 float scale; teleport di 0.12; rotazione 15/-15; morte temp 60.           ##
-##   2. Altrimenti, valori sopra dimezzati: visuale più sharp ma più laggosa (attuale) ##
-#########################################################################################
+##########################################################################
+## Chiamata da skills:list/offensive/freeze_breath/setup e da sé stessa ##
+## Esecutore e posizione: il marker | Rotazione: il caster              ##
+## Score: @s temp = passi totali | @s temp3 = passo attuale             ##
+## #freeze_breath temp/temp2 = direzione (sinistra/su)                  ##
+##########################################################################
 
-# Aumento score
-# Questo decide
-    # 1. quando muore il marker
-    # 2. a quale distanza deve stare ogni singola la particella per l'evocazione.
-    # 3. "range" serve a determinare il range dove trova il nemico.
+# Passo attuale
 scoreboard players add @s temp3 1
-execute store result entity @s data.particleDistance float 0.0175 run scoreboard players get @s temp3
-execute store result entity @s data.range float 0.025 run scoreboard players get @s temp3
 
-# Particella
-    # Evocazione particella con la distanza decisa.
-$execute unless entity @s[tag=breath.blocked] run particle snowflake ^ ^ ^$(particleDistance) 0 0 0 0 1 force
-$particle minecraft:dust_color_transition{from_color:[0.15,0.1,0.45],to_color:[0.85,0.7,1.0],scale:1.1} ^ ^ ^$(particleDistance) 0 0 0 0 1 force
+# Posizione locale della particella: raggio (0.0175 * passo) * direzione / 10000
+scoreboard players operation #freeze_breath temp7 = #freeze_breath temp
+scoreboard players operation #freeze_breath temp7 *= @s temp3
+execute store result storage arenaproject:game_memory tempFreezingBreath.x float 0.00000175 run scoreboard players get #freeze_breath temp7
+scoreboard players operation #freeze_breath temp7 = #freeze_breath temp2
+scoreboard players operation #freeze_breath temp7 *= @s temp3
+execute store result storage arenaproject:game_memory tempFreezingBreath.y float 0.00000175 run scoreboard players get #freeze_breath temp7
 
-# Blocco (Nel caso passasse attraverso un blocco, arrecherà meno danni.)
-execute unless entity @s[tag=breath.blocked] unless block ~ ~ ~ air run function skills:list/offensive/freeze_breath/block_reduction
+# Raggio del danno (0.025 * passo, come prima)
+execute store result storage arenaproject:game_memory tempFreezingBreath.range float 0.025 run scoreboard players get @s temp3
 
-# Identificazione nemico
-# Le vittime già colpite (freeze_breath_ID.victim) vengono escluse dalla ricerca stessa
-function skills:auxiliary/targeting/search_damage with entity @s data
+# Particelle, blocco e danno
+function skills:list/offensive/freeze_breath/step with storage arenaproject:game_memory tempFreezingBreath
 
-# Teletrasporto
-    # Questo decide quanta distanza deve percorrere ogni ricorsione e quanto deve ruotare ogni metà della spirale.
-tp @s[tag=test.down] ^0.06 ^ ^ ~ ~7.5
-tp @s[tag=test.up] ^-0.06 ^ ^ ~ ~-7.5
+# Rotazione della direzione di 7.5° (x' = x*cos - y*sin | y' = x*sin + y*cos)
+scoreboard players operation #freeze_breath temp8 = #freeze_breath temp
+scoreboard players operation #freeze_breath temp8 *= #freeze_breath temp3
+scoreboard players operation #freeze_breath temp9 = #freeze_breath temp2
+scoreboard players operation #freeze_breath temp9 *= #freeze_breath temp4
+scoreboard players operation #freeze_breath temp8 -= #freeze_breath temp9
 
-# Check tags (cambio rotazione, da migliorare e mettere le funzioni di "cambiamento rotazione".
-execute if entity @s[x_rotation=90] run function skills:list/offensive/freeze_breath/rotation_up
-execute if entity @s[x_rotation=-90] run function skills:list/offensive/freeze_breath/rotation_down
+scoreboard players operation #freeze_breath temp9 = #freeze_breath temp
+scoreboard players operation #freeze_breath temp9 *= #freeze_breath temp4
+scoreboard players operation #freeze_breath temp10 = #freeze_breath temp2
+scoreboard players operation #freeze_breath temp10 *= #freeze_breath temp3
+scoreboard players operation #freeze_breath temp9 += #freeze_breath temp10
 
-# Uccisione (caso base)
-execute if score @s temp3 >= @s temp run return run function skills:list/offensive/freeze_breath/end with entity @s data
+# Ritorno alla scala 10000 con arrotondamento
+scoreboard players operation #freeze_breath temp8 += #freeze_breath temp6
+scoreboard players operation #freeze_breath temp8 /= #freeze_breath temp5
+scoreboard players operation #freeze_breath temp9 += #freeze_breath temp6
+scoreboard players operation #freeze_breath temp9 /= #freeze_breath temp5
+scoreboard players operation #freeze_breath temp = #freeze_breath temp8
+scoreboard players operation #freeze_breath temp2 = #freeze_breath temp9
 
-# Ricorsione
-execute if score @s temp3 < @s temp at @s run return run function skills:list/offensive/freeze_breath/recursion with entity @s data
+# Caso base
+execute if score @s temp3 >= @s temp run return run data remove storage arenaproject:game_memory tempFreezingBreath
+
+# Avanzamento lungo la visuale e ricorsione
+tp @s ^ ^ ^0.06
+execute at @s run function skills:list/offensive/freeze_breath/recursion
