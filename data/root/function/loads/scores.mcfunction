@@ -102,6 +102,7 @@ scoreboard objectives add antispam_target.ultimate dummy
 # Statistiche summon
 scoreboard objectives add summon.health dummy
 scoreboard objectives add summon.iframes dummy
+scoreboard objectives add summon.id dummy
 
 # Utilità
 scoreboard objectives add bool dummy
@@ -128,6 +129,7 @@ scoreboard objectives add player.hearts dummy
 # Statistiche post-partita
 scoreboard objectives add poststat.heal_received dummy
 scoreboard objectives add poststat.melee_inflicted dummy
+scoreboard objectives add poststat.melee_inflicted_summon dummy
 scoreboard objectives add poststat.damage_received dummy
 scoreboard objectives add poststat.damage_halved dummy
 scoreboard objectives add poststat.best_combo dummy

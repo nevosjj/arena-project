@@ -1,9 +1,9 @@
-############
-# INFO
-# Uso: function skills:auxiliary/targeting/search_heal with entity @s data
-# Esecutore e posizione: il finder
-# Cura TUTTI gli alleati nel raggio (caster incluso)
-############
+##############################################################################
+## Chiamata dalle abilità di cura (es. golden_apple)                        ##
+## Uso: function skills:auxiliary/targeting/search_heal with entity @s data ##
+## Esecutore e posizione: il finder                                         ##
+## Cura TUTTI gli alleati nel raggio (caster incluso).                      ##
+##############################################################################
 
 # Selezione
 function skills:auxiliary/targeting/select_allies with entity @s data

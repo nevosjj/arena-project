@@ -1,4 +1,50 @@
 1. DISTRIBUTORE RIGENERATIVO: programmare l'abilità
+    FATTO: dati in match/storages/abilities/support (technical + chestItems), refactor targeting (skills:auxiliary/targeting/), fix stack immobilizzazioni.
+    Si procede UNA fase alla volta, solo con l'ok dell'utente.
+
+    FASE 3 - EVOCAZIONI DANNEGGIABILI ("player_summon") -- IMPLEMENTATA, DA TESTARE IN GIOCO (vedi documentation.txt)
+        Risposte: a. cartelle separate | b. ignoreSummons:1b (magnetic_impulse) | c. poststat.melee_inflicted_summon
+                  d. cleanup a inizio round e a fine partita | e. hitbox del distributore ferma
+        Da fare dopo i test: cancellare skills:list/debug/summon_dummy/ ; mostrare melee_done_summon nelle statistiche (recording:check/stats)
+        Vincolo: le interaction NON hanno "data" -> ogni evocazione ha un marker "cervello" collegato tramite score summon.id
+                 (contatore globale #summon_counter). Per il distributore il cervello è il marker dell'abilità.
+        skills:auxiliary/summon/
+            - create (macro, eseguita come il cervello): evoca interaction con width/height/health, assegna summon.id/ID/teamID, tag player_summon + summon.part
+            - resize (macro): cambia width/height (es. doom_shroom che cresce)
+            - remove: rimozione senza distruzione (fine durata)
+            - tick: scala summon.iframes, legge il melee, uccide interaction orfane
+            - cleanup: kill @e[tag=summon.part], chiamato da match:end/cleanup
+        health:summon/
+            - melee: NBT "attack" + on attacker -> se iframes attivi o attaccante alleato ignora; summon.health -= stat.attack;
+                     iframes 10 tick; testo danno. NESSUN bonus (no energia, no combo, no flame_sword). Poi data remove attack.
+            - ability_damage: nullify se #round_ended, overtime, scala vita, testo danno (health:texts/damage), NIENTE notifica "!!!"
+            - death: summon.health <= 0 -> skills:list/$(abilityType)/$(abilityName)/destroyed (come il cervello), kill interaction
+        Targeting:
+            - select_enemies(_single): secondo selettore @e[type=interaction,tag=player_summon]; nel _single candidati @a -> @e
+            - select_allies(_single): evocazioni MAI incluse
+            - apply_damage: @s[type=player] -> flusso giocatori, altrimenti health:summon/ability_damage
+            - damage_consequence di freeze_breath e lightning_strike: righe attributi protette con @s[type=player]; freeze_breath/end toglie victim con @e
+        Colpiscono le evocazioni: cookie_blaster, freeze_breath, tornado, area di lightning_strike
+        NON le colpiscono: raycast di lightning_strike, switch, vampiric_chain, magnetic_impulse, golden_apple
+        Score nuovi in root:loads/scores: summon.health, summon.iframes, summon.id. Tick in root:ticks/skills.
+        Test: evocazione di prova temporanea skills:list/debug/summon_dummy/ (init + destroyed), da cancellare dopo.
+        DOMANDE APERTE:
+            a. Cartelle: skills:auxiliary/summon/ + health:summon/, oppure tutto in un posto?
+            b. Evocazioni incluse di default nei nemici con flag ignoreSummons:1b (solo magnetic_impulse), o opt-in targetSummons:1b?
+            c. Danni alle evocazioni contano nelle poststat (es. poststat.melee_inflicted)?
+            d. A fine round le evocazioni vive spariscono? (oggi new_round non pulisce le entità delle abilità)
+            e. Hitbox del distributore ferma (copre tutta l'oscillazione) o segue il movimento? (proposta: ferma)
+
+    FASE 4 - REGEN_DISPENSER (dopo la fase 3)
+        Entità: marker cervello (tick in root:ticks/skills) + block_display dispenser + interaction (50 HP, via summon/create).
+        Spawn tra busto e piedi del caster, resta sul posto e oscilla su/giù (teleport_duration). Elica: più avanti.
+        Mira: alleato più vicino entro 7 blocchi (caster incluso, anche a vita piena, anche dietro i muri) via select_allies_single.
+            -> serve un campo a parte in technical per i 7 blocchi (range = raggio di collisione del proiettile).
+        Sparo ogni 3s (delay:60); senza bersaglio resta in standby e spara appena ne trova uno.
+        Proiettile: item con tag "projectile" (lo solleva il tornado), motion 26 con set_motion, gravità attiva,
+            item casuale tra golden_apple / golden_carrot / pozione splash di guarigione;
+            attraversa i nemici, cura 75 il primo alleato che tocca (search_heal_single), heal_consequence lo uccide.
+        Durata 9s (duration:180), ricarica 28s.
 2. BLOOD MOTHER: programmare l'abilità
 3. DOOM SHROOM: programmare l'abilità
 4. MELODIES: suoni di feedback custom a "melodia", riconoscibili giocando (cartella data/melodies già pronta)

@@ -1,9 +1,9 @@
-############
-# INFO
-# Controlla se attorno alla posizione c'è un blocco solido (non in #skills:raycast)
-# Ritorna 1 se tocca un muro, fail altrimenti
-# Uso: execute if function skills:auxiliary/wall_check run ...
-############
+########################################################################################
+## Chiamata dai proiettili (es. skills:list/offensive/cookie_blaster/tick)            ##
+## Uso: execute if function skills:auxiliary/wall_check run ...                       ##
+## Ritorna 1 se attorno alla posizione c'è un blocco solido (non in #skills:raycast). ##
+## Ritorna fail altrimenti.                                                           ##
+########################################################################################
 
 # Lati
 execute unless block ~0.3 ~ ~ #skills:raycast run return 1

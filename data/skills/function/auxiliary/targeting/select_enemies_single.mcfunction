@@ -1,24 +1,27 @@
-############
-# INFO
-# Uso: function skills:auxiliary/targeting/select_enemies_single with entity @s data
-# Esecutore e posizione: il finder
-# Data richiesti: range, abilityName, ID, teamID
-############
-# Assegna "target.selected" SOLO al nemico più vicino al finder.
-# Esclude chi ha il tag "nome_abilita_ID.victim" (colpi multipli).
-# Va SEMPRE chiusa con skills:auxiliary/targeting/clear
-############
+########################################################################################
+## Chiamata da skills:auxiliary/targeting/search_damage_single o da effetti custom    ##
+## Uso: function skills:auxiliary/targeting/select_enemies_single with entity @s data ##
+## Esecutore e posizione: il finder | Data: range, abilityName, ID, teamID            ##
+## Data opzionale: ignoreSummons:1b -> ignora le evocazioni nemiche                   ##
+## Tag "target.selected" SOLO al nemico più vicino (giocatore o evocazione).          ##
+## Esclude "nome_abilita_ID.victim". Va SEMPRE chiusa con targeting/clear.            ##
+########################################################################################
 
-# Nessun giocatore vicino, niente da fare
-$execute unless entity @a[tag=in_game,gamemode=!spectator,distance=..$(range)] run return fail
+# Nessun bersaglio vicino, niente da fare
+$execute unless entity @a[tag=in_game,gamemode=!spectator,distance=..$(range)] \
+    unless entity @e[type=interaction,tag=player_summon,distance=..$(range)] run return fail
 
 # Fonte
 function skills:auxiliary/targeting/source
 
-# Candidati
+# Candidati giocatori
 $execute as @a[tag=in_game,gamemode=!spectator,distance=..$(range),tag=!$(abilityName)_$(ID).victim] \
     unless score @s teamID = #source teamID run tag @s add target.candidate
 
+# Candidati evocazioni
+$execute unless data entity @s data{ignoreSummons:1b} as @e[type=interaction,tag=player_summon,distance=..$(range),tag=!$(abilityName)_$(ID).victim] \
+    unless score @s teamID = #source teamID run tag @s add target.candidate
+
 # Selezione del più vicino
-tag @a[tag=target.candidate,sort=nearest,limit=1] add target.selected
-tag @a[tag=target.candidate] remove target.candidate
+tag @e[tag=target.candidate,sort=nearest,limit=1] add target.selected
+tag @e[tag=target.candidate] remove target.candidate

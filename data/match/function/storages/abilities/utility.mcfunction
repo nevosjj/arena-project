@@ -25,7 +25,8 @@ data modify storage ability_data:utility skills set value [\
             cooldown:32,\
             duration:60,\
             range:8f,\
-            immobilization:3\
+            immobilization:3,\
+            ignoreSummons:1b\
         },\
         display: {\
             name:"Impulso magnetico",\

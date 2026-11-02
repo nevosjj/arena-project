@@ -16,6 +16,7 @@ stopwatch remove match:overtime
 stopwatch remove match:round_break
 
 # Uccisione entità
+function skills:auxiliary/summon/cleanup
 kill @e[type=marker]
 kill @e[type=block_display]
 

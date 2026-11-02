@@ -1,9 +1,9 @@
-############
-# INFO
-# Uso: function skills:auxiliary/targeting/search_heal_single with entity @s data
-# Esecutore e posizione: il finder
-# Cura SOLO l'alleato più vicino nel raggio (caster incluso)
-############
+#####################################################################################
+## Chiamata dalle cure a bersaglio singolo                                         ##
+## Uso: function skills:auxiliary/targeting/search_heal_single with entity @s data ##
+## Esecutore e posizione: il finder                                                ##
+## Cura SOLO l'alleato più vicino nel raggio (caster incluso).                     ##
+#####################################################################################
 
 # Selezione
 function skills:auxiliary/targeting/select_allies_single with entity @s data

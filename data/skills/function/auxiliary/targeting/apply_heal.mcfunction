@@ -1,9 +1,8 @@
-############
-# INFO
-# CHIAMATA DA skills:auxiliary/targeting/search_heal(_single)
-# Esecutore: il bersaglio | Posizione: il finder
-# Macro: storage arenaproject:game_memory targetSource (data del finder)
-############
+############################################################################
+## Chiamata da skills:auxiliary/targeting/search_heal(_single)            ##
+## Esecutore: il bersaglio | Posizione: il finder                         ##
+## Macro: storage arenaproject:game_memory targetSource (data del finder) ##
+############################################################################
 
 # Applicazione cura
 $scoreboard players add @s incoming_heal $(power)

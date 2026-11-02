@@ -25,8 +25,26 @@
         - @e[tag=target.source]                       -> il finder esatto (es. kill del proiettile)
         - storage arenaproject:game_memory targetSource -> i data del finder
         - #source teamID                              -> la squadra del finder
-    Bersagli validi: @a[tag=in_game,gamemode=!spectator]
+    Bersagli validi: @a[tag=in_game,gamemode=!spectator] + evocazioni nemiche @e[type=interaction,tag=player_summon] (solo nei nemici)
+    Per ignorare le evocazioni: ignoreSummons:1b nei technical dell'abilità (es. magnetic_impulse).
+    Nelle damage_consequence le righe solo-giocatore (attributi, tag di debuff) vanno protette con @s[type=player].
     Colpi multipli: chi ha il tag "nome_abilita_ID.victim" viene escluso dalla ricerca.
+
+## DOCUMENTAZIONE EVOCAZIONI (skills:auxiliary/summon/ + health:summon/)
+    skills:auxiliary/summon/ = vita dell'entità (creazione, rimozione, tick)
+    health:summon/           = matematica dei danni (melee, abilità, morte)
+
+    Struttura: un "cervello" (marker con data abilityName, abilityType, ID, teamID) + una hitbox interaction "player_summon",
+    collegati dallo score summon.id. Tutte le parti hanno il tag "summon.part" (anche i visual: vanno aggiunti a mano).
+        - create {width, height, health} -> come il cervello, nella posizione della hitbox
+        - resize {width, height}          -> come il cervello
+        - remove                          -> come il cervello, toglie la hitbox SENZA destroyed (es. fine durata)
+        - cleanup                         -> elimina tutto, a inizio round e a fine partita
+    Score della hitbox: summon.health, summon.iframes (10 tick dopo un melee), summon.id, ID, teamID.
+    Melee: danno = stat.attack dell'attaccante, nessun bonus/energia/combo, conta in poststat.melee_inflicted_summon.
+    Abilità: testo danno sì, notifica "!!!" no. Overtime applicato, danni annullati a round finito.
+    Morte: skills:list/<abilityType>/<abilityName>/destroyed eseguita come e al cervello (deve uccidere cervello e visual).
+    Hitbox senza cervello: si elimina da sola.
 
 ## DOCUMENTAZIONE PATCH
 

@@ -37,6 +37,9 @@ bossbar set match:timer visible true
 stopwatch remove match:overtime
 stopwatch remove match:round_break
 
+# Evocazioni del round precedente
+function skills:auxiliary/summon/cleanup
+
 # Cleanup temporary game_memory
 data remove storage arenaproject:game_memory temporary
 
