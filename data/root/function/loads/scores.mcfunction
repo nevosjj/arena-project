@@ -134,6 +134,11 @@ scoreboard objectives add poststat.melee_inflicted_summon dummy
 scoreboard objectives add poststat.damage_received dummy
 scoreboard objectives add poststat.damage_halved dummy
 scoreboard objectives add poststat.best_combo dummy
+scoreboard objectives add poststat.powerup_picked dummy
+
+# Potenziamenti
+scoreboard objectives add powerup.anim_timer dummy
+scoreboard objectives add powerup.berserk_timer dummy
 
 # Movimento proiettili
 scoreboard objectives add motion.x1 dummy

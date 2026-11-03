@@ -32,6 +32,9 @@ bossbar remove match:timer
 # Aggiunta orologio overtime
 stopwatch create match:overtime
 
+# Ciclo dei potenziamenti
+function match:events/powerup/start
+
 # Feedback
 tellraw @a [{"text":"\n> ","color":"gray","bold":true},{"text":"Combattete!","color":"red","bold":false}]
 execute as @a at @s run playsound entity.ender_dragon.ambient voice @s ~ ~ ~ 1 0.9

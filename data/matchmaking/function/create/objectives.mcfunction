@@ -19,6 +19,9 @@ scoreboard players set @a[tag=in_game] stat.defense 0
 scoreboard players set @a[tag=in_game] stat.combo 0
 scoreboard players set @a[tag=in_game] poststat.best_combo 0
 
+# Potenziamenti raccolti (inizializzazione)
+scoreboard players set @a[tag=in_game] poststat.powerup_picked 0
+
 # Esperienza
 # limit = tempo di ottenimento
 # gain = ottenimento

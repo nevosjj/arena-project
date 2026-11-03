@@ -12,7 +12,7 @@ data modify storage map_data:1v1 list set value [\
                 spawn2: "131 -16 24 0 0", \
                 bars1: "95 -16 21 99 -13 21",\
                 bars2: "133 -16 27 129 -13 27",\
-                powerup: "114 -16 24",\
+                powerup_spawns: ["97 -16 31", "131 -16 17"],\
                 immediateDeath: "-20",\
             }, \
             { \
@@ -25,6 +25,7 @@ data modify storage map_data:1v1 list set value [\
                 spawn2: "135 -22 20 90 0", \
                 bars1: "132 -22 22 132 -18 18",\
                 bars2: "96 -22 18 96 -18 22",\
+                powerup_spawns: ["114 -26 36", "114 -26 4"],\
                 immediateDeath: "null",\
             } \
         ] \

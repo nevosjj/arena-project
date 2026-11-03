@@ -50,6 +50,7 @@ tag @s remove energy.activated
 tag @s remove support_down
 tag @s remove utility_down
 tag @s remove ultimate_down
+tag @s remove powerup.berserk
 
 # Selezione (se la partita finisce durante la selezione)
 tag @s remove selecting

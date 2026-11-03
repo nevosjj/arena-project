@@ -9,6 +9,9 @@
 # Ferma l'overtime
 function match:events/overtime/stop
 
+# Ferma i potenziamenti (e i berserk attivi)
+function match:events/powerup/clean
+
 # Creazione stopwatch
 stopwatch create match:win_break
 

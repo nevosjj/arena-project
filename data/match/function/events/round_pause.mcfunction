@@ -7,6 +7,9 @@
 # Ferma l'overtime
 function match:events/overtime/stop
 
+# Ferma i potenziamenti (e i berserk attivi)
+function match:events/powerup/clean
+
 # Stopwatch
 stopwatch create match:round_break
 

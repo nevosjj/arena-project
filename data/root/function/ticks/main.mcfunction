@@ -43,6 +43,15 @@ execute if entity @e[type=text_display,tag=feedback_text] as @e[type=text_displa
 # Coordinate 90 -30 0, distanza 128.
 execute positioned 90 -30 0 run function root:ticks/skills
 
+## Potenziamenti
+# Anteprima (vortice prima della comparsa)
+execute if entity @e[type=marker,tag=powerup.incoming] as @e[type=marker,tag=powerup.incoming] at @s run function match:events/powerup/preview_tick
+# In campo (fluttuazione, impulso, scadenza, raccolta)
+execute if entity @e[type=marker,tag=powerup.active] as @e[type=marker,tag=powerup.active] at @s run function match:events/powerup/tick
+# Berserk: durata e anelli
+execute if entity @a[tag=powerup.berserk] as @a[tag=powerup.berserk] run function match:events/powerup/types/berserk/tick
+execute if entity @e[type=marker,tag=powerup.berserk_visual] as @e[type=marker,tag=powerup.berserk_visual] at @s run function match:events/powerup/types/berserk/rings with entity @s data
+
 ## Animazioni
 # Morte
 execute if entity @e[type=mannequin,tag=death_mannequin,tag=death_mannequin.tick] as @e[type=mannequin,tag=death_mannequin,tag=death_mannequin.tick] at @s run function animation:deaths/general/tick with entity @s data

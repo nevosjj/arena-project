@@ -13,11 +13,6 @@ Melodie
 Riorganizza cartelle skills:auxiliary
 	- Mettere le funzioni senza directory dentro una directory organizzata
 
-Fare che cooldown riparte solo dopo la fine di una skill
-	- Esempio: la cooldown di vampiric_chain riparte solo dopo che si spezza la catena
-	- Esempio 2: la cooldown di regen_dispenser riparte solo dopo che muore il dispenser volante
-	- Esempio 3: bone_shield riparte solo dopo che viene distrutta la barriera
-
 Migliorare sistema di recording
 	- Dialogue: rendere tutto un dialogue, apribile dalla lobby da un NPC con interaction o da un trigger eseguibile dai giocatori per i fatti loro
 	- Timelines: Fa vedere una lista dei round, da questi ne viene elencata la timeline

@@ -10,3 +10,5 @@ $execute store result storage api.nevosjj.lobby:match_list elements[$(matchIndex
 $execute store result storage api.nevosjj.lobby:match_list elements[$(matchIndex)].players[{ID:$(ID)}].stats.damage_halved int 1.0 run scoreboard players get @s poststat.damage_halved
 $execute store result storage api.nevosjj.lobby:match_list elements[$(matchIndex)].players[{ID:$(ID)}].stats.damage_received int 1.0 run scoreboard players get @s poststat.damage_received
 $execute store result storage api.nevosjj.lobby:match_list elements[$(matchIndex)].players[{ID:$(ID)}].stats.best_combo int 1.0 run scoreboard players get @s poststat.best_combo
+$execute store result storage api.nevosjj.lobby:match_list elements[$(matchIndex)].players[{ID:$(ID)}].stats.powerup_picked int 1.0 run scoreboard players get @s poststat.powerup_picked
+$execute store result storage api.nevosjj.lobby:match_list elements[$(matchIndex)].players[{ID:$(ID)}].stats.melee_inflicted_summon int 1.0 run scoreboard players get @s poststat.melee_inflicted_summon

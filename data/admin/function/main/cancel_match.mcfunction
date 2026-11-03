@@ -14,6 +14,9 @@ execute unless entity @a[tag=in_game] run return fail
 # Overtime
 function match:events/overtime/stop
 
+# Potenziamenti
+function match:events/powerup/clean
+
 # Stopwatch non gestiti da match:end/cleanup
 stopwatch remove match:first_timer
 stopwatch remove match:map_editor/opening
