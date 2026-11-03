@@ -1,5 +1,5 @@
 ## Caso base
-execute if score @s duration.utility matches ..0 run return run function skills:list/utility/tornado/reset
+execute if score @s duration.utility matches ..0 run return run function skills:list/utility/tornado/end with entity @s data
 
 # Aggiornamento punteggi
 scoreboard players remove @s duration.utility 1

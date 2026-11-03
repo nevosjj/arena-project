@@ -36,4 +36,5 @@ function match:display/update
 function health:auxiliary/actionbar
 
 # Reset
+data remove storage arenaproject:game_memory healFeedback
 scoreboard players reset @s incoming_heal

@@ -20,10 +20,6 @@ function skills:activations/check/condition with storage arenaproject:game_memor
 execute if score @s condition.support matches 2 run data modify storage arenaproject:game_memory temporary.condition.skillTYPE_txt set value "support"
 execute if score @s condition.support matches 2 run return run function skills:activations/trigger/general/block with storage arenaproject:game_memory temporary.condition
 
-## Impostazione ricarica
-data modify storage arenaproject:game_memory temporary.down.skillTYPE_txt set value "support"
-function skills:activations/trigger/general/down with storage arenaproject:game_memory temporary.down
-
 # Inserimento tipo
 # hotbarIndex serve a cercare l'indice dell'abilità nella hotbar per sostituire l'item
 # skillTYPE serve a cercare l'indice del tipo della skill tra la lista abilità

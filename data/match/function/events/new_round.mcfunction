@@ -40,6 +40,12 @@ stopwatch remove match:round_break
 # Evocazioni del round precedente
 function skills:auxiliary/summon/cleanup
 
+# Abilità rimaste attive nel round precedente
+# Tutti i marker in partita sono di abilità
+kill @e[type=marker]
+kill @e[type=block_display,tag=bone_shield.visual]
+execute as @a[tag=in_game] run function match:end/skill_state
+
 # Cleanup temporary game_memory
 data remove storage arenaproject:game_memory temporary
 
@@ -60,6 +66,5 @@ tag @a[tag=in_game] remove energy.activated
 tag @a[tag=in_game,tag=round.dead] remove round.dead
 tag @a[tag=in_game,tag=round.loser] remove round.loser
 tag @a[tag=in_game,tag=round.winner] remove round.winner
-
 # Aggiornamento vita
 execute as @a[tag=in_game] run function match:display/update

@@ -1,17 +1,8 @@
-#########################################################
-## Chiamata da health:summon/destroyed                 ##
-## Distrugge il summon (quando raggiunge 0 di vita)    ##
-## La interaction la elimina health:summon/death       ##
-#########################################################
+########################################################
+## Chiamata da health:summon/destroyed                ##
+## Esecutore e posizione: l'evocazione (piedi hitbox) ##
+## Nome richiesto dal sistema evocazioni: rimanda     ##
+## all'unica fine, regen_dispenser/end                ##
+########################################################
 
-# Feedback particellare
-particle block{block_state:"minecraft:dispenser"} ~ ~0.3 ~ 0.3 0.3 0.3 0.4 15 force
-particle explosion ~ ~0.3 ~ 0 0 0 0 1 force
-
-# Feedback sonoro
-playsound entity.generic.explode player @a ~ ~ ~ 1 1.6
-playsound entity.breeze.death player @a ~ ~ ~ 2 1.6
-
-# Pulizia
-execute positioned ~ ~0.3 ~ run kill @e[type=block_display,tag=regen_dispenser.visual,distance=..0.1,limit=1]
-execute positioned ~ ~0.3 ~ run kill @e[type=block_display,tag=regen_dispenser.propeller,distance=..0.1]
+execute positioned ~ ~0.3 ~ run function skills:list/support/regen_dispenser/end with entity @s data

@@ -24,6 +24,7 @@ data modify storage ability_data:support skills set value [\
         },\
         technical: {\
             cooldown:12,\
+            delayedCooldown:1b,\
             count:5,\
             power:50,\
             duration:80\
@@ -42,6 +43,7 @@ data modify storage ability_data:support skills set value [\
         },\
         technical: {\
             cooldown:40,\
+            delayedCooldown:1b,\
             range:12f,\
             power:35,\
             condition:{raycast:"true",range:7f},\
@@ -60,6 +62,7 @@ data modify storage ability_data:support skills set value [\
         },\
         technical: {\
             cooldown:28,\
+            delayedCooldown:1b,\
             duration:180,\
             power:75,\
             delay:60,\

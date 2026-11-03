@@ -42,6 +42,7 @@ data modify storage ability_data:utility skills set value [\
         },\
         technical: {\
             cooldown:42,\
+            delayedCooldown:1b,\
             duration:180,\
             power:8,\
             range:7,\
@@ -61,6 +62,7 @@ data modify storage ability_data:utility skills set value [\
         },\
         technical: {\
             cooldown:45,\
+            delayedCooldown:1b,\
             charge:60,\
             condition:{raycast:"true",range:15f},\
         },\

@@ -5,7 +5,7 @@
 #######################################################
 
 # Fine durata
-execute if score @s duration.support matches ..0 run return run function skills:list/support/regen_dispenser/end
+execute if score @s duration.support matches ..0 run return run function skills:list/support/regen_dispenser/end with entity @s data
 scoreboard players remove @s duration.support 1
 
 # Oscillazione (giù a 20, su a 40, ciclo di 40 tick)

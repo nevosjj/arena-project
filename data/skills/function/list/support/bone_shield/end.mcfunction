@@ -1,13 +1,38 @@
+##################################################
+## Chiamata da bone_shield/apply_on_hit (teschi ##
+## finiti) || bone_shield/finder_timer (durata) ##
+## Esecutore: il caster                         ##
+## Macro: data del marker finder/ender (ID)     ##
+## Unica fine dello scudo osseo                 ##
+##################################################
+
+# Ricarica
+function skills:cooldowns/delayed/start {skillTYPE_txt:"support",hotbarIndex:2}
+
+# Resetta quantità teschi
+scoreboard players reset @s counter.support
+
+# Resetta timer abilità
+scoreboard players reset @s duration.support
+
+# Rimuovi tag generico
+tag @s remove skill.bone_shield
+
+# Rimuovi tutti i teschi rimasti
+$execute as @e[type=block_display,tag=bone_shield.id$(ID),distance=..5] \
+    at @s run function skills:list/support/bone_shield/destroy
+
+# Rimuovi tag specifico dell'ID
+$tag @s remove owner_$(ID).bone_shield
+
+# Rimuovi score difesa
+scoreboard players remove @s stat.defense 50
+
 # Feedback
-playsound minecraft:entity.guardian.hurt voice @a ~ ~ ~ 10 0.7
-playsound minecraft:entity.skeleton_horse.ambient voice @a ~ ~ ~ 10 0.7
+playsound entity.skeleton.death player @a ~ ~ ~ 2 0.8
+playsound block.respawn_anchor.deplete player @a ~ ~ ~ 2 1.4
+particle white_smoke ~ ~1 ~ 0.5 0.5 0.5 0.05 100 force
 
-# Pulizia per evitare dati fantasma
-scoreboard players reset @s temp2
-scoreboard players reset @s temp3
-
-# Assegnazione ID a ciascun teschio per la ricerca TP
-$execute store result score @e[type=block_display,distance=..5,tag=bone_shield.id$(ID)] ID run data get entity @s data.ID
-
-# Uccisione
-kill @s
+# Marker di ricerca (colpo o fine durata)
+kill @e[type=marker,distance=..3,limit=1,sort=nearest,tag=bone_shield.finder]
+kill @e[type=marker,distance=..3,limit=1,sort=nearest,tag=bone_shield.ender]

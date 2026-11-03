@@ -1,15 +1,17 @@
-#####################################################
-## Chiamato da skills:activations/flow/generic     ##
-## Imposta un oggetto al posto dell'abilità        ##
-## Questo fa capire all'utente                     ##
-## che l'abilità non è disponibile                 ##
-#####################################################
+#################################################
+## Chiamato da skills:activations/flow/generic ##
+## Macro: hotbarIndex, glassItem/Name/Color    ##
+## Imposta un oggetto al posto dell'abilità    ##
+## Questo fa capire all'utente                 ##
+## che l'abilità non è disponibile             ##
+#################################################
 
 ## RIMOZIONE Item
 item replace entity @s weapon.mainhand with air
 
 ## INSERIMENTO Item di non disponibilità
-$item replace entity @s hotbar.$(hotbarIndex) with red_stained_glass_pane[custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
+# glassItem, glassName, glassColor: impostati in skills:activations/flow/generic || cooldown
+$item replace entity @s hotbar.$(hotbarIndex) with $(glassItem)[custom_name=[{"text":"$(glassName)","color":"$(glassColor)","bold":true,"italic":false}]]
 
 ## TAG ESCLUSIVO
 # Support, Utility, Ultimate

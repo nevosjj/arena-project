@@ -30,24 +30,18 @@ experience set @s 0 levels
 execute as @s[tag=in_game] run attribute @s minecraft:attack_damage base set 0.0
 execute as @s[tag=in_game] run attribute @s minecraft:max_health base set 10.0
 execute as @s[tag=in_game] run attribute @s minecraft:knockback_resistance base set 1.0
-execute as @s[tag=in_game] run attribute @s minecraft:movement_speed modifier remove freeze_breath:slow
-execute as @s[tag=in_game] run attribute @s minecraft:jump_strength modifier remove lightning_strike:jump
-execute as @s[tag=in_game] run attribute @s minecraft:movement_speed modifier remove lightning_strike:slow
-execute as @s[tag=in_game] run attribute @s minecraft:movement_speed modifier remove magnetic_impulse:immobilize
-execute as @s[tag=in_game] run attribute @s minecraft:jump_strength modifier remove magnetic_impulse:immobilize
 
 # Effetto di rigenerazione dopo la redistribuzione di vita
 effect give @s regeneration 10 10 true
 
-## Tag con ID (prima del reset degli obiettivi, serve lo score ID)
-execute store result storage arenaproject:game_memory temporary.cleanup.ID int 1 run scoreboard players get @s ID
-function match:end/clean_macro_tags with storage arenaproject:game_memory temporary.cleanup
+## Stato abilità: tag con ID, tag di stato, rallentamenti
+# Prima del reset degli obiettivi, serve lo score ID
+function match:end/skill_state
 
 ## Obiettivi
 scoreboard players reset *
 
 ## Tags
-tag @s remove skill.bone_shield
 tag @s remove round.dead
 tag @s remove round.loser
 tag @s remove round.winner
@@ -56,13 +50,6 @@ tag @s remove energy.activated
 tag @s remove support_down
 tag @s remove utility_down
 tag @s remove ultimate_down
-tag @s remove freeze_breath.slowed
-tag @s remove magnetic_impulse.immobilized
-tag @s remove lightning_strike.immobilized
-tag @s remove end_teleport.player
-tag @s remove flame_sword.energy
-tag @s remove flame_sword.p0
-tag @s remove flame_sword.p2
 
 # Selezione (se la partita finisce durante la selezione)
 tag @s remove selecting
