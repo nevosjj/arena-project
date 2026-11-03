@@ -1,6 +1,7 @@
-#############
-# La funzione si occupa di imporre gli attributi giusti ai giocatori che entrano in partita.
-#############
+####################################################
+## La funzione si occupa di imporre gli attributi ##
+## giusti ai giocatori che entrano in partita.    ##
+####################################################
 
 ## Attributi non dinamici
 

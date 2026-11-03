@@ -7,7 +7,7 @@
 
 # Feedback
 particle totem_of_undying ~ ~1.2 ~ 0.2 0.3 0.2 0.3 10 force
-playsound entity.player.levelup player @a ~ ~ ~ 1 1.6
+playsound minecraft:block.trial_spawner.open_shutter voice @a ~ ~ ~ 2 1
 
 # Annuncio
 function match:events/powerup/pick_feedback {name:"Cura",color:"green"}

@@ -16,5 +16,5 @@ attribute @s minecraft:entity_interaction_range modifier remove flame_sword:rang
 execute at @s run function skills:list/offensive/flame_sword/macro_reset with entity @e[type=marker,limit=1,sort=nearest,distance=..3,tag=flame_sword.visual] data
 tag @s remove flame_sword.energy
 
-# Feedback visivo
-playsound block.fire.extinguish ambient @a ~ ~ ~ 2 1.1
+# Feedback audio
+playsound entity.blaze.death ambient @a ~ ~ ~ 2 1.55
