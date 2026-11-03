@@ -14,7 +14,7 @@ item replace entity @s player.cursor with air
 item replace entity @s enderchest.0 with air
 
 # Feedback
-playsound block.note_block.pling ui @s ~ ~ ~ 10 2
+playsound block.note_block.pling ui @s ~ ~ ~ 10 1.25
 
 # Ritorno indietro
 function selection:insertion/movements/go_back
