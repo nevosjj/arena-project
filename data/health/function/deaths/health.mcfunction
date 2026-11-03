@@ -26,6 +26,9 @@ scoreboard players set #round_ended bool 1
 # La prevenzione viene fatta in health:math/incoming_damage
 tag @s add round.dead
 
+# Aggiornamento sidebar (mostra "MORTO", copre anche la morte da void)
+function match:display/update
+
 # Ottenimento cuori giocatori in uno score
 execute store result score @s player.hearts run attribute @s max_health base get
 

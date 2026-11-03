@@ -45,6 +45,9 @@ execute at @s as @e[type=marker,tag=vampiric_chain.marker,distance=..96] run fun
 # Rimozione
 scoreboard players operation @s stat.current_health -= @s incoming_damage
 
+# La vita non scende mai sotto lo zero
+execute if score @s stat.current_health matches ..-1 run scoreboard players set @s stat.current_health 0
+
 # Aumento danni recenti
 scoreboard players operation @s recent_damage += @s incoming_damage
 
