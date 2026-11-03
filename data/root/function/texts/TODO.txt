@@ -1,9 +1,14 @@
 2. BLOOD MOTHER: programmare l'abilità
 3. DOOM SHROOM: programmare l'abilità
-4. MELODIES: suoni di feedback custom a "melodia", riconoscibili giocando (cartella data/melodies già pronta)
 5. DIALOGUE - Patch notes: dialogue statico (data/<namespace>/dialog/patch_notes.json), apribile dal menu di pausa con #minecraft:pause_screen_additions, eventualmente una pagina per versione
 6. DIALOGUE - Recording: sostituire la chest in 9 -55 39 con un dialogue per giocatore (pulsanti con /trigger, contenuto con macro da storage, pause:false)
 7. DIALOGUE - Selezione abilità: tenere la griglia nel chest_minecart, ma usare un dialogue per descrizione dettagliata + conferma abilità (pulsante Conferma con /trigger)
+
+Melodie
+	- Suoni di feeback custom per
+		- Ricarica abilità
+		- Bassa vita
+		- Fasi della partita
 
 Riorganizza cartelle skills:auxiliary
 	- Mettere le funzioni senza directory dentro una directory organizzata
@@ -15,8 +20,54 @@ Comandi admin
 	-
 
 Fare che cooldown riparte solo dopo la fine di una skill
-	- Esempio: la cooldown di vampiric_chain riparte solo dopo
+	- Esempio: la cooldown di vampiric_chain riparte solo dopo che si spezza la catena
+	- Esempio 2: la cooldown di regen_dispenser riparte solo dopo che muore il dispenser volante
+	- Esempio 3: bone_shield riparte solo dopo che viene distrutta la barriera
 
 Fare che, una volta che si infligge danno ad un utente:
-	- La vita non va sotto lo zero
+	- La vita non va sotto lo zero (è molto fastidioso vedere nella sidebar che va sotto lo 0, tipo -5)
+	- Anzi, addirittura fare che se è zero la vita c'è scritto "MORTO" accanto, invece del numero, in rosso scuro e BLOOD
 
+Migliorare sistema di recording
+	- Dialogue: rendere tutto un dialogue, apribile dalla lobby da un NPC con interaction o da un trigger eseguibile dai giocatori per i fatti loro
+	- Timelines: Fa vedere una lista dei round, da questi ne viene elencata la timeline
+		- La timeline è composta da Eventi
+			- Ogni evento è rappresentato con una testa (o un dialogue a sto punto che vogliamo mettere un dialogue)
+				- L'evento contiene timewhen (quindi quando è avvenuto), il timewhat (quindi cosa è successo), timewho (chi ha fatto cosa)
+					- Gli eventi sono: attivare la ultimate, pickupare un powerup (i powerup sono da programmare), morte di un giocatore, vittoria round
+	- Classifica: Fa vedere una lista di chi è stato il migliore in certe categorie.
+		- Fa semplicemente vedere, sopra certi oggetti, per ciascuna categoria, i migliori giocatori
+			- Esempio: blaze_powder -> MAGGIOR DANNI -> Utente
+	- Statistiche giocatori: Esiste già, ma bisogna fare che quando premi una testa fa vedere solo dopo le statistiche annesse al giocatore, e non che siano scritte sotto
+		- Le statistiche sono divise in categorie, quindi:
+			- Reparto aggressività (quantità melee, danni melee inflitti, danni abilità inflitti, miglior combo,)
+			- Reparto difesa (danni ricevuti, danni melee subiti, danni abilità subiti, danni dimezzati, danni curati)
+			- Reparto abilità (quantità attivazioni abilità, energia spesa)
+
+Lobby, aggiungere statistiche
+	- Statistiche globali abilità: pickrate, winrate, banrate (quando ci sarà la draft)
+	- Patch notes, presentando:
+		- Nuove feature
+		- Cambiamneti (adjustments, nerfs, buffs)
+		- Bugfix
+	- Cosmetici
+
+Selezione abilità,
+	- avevo programmato che quando selezioni un'abilità ti torna nel menù principale di selezione abilità: ho messo che ti fa vedere cosa avevi scelto
+	- Per ora voglio rimuoverlo, e ricentrare le abilità
+
+Dimensioni,
+	- Le partite vengono sviluppate in dimensioni apposite
+	- Non mi ricordo se si potessero creare dimensioni extra in modo dinamico
+	- Se così fosse si potrebbero creare più dimensioni per permettere il cycle di più partite alla volta
+
+Stanza preparazione, spectate
+	- Aggiungere la stanza di preparazione partita (con modalità prefatte)
+	- I giocatori possono modificare gran parte delle statistiche di una partita, consultabile in matchmaking/modes/1v1
+	- Fixare "Unquoted strings cannot start with `[0-9.+-]` in data pack format 71+ / minecraft 1.21.5" sul suddetto file
+	- Aggiungere di conseguenza che puoi scegliere che partita spectare dalla lobby
+
+Powerup,
+	- Aggiungere powerup durante la partita
+	- Per ora ne aggiungerei solo 2, melee danno extra per 10s e cura di 200hp istantaneo
+	- Spawnano su 2 punti fissi delle mappe, scelti a random, vengono annucniati 10 secondi prima del loro spawn
