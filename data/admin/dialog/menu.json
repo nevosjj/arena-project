@@ -1,0 +1,58 @@
+{
+    "type": "minecraft:multi_action",
+    "title": [
+        {"text": "ᴍᴇɴᴜ ", "color": "gray"},
+        {"text": "ᴀᴅᴍɪɴ", "color": "dark_red", "bold": true}
+    ],
+    "external_title": {"text": "Menu admin", "color": "dark_red"},
+    "body": [
+        {
+            "type": "minecraft:plain_message",
+            "width": 300,
+            "contents": [
+                {"text": "Comandi di test. ", "color": "gray"},
+                {"text": "Vittorie: ", "color": "dark_gray"},
+                {"text": "le esegui tu, vinci tu.", "color": "gray"}
+            ]
+        }
+    ],
+    "columns": 2,
+    "pause": false,
+    "after_action": "close",
+    "actions": [
+        {
+            "label": {"text": "Vittoria round", "color": "aqua"},
+            "tooltip": {"text": "L'avversario muore e vinci il round corrente"},
+            "width": 150,
+            "action": {"type": "minecraft:run_command", "command": "/function admin:main/round_win"}
+        },
+        {
+            "label": {"text": "Vittoria partita", "color": "gold"},
+            "tooltip": {"text": "L'avversario perde tutte le vite e vinci la partita"},
+            "width": 150,
+            "action": {"type": "minecraft:run_command", "command": "/function admin:main/match_win"}
+        },
+        {
+            "label": {"text": "Tutto costa poco", "color": "light_purple"},
+            "tooltip": {"text": "Ricarica 1s e costo energia 1 per tutti (dopo la selezione)"},
+            "width": 150,
+            "action": {"type": "minecraft:run_command", "command": "/function admin:main/low_cost"}
+        },
+        {
+            "label": {"text": "Cura totale", "color": "green"},
+            "tooltip": {"text": "Vita al massimo a tutti i giocatori vivi"},
+            "width": 150,
+            "action": {"type": "minecraft:run_command", "command": "/function admin:main/heal_all"}
+        },
+        {
+            "label": {"text": "Annulla partita", "color": "red"},
+            "tooltip": {"text": "Chiude la partita senza vincitore e senza registrarla"},
+            "width": 150,
+            "action": {"type": "minecraft:show_dialog", "dialog": "admin:confirm_cancel"}
+        }
+    ],
+    "exit_action": {
+        "label": {"text": "Chiudi", "color": "gray"},
+        "width": 150
+    }
+}

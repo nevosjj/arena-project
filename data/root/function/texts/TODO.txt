@@ -13,20 +13,10 @@ Melodie
 Riorganizza cartelle skills:auxiliary
 	- Mettere le funzioni senza directory dentro una directory organizzata
 
-Comandi admin
-	- Vittoria partita
-	- Tutto costa basso (cooldown a 1 di tutto, costo energia 1)
-	- Vittoria round
-	-
-
 Fare che cooldown riparte solo dopo la fine di una skill
 	- Esempio: la cooldown di vampiric_chain riparte solo dopo che si spezza la catena
 	- Esempio 2: la cooldown di regen_dispenser riparte solo dopo che muore il dispenser volante
 	- Esempio 3: bone_shield riparte solo dopo che viene distrutta la barriera
-
-Fare che, una volta che si infligge danno ad un utente:
-	- La vita non va sotto lo zero (è molto fastidioso vedere nella sidebar che va sotto lo 0, tipo -5)
-	- Anzi, addirittura fare che se è zero la vita c'è scritto "MORTO" accanto, invece del numero, in rosso scuro e BLOOD
 
 Migliorare sistema di recording
 	- Dialogue: rendere tutto un dialogue, apribile dalla lobby da un NPC con interaction o da un trigger eseguibile dai giocatori per i fatti loro
@@ -44,6 +34,11 @@ Migliorare sistema di recording
 			- Reparto difesa (danni ricevuti, danni melee subiti, danni abilità subiti, danni dimezzati, danni curati)
 			- Reparto abilità (quantità attivazioni abilità, energia spesa)
 
+USCITA PARTITA:
+	- Creare un sistema che detecta quando un giocatore esce dalla partita
+	- Una volta che esce dalla partita, fa vincere colui che non ha quittato, e appena rientra l'altro giocatore entra e gli fa sapere che ha perso per il quit
+	- Lo tippa ovviamente in lobby e resetta tutto ciò che aveva
+
 Lobby, aggiungere statistiche
 	- Statistiche globali abilità: pickrate, winrate, banrate (quando ci sarà la draft)
 	- Patch notes, presentando:
@@ -51,10 +46,6 @@ Lobby, aggiungere statistiche
 		- Cambiamneti (adjustments, nerfs, buffs)
 		- Bugfix
 	- Cosmetici
-
-Selezione abilità,
-	- avevo programmato che quando selezioni un'abilità ti torna nel menù principale di selezione abilità: ho messo che ti fa vedere cosa avevi scelto
-	- Per ora voglio rimuoverlo, e ricentrare le abilità
 
 Dimensioni,
 	- Le partite vengono sviluppate in dimensioni apposite

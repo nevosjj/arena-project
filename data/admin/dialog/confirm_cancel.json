@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:confirmation",
+    "title": {"text": "Annullare la partita?", "color": "red", "bold": true},
+    "body": [
+        {
+            "type": "minecraft:plain_message",
+            "width": 250,
+            "contents": {"text": "Tutti tornano in lobby. La partita non viene registrata.", "color": "gray"}
+        }
+    ],
+    "pause": false,
+    "after_action": "close",
+    "yes": {
+        "label": {"text": "Annulla partita", "color": "red"},
+        "tooltip": {"text": "Conferma"},
+        "action": {"type": "minecraft:run_command", "command": "/function admin:main/cancel_match"}
+    },
+    "no": {
+        "label": {"text": "Indietro", "color": "gray"},
+        "action": {"type": "minecraft:show_dialog", "dialog": "admin:menu"}
+    }
+}
