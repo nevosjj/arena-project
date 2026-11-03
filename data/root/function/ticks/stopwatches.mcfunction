@@ -15,9 +15,8 @@ execute if stopwatch match:first_timer 25.. run function match:events/low_timer
 # Apertura cancelli
 execute if stopwatch match:map_editor/opening 5.. run function match:events/end_selection
 
-# Overtime, impostato dinamicamente in futuro mappa per mappa.
-# Per ora non è impostato dinamicamente!
-execute if stopwatch match:overtime 210.. run function match:events/overtime with storage match_data:1v1 list.1v1
+# Check overtime DINAMICO
+execute if stopwatch match:overtime 0.. run function match:events/overtime/check with storage match_data:1v1 list.1v1
 
 # Potenziamenti: attesa -> anteprima (10s) -> in campo (15s) -> attesa
 execute if stopwatch match:powerup/cycle 0.. run function match:events/powerup/cycle with storage match_data:1v1 list.1v1
