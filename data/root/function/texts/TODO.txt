@@ -62,3 +62,5 @@ Powerup,
 	- Aggiungere powerup durante la partita
 	- Per ora ne aggiungerei solo 2, melee danno extra per 10s e cura di 200hp istantaneo
 	- Spawnano su 2 punti fissi delle mappe, scelti a random, vengono annucniati 10 secondi prima del loro spawn
+
+Actionabar dinamica.

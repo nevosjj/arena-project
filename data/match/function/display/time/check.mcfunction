@@ -20,3 +20,6 @@ execute if score #match match.seconds matches ..9 run function match:display/tim
 
 # Aggiornamento
 function match:display/time/update with storage arenaproject:game_memory displayTime
+
+# Reset
+data remove storage arenaproject:game_memory displayTime
