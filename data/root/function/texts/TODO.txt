@@ -4,3 +4,19 @@
 5. DIALOGUE - Patch notes: dialogue statico (data/<namespace>/dialog/patch_notes.json), apribile dal menu di pausa con #minecraft:pause_screen_additions, eventualmente una pagina per versione
 6. DIALOGUE - Recording: sostituire la chest in 9 -55 39 con un dialogue per giocatore (pulsanti con /trigger, contenuto con macro da storage, pause:false)
 7. DIALOGUE - Selezione abilità: tenere la griglia nel chest_minecart, ma usare un dialogue per descrizione dettagliata + conferma abilità (pulsante Conferma con /trigger)
+
+Riorganizza cartelle skills:auxiliary
+	- Mettere le funzioni senza directory dentro una directory organizzata
+
+Comandi admin
+	- Vittoria partita
+	- Tutto costa basso (cooldown a 1 di tutto, costo energia 1)
+	- Vittoria round
+	-
+
+Fare che cooldown riparte solo dopo la fine di una skill
+	- Esempio: la cooldown di vampiric_chain riparte solo dopo
+
+Fare che, una volta che si infligge danno ad un utente:
+	- La vita non va sotto lo zero
+

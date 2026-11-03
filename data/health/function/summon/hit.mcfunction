@@ -4,4 +4,4 @@
 ## Chiama skills:list/<abilityType>/<abilityName>/hit (suono)       ##
 ######################################################################
 
-$function skills:list/$(abilityType)/$(abilityName)/hit
+$function skills:list/$(abilityType)/$(abilityName)/hit_feedback
