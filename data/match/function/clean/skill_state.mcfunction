@@ -1,6 +1,7 @@
 ######################################################
-## Chiamata da match:events/new_round               ##
-## || match:end/cleanup (prima del reset obiettivi) ##
+## Chiamata da                                      ##
+## match:events/new_round                           ##
+## match:end/cleanup                                ##
 ## Esecutore: un giocatore in partita               ##
 ## Azzera lo stato lasciato dalle abilità attive:   ##
 ## tag dinamici, tag di stato, rallentamenti,       ##
@@ -9,7 +10,7 @@
 
 ## Tag con ID (serve lo score ID)
 execute store result storage arenaproject:game_memory temporary.skill_state.ID int 1 run scoreboard players get @s ID
-function match:end/clean_macro_tags with storage arenaproject:game_memory temporary.skill_state
+function match:clean/macro_tags with storage arenaproject:game_memory temporary.skill_state
 data remove storage arenaproject:game_memory temporary.skill_state
 
 ## Ricarica ritardata (abilità rimaste IN USO)

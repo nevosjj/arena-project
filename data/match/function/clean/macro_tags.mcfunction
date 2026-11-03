@@ -1,5 +1,5 @@
 ###################################################################
-## Chiamata da match:end/skill_state                             ##
+## Chiamata da match:clean/skill_state                           ##
 ## Rimuove i tag con l'ID del giocatore (es. owner_$(ID).*).     ##
 ## Pulisce @a: alcuni tag stanno sul bersaglio con l'ID di @s.   ##
 ###################################################################

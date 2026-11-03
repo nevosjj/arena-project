@@ -44,7 +44,7 @@ function skills:auxiliary/summon/cleanup
 # Tutti i marker in partita sono di abilità
 kill @e[type=marker]
 kill @e[type=block_display,tag=bone_shield.visual]
-execute as @a[tag=in_game] run function match:end/skill_state
+execute as @a[tag=in_game] run function match:clean/skill_state
 
 # Cleanup temporary game_memory
 data remove storage arenaproject:game_memory temporary

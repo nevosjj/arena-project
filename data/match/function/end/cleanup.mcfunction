@@ -36,7 +36,7 @@ effect give @s regeneration 10 10 true
 
 ## Stato abilità: tag con ID, tag di stato, rallentamenti
 # Prima del reset degli obiettivi, serve lo score ID
-function match:end/skill_state
+function match:clean/skill_state
 
 ## Obiettivi
 scoreboard players reset *
