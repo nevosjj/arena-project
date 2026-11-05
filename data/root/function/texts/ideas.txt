@@ -3,25 +3,172 @@
 
 /// AGGIUNTE:
     /// ABILITA NUOVE:
-        > Salto del Golem - UTILITY - Il tuo prossimo salto è potenziato per 5 secondi (1,5x). Quando atterri, genera un'onda d'urto di fronte a te. La distanza e il danno sono
-        proporzionali alla distanza percorsa durante la caduta (minimo 3 blocchi di caduta), ma ricevi una porzione (30%) del danno che farebbe l'onda d'urto. Ricarica di 35s.
-        Danno doppio alle strutture (Fungo apocalittico, e simili)
-        > Legame dell'anima - SUPPORT - (Disponibile solo in 2v2) Bersaglia un alleato. Ti curi ogni 0,5s per 3s del 7% di differenza della vita (nel momento del bersagliamento) 
-        tra te e il tuo alleato. Range: 35, Ricarica: 20s
-        > Tesla Redstone - UTILITY - Crea una mini tesla di redstone. Non puoi creare una tesla più vicina di 3 blocchi da un'altra. Non puoi creare più di 3 tesle. Ricarica di 9 secondi.
-        La tesla in mezzo ha la testa del giocatore per capire di chi è. Dopo 5 secondi, si accende.
-        Quando la cima di una tesla viene colpita da un giocatore, si attiva, creando un impulso che ruba 20 energia e la regala al possessore della tesla, e danneggia per 10 hp. 
-        Raggio di 7 blocchi, se altre tesle vacanti sono nell'area, attiva quella più vicina.
-        > Pietrificazione - UTILITY - Bersaglia un nemico, pietrificandolo per 5s.
-        Ai nemici pietrificati spariscono tutti i buff e debuff, non possono muoversi, attaccare o usare abilità, ma guadagnano
-        100% di resistenza melee, 90%  resistenza abilità e guariscono 10hp al secondo. La pietrificazione può svanire in anticipo
-        se alleati o nemici lo colpiscono 3 volte.
-        > Pollo di lava - OFFENSIVE - Lancia un pollo che segue la direzione del tuo cursore. Infligge 42 danni.
-        Lascia una zona bruciante per 3s sulla zona d'impatto, infligge 3 danni al secondo. COSTO: 35xp.
-        > Scheletro Guerriero - OFFENSIVE - Lancia lungo una lunga distanza uno scheletro. Può essere ucciso con le abilità e melee.
-        Dopo un breve ritardo si agguerrisce, statistiche: 8 danni melee e 25 HP. Esiste per 7s.
-        Se esiste già lo scheletro, ti scambi di posizione, facendo 25 danni ad area 3x3 sia sulla posizione dello scheletro che la tua.
-        COSTO: 40xp 
+
+- Canzone del potere (SUPPORT)
+	> Una musica comincia a suonare per pochi secondi
+	> Velocizza la rigenerazione di energia e la velocità di movimento
+	> Ogni volta che usi l'abilità offensiva, sprigiona un impulso di note
+	> L'impulso incrementa la durata della musica
+	> Se l'impulso colpisce un nemico, ti cura di una percentuale del prezzo della tua offensiva
+	STATS
+	> Durata 5s
+	> Energia 1.5x, movimento +10%
+	> Range massimo impulso: 4 blocchi
+	> Range dell'impulso: 1 blocco a forma di ciambella
+	> Incremento durata: 1s
+	> Cura: 50% prezzo offensiva
+	> Ricarica 15s
+
+- Portale temporale (SUPPORT)
+	> Crea un portale sulla zona visibile solo alla tua squadra
+	> Dopo una certa durata, sparisce
+	> Riutilizza per teletrasportarti sul portale.
+	> Dopo il teletrasporto, ti curi, incrementa per ogni secondo che il portale è esistito
+	STATS
+	> Durata 12s
+	> Cura 20/s
+	> Ricarica 20s
+
+- Sputo di Inchiostro (OFFENSIVE)
+	> All'attivazione, spendi esperienza extra
+	> L'esperienza extra estende la durata dell'abilità
+	> Comincia a sputare inchiostro a corto raggio
+	> L'inchiostro infligge danno
+	> Se colpisci il nemico con abbastanza inchiostro, lo accechi, fai danni extra e gli fermi la rigenerazione di energia
+	STATS
+	> Costo 20e
+	> Esperienza extra: ogni 20e, li spendi
+	> Durata 3s
+	> Estensione durata 2s
+	> Danni inchiostro 3
+	> Range inchiostro 3 blocchi
+	> Frequenza inchiostro: 1/0,2s
+	> Inchiostro necessario per il burst: 30
+	> Burst: 20 danni, accecamento 3s, stop energia 3s
+	> Accecamento: non vedi entro tot blocchi, non puoi correre
+
+- Pugno del Golem (UTILITY)
+	> Lancia un'incudine
+	> Appena tocca terra, si carica
+	> Dopo una breve durata, crea una zona esagonale
+	> I nemici che ci entrano consumano l'area vengono storditi
+	> L'esagono ha una durata
+	STATS
+	> Carica 4s
+	> Raggio esagono 6 blocchi
+	> Durata stordimento 3s
+	> Durata esagono 7s
+	> Ricarica 22s (inizia dopo che la zona sparisce)
+
+- Trappola Creeper (OFFENSIVE)
+	> Evoca un piccolo creeper su di te
+	> Dopo un breve periodo, si innesca
+	> Crea un'area trappola, che si espande ad ogni secondo insieme al danno
+	> Se vi entrano dei nemici, esplode, infliggendo danno e ancorando
+	> Non può esistere più di una trappola alla volta
+	STATS
+	> Costo 25e
+	> Raggio iniziale 3 blocchi
+	> Espansione: 15 danni + 1 blocco/s, massimo di 5 espansioni
+	> Periodo di innesco 2s
+	> Ritardo esplosione 0,5s
+	> Danno base 50
+	> Ancorato: non puoi usare abilità basate sul movimento
+
+- Pollo lava (Ispirato a lava chicken) (OFFENSIVE)
+	> Lancia un pollo proiettile che segue il tuo cursorse
+	> Infligge danno
+	> Crea una zona di fuoco per un breve periodo
+	STATS
+	> Costo 30e
+	> Raggio esplosione 2 blocchi
+	> Danno 35
+	> Durata zona di fuoco 2s, 5 danni/s
+
+- Arma Quake (OFFENSIVE) (Non ha bisogno di bersaglio)
+	> Sferra un proiettile hit-scan
+	> Si ferma ai muri
+	> Se colpisci un numero di volte un bersaglio con questo poriettile, 
+	crea danno burst
+	STATS
+	> Costo 20e
+	> Numero colpi burst 5
+	> Danno base 10
+	> Danno burst 50
+	> Raggio 40 blocchi
+
+- Onda sismica (UTILITY)
+	> Il tuo prossimo salto è potenziato per poco tempo
+	> All'atterraggio, crea un'onda d'urto verso la direzione in cui guardi
+	> L'onda d'urto si interrompe in anticipo se trova barriere o non c'è terreno
+	> Stordisce i nemici
+	> Distrugge subito tutte le evocazioni ed edifici
+	STATS
+	> Ricarica: 35s
+	> Potenza salto +200%
+	> Durata potenziamento salto 3s
+	> Distanza onda d'urto 12 blocchi
+	> Stordimento 3s
+
+- Anello d'acqua (UTILITY)
+	> Crea intorno a te un anello d'acqua per una durata
+	> All'attivazione e ad ogni intervallo di tempo crea un impulso
+	> L'impulso rimuove i debuff e indebolisce i danni dell'avversario
+	> L'impulso potenzia inoltre per un breve periodo le caratteristiche della
+	tua prossima abilità
+	STATS
+	> Ricarica 40s
+	> Indebolimento danni abilità e melee avversario: -25% 5s
+	> Impulso ogni 5s
+	> Durata 10s (3 impulsi totali)
+	> Potenziamento caratteristiche: +20% (danno, range, durata, potenza cura)
+ 
+- Uovo di fenice (ULTIMATE)
+	> Evoca un uovo volante
+	> Può essere ucciso tramite abilità e colpi corpo a corpo
+	> Ha una durata prima di sparire
+	> Se muori mentre l'uovo esiste, rinasci sull'uovo
+	> La vita con cui rinasci aumenta in base ai danni arrecati tra l'evocazione dell'uovo
+	e la rinascita
+	> Esiste un limite di vita con cui rinasci
+	> Quando rinasci, infliggi meno danni abilità e corpo a corpo
+	STATS
+	> Durata uovo 20s
+	> Salute uovo 200
+	> Guarigione alla rinascita 150hp
+	> Guarigione extra +25% del danno abilità e corpo a corpo arrecato
+	> Limite vita 300hp TOTALI tra guarigione base ed extra
+	> Debolezza danni abilità e corpo a corpo -50% per 7s
+	
+- Ragno madre (ULTIMATE) (Bersaglio necessario)
+	> Bersaglia un nemico. Diventa l'obiettivo di un ragno gigante che evochi
+	> Ogni tot. tempo esegue un salto verso la direzione dell'obiettivo
+	> Se incontra l'obiettivo durante il salto, gli infligge danno
+	> Può essere ucciso tramite abilità e colpi corpo a corpo
+	STATS
+	> Ricarica 75s
+	> Durata infinita
+	> Danni 40
+	> Durata intervalli salto 4s
+	> Salute 120
+	> Forza del salto: media
+	> NOTA BENE: La forza del salto è scritta media perché ha un valore non ancora ben definito e uso una funzione
+	fa set_motion in modo particolare. Comunque la distanza massima del salto sarà circa 8 blocchi, sia verticalmente che orizzontalmente
+	> NOTA BENE: Il ragno al salto conta come proiettile
+
+- Fungo apocalittico (ULTIMATE)
+	> Pianta un fungo sotto di te
+	> Infligge danni ogni secondo in un'area molto larga
+	> Colpisce i nemici visibili dal fungo
+	> Alla fine della durata, genera una grande esplosione che fa danni
+	> Può essere distrutto tramite abilità e colpi corpo a corpo
+	STATS
+	> Ricarica 90s
+	> Durata 12s
+	> Danno 10/s
+	> Danno finale 180
+	> Raggio 32
+	> Salute 150
 
     /// OGGETTI:
     Gli oggetti possono essere comprati tra un round e l'altro. Conferiscono statistiche ed effetti unici.

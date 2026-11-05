@@ -67,7 +67,8 @@ REMOVED
 KNOWN ISSUES
 
 ## INFO PARTITA
-    - I giocatori hanno 2000 HP (non ci si può guarire oltre)
+    - I giocatori hanno 2000 HP (non ci si può guarire oltre), se si riceve danno dimezza SOLO questo score, non i cuori vanilla
+    - La vita vanilla rappresenta i round rimanenti di combattimento. Ogni round perso ti fa perdere 1 cuore vanilla
     - Knockback -60%, ogni melee infligge 10 HP, segnati come "danni melee"
     - esistono poi i "danni abilità"
     - Nella partita esistono powerup che spawnano su 2 punti fissi scelti a random sulla mappa, conferiscono buff temporanei (vita, danni melee/abilità extra, ricarica dimezzata, ecc)
