@@ -4,6 +4,11 @@
 6. DIALOGUE - Recording: sostituire la chest in 9 -55 39 con un dialogue per giocatore (pulsanti con /trigger, contenuto con macro da storage, pause:false)
 7. DIALOGUE - Selezione abilità: tenere la griglia nel chest_minecart, ma usare un dialogue per descrizione dettagliata + conferma abilità (pulsante Conferma con /trigger)
 
+PRIO #1
+1. Migliorare effetti grafici magnetic_impulse e switch
+2. Reworkare golden_apple e tornado
+3. Riscrivere lightning_strike per riflettere ciò che fa realmente
+
 Melodie
 	- Suoni di feeback custom per
 		- Ricarica abilità
