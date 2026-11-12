@@ -185,5 +185,14 @@
     
 /// MODIFICHE:
     /// ABILITA:
-        > Tornado - (NUOVO) I nemici non possono usare le abilità di movimento dentro il raggio d'azione
-        > Scambio - (NUOVO) Nelle 2v2, puoi fare scambio anche con gli alleati, senza lo stun. ATTENZIONE: è disponibile in 1v1, ma questa funzione è esclusiva nel 2v2.
+        > Tornado -
+			> (NUOVO) I nemici non possono usare le abilità di movimento dentro il raggio d'azione
+			> (NUOVO) I nemici all'interno non possono uscire
+			> (REWORK) Non tira più in alto i proiettili ma li distrugge direttamente
+			> (REWORK) Il tipo di abilità passa da Utility a Ultimate
+			> (BUFF) Funziona da muro (Non puoi utilizare abilità basate sul Raycast all'attivazione)
+			> (BUFF) Rende più veloci gli alleati all'interno, rende più lenti i nemici all'interno
+			> (NERF) Raggio da 7 a 5
+			> (NERF) Durata da 9 a 8 secondi
+			> (NERF) Non infligge più danni nel tempo
+		> Scambio - (NUOVO) Nelle 2v2, puoi fare scambio anche con gli alleati, senza lo stun. ATTENZIONE: è disponibile in 1v1, ma questa funzione è esclusiva nel 2v2.

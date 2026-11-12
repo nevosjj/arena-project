@@ -53,4 +53,6 @@ Stanza preparazione, spectate
 	- Fixare "Unquoted strings cannot start with `[0-9.+-]` in data pack format 71+ / minecraft 1.21.5" sul suddetto file
 	- Aggiungere di conseguenza che puoi scegliere che partita spectare dalla lobby
 
-Actionabar dinamica.
+Actionabar dinamica
+
+Fare che la barra XP "verde" si limita in base a quanta percentuale di energia rispetto al max di energia hai
