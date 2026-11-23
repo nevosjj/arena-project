@@ -23,7 +23,7 @@ data modify storage ability_data:utility skills set value [\
         },\
         technical: {\
             cooldown:30,\
-            duration:60,\
+            duration:40,\
             range:8f,\
             immobilization:2,\
             ignoreSummons:1b\

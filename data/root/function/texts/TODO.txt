@@ -1,13 +1,14 @@
-2. BLOOD MOTHER: programmare l'abilità
-3. DOOM SHROOM: programmare l'abilità
-5. DIALOGUE - Patch notes: dialogue statico (data/<namespace>/dialog/patch_notes.json), apribile dal menu di pausa con #minecraft:pause_screen_additions, eventualmente una pagina per versione
-6. DIALOGUE - Recording: sostituire la chest in 9 -55 39 con un dialogue per giocatore (pulsanti con /trigger, contenuto con macro da storage, pause:false)
-7. DIALOGUE - Selezione abilità: tenere la griglia nel chest_minecart, ma usare un dialogue per descrizione dettagliata + conferma abilità (pulsante Conferma con /trigger)
-
+---
 PRIO #1
 1. Migliorare effetti grafici magnetic_impulse e switch
 2. Reworkare golden_apple e tornado
 3. Riscrivere lightning_strike per riflettere ciò che fa realmente
+4. Implementare broodmother + doom_shrom
+---
+
+DIALOGUE - Patch notes: dialogue statico (data/<namespace>/dialog/patch_notes.json), apribile dal menu di pausa con #minecraft:pause_screen_additions, eventualmente una pagina per versione
+DIALOGUE - Recording: sostituire la chest in 9 -55 39 con un dialogue per giocatore (pulsanti con /trigger, contenuto con macro da storage, pause:false)
+DIALOGUE - Selezione abilità: tenere la griglia nel chest_minecart, ma usare un dialogue per descrizione dettagliata + conferma abilità (pulsante Conferma con /trigger)
 
 Melodie
 	- Suoni di feeback custom per
