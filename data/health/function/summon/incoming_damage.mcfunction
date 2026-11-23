@@ -15,6 +15,12 @@ scoreboard players operation #match temp2 += #overtime multiplier
 scoreboard players operation @s incoming_damage *= #match temp2
 scoreboard players operation @s incoming_damage /= #match temp
 
+## Statistiche post-partita (danno netto, dopo l'overtime)
+# Attaccante: tag summon.attacker (health:summon/melee || health:summon/ability_damage)
+scoreboard players operation @a[tag=summon.attacker] poststat.summon_damage_inflicted += @s incoming_damage
+execute if score @s melee_damage matches 1.. run scoreboard players operation @a[tag=summon.attacker] poststat.melee_inflicted += @s incoming_damage
+execute if score @s ability_damage matches 1.. run scoreboard players operation @a[tag=summon.attacker] poststat.ability_inflicted += @s incoming_damage
+
 # Feedback in-game text_display
 execute store result storage arenaproject:game_memory damageFeedback.text int 1.0 run scoreboard players get @s incoming_damage
 execute at @s run function health:texts/damage with storage arenaproject:game_memory damageFeedback

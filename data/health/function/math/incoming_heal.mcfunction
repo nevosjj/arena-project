@@ -5,11 +5,11 @@ scoreboard players operation @s heal_available -= @s stat.current_health
 # Se la guarigione è più dello spazio disponibile, limita
 execute if score @s incoming_heal > @s heal_available run scoreboard players operation @s incoming_heal = @s heal_available
 
-# Applica la guarigione (ora è sicura)
+# Applica la guarigione limitata
 scoreboard players operation @s stat.current_health += @s incoming_heal
 
-# Accumula cure ricevute
-scoreboard players operation @s poststat.heal_received += @s incoming_heal
+# Accumula cure istantanee ricevute (nette, dopo il limite)
+scoreboard players operation @s poststat.instant_heal_received += @s incoming_heal
 
 # Feedback
 $execute if score @s incoming_heal matches 1.. run \

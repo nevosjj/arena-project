@@ -127,13 +127,28 @@ scoreboard objectives add match.seconds dummy
 scoreboard objectives add match.minutes dummy
 scoreboard objectives add player.hearts dummy
 
-# Statistiche post-partita
-scoreboard objectives add poststat.heal_received dummy
+## Statistiche post-partita
+# Danno
 scoreboard objectives add poststat.melee_inflicted dummy
-scoreboard objectives add poststat.melee_inflicted_summon dummy
-scoreboard objectives add poststat.damage_received dummy
-scoreboard objectives add poststat.damage_halved dummy
+scoreboard objectives add poststat.ability_inflicted dummy
 scoreboard objectives add poststat.best_combo dummy
+scoreboard objectives add poststat.summon_damage_inflicted dummy
+# Difesa
+scoreboard objectives add poststat.total_damage_received dummy
+scoreboard objectives add poststat.melee_damage_received dummy
+scoreboard objectives add poststat.damage_halved dummy
+scoreboard objectives add poststat.ability_damage_received dummy
+# Cure
+scoreboard objectives add poststat.instant_heal_received dummy
+scoreboard objectives add poststat.regen_healed dummy
+scoreboard objectives add poststat.regen_lost dummy
+scoreboard objectives add poststat.total_heal_received dummy
+# XP
+scoreboard objectives add poststat.total_xp_generated dummy
+scoreboard objectives add poststat.timer_xp_generated dummy
+scoreboard objectives add poststat.melee_xp_generated dummy
+scoreboard objectives add poststat.xp_wasted dummy
+# Obiettivi
 scoreboard objectives add poststat.powerup_picked dummy
 
 # Potenziamenti

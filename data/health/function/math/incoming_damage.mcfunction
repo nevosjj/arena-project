@@ -42,6 +42,17 @@ execute at @s run function health:texts/damage with storage arenaproject:game_me
 # Catena Vampirica check
 execute at @s as @e[type=marker,tag=vampiric_chain.marker,distance=..96] run function skills:list/support/vampiric_chain/heal with entity @s data
 
+## STATISTICHE POST-PARTITA
+# Danno netto: dopo overtime e difesa
+# Corpo a corpo: l'attaccante ha il tag damage.dealer (health:auxiliary/attack_hurt)
+execute if score @s melee_damage matches 1.. run scoreboard players operation @s poststat.melee_damage_received += @s incoming_damage
+execute if score @s melee_damage matches 1.. run scoreboard players operation @a[tag=damage.dealer] poststat.melee_inflicted += @s incoming_damage
+# Abilità: l'attaccante si trova dal nome (playerName)
+execute if score @s ability_damage matches 1.. run scoreboard players operation @s poststat.ability_damage_received += @s incoming_damage
+$execute if score @s ability_damage matches 1.. run tag $(playerName) add damage.ability_dealer
+scoreboard players operation @a[tag=damage.ability_dealer] poststat.ability_inflicted += @s incoming_damage
+tag @a[tag=damage.ability_dealer] remove damage.ability_dealer
+
 # Rimozione
 scoreboard players operation @s stat.current_health -= @s incoming_damage
 
@@ -53,9 +64,6 @@ scoreboard players operation @s recent_damage += @s incoming_damage
 
 # Reset dei danni recenti
 scoreboard players set @s recent_damage.timer 1
-
-# Accumula danni ricevuti 
-scoreboard players operation @s poststat.damage_received += @s incoming_damage
 
 # Aggiornamento sidebar
 function match:display/update

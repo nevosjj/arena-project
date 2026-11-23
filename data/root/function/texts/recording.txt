@@ -12,19 +12,18 @@ Registri partite (Fino a 7 partite)
 					> Danni corpo a corpo ricevuti
 					> Danni abilità ricevuti
 					> Danni totali ricevuti
-					> Danni mitigati
+					> Danni ridotti
 				> Sezione guarigione
 					> Vita istantanea guarita
 					> Vita rigenerativa guarita
 					> Vita rigenerativa perduta
-					> Vita guarita a sé stesso
-					> Vita guarita agli alleati
 				> Sezione esperienza
+					> XP generata totale
+					> XP generata con i secondi
 					> XP generata con i colpi melee
 					> XP sprecata (oltre 100 XP)
-					> Conversione danni in XP
-					
-					
+				> Sezione obiettivi
+					> Powerup raccolti
 		> Equipaggiamento
 			> Lista giocatori con le loro abilità
 				> Abilità offensiva
@@ -43,3 +42,17 @@ Registri partite (Fino a 7 partite)
 					> Uccisioni
 					> Overtime, se c'è stato
 			> Durata media round
+
+DESCRIZIONE:
+
+su root:loads/scores ci sono gli score che iniziano con "poststat.", sono le statistiche del recording. Non ci sono tutte, alcune verranno implementate in futuro (non metterle tu quindi)
+Il calcolo degli score durante la partita deve essere ancora messo, se possibile mettilo tu. Reset inclusi, credo, ma forse c'è già un "scoreboard players reset @a[tag=in_game] *".
+
+Voci foglia -> Sono testi nel dialog, tutti elencati nella stessa pagina
+Tempo -> Il tempo viene calcolato ogni secondo da root:tick/1second chiamando match:display/time/check, quindi si estraggono i due score per ottenere minutaggio e secondi una volta fatto l'append dell'evento durante la partita
+Timeline -> La timeline dev'essere composta così in un round "{m:minuti,s:secondi,event:"ultimate",player:"PlayerX",skill:"broodmother"}", quindi pre-formattato, e mettere il dialogo di testo in base all'evento. Per esempio: per le ulti "Evento 1 \n Tempo mm:ss \n PlayerX ha attivato ultimateY"
+Per le statistiche un giorno metterò le statistiche precise di ogni abilità su equipaggiamento, ma succederà un'altra volta
+
+Nota: prima poststat.damage_received, ora è poststat.total_damage_received
+prima poststat.melee_inflicted_summon, ora è posttstat.summon_damage_inflicted (è generale ora, sia abilità che melee)
+Ovviamente dove possibile le statistiche "total" verrannoa aggiunte nel finale, credo abbia senso così? e non calcolarle nel runtime

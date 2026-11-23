@@ -8,10 +8,6 @@
 scoreboard players operation @s melee_damage = @a[tag=summon.attacker,limit=1] stat.attack
 scoreboard players operation @s incoming_damage += @s melee_damage
 
-# Statistica post-partita dell'attaccante
-execute as @a[tag=summon.attacker] run scoreboard players operation @s poststat.melee_inflicted_summon += @s stat.attack
-execute as @a[tag=summon.attacker] run scoreboard players operation @s poststat.melee_inflicted += @s stat.attack
-
 # Iframes
 scoreboard players set @s summon.iframes 10
 

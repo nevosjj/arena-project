@@ -27,9 +27,7 @@ execute on attacker if entity @s[tag=flame_sword.energy] as @s run function skil
 ## MATEMATICA
 # Operazione
 scoreboard players operation @a[tag=damage.victim] melee_damage += @a[tag=damage.dealer] stat.attack
-# Accumulo score a chi ha attaccato
-execute on attacker run scoreboard players operation @s poststat.melee_inflicted += @s stat.attack
-# Chiamata funzione
+# Chiamata funzione 
 function health:types/melee_damage
 # Reset tags
 execute on attacker run tag @s remove damage.dealer
