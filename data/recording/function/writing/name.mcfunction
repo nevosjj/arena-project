@@ -1,2 +1,0 @@
-# Inietta il nome dello storage dentro "item_name"
-$data modify block 9 -55 39 Items[{Slot:$(chestIndex)b}].components."minecraft:item_name" set string storage api.nevosjj.lobby:match_list elements[$(index)].match_id
