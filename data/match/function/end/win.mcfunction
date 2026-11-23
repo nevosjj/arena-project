@@ -28,7 +28,9 @@ tellraw @a [{"text":"VINCITORE","bold":true,"color":"dark_gray"},{"text":" >> ",
     {"text":"!","color":"gray","bold":false}]
 
 ## REGISTRAZIONE PARTITA
-# Calcolo tempo
+# Fine dell'ultimo round
+function recording:rounds/end
+# Salvataggio
 function recording:actions/start_recording
 
 # Pulizia

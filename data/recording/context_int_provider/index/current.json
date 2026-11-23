@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:storage",
+  "storage": "api.nevosjj.lobby:match_list",
+  "path": "saveIndex",
+  "fallback": 0
+}

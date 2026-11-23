@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:mod",
+  "left": {
+    "type": "minecraft:div",
+    "left": {
+      "type": "minecraft:storage",
+      "storage": "match_recorder:data",
+      "path": "actual_match.rounds_seconds",
+      "fallback": 0
+    },
+    "right": {
+      "type": "minecraft:storage",
+      "storage": "match_recorder:data",
+      "path": "actual_match.round_count",
+      "fallback": 0
+    }
+  },
+  "right": 60
+}

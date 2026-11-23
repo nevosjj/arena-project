@@ -10,6 +10,11 @@ scoreboard players add #match match.seconds 1
 # Calcolo minuti
 execute if score #match match.seconds matches 60.. run function match:display/time/get
 
+# Orologio del round (azzerato da recording:rounds/start all'apertura dei cancelli)
+scoreboard players add #match round.seconds 1
+execute if score #match round.seconds matches 60.. run scoreboard players add #match round.minutes 1
+execute if score #match round.seconds matches 60.. run scoreboard players set #match round.seconds 0
+
 # Immissione dati
 execute store result storage arenaproject:game_memory displayTime.minutes int 1.0 run scoreboard players get #match match.minutes
 execute store result storage arenaproject:game_memory displayTime.seconds int 1.0 run scoreboard players get #match match.seconds

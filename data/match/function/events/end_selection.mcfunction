@@ -35,6 +35,9 @@ stopwatch create match:overtime
 # Ciclo dei potenziamenti
 function match:events/powerup/logic/start
 
+# Registrazione: inizio del round
+function recording:rounds/start
+
 # Feedback
 tellraw @a [{"text":"\n> ","color":"gray","bold":true},{"text":"Combattete!","color":"red","bold":false}]
 execute as @a at @s run playsound entity.ender_dragon.ambient voice @s ~ ~ ~ 1 0.9

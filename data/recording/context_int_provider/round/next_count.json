@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:add",
+  "inputs": [
+    {
+      "type": "minecraft:storage",
+      "storage": "match_recorder:data",
+      "path": "actual_match.round_count",
+      "fallback": 0
+    },
+    1
+  ]
+}

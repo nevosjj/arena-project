@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:add",
+  "inputs": [
+    {
+      "type": "minecraft:storage",
+      "storage": "match_recorder:data",
+      "path": "actual_match.rounds_seconds",
+      "fallback": 0
+    },
+    {
+      "type": "minecraft:mul",
+      "inputs": [
+        {
+          "type": "minecraft:storage",
+          "storage": "match_recorder:data",
+          "path": "actual_match.rounds[-1].duration.m",
+          "fallback": 0
+        },
+        60
+      ]
+    },
+    {
+      "type": "minecraft:storage",
+      "storage": "match_recorder:data",
+      "path": "actual_match.rounds[-1].duration.s",
+      "fallback": 0
+    }
+  ]
+}

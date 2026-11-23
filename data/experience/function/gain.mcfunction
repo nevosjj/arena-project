@@ -5,6 +5,9 @@ scoreboard players reset @s experience_timer
 scoreboard players operation #xp.gain temp = @s experience_gain
 function experience:stats {objective:"timer_xp_generated"}
 
+# Già a 100: tutta l'XP è scarto (contata sopra), niente aumento
+execute if score @s experience_level matches 100.. run return 0
+
 scoreboard players operation @s experience_level += @s experience_gain
 execute store result storage arenaproject:game_memory temporary_exp.expGain int 1.0 run scoreboard players get @s experience_level
 function experience:macro with storage arenaproject:game_memory temporary_exp

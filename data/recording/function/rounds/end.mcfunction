@@ -1,0 +1,12 @@
+###########################################################
+## Chiamata da match:events/round_pause || match:end/win ##
+## Fine del round: salva la sua durata e la somma al     ##
+## totale per la media (actions/start_recording)         ##
+###########################################################
+
+# Durata
+execute store result storage match_recorder:data actual_match.rounds[-1].duration.m int 1.0 run scoreboard players get #match round.minutes
+execute store result storage match_recorder:data actual_match.rounds[-1].duration.s int 1.0 run scoreboard players get #match round.seconds
+
+# Totale in secondi di tutti i round
+data modify storage match_recorder:data actual_match.rounds_seconds set compute default integer recording:round/total_seconds

@@ -10,6 +10,9 @@ function match:events/overtime/stop
 # Ferma i potenziamenti (e i berserk attivi)
 function match:events/powerup/logic/clean
 
+# Registrazione: fine del round
+function recording:rounds/end
+
 # Stopwatch
 stopwatch create match:round_break
 
