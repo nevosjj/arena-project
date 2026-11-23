@@ -15,7 +15,7 @@ execute unless entity @a[tag=in_game] run return fail
 function match:events/overtime/stop
 
 # Potenziamenti
-function match:events/powerup/clean
+function match:events/powerup/logic/clean
 
 # Stopwatch non gestiti da match:end/cleanup
 stopwatch remove match:first_timer

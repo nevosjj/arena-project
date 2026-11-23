@@ -1,5 +1,5 @@
 #########################################################
-## Chiamata da match:events/powerup/announce           ##
+## Chiamata da match:events/powerup/logic/announce     ##
 ## Macro: arenaproject:game_memory temporary.powerup   ##
 ## Tira a caso gli indici di tipo e punto. Con un solo ##
 ## elemento resta 1 (random vuole almeno 2 valori).    ##

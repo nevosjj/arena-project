@@ -19,9 +19,9 @@ execute if stopwatch match:map_editor/opening 5.. run function match:events/end_
 execute if stopwatch match:overtime 0.. run function match:events/overtime/check with storage match_data:1v1 list.1v1
 
 # Potenziamenti: attesa -> anteprima (10s) -> in campo (15s) -> attesa
-execute if stopwatch match:powerup/cycle 0.. run function match:events/powerup/cycle with storage match_data:1v1 list.1v1
-execute if stopwatch match:powerup/incoming 10.. run function match:events/powerup/spawn
-execute if stopwatch match:powerup/life 15.. run function match:events/powerup/despawn
+execute if stopwatch match:powerup/cycle 0.. run function match:events/powerup/logic/cycle with storage match_data:1v1 list.1v1
+execute if stopwatch match:powerup/incoming 10.. run function match:events/powerup/logic/spawn
+execute if stopwatch match:powerup/life 15.. run function match:events/powerup/logic/despawn
 
 # Pausa dopo che un round è finito al seguito della morte di qualcuno
 # Dopo crea un nuovo round, se disponibile

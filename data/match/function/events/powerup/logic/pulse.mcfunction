@@ -1,5 +1,5 @@
 ##########################################################
-## Chiamata da match:events/powerup/tick                ##
+## Chiamata da match:events/powerup/logic/tick          ##
 ## Posizione: il marker del potenziamento               ##
 ## Anello di particelle che parte dal centro del blocco ##
 ## e si allarga in orizzontale (12 direzioni).          ##

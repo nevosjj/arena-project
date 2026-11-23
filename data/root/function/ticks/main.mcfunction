@@ -45,9 +45,9 @@ execute positioned 90 -30 0 run function root:ticks/skills
 
 ## Potenziamenti
 # Anteprima (vortice prima della comparsa)
-execute if entity @e[type=marker,tag=powerup.incoming] as @e[type=marker,tag=powerup.incoming] at @s run function match:events/powerup/preview_tick
+execute if entity @e[type=marker,tag=powerup.incoming] as @e[type=marker,tag=powerup.incoming] at @s run function match:events/powerup/logic/preview_tick
 # In campo (fluttuazione, impulso, scadenza, raccolta)
-execute if entity @e[type=marker,tag=powerup.active] as @e[type=marker,tag=powerup.active] at @s run function match:events/powerup/tick
+execute if entity @e[type=marker,tag=powerup.active] as @e[type=marker,tag=powerup.active] at @s run function match:events/powerup/logic/tick
 # Berserk: durata e anelli
 execute if entity @a[tag=powerup.berserk] as @a[tag=powerup.berserk] run function match:events/powerup/types/berserk/tick
 execute if entity @e[type=marker,tag=powerup.berserk_visual] as @e[type=marker,tag=powerup.berserk_visual] at @s run function match:events/powerup/types/berserk/rings with entity @s data

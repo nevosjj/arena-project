@@ -1,5 +1,5 @@
 ###############################################################
-## Chiamata da match:events/powerup/tick                     ##
+## Chiamata da match:events/powerup/logic/tick               ##
 ## Esecutore: il giocatore | Posizione: il potenziamento     ##
 ## Macro: i data del marker del potenziamento (type)         ##
 ## Legge i parametri del tipo da match_data:1v1 e li passa  ##

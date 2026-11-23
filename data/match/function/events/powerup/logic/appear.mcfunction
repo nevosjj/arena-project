@@ -1,5 +1,5 @@
 ###########################################################
-## Chiamata da match:events/powerup/spawn                ##
+## Chiamata da match:events/powerup/logic/spawn          ##
 ## Esecutore e posizione: il marker in anteprima         ##
 ## Macro: i data del marker (type)                       ##
 ## Il potenziamento appare con il visual del suo tipo.   ##

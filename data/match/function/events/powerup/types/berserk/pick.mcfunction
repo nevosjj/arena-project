@@ -8,7 +8,7 @@
 ###############################################################
 
 # Annuncio
-function match:events/powerup/pick_feedback {name:"Berserk",color:"dark_red"}
+function match:events/powerup/logic/pick_feedback {name:"Berserk",color:"dark_red"}
 
 # Primo berserk: bonus e anelli
 $execute unless entity @s[tag=powerup.berserk] run function match:events/powerup/types/berserk/start {bonus:$(bonus)}

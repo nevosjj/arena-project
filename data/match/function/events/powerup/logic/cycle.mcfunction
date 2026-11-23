@@ -4,4 +4,4 @@
 ## Finita l'attesa annuncia il potenziamento.                         ##
 ########################################################################
 
-$execute if stopwatch match:powerup/cycle $(powerupWait).. run function match:events/powerup/announce
+$execute if stopwatch match:powerup/cycle $(powerupWait).. run function match:events/powerup/logic/announce

@@ -1,5 +1,5 @@
 #############################################################
-## Chiamata da match:events/powerup/announce               ##
+## Chiamata da match:events/powerup/logic/announce         ##
 ## Macro: arenaproject:game_memory temporary.powerup       ##
 ## Copia il tipo e le coordinate scelti (indici negativi). ##
 #############################################################

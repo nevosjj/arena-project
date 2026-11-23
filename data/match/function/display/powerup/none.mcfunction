@@ -1,5 +1,5 @@
 #########################################################
-## Chiamata da match:events/powerup/*                  ##
+## Chiamata da match:events/powerup/logic/*            ##
 ## Sidebar: nessun potenziamento in arrivo o in campo. ##
 #########################################################
 

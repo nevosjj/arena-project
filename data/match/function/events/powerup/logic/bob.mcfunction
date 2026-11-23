@@ -1,5 +1,5 @@
 ########################################################
-## Chiamata da match:events/powerup/tick              ##
+## Chiamata da match:events/powerup/logic/tick        ##
 ## Posizione: il marker del potenziamento | Macro: y  ##
 ## Sposta il blocco all'altezza y con interpolazione. ##
 ########################################################

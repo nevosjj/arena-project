@@ -10,7 +10,7 @@
 function match:events/overtime/stop
 
 # Ferma i potenziamenti (e i berserk attivi)
-function match:events/powerup/clean
+function match:events/powerup/logic/clean
 
 # Creazione stopwatch
 stopwatch create match:win_break

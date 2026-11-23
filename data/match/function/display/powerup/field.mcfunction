@@ -1,5 +1,5 @@
 #############################################
-## Chiamata da match:events/powerup/appear ##
+## Chiamata da match:events/powerup/logic/appear ##
 ## Sidebar: potenziamento in campo.        ##
 #############################################
 

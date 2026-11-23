@@ -1,5 +1,5 @@
 ###############################################
-## Chiamata da match:events/powerup/announce ##
+## Chiamata da match:events/powerup/logic/announce ##
 ## Sidebar: potenziamento in arrivo.         ##
 ###############################################
 

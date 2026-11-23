@@ -1,0 +1,45 @@
+Registri partite (Fino a 7 partite)
+	> Partita di Arena Project
+		> Statistiche
+			> Lista giocatori
+				> Sezione danni
+					> Danni corpo a corpo inflitti
+					> Combo migliore
+					> Danni abilità inflitti
+					> Rimozione pool HP rigenerazione
+					> Danni alle evocazioni
+				> Sezione difesa
+					> Danni corpo a corpo ricevuti
+					> Danni abilità ricevuti
+					> Danni totali ricevuti
+					> Danni mitigati
+				> Sezione guarigione
+					> Vita istantanea guarita
+					> Vita rigenerativa guarita
+					> Vita rigenerativa perduta
+					> Vita guarita a sé stesso
+					> Vita guarita agli alleati
+				> Sezione esperienza
+					> XP generata con i colpi melee
+					> XP sprecata (oltre 100 XP)
+					> Conversione danni in XP
+					
+					
+		> Equipaggiamento
+			> Lista giocatori con le loro abilità
+				> Abilità offensiva
+				> Abilità utility
+				> Abilità support
+				> Abilità ultimate
+		> Timelines
+			> Rounds
+				> Round n (n = numero)
+					> Durata
+					> Vincitore
+					> Spawn power-ups
+					> Raccolta power-ups
+					> Attivazione ultimate
+					> Fine round
+					> Uccisioni
+					> Overtime, se c'è stato
+			> Durata media round

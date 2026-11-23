@@ -33,7 +33,7 @@ bossbar remove match:timer
 stopwatch create match:overtime
 
 # Ciclo dei potenziamenti
-function match:events/powerup/start
+function match:events/powerup/logic/start
 
 # Feedback
 tellraw @a [{"text":"\n> ","color":"gray","bold":true},{"text":"Combattete!","color":"red","bold":false}]

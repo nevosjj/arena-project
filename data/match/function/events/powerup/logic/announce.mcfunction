@@ -1,5 +1,5 @@
 ############################################################
-## Chiamata da match:events/powerup/cycle (fine attesa)   ##
+## Chiamata da match:events/powerup/logic/cycle           ##
 ## Esecutore: il controller                               ##
 ## Sceglie a caso il tipo (tra quelli con enabled:true) e ##
 ## il punto della mappa, evoca l'anteprima e la annuncia. ##
@@ -24,11 +24,11 @@ execute store result storage arenaproject:game_memory temporary.powerup.spawnSiz
 # Scelta casuale (indici negativi, da -1 a -dimensione)
 data modify storage arenaproject:game_memory temporary.powerup.typeIndex set value 1
 data modify storage arenaproject:game_memory temporary.powerup.spawnIndex set value 1
-function match:events/powerup/choose with storage arenaproject:game_memory temporary.powerup
-function match:events/powerup/select with storage arenaproject:game_memory temporary.powerup
+function match:events/powerup/logic/choose with storage arenaproject:game_memory temporary.powerup
+function match:events/powerup/logic/select with storage arenaproject:game_memory temporary.powerup
 
 # Anteprima sul punto scelto
-function match:events/powerup/incoming with storage arenaproject:game_memory temporary.powerup
+function match:events/powerup/logic/incoming with storage arenaproject:game_memory temporary.powerup
 data remove storage arenaproject:game_memory temporary.powerup
 stopwatch create match:powerup/incoming
 

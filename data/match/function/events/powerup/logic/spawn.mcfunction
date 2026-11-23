@@ -10,5 +10,5 @@ stopwatch remove match:powerup/incoming
 execute unless entity @e[type=marker,tag=powerup.incoming] run return run stopwatch create match:powerup/cycle
 
 # Comparsa
-execute as @e[type=marker,tag=powerup.incoming,limit=1] at @s run function match:events/powerup/appear with entity @s data
+execute as @e[type=marker,tag=powerup.incoming,limit=1] at @s run function match:events/powerup/logic/appear with entity @s data
 stopwatch create match:powerup/life
