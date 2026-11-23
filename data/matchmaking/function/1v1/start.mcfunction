@@ -19,6 +19,9 @@ function matchmaking:storages/maps/1v1
 # Creazione storage modalità
 function matchmaking:storages/modes/1v1
 
+# Creazione storage potenziamenti
+function matchmaking:storages/powerups/1v1
+
 # Gestione interaction in lobby
 tag @e[type=interaction,tag=matchmaking.1v1] add can_spectate
 

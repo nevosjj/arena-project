@@ -2,11 +2,15 @@
 ## Chiamata da match:events/powerup/tick                     ##
 ## Esecutore: il giocatore | Posizione: il potenziamento     ##
 ## Macro: i data del marker del potenziamento (type)         ##
+## Legge i parametri del tipo da match_data:1v1 e li passa  ##
+## alla funzione pick del tipo via with storage.            ##
 ## Applica l'effetto del tipo, poi rimuove il potenziamento. ##
 ###############################################################
 
 # Effetto del tipo
-$function match:events/powerup/types/$(type)/pick
+$data modify storage arenaproject:game_memory temporary.powerup_config set from storage match_data:1v1 list.1v1.powerups[{name:"$(type)"}][0]
+$function match:events/powerup/types/$(type)/pick with storage arenaproject:game_memory temporary.powerup_config
+data remove storage arenaproject:game_memory temporary.powerup_config
 
 # Statistica post-partita
 scoreboard players add @s poststat.powerup_picked 1
