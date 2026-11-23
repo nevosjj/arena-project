@@ -15,6 +15,9 @@ data remove storage arenaproject:game_memory temporary.powerup_config
 # Statistica post-partita
 scoreboard players add @s poststat.powerup_picked 1
 
+# Registrazione: raccolta (timestamps)
+$function recording:timestamps/powerup_pick {type:"$(type)"}
+
 # Rimozione
 kill @e[type=block_display,tag=powerup.visual]
 kill @e[type=marker,tag=powerup.active]

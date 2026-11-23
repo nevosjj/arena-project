@@ -71,6 +71,9 @@ function match:display/update
 # Aggiornamento actionbar
 function health:auxiliary/actionbar
 
+# Registrazione: uccisione (timestamps), prima del flusso di morte
+execute if score @s[tag=!round.dead] stat.current_health matches ..0 run function recording:timestamps/kill
+
 # Controllo morte
 execute if score @s[tag=!round.dead] stat.current_health matches ..0 at @s run function health:deaths/health
 

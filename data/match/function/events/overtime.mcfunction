@@ -22,5 +22,8 @@ function match:display/overtime with storage match_data:1v1 list.1v1
 # Aumento danno
 $scoreboard players add #overtime multiplier $(overtimeDamage)
 
+# Registrazione: inizio overtime (timestamps)
+function recording:timestamps/overtime
+
 # Rimozione stopwatch
 stopwatch remove match:overtime

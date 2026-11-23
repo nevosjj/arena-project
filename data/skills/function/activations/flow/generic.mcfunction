@@ -23,6 +23,9 @@ execute if entity @s[tag=execute_item_removal] run function skills:activations/f
 ## ESTRAZIONE player_name
 function skills:activations/flow/player_name
 
+## Registrazione: attivazione della ultimate (timestamps)
+execute if data storage arenaproject:game_memory temporary.activation{skillTYPE_txt:"ultimate"} run function recording:timestamps/ultimate with storage arenaproject:game_memory temporary.activation
+
 ## ESTRAZIONE skillIndex
 # Ottengo le proprietà dell'abilità precisa in un tipo di abilità specifico
 function skills:activations/flow/search_id with storage arenaproject:game_memory temporary.activation

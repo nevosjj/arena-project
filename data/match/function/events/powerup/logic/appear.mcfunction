@@ -23,5 +23,8 @@ $function match:events/powerup/types/$(type)/visual
 particle firework ~ ~0.8 ~ 0.1 0.1 0.1 0.15 40 force
 playsound block.trial_spawner.spawn_item ambient @a ~ ~ ~ 2 1.4
 
+# Registrazione: comparsa (timestamps)
+$function recording:timestamps/powerup_spawn {type:"$(type)"}
+
 # Sidebar
 function match:display/powerup/field

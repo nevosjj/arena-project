@@ -13,5 +13,5 @@ scoreboard players set #match round.seconds 0
 data modify storage match_recorder:data actual_match.round_count set compute default integer recording:round/next_count
 
 # Nuovo elemento
-data modify storage match_recorder:data actual_match.rounds append value {n:0,duration:{m:0,s:0}}
+data modify storage match_recorder:data actual_match.rounds append value {n:0,duration:{m:0,s:0},winner:"",events:[]}
 data modify storage match_recorder:data actual_match.rounds[-1].n set from storage match_recorder:data actual_match.round_count
