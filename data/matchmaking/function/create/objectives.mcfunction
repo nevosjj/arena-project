@@ -16,6 +16,7 @@ execute as @a[tag=in_game] run scoreboard players operation @s stat.current_heal
 # Statistiche (dallo storage della modalità)
 execute store result score @a[tag=in_game] stat.attack run data get storage match_data:1v1 list.1v1.attack
 execute store result score @a[tag=in_game] stat.defense run data get storage match_data:1v1 list.1v1.defense
+execute store result score @a[tag=in_game] stat.regeneration_frequency run data get storage match_data:1v1 list.1v1.regenFrequency
 
 # Combo (inizializzazione)
 scoreboard players set @a[tag=in_game] stat.combo 0

@@ -60,6 +60,9 @@ scoreboard players operation @s stat.current_health -= @s incoming_damage
 # La vita non scende mai sotto lo zero
 execute if score @s stat.current_health matches ..-1 run scoreboard players set @s stat.current_health 0
 
+# Pool di rigenerazione: ogni colpo con danno > 0 toglie regenDrain (overtime escluso, non passa da qui)
+execute if score @s incoming_damage matches 1.. if score @s stat.regeneration_pool matches 1.. run function health:regeneration/drain
+
 # Aumento danni recenti
 scoreboard players operation @s recent_damage += @s incoming_damage
 

@@ -1,10 +1,8 @@
 ---
 PRIO #1
-1. Migliorare effetti grafici magnetic_impulse e switch
-2. Reworkare golden_apple e tornado
-3. Riscrivere lightning_strike per riflettere ciò che fa realmente
 4. Implementare broodmother + doom_shrom
 ---
+
 DIALOGUE - Selezione abilità: tenere la griglia nel chest_minecart, ma usare un dialogue per descrizione dettagliata + conferma abilità (pulsante Conferma con /trigger)
 
 Melodie
@@ -17,14 +15,6 @@ USCITA PARTITA:
 	- Creare un sistema che detecta quando un giocatore esce dalla partita
 	- Una volta che esce dalla partita, fa vincere colui che non ha quittato, e appena rientra l'altro giocatore entra e gli fa sapere che ha perso per il quit
 	- Lo tippa ovviamente in lobby e resetta tutto ciò che aveva
-
-Lobby, aggiungere statistiche
-	- Statistiche globali abilità: pickrate, winrate, banrate (quando ci sarà la draft)
-	- Patch notes, presentando:
-		- Nuove feature
-		- Cambiamneti (adjustments, nerfs, buffs)
-		- Bugfix
-	- Cosmetici
 
 Dimensioni,
 	- Le partite vengono sviluppate in dimensioni apposite

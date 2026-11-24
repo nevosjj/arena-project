@@ -7,6 +7,6 @@
 
 data modify storage match_data:1v1 list.1v1.powerupTimer set value 40
 data modify storage match_data:1v1 list.1v1.powerups set value [\
-    {name:"heal",enabled:true,amount:250},\
+    {name:"heal",enabled:true,power:250},\
     {name:"berserk",enabled:true,duration:200,bonus:20},\
 ]

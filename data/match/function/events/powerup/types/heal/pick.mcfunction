@@ -1,8 +1,8 @@
 #########################################################
 ## Chiamata da match:events/powerup/pick               ##
 ## Esecutore: il giocatore                             ##
-## Macro: match_data:1v1 powerups[heal] (name, amount) ##
-## Cura rigenerativa: $(amount) nella pool di          ##
+## Macro: match_data:1v1 powerups[heal] (name, power)  ##
+## Cura rigenerativa: $(power) nella pool di           ##
 ## stat.regeneration_pool (health:regeneration/add).   ##
 #########################################################
 
@@ -14,5 +14,4 @@ playsound minecraft:block.trial_spawner.open_shutter voice @a ~ ~ ~ 2 1
 function match:events/powerup/logic/pick_feedback {name:"Cura",color:"green"}
 
 # Cura rigenerativa (si somma alla pool già presente)
-$data modify storage arenaproject:game_memory regen.add set value $(amount)
-function health:regeneration/add
+$function health:regeneration/add {power:$(power)}

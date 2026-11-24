@@ -1,0 +1,1 @@
+{ "type": "minecraft:add", "inputs": [ { "type": "minecraft:score", "score": "poststat.regen_lost", "target": { "type": "context", "target": "this" }, "fallback": 0 }, "health:regen/drain" ] }

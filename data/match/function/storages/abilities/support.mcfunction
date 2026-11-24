@@ -8,7 +8,8 @@ data modify storage ability_data:support skills set value [\
         technical: {\
             cooldown:20,\
             range:4,\
-            regenPower:250\
+            power:250,\
+            regen_heal:1b\
         },\
         display: {\
             name:"Mela dorata",\

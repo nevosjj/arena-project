@@ -1,5 +1,5 @@
 ###############################################################################
-## Chiamata da root:ticks/main (ogni 10 tick, se stat.regeneration_pool > 0) ##
+## Chiamata da health:regeneration/tick (timer a 0)                          ##
 ## Esecutore: il giocatore che rigenera                                      ##
 ## Un impulso: consuma min(pool, regenPulse) dalla pool e cura fino al max.  ##
 ## Quello che non entra (vita piena) è perso (poststat.regen_lost).          ##
@@ -25,6 +25,7 @@ execute store result score @s stat.regeneration_pool run compute entity @s integ
 execute unless data storage arenaproject:game_memory regen{healed:0} at @s run playsound minecraft:block.bubble_column.bubble_pop ui @s ~ ~ ~ 10 2
 
 # Pool vuota
+execute if score @s stat.regeneration_pool matches ..0 run scoreboard players reset @s stat.regeneration_timer
 execute if score @s stat.regeneration_pool matches ..0 run scoreboard players reset @s stat.regeneration_pool
 
 # Aggiornamento sidebar e actionbar

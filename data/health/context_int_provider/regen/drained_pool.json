@@ -1,0 +1,1 @@
+{ "type": "minecraft:sub", "left": { "type": "minecraft:score", "score": "stat.regeneration_pool", "target": { "type": "context", "target": "this" }, "fallback": 0 }, "right": "health:regen/drain" }

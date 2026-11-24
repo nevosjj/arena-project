@@ -53,5 +53,5 @@ execute if entity @e[type=mannequin,tag=death_mannequin,tag=death_mannequin.tick
 ## Anteprima gittata delle abilità con condizione raycast (visibile solo al giocatore)
 execute as @a[tag=in_game,tag=!round.dead] at @s run function skills:auxiliary/range_preview/check
 
-## Rigenerazione (stat.regeneration_pool): un impulso ogni 10 tick
-execute if entity @a[tag=in_game,scores={stat.regeneration_pool=1..}] as @a[tag=in_game,scores={stat.regeneration_pool=1..}] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:periodic_tick":10}} run function health:regeneration/heal
+## Rigenerazione
+execute if entity @a[tag=in_game,scores={stat.regeneration_pool=1..}] as @a[tag=in_game,scores={stat.regeneration_pool=1..}] run function health:regeneration/tick
