@@ -113,7 +113,7 @@ Scudo osseo
 NOTA: Scudo osseo difendeva e basta, senza offrire nulla di interessante. Ora se usata bene crea una finestra dove ti puoi difendere bene dalle abilità con il giusto timing, ma può essere counterato dai melee
 
 Catena vampirica
-> (BUFF) Cura: 35% -> 75%
+> (BUFF) Cura: 35% -> 50%
 > (NERF) Raggio di distruzione: 12 blocchi -> 10 blocchi
 > (NERF) Raggio di concatenazione: 7 blocchi -> 5 blocchi
 > (NUOVO) (NERF) Durata: 8s

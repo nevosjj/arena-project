@@ -11,5 +11,8 @@ $tag @e[type=player,limit=1,sort=nearest,tag=support.skill_target.$(ID)] remove 
 # Aggiungi tag utente
 $tag @e[type=player,limit=1,distance=..2,sort=nearest,tag=vampiric_chain_user] add vampiric_chain_user.$(ID)
 
+# Durata (scala in vampiric_chain/tick)
+$scoreboard players set @s duration.support $(duration)
+
 # Inizializza tick
 tag @s add ready

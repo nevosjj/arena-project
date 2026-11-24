@@ -28,6 +28,8 @@ tag @s remove freeze_breath.slowed
 tag @s remove magnetic_impulse.immobilized
 tag @s remove lightning_strike.immobilized
 tag @s remove end_teleport.player
+tag @s remove end_teleport.speed
+scoreboard players reset @s end_teleport.counter
 tag @s remove flame_sword.energy
 tag @s remove flame_sword.p0
 tag @s remove flame_sword.p2
@@ -35,4 +37,5 @@ attribute @s minecraft:movement_speed modifier remove freeze_breath:slow
 attribute @s minecraft:jump_strength modifier remove lightning_strike:jump
 attribute @s minecraft:movement_speed modifier remove lightning_strike:slow
 attribute @s minecraft:movement_speed modifier remove magnetic_impulse:immobilize
+attribute @s minecraft:movement_speed modifier remove end_teleport:speed
 attribute @s minecraft:jump_strength modifier remove magnetic_impulse:immobilize

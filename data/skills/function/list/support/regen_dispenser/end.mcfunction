@@ -20,4 +20,5 @@ playsound entity.breeze.death player @a ~ ~ ~ 2 1.6
 # Pulizia
 kill @e[type=block_display,tag=regen_dispenser.visual,distance=..0.1,limit=1]
 kill @e[type=block_display,tag=regen_dispenser.propeller,distance=..0.1]
+kill @e[type=marker,tag=regen_dispenser.range,distance=..0.1,limit=1]
 function skills:auxiliary/summon/kill

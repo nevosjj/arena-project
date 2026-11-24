@@ -13,9 +13,6 @@ Melodie
 		- Bassa vita
 		- Fasi della partita
 
-Migliorare sistema di recording (il dialog c'è: recording:dialog/*, /trigger recording.nav set 1)
-	- Statistiche "Rimozione pool HP rigenerazione" (da fare con la meccanica)
-
 USCITA PARTITA:
 	- Creare un sistema che detecta quando un giocatore esce dalla partita
 	- Una volta che esce dalla partita, fa vincere colui che non ha quittato, e appena rientra l'altro giocatore entra e gli fa sapere che ha perso per il quit
@@ -41,5 +38,3 @@ Stanza preparazione, spectate
 	- Aggiungere di conseguenza che puoi scegliere che partita spectare dalla lobby
 
 Actionabar dinamica
-
-Fare che la barra XP "verde" si limita in base a quanta percentuale di energia rispetto al max di energia hai

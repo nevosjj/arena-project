@@ -8,7 +8,6 @@ data modify storage ability_data:support skills set value [\
         technical: {\
             cooldown:20,\
             range:4,\
-            power:0,\
             regenPower:250\
         },\
         display: {\
@@ -46,7 +45,8 @@ data modify storage ability_data:support skills set value [\
             cooldown:20,\
             delayedCooldown:1b,\
             range:10f,\
-            power:75,\
+            power:50,\
+            duration:160,\
             condition:{raycast:"true",range:5f},\
         },\
         display: {\
@@ -64,10 +64,10 @@ data modify storage ability_data:support skills set value [\
         technical: {\
             cooldown:20,\
             delayedCooldown:1b,\
-            duration:160,\
+            duration:200,\
             power:80,\
-            delay:40,\
-            health:100,\
+            delay:50,\
+            health:140,\
             motion:9,\
             range:7f,\
             projectileRange:1.3f,\

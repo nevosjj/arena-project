@@ -160,6 +160,7 @@ scoreboard objectives add counter.selection dummy
 scoreboard objectives add freeze_breath.counter dummy
 scoreboard objectives add lightning_strike.counter dummy
 scoreboard objectives add magnetic_impulse.counter dummy
+scoreboard objectives add end_teleport.counter dummy
 
 # Animazione
 scoreboard objectives add animation dummy

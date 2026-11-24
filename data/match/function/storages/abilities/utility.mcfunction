@@ -7,7 +7,9 @@ data modify storage ability_data:utility skills set value [\
         },\
         technical: {\
             cooldown:15,\
-            range:9f\
+            range:9f,\
+            speedPower:20f,\
+            duration:60,\
         },\
         display: {\
             name:"Teletrasporto dell'End",\
@@ -22,9 +24,9 @@ data modify storage ability_data:utility skills set value [\
             abilityEffect:"control"\
         },\
         technical: {\
-            cooldown:30,\
+            cooldown:35,\
             duration:40,\
-            range:8f,\
+            range:6f,\
             immobilization:2,\
             ignoreSummons:1b\
         },\
@@ -43,8 +45,8 @@ data modify storage ability_data:utility skills set value [\
         technical: {\
             cooldown:25,\
             delayedCooldown:1b,\
-            charge:60,\
-            condition:{raycast:"true",range:36f},\
+            charge:40,\
+            condition:{raycast:"true",range:16f},\
         },\
         display: {\
             name:"Scambio",\

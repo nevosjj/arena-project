@@ -31,6 +31,9 @@ execute as @e[type=block_display,tag=regen_dispenser.visual,distance=..0.1,limit
     if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:periodic_tick":5}} \
     run function skills:list/support/regen_dispenser/propeller
 
+# Cerchio di bersagliamento (solo alleati)
+execute as @e[type=marker,tag=regen_dispenser.range,distance=..0.1,limit=1] at @s run function skills:list/support/regen_dispenser/range with entity @s data
+
 # Sparo: prima scala, a 0 spara (spari a 60, 120, 180 tick; senza bersaglio resta in attesa)
 scoreboard players remove @s counter.support 1
 execute if score @s counter.support matches ..0 run function skills:list/support/regen_dispenser/shoot with entity @s data

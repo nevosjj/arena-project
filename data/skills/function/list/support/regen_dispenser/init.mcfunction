@@ -10,5 +10,10 @@ execute as @e[type=marker,tag=regen_dispenser.marker,distance=..2,limit=1,sort=n
 execute as @e[type=interaction,tag=summon.new,distance=..3,limit=1,sort=nearest] at @s positioned ~ ~0.3 ~ \
     run function skills:list/support/regen_dispenser/setup with entity @s data
 
+# Cerchio di bersagliamento: marker figlio con i data del marker abilità (range, teamID)
+# (posizione del marker abilità = centro del dispenser)
+execute as @e[type=marker,tag=regen_dispenser.marker,distance=..2,limit=1,sort=nearest] at @s \
+    run function skills:list/support/regen_dispenser/range_setup
+
 # Il marker non serve più: l'evocazione è autonoma
 execute as @e[type=marker,tag=regen_dispenser.marker,distance=..2,limit=1,sort=nearest] run kill @s
