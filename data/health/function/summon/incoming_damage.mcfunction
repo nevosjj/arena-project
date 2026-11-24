@@ -27,6 +27,9 @@ execute at @s run function health:texts/damage with storage arenaproject:game_me
 # Rimozione
 scoreboard players operation @s summon.health -= @s incoming_damage
 
+# Indicatore HP
+function skills:auxiliary/summon/health_display
+
 # Reset
 data remove storage arenaproject:game_memory damageFeedback
 scoreboard players reset @s melee_damage

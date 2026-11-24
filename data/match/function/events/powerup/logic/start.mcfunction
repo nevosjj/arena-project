@@ -3,7 +3,7 @@
 ## Avvia il ciclo dei potenziamenti del round. Fasi (stopwatch): ##
 ## match:powerup/cycle    attesa, poi annuncio                   ##
 ## match:powerup/incoming 10s di anteprima, poi comparsa         ##
-## match:powerup/life     15s in campo, poi scadenza             ##
+## match:powerup/life     5s in campo, poi scadenza              ##
 ## Dopo raccolta o scadenza riparte match:powerup/cycle.         ##
 ###################################################################
 

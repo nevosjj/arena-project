@@ -3,10 +3,10 @@ function match:map_editor/open with storage map_data:1v1 temporary
 
 # Distribuzione oggetti da combattimento
 clear @a
-item replace entity @a hotbar.0 with blaze_rod[item_model="minecraft:iron_sword",minecraft:blocks_attacks={},attribute_modifiers=[{id:"offensive_sword",type:"attack_damage",amount:0,operation:"add_value"}],minecraft:custom_data={skill:{offensive:1b}},custom_name=[{"text":"Spada offensiva","color":"#d36464","bold":true,"italic":false}]] 1
-item replace entity @a hotbar.1 with red_stained_glass_pane[custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
-item replace entity @a hotbar.2 with red_stained_glass_pane[custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
-item replace entity @a hotbar.3 with red_stained_glass_pane[custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
+execute as @a run function skills:auxiliary/sword/give {reach:3.0}
+item replace entity @a hotbar.1 with red_stained_glass_pane[minecraft:attack_range={max_reach:3.0f},custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
+item replace entity @a hotbar.2 with red_stained_glass_pane[minecraft:attack_range={max_reach:3.0f},custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
+item replace entity @a hotbar.3 with red_stained_glass_pane[minecraft:attack_range={max_reach:3.0f},custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
 
 # Ricarica iniziale
 scoreboard players set @a[tag=in_game] cooldown.support_timer 5

@@ -9,8 +9,8 @@ summon marker ~ ~1 ~ {Tags:["flame_sword.end_visual"]}
 scoreboard players set @e[type=marker,limit=1,sort=nearest,distance=..2,tag=flame_sword.end_visual] temp 0
 execute as @e[type=marker,limit=1,sort=nearest,distance=..2,tag=flame_sword.end_visual] at @s run function skills:list/offensive/flame_sword/visual_smoke
 
-# Rimozione attributi
-attribute @s minecraft:entity_interaction_range modifier remove flame_sword:range
+# Portata normale della spada
+function skills:auxiliary/sword/give {reach:3.0}
 
 # Rimozione tag
 execute at @s run function skills:list/offensive/flame_sword/macro_reset with entity @e[type=marker,limit=1,sort=nearest,distance=..3,tag=flame_sword.visual] data

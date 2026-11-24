@@ -22,7 +22,7 @@ execute store result score @s stat.current_health run compute entity @s integer 
 execute store result score @s stat.regeneration_pool run compute entity @s integer health:regen/new_pool
 
 # Feedback sonoro (solo se ha curato qualcosa)
-execute unless data storage arenaproject:game_memory regen{healed:0} at @s run playsound minecraft:block.bubble_column.bubble_pop ui @s ~ ~ ~ 1 2
+execute unless data storage arenaproject:game_memory regen{healed:0} at @s run playsound minecraft:block.bubble_column.bubble_pop ui @s ~ ~ ~ 10 2
 
 # Pool vuota
 execute if score @s stat.regeneration_pool matches ..0 run scoreboard players reset @s stat.regeneration_pool

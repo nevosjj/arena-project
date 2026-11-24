@@ -44,6 +44,8 @@ function skills:auxiliary/summon/cleanup
 # Tutti i marker in partita sono di abilità
 kill @e[type=marker]
 kill @e[type=block_display,tag=bone_shield.visual]
+# Flame sword attiva a fine round: spada con portata normale (prima che skill_state tolga il tag)
+execute as @a[tag=in_game,tag=flame_sword.energy] run function skills:auxiliary/sword/give {reach:3.0}
 execute as @a[tag=in_game] run function match:clean/skill_state
 
 # Cleanup temporary game_memory

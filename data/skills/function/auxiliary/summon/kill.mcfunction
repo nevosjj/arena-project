@@ -5,4 +5,6 @@
 ########################################################################################
 
 scoreboard players reset @s
+# Passeggeri (es. indicatore HP della hitbox)
+execute on passengers run kill @s
 kill @s

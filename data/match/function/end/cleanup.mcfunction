@@ -30,6 +30,7 @@ experience set @s 0 levels
 execute as @s[tag=in_game] run attribute @s minecraft:attack_damage base set 0.0
 execute as @s[tag=in_game] run attribute @s minecraft:max_health base set 10.0
 execute as @s[tag=in_game] run attribute @s minecraft:knockback_resistance base set 1.0
+execute as @s[tag=in_game] run attribute @s minecraft:entity_interaction_range base reset
 
 # Effetto di rigenerazione dopo la redistribuzione di vita
 effect give @s regeneration 10 10 true

@@ -9,6 +9,11 @@ data modify storage arenaproject:game_memory tempFreezingBreath set from entity 
 data modify storage arenaproject:game_memory tempFreezingBreath.distance set from entity @s data.distance
 data modify storage arenaproject:game_memory tempFreezingBreath.k set value 0
 
+# Danno da ostruito: power * (100 - blockedReduction) / 100, usato da block_reduction
+data modify storage arenaproject:game_memory tempFreezingBreath.power set from entity @s data.power
+data modify storage arenaproject:game_memory tempFreezingBreath.blockedReduction set from entity @s data.blockedReduction
+data modify entity @s data.powerDown set compute default integer skills:freeze_breath/power_down
+
 # Numero di passi: distance / stepLength (arrotondato)
 data modify storage arenaproject:game_memory tempFreezingBreath.steps set compute default integer skills:freeze_breath/steps
 

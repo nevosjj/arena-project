@@ -10,8 +10,10 @@ $scoreboard players set @p[distance=..2,tag=flame_sword.setup] counter.offensive
 # Colpi massimi dati
 $scoreboard players set @p[distance=..2,tag=flame_sword.setup] counter.offensive2 $(max_hit)
 
-# Attributo
-$attribute @p[limit=1,tag=flame_sword.setup] minecraft:entity_interaction_range modifier add flame_sword:range $(range) add_value
+# Portata extra: spada con attack_range = 3 (base) + range
+$data modify storage arenaproject:game_memory sword.reach set compute default float {type:"minecraft:add",inputs:[3,$(range)]}
+execute as @p[limit=1,tag=flame_sword.setup] run function skills:auxiliary/sword/give with storage arenaproject:game_memory sword
+data remove storage arenaproject:game_memory sword
 
 # Distribuzione tag target particelle
 $tag @p[distance=..2,tag=flame_sword.setup] add flame_sword.player$(ID)

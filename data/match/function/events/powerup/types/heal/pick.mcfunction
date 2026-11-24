@@ -1,10 +1,10 @@
-##########################################################
+#########################################################
 ## Chiamata da match:events/powerup/pick               ##
 ## Esecutore: il giocatore                             ##
 ## Macro: match_data:1v1 powerups[heal] (name, amount) ##
 ## Cura rigenerativa: $(amount) nella pool di          ##
 ## stat.regeneration_pool (health:regeneration/add).   ##
-##########################################################
+#########################################################
 
 # Feedback
 particle totem_of_undying ~ ~1.2 ~ 0.2 0.3 0.2 0.3 10 force

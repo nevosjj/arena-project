@@ -1,5 +1,5 @@
 ###################################################################
-## Chiamata da root:ticks/stopwatches (match:powerup/life a 15s) ##
+## Chiamata da root:ticks/stopwatches (match:powerup/life a 5s)  ##
 ## Nessuno l'ha raccolto: sparisce e riparte l'attesa.           ##
 ###################################################################
 

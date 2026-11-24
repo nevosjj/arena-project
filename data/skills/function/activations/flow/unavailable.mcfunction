@@ -11,7 +11,7 @@ item replace entity @s weapon.mainhand with air
 
 ## INSERIMENTO Item di non disponibilità
 # glassItem, glassName, glassColor: impostati in skills:activations/flow/generic || cooldown
-$item replace entity @s hotbar.$(hotbarIndex) with $(glassItem)[custom_name=[{"text":"$(glassName)","color":"$(glassColor)","bold":true,"italic":false}]]
+$item replace entity @s hotbar.$(hotbarIndex) with $(glassItem)[minecraft:attack_range={max_reach:3.0f},custom_name=[{"text":"$(glassName)","color":"$(glassColor)","bold":true,"italic":false}]]
 
 ## TAG ESCLUSIVO
 # Support, Utility, Ultimate
