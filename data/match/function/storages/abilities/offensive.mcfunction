@@ -8,16 +8,16 @@ data modify storage ability_data:offensive skills set value [\
         technical: {\
             cost:50,\
             range:1.5f,\
-            power:9,\
+            power:12,\
             distance:9,\
             motion:17,\
             count:7,\
-            spread:8\
+            spread:7\
         },\
         display: {\
             name:"Spara Biscotto",\
             item:"cookie",\
-            chestItems:{Items:[{Slot:3b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"green","italic":false,"text":"Costo di energia"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 50 Energia"}]],"minecraft:item_model":"experience_bottle"}},{Slot:4b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"red","italic":false,"text":"Danno inflitto"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 9 per biscotto"}]],"minecraft:item_model":"blaze_powder"}},{Slot:5b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Quantità"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 7 biscotti"}]],"minecraft:item_model":"prismarine_crystals"}},{Slot:10b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"gold","italic":false,"text":"Spara biscotto"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Spara dei biscotti di fronte a te"}],[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Infliggono danno ai nemici"}],[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Hanno uno spread casuale"}]],"minecraft:item_model":"cookie"}},{Slot:12b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Raggio d'azione"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 1,5 blocchi"}]],"minecraft:item_model":"splash_potion"}},{Slot:13b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Distanza percorribile"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 9 tick"}]],"minecraft:item_model":"saddle"}},{Slot:14b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Velocità proiettili"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 17 velocità in aria"}]],"minecraft:item_model":"iron_boots"}},{Slot:21b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Spread casuale"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 8° rispetto alla visione"}]],"minecraft:item_model":"tnt"}}]},\
+            chestItems:{Items:[{Slot:3b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"green","italic":false,"text":"Costo di energia"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 50 Energia"}]],"minecraft:item_model":"experience_bottle"}},{Slot:4b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"red","italic":false,"text":"Danno inflitto"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 12 per biscotto"}]],"minecraft:item_model":"blaze_powder"}},{Slot:5b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Quantità"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 7 biscotti"}]],"minecraft:item_model":"prismarine_crystals"}},{Slot:10b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"gold","italic":false,"text":"Spara biscotto"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Spara dei biscotti di fronte a te"}],[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Infliggono danno ai nemici"}],[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" Hanno uno spread casuale"}]],"minecraft:item_model":"cookie"}},{Slot:12b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Raggio d'azione"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 1,5 blocchi"}]],"minecraft:item_model":"splash_potion"}},{Slot:13b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Distanza percorribile"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 9 tick"}]],"minecraft:item_model":"saddle"}},{Slot:14b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Velocità proiettili"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 17 velocità in aria"}]],"minecraft:item_model":"iron_boots"}},{Slot:21b,id:"minecraft:white_wool",count:1,components:{"minecraft:custom_name":{"bold":true,"color":"dark_aqua","italic":false,"text":"Spread casuale"},"minecraft:lore":[[{"bold":true,"color":"dark_gray","italic":false,"text":"➤"},{"bold":false,"color":"gray","italic":false,"text":" 7° rispetto alla visione"}]],"minecraft:item_model":"tnt"}}]},\
         }\
     },\
     {\
@@ -31,7 +31,7 @@ data modify storage ability_data:offensive skills set value [\
             range:0.0f,\
             distance:6f,\
             power:125,\
-            powerDown:80,\
+            powerDown:50,\
             slow:35,\
             duration:60\
         },\
@@ -49,10 +49,10 @@ data modify storage ability_data:offensive skills set value [\
         },\
         technical: {\
             cost:75,\
-            range:2f,\
-            power:80,\
-            duration:40,\
-            charge:25,\
+            range:3f,\
+            power:100,\
+            duration:20,\
+            charge:20,\
             condition:{raycast:"true",range:24f}\
         },\
         display: {\

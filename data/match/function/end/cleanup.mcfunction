@@ -38,6 +38,9 @@ effect give @s regeneration 10 10 true
 # Prima del reset degli obiettivi, serve lo score ID
 function match:clean/skill_state
 
+## Squadre
+team remove in_game
+
 ## Obiettivi
 scoreboard players reset *
 

@@ -44,9 +44,9 @@ data modify storage ability_data:support skills set value [\
         technical: {\
             cooldown:20,\
             delayedCooldown:1b,\
-            range:12f,\
-            power:35,\
-            condition:{raycast:"true",range:7f},\
+            range:10f,\
+            power:75,\
+            condition:{raycast:"true",range:5f},\
         },\
         display: {\
             name:"Catena vampirica",\
