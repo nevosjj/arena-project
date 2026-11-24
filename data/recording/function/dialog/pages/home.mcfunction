@@ -10,7 +10,7 @@ data modify storage recording:view dialog.title set value [{text:"ʀᴇɢɪsᴛ�
 data modify storage recording:view dialog.exit_action set value {label:{text:"Chiudi",color:"gray"},width:150}
 
 # Nessuna partita salvata
-execute unless data storage api.nevosjj.lobby:match_list elements[0] run return run function recording:dialog/pages/home_empty
+execute unless data storage api.nevosjj.lobby:match_list elements[].match_id run return run function recording:dialog/pages/home_empty
 
 data modify storage recording:view dialog.body append value {type:"minecraft:plain_message",width:300,contents:{text:"Le ultime partite giocate, dalla più recente.",color:"gray"}}
 

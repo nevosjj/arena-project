@@ -18,7 +18,7 @@ execute if score @s recording.nav matches 100..106 run scoreboard players remove
 
 # Partita scelta: se non c'è più si torna alla Home
 function recording:dialog/load_match
-execute unless data storage recording:view match run return run function recording:dialog/pages/home
+execute unless data storage recording:view match.match_id run return run function recording:dialog/pages/home
 
 # Pagine della partita
 execute if score @s recording.nav matches 100..106 run return run function recording:dialog/pages/match

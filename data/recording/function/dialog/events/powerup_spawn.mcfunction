@@ -3,5 +3,6 @@
 ## "È comparso il power-up Y"                           ##
 ##########################################################
 
+data modify storage recording:view icon set value "minecraft:gold_block"
 data modify storage recording:view line append value {text:"È comparso il power-up ",color:"gray"}
 function recording:dialog/events/powerup_name

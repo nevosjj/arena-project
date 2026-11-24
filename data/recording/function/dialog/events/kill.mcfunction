@@ -3,6 +3,7 @@
 ## "X è stato ucciso da Y" (+ "con Z" se abilità)       ##
 ##########################################################
 
+data modify storage recording:view icon set value "minecraft:skeleton_skull"
 data modify storage recording:view line append value {text:"",color:"red"}
 data modify storage recording:view line[-1].text set from storage recording:view loop.entry.player
 

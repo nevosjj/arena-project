@@ -1,11 +1,13 @@
 #############################################################
 ## Chiamata da recording:dialog/pages/round e da sé stessa ##
 ## Esecutore: il giocatore                                 ##
-## Evento loop.list[0]: "Evento k / Tempo m:ss /           ##
-## descrizione" (recording:dialog/events/*)                ##
+## Evento loop.list[0]: item (icon) e accanto              ##
+## "Evento k / Tempo m:ss / descrizione"                   ##
+## (recording:dialog/events/*)                             ##
 #############################################################
 
 data modify storage recording:view loop.entry set from storage recording:view loop.list[0]
+data modify storage recording:view icon set value "minecraft:paper"
 
 # Numero e tempo
 data modify storage recording:view args.n set from storage recording:view loop.k
@@ -23,8 +25,9 @@ execute if data storage recording:view loop.entry{event:"kill"} run function rec
 execute if data storage recording:view loop.entry{event:"overtime"} run function recording:dialog/events/overtime
 execute if data storage recording:view loop.entry{event:"round_end"} run function recording:dialog/events/round_end
 
-data modify storage recording:view dialog.body append value {type:"minecraft:plain_message",width:300,contents:[]}
-data modify storage recording:view dialog.body[-1].contents set from storage recording:view line
+data modify storage recording:view dialog.body append value {type:"minecraft:item",item:{id:"minecraft:paper",count:1},show_decorations:false,show_tooltip:false,width:16,height:16,description:{width:250,contents:[]}}
+data modify storage recording:view dialog.body[-1].item.id set from storage recording:view icon
+data modify storage recording:view dialog.body[-1].description.contents set from storage recording:view line
 
 data remove storage recording:view loop.list[0]
 data modify storage recording:view loop.k set compute default integer recording:dialog/loop/next_k
