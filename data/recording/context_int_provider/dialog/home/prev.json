@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:mod",
+  "left": {
+    "type": "minecraft:add",
+    "inputs": [
+      {
+        "type": "minecraft:storage",
+        "storage": "recording:view",
+        "path": "loop.i",
+        "fallback": 0
+      },
+      6
+    ]
+  },
+  "right": 7
+}

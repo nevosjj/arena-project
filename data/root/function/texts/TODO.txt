@@ -7,7 +7,6 @@ PRIO #1
 ---
 
 DIALOGUE - Patch notes: dialogue statico (data/<namespace>/dialog/patch_notes.json), apribile dal menu di pausa con #minecraft:pause_screen_additions, eventualmente una pagina per versione
-DIALOGUE - Recording: sostituire la chest in 9 -55 39 con un dialogue per giocatore (pulsanti con /trigger, contenuto con macro da storage, pause:false)
 DIALOGUE - Selezione abilità: tenere la griglia nel chest_minecart, ma usare un dialogue per descrizione dettagliata + conferma abilità (pulsante Conferma con /trigger)
 
 Melodie
@@ -19,21 +18,14 @@ Melodie
 Riorganizza cartelle skills:auxiliary
 	- Mettere le funzioni senza directory dentro una directory organizzata
 
-Migliorare sistema di recording
-	- Dialogue: rendere tutto un dialogue, apribile dalla lobby da un NPC con interaction o da un trigger eseguibile dai giocatori per i fatti loro
-	- Timelines: Fa vedere una lista dei round, da questi ne viene elencata la timeline
-		- La timeline è composta da Eventi
-			- Ogni evento è rappresentato con una testa (o un dialogue a sto punto che vogliamo mettere un dialogue)
-				- L'evento contiene timewhen (quindi quando è avvenuto), il timewhat (quindi cosa è successo), timewho (chi ha fatto cosa)
-					- Gli eventi sono: attivare la ultimate, pickupare un powerup (i powerup sono da programmare), morte di un giocatore, vittoria round
+Migliorare sistema di recording (il dialog c'è: recording:dialog/*, /trigger recording.nav set 1)
+	- NPC in lobby con interaction che apre il dialog
+	- Togliere dal mondo la vecchia chest in 9 -55 39
+	- Statistiche "Rimozione pool HP rigenerazione" (da fare con la meccanica)
 	- Classifica: Fa vedere una lista di chi è stato il migliore in certe categorie.
 		- Fa semplicemente vedere, sopra certi oggetti, per ciascuna categoria, i migliori giocatori
 			- Esempio: blaze_powder -> MAGGIOR DANNI -> Utente
-	- Statistiche giocatori: Esiste già, ma bisogna fare che quando premi una testa fa vedere solo dopo le statistiche annesse al giocatore, e non che siano scritte sotto
-		- Le statistiche sono divise in categorie, quindi:
-			- Reparto aggressività (quantità melee, danni melee inflitti, danni abilità inflitti, miglior combo,)
-			- Reparto difesa (danni ricevuti, danni melee subiti, danni abilità subiti, danni dimezzati, danni curati)
-			- Reparto abilità (quantità attivazioni abilità, energia spesa)
+	- Reparto abilità (quantità attivazioni abilità, energia spesa)
 
 USCITA PARTITA:
 	- Creare un sistema che detecta quando un giocatore esce dalla partita

@@ -29,6 +29,10 @@ execute as @e[type=interaction,tag=matchmaking.1v1] if score @s counter matches 
 # Controllo text_display danno
 execute if entity @e[type=text_display,tag=feedback_text] as @e[type=text_display,tag=feedback_text] at @s run function health:texts/tick
 
+## Registro partite (dialog): i pulsanti usano /trigger recording.nav
+scoreboard players enable @a recording.nav
+execute as @a[scores={recording.nav=1..}] run function recording:dialog/nav
+
 ## Skills
 # Coordinate 90 -30 0, distanza 128.
 execute positioned 90 -30 0 run function root:ticks/skills

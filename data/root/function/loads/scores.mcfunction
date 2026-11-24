@@ -153,6 +153,10 @@ scoreboard objectives add poststat.xp_wasted dummy
 # Obiettivi
 scoreboard objectives add poststat.powerup_picked dummy
 
+# Registro partite
+scoreboard objectives add recording.nav trigger
+scoreboard objectives add recording.match dummy
+
 # Potenziamenti
 scoreboard objectives add powerup.anim_timer dummy
 scoreboard objectives add powerup.berserk_timer dummy

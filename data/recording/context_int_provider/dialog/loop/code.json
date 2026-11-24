@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:add",
+  "inputs": [
+    {
+      "type": "minecraft:storage",
+      "storage": "recording:view",
+      "path": "loop.k",
+      "fallback": 0
+    },
+    {
+      "type": "minecraft:storage",
+      "storage": "recording:view",
+      "path": "loop.base",
+      "fallback": 0
+    }
+  ]
+}
