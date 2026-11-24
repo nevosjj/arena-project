@@ -8,7 +8,7 @@
 ###############################################################
 
 # Effetto del tipo
-$data modify storage arenaproject:game_memory temporary.powerup_config set from storage match_data:1v1 list.1v1.powerups[{name:"$(type)"}][0]
+$data modify storage arenaproject:game_memory temporary.powerup_config set from storage match_data:1v1 list.1v1.powerups[{name:"$(type)"}]
 $function match:events/powerup/types/$(type)/pick with storage arenaproject:game_memory temporary.powerup_config
 data remove storage arenaproject:game_memory temporary.powerup_config
 

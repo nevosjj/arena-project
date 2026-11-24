@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:add",
+  "inputs": [
+    { "type": "minecraft:score", "score": "poststat.xp_wasted", "target": { "type": "context", "target": "this" }, "fallback": 0 },
+    { "type": "minecraft:sub", "left": { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "xpStats.gain", "fallback": 0 }, "right": "experience:xp/net" }
+  ]
+}

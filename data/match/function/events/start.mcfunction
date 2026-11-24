@@ -11,9 +11,6 @@ stopwatch create match:sound
 # Punteggio timer
 scoreboard players set #match counter 30
 
-# Punteggi costanti
-scoreboard players set #constant.100 temp 100
-
 # Bossbar timer
 bossbar add match:timer [{"text":"Selezione...","color":"light_purple"}]
 bossbar set match:timer style notched_10

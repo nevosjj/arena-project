@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:add",
+  "inputs": [
+    { "type": "minecraft:score", "score": "poststat.damage_halved", "target": { "type": "context", "target": "this" }, "fallback": 0 },
+    { "type": "minecraft:sub", "left": { "type": "minecraft:score", "score": "incoming_damage", "target": { "type": "context", "target": "this" }, "fallback": 0 }, "right": "health:damage/defense" }
+  ]
+}

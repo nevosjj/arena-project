@@ -2,8 +2,9 @@
 scoreboard players reset @s experience_timer
 
 # Statistiche post-partita (prima dell'aumento)
-scoreboard players operation #xp.gain temp = @s experience_gain
-function experience:stats {objective:"timer_xp_generated"}
+data modify storage arenaproject:game_memory xpStats.objective set value "timer_xp_generated"
+execute store result storage arenaproject:game_memory xpStats.gain int 1 run scoreboard players get @s experience_gain
+function experience:stats with storage arenaproject:game_memory xpStats
 
 # Già a 100: tutta l'XP è scarto (contata sopra), niente aumento
 execute if score @s experience_level matches 100.. run return 0

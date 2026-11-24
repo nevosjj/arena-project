@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:sub",
+  "left": { "type": "minecraft:storage", "storage": "match_data:1v1", "path": "list.\"1v1\".powerupTimer", "fallback": 0 },
+  "right": 10
+}

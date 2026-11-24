@@ -9,10 +9,7 @@
 
 # Attesa prima dell'annuncio: powerupTimer - 10
 # (powerupTimer = secondi tra la fine di un potenziamento e la comparsa del successivo)
-execute store result score #powerup temp run data get storage match_data:1v1 list.1v1.powerupTimer
-scoreboard players remove #powerup temp 10
-execute store result storage match_data:1v1 list.1v1.powerupWait int 1 run scoreboard players get #powerup temp
-scoreboard players reset #powerup temp
+data modify storage match_data:1v1 list.1v1.powerupWait set compute default integer match:powerup/wait
 
 # Stopwatch
 stopwatch remove match:powerup/cycle

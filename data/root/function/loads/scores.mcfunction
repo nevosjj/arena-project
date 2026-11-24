@@ -6,13 +6,6 @@ tellraw @a [{"text":"[","color":"dark_gray"},{"text":"Scoreboard","color":"#f5ac
 scoreboard objectives add temp dummy
 scoreboard objectives add temp2 dummy
 scoreboard objectives add temp3 dummy
-scoreboard objectives add temp4 dummy
-scoreboard objectives add temp5 dummy
-scoreboard objectives add temp6 dummy
-scoreboard objectives add temp7 dummy
-scoreboard objectives add temp8 dummy
-scoreboard objectives add temp9 dummy
-scoreboard objectives add temp10 dummy
 
 # Giocatore
 scoreboard objectives add ID dummy
@@ -20,10 +13,6 @@ scoreboard objectives add teamID dummy
 
 # Display di lato
 scoreboard objectives add game_display dummy [{"text":"Arena Project","color":"#eee094"}]
-
-# Selezione abilità
-scoreboard objectives add selection.skill.type dummy
-scoreboard objectives add selection.skill.id dummy
 
 # Statistiche giocatore
 scoreboard objectives add stat.defense dummy
@@ -52,8 +41,6 @@ scoreboard objectives add experience_cost dummy
 # Contatori abilità
 scoreboard objectives add counter.offensive dummy
 scoreboard objectives add counter.offensive2 dummy
-scoreboard objectives add counter.offensive3 dummy
-scoreboard objectives add counter.offensive4 dummy
 scoreboard objectives add counter.support dummy
 scoreboard objectives add counter.support2 dummy
 scoreboard objectives add counter.utility dummy
@@ -106,21 +93,15 @@ scoreboard objectives add summon.iframes dummy
 
 # Utilità
 scoreboard objectives add bool dummy
-scoreboard objectives add roll dummy
 scoreboard objectives add counter dummy
 scoreboard objectives add death dummy
 scoreboard objectives add multiplier dummy
 scoreboard objectives add sound dummy
 scoreboard objectives add range dummy
 scoreboard objectives add raycast dummy
-scoreboard objectives add iteration dummy
-scoreboard objectives add t dummy
-scoreboard objectives add max_t dummy
 scoreboard objectives add void dummy
 
 # Info partita
-scoreboard objectives add rounds dummy
-scoreboard objectives add best_rounds dummy
 scoreboard objectives add player.amount dummy
 scoreboard objectives add match.duration dummy
 scoreboard objectives add match.seconds dummy

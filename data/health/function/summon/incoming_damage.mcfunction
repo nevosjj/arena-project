@@ -8,12 +8,8 @@
 # Round finito: danno annullato
 execute if score #round_ended bool matches 1 run return run function health:math/nullify
 
-# Moltiplicatore overtime
-scoreboard players set #match temp 100
-scoreboard players set #match temp2 100
-scoreboard players operation #match temp2 += #overtime multiplier
-scoreboard players operation @s incoming_damage *= #match temp2
-scoreboard players operation @s incoming_damage /= #match temp
+# Moltiplicatore overtime: incoming_damage * (100 + #overtime multiplier) / 100
+execute store result score @s incoming_damage run compute entity @s integer health:damage/overtime
 
 ## Statistiche post-partita (danno netto, dopo l'overtime)
 # Attaccante: tag summon.attacker (health:summon/melee || health:summon/ability_damage)

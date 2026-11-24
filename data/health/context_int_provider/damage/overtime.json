@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:div",
+  "left": {
+    "type": "minecraft:mul",
+    "inputs": [
+      { "type": "minecraft:score", "score": "incoming_damage", "target": { "type": "context", "target": "this" }, "fallback": 0 },
+      {
+        "type": "minecraft:add",
+        "inputs": [ 100, { "type": "minecraft:score", "score": "multiplier", "target": { "type": "fixed", "name": "#overtime" }, "fallback": 0 } ]
+      }
+    ]
+  },
+  "right": 100
+}

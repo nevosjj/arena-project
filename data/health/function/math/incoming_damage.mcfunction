@@ -6,12 +6,8 @@
 # Ignora completamente se il round è finito
 execute if score #round_ended bool matches 1 run function health:math/nullify
 
-# Moltiplicatore overtime
-scoreboard players set #match temp 100
-scoreboard players set #match temp2 100
-scoreboard players operation #match temp2 += #overtime multiplier
-scoreboard players operation @s incoming_damage *= #match temp2
-scoreboard players operation @s incoming_damage /= #match temp
+# Moltiplicatore overtime: incoming_damage * (100 + #overtime multiplier) / 100
+execute store result score @s incoming_damage run compute entity @s integer health:damage/overtime
 
 # Rimozione danni resistenza danni
 execute unless score @s stat.defense matches 0 run function health:math/halve_damage

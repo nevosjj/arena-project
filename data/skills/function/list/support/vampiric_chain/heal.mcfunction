@@ -9,18 +9,10 @@
 # Ciascun marker controlla se il proprio proprietario ha danni inflitti da trasferire, altrimenti ritorna
 $execute unless score @e[type=player,limit=1,tag=vampiric_chain_target.$(ID)] incoming_damage matches 1.. run return fail
 
-# Copia lo score danni in temp2
-$scoreboard players operation @s temp2 = @e[type=player,limit=1,tag=vampiric_chain_target.$(ID)] incoming_damage
-
 ## Calcola
-# Prepara
-execute store result score @s temp3 run data get entity @s data.power
-scoreboard players set @s temp4 100
-# Calcola
-scoreboard players operation @s temp2 *= @s temp3
-scoreboard players operation @s temp2 /= @s temp4
-# Controllo
-execute if score @s temp2 matches 0 run scoreboard players set @s temp2 1
+# Cura = max(1, danni del bersaglio * power / 100)
+    # "this" del provider score è l'esecutore: si esegue come il bersaglio, ma il risultato va nel marker (@s risolto prima di "as")
+$execute store result score @s temp2 as @e[type=player,limit=1,tag=vampiric_chain_target.$(ID)] run compute entity @s integer {type:"minecraft:max",inputs:[1,{type:"minecraft:div",left:{type:"minecraft:mul",inputs:[{type:"minecraft:score",score:"incoming_damage",target:{type:"context",target:"this"},fallback:0},$(power)]},right:100}]}
 
 # Cura
 $scoreboard players operation @e[type=player,limit=1,tag=vampiric_chain_user.$(ID)] incoming_heal += @s temp2
@@ -33,5 +25,3 @@ $execute at @e[type=player,limit=1,tag=vampiric_chain_user.$(ID)] run particle d
 
 # Reset
 scoreboard players reset @s temp2
-scoreboard players reset @s temp3
-scoreboard players reset @s temp4
