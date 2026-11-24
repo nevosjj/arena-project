@@ -7,8 +7,12 @@
 # Applicazione cura
 $scoreboard players add @s incoming_heal $(power)
 
-# Flusso cure (con origine della cura)
+# Flusso cure
 function health:math/incoming_heal with storage arenaproject:game_memory targetSource
+
+# Cura rigenerativa
+execute if data storage arenaproject:game_memory targetSource.regenPower run data modify storage arenaproject:game_memory regen.add set from storage arenaproject:game_memory targetSource.regenPower
+execute if data storage arenaproject:game_memory targetSource.regenPower run function health:regeneration/add
 
 # Effetti legati alle abilità (insieme ai visual)
 # Il finder è raggiungibile con @e[tag=target.source]

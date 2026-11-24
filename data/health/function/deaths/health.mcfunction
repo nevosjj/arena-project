@@ -26,6 +26,9 @@ scoreboard players set #round_ended bool 1
 # La prevenzione viene fatta in health:math/incoming_damage
 tag @s add round.dead
 
+# Rigenerazione: la pool rimasta si perde
+function health:regeneration/remove
+
 # Fine del berserk (potenziamento)
 execute if entity @s[tag=powerup.berserk] run function match:events/powerup/types/berserk/end
 

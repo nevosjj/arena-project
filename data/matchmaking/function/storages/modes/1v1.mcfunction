@@ -10,5 +10,6 @@ data modify storage match_data:1v1 list set value {\
             defense:0,\
             playerLives:2.0,\
             knockbackResistance:0.5,\
+            regenPulse:25,\
         },\
 }

@@ -6,6 +6,11 @@
 # Ignora completamente se il round è finito
 execute if score #round_ended bool matches 1 run function health:math/nullify
 
+# Berserk dell'attaccante: incoming_damage * (100 + bonus) / 100
+    # Melee: l'attaccante ha il tag damage.dealer | Abilità: l'attaccante si trova dal nome (playerName)
+execute if score @s melee_damage matches 1.. if entity @a[tag=damage.dealer,tag=powerup.berserk] store result score @s incoming_damage run compute entity @s integer health:damage/berserk
+$execute if score @s ability_damage matches 1.. if entity @a[name="$(playerName)",tag=powerup.berserk] store result score @s incoming_damage run compute entity @s integer health:damage/berserk
+
 # Moltiplicatore overtime: incoming_damage * (100 + #overtime multiplier) / 100
 execute store result score @s incoming_damage run compute entity @s integer health:damage/overtime
 

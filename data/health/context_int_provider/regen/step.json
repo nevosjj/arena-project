@@ -1,0 +1,4 @@
+{
+  "type": "minecraft:min",
+  "inputs": [ { "type": "minecraft:score", "score": "stat.regeneration_pool", "target": { "type": "context", "target": "this" }, "fallback": 0 }, { "type": "minecraft:storage", "storage": "match_data:1v1", "path": "list.\"1v1\".regenPulse", "fallback": 0 } ]
+}

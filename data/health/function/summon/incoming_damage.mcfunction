@@ -8,6 +8,9 @@
 # Round finito: danno annullato
 execute if score #round_ended bool matches 1 run return run function health:math/nullify
 
+# Berserk dell'attaccante (tag summon.attacker, melee e abilità): incoming_damage * (100 + bonus) / 100
+execute if entity @a[tag=summon.attacker,tag=powerup.berserk] store result score @s incoming_damage run compute entity @s integer health:damage/berserk
+
 # Moltiplicatore overtime: incoming_damage * (100 + #overtime multiplier) / 100
 execute store result score @s incoming_damage run compute entity @s integer health:damage/overtime
 

@@ -20,6 +20,7 @@ scoreboard objectives add stat.attack dummy
 scoreboard objectives add stat.max_health dummy
 scoreboard objectives add stat.current_health dummy
 scoreboard objectives add stat.combo dummy
+scoreboard objectives add stat.regeneration_pool dummy
 scoreboard objectives add stat.hunger food
 
 # Operazioni vita

@@ -1,0 +1,1 @@
+{ "type": "minecraft:add", "inputs": [ { "type": "minecraft:score", "score": "stat.current_health", "target": { "type": "context", "target": "this" }, "fallback": 0 }, { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "regen.healed", "fallback": 0 } ] }

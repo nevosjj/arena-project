@@ -1,13 +1,12 @@
-##########################################################
-## Chiamata da match:events/powerup/types/berserk/pick ##
-## Esecutore: il giocatore                             ##
-## Macro: {bonus} passato da berserk/pick              ##
-## Applica il bonus e crea il marker degli anelli con  ##
-## lo stesso ID del giocatore.                         ##
-##########################################################
+############################################################
+## Chiamata da match:events/powerup/types/berserk/pick    ##
+## Esecutore: il giocatore                                ##
+## Dà il tag powerup.berserk: finché c'è, i suoi danni    ##
+## (melee e abilità) prendono +bonus% (health:damage/     ##
+## berserk). Crea il marker degli anelli con il suo ID.   ##
+############################################################
 
-# Bonus melee
-$scoreboard players add @s stat.attack $(bonus)
+# Stato: il tag attiva il +bonus% (health:damage/berserk)
 tag @s add powerup.berserk
 
 # Marker degli anelli

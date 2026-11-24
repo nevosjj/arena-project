@@ -56,6 +56,8 @@ scoreboard players reset @a cooldown.support_timer
 scoreboard players reset @a cooldown.utility_timer
 scoreboard players reset @a cooldown.ultimate_timer
 scoreboard players reset @a player.hearts
+# Rigenerazione: la pool rimasta si perde
+execute as @a[tag=in_game] run function health:regeneration/remove
 execute as @a[tag=in_game] run scoreboard players operation @s stat.current_health = @s stat.max_health
 
 # Rimozione permessi energia

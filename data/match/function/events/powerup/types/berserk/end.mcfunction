@@ -6,8 +6,7 @@
 ## Esecutore: il giocatore con il berserk                  ##
 #############################################################
 
-# Rimozione bonus
-scoreboard players remove @s stat.attack 5
+# Rimozione stato (fine del +bonus% danni)
 tag @s remove powerup.berserk
 scoreboard players reset @s powerup.berserk_timer
 
