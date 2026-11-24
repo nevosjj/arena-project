@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:storage", "storage": "arenaproject:game_memory",
+  "path": "tempFreezingBreath.steps",
+  "fallback": 0
+}

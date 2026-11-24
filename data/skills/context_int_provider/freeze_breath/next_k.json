@@ -1,0 +1,4 @@
+{
+  "type": "minecraft:add",
+  "inputs": [ { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "tempFreezingBreath.k", "fallback": 0 }, 1 ]
+}

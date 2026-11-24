@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:add",
+  "inputs": [
+    { "type": "minecraft:mul", "inputs": [ { "type": "minecraft:add", "inputs": [ { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "bezier.p0.z", "fallback": 0 }, { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "bezier.p2.z", "fallback": 0 } ] }, 0.5 ] },
+    { "type": "minecraft:uniform", "min": -5, "max": 5 }
+  ]
+}

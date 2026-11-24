@@ -1,0 +1,4 @@
+{
+  "type": "minecraft:mul",
+  "inputs": [ "skills:math/bezier2/t", "skills:math/bezier2/t" ]
+}

@@ -1,19 +1,21 @@
 ################################################################################
 ## Chiamata da skills:list/offensive/flame_sword/get_points e da sé stessa    ##
 ## Curva di Bézier quadratica ricorsiva: un punto e una particella per ciclo. ##
+## B(t) = (1-t)^2 * P0 + 2t(1-t) * P1 + t^2 * P2 (skills:math/bezier2/*)      ##
 ################################################################################
 
-# Case base: t=100 significa fine della curva, senza uscire dal range
-execute if score #flame_sword t matches 100.. run return run function skills:list/offensive/flame_sword/reset_data
+# Caso base: i >= points
+execute if predicate skills:math/bezier2/finished run return run function skills:list/offensive/flame_sword/reset_data
 
 # Calcolo del punto corrente della curva
-function skills:list/offensive/flame_sword/bezier
+data modify storage arenaproject:game_memory bezier.pos.x set compute default float skills:math/bezier2/x
+data modify storage arenaproject:game_memory bezier.pos.y set compute default float skills:math/bezier2/y
+data modify storage arenaproject:game_memory bezier.pos.z set compute default float skills:math/bezier2/z
 
 # Particella nella posizione calcolata
-function skills:list/offensive/flame_sword/particle with storage arenaproject:game_memory bezierTemp.resultPos
+function skills:list/offensive/flame_sword/particle with storage arenaproject:game_memory bezier.pos
 
-# Avanza t in modo costante e coerente, in scala intera 0..100
-scoreboard players add #flame_sword iteration 1
-scoreboard players add #flame_sword t 5
+# Punto successivo
+data modify storage arenaproject:game_memory bezier.i set compute default integer skills:math/bezier2/next_i
 
 function skills:list/offensive/flame_sword/recursion

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:add",
+  "inputs": [
+    { "type": "minecraft:mul", "inputs": [ "skills:math/bezier2/c0", { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "bezier.p0.x", "fallback": 0 } ] },
+    { "type": "minecraft:mul", "inputs": [ "skills:math/bezier2/c1", { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "bezier.p1.x", "fallback": 0 } ] },
+    { "type": "minecraft:mul", "inputs": [ "skills:math/bezier2/c2", { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "bezier.p2.x", "fallback": 0 } ] }
+  ]
+}

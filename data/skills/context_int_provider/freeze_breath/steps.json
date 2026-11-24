@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:from_float",
+  "input": {
+    "type": "minecraft:round",
+    "input": { "type": "minecraft:div", "left": { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "tempFreezingBreath.distance", "fallback": 0 }, "right": { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "tempFreezingBreath.stepLength", "fallback": 0 } }
+  }
+}

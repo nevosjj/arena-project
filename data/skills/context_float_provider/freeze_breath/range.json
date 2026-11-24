@@ -1,0 +1,4 @@
+{
+  "type": "minecraft:mul",
+  "inputs": [ { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "tempFreezingBreath.rangeGrowth", "fallback": 0 }, { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "tempFreezingBreath.k", "fallback": 0 } ]
+}

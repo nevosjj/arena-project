@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:int_value_check",
+  "value": "skills:freeze_breath/current_k",
+  "test": { "min": "skills:freeze_breath/total_steps" }
+}

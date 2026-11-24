@@ -84,6 +84,7 @@ Power-ups:
 -ABILITà-
 Respiro congelante
 > Danni: 125 -> 125, Danno da ostruito: 80 -> -50%
+> Range: 9 -> 6 blocchi
 NOTA: L'abilità aveva un un modo di ridurre il danno troppo affidabile. Questo aiuta ad applicare meglio qualsiasi altro cambiamento al danno base
 
 Spara biscotto

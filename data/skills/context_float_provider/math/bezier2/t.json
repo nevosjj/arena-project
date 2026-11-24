@@ -1,0 +1,4 @@
+{
+  "type": "minecraft:add",
+  "inputs": [ { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "bezier.tStart", "fallback": 0 }, { "type": "minecraft:mul", "inputs": [ { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "bezier.i", "fallback": 0 }, { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "bezier.tStep", "fallback": 0 } ] } ]
+}

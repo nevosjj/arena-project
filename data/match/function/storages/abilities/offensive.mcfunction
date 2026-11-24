@@ -30,6 +30,7 @@ data modify storage ability_data:offensive skills set value [\
             cost:90,\
             range:0.0f,\
             distance:6f,\
+            shape:{stepLength:0.06f,growth:0.0175f,rangeGrowth:0.025f,twist:7.5f,startAngle:198.43f},\
             power:125,\
             powerDown:50,\
             slow:35,\

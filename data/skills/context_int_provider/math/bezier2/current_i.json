@@ -1,0 +1,5 @@
+{
+  "type": "minecraft:storage", "storage": "arenaproject:game_memory",
+  "path": "bezier.i",
+  "fallback": 0
+}

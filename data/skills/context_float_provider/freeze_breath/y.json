@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:div",
+  "left": {
+    "type": "minecraft:round",
+    "input": {
+      "type": "minecraft:mul",
+      "inputs": [ 1000, { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "tempFreezingBreath.growth", "fallback": 0 }, { "type": "minecraft:storage", "storage": "arenaproject:game_memory", "path": "tempFreezingBreath.k", "fallback": 0 }, { "type": "minecraft:sin", "input": "skills:freeze_breath/angle" } ]
+    }
+  },
+  "right": 1000
+}
