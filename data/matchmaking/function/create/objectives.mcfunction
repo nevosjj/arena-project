@@ -48,5 +48,7 @@ scoreboard players set @a[tag=in_game] poststat.powerup_picked 0
 # Esperienza (dallo storage della modalità)
 # limit = tempo di ottenimento (expTimer)
 # gain = ottenimento (expGain)
+# melee = ottenimento per colpo corpo a corpo (expMelee)
 execute store result score @a[tag=in_game] experience_limit run data get storage match_data:1v1 list.1v1.expTimer
 execute store result score @a[tag=in_game] experience_gain run data get storage match_data:1v1 list.1v1.expGain
+execute store result score @a[tag=in_game] experience_melee run data get storage match_data:1v1 list.1v1.expMelee

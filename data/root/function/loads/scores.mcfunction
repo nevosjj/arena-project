@@ -37,6 +37,7 @@ scoreboard objectives add recent_damage.timer dummy
 
 # Operazioni esperienza
 scoreboard objectives add experience_gain dummy
+scoreboard objectives add experience_melee dummy
 scoreboard objectives add experience_limit dummy
 scoreboard objectives add experience_timer dummy
 scoreboard objectives add experience_level dummy
@@ -163,6 +164,7 @@ scoreboard objectives add counter.selection dummy
 scoreboard objectives add freeze_breath.counter dummy
 scoreboard objectives add lightning_strike.counter dummy
 scoreboard objectives add magnetic_impulse.counter dummy
+scoreboard objectives add switch.counter dummy
 scoreboard objectives add end_teleport.counter dummy
 
 # Animazione

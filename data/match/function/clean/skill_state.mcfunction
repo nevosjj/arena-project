@@ -27,6 +27,9 @@ scoreboard players reset @s stat.ability_defense
 tag @s remove freeze_breath.slowed
 tag @s remove magnetic_impulse.immobilized
 tag @s remove lightning_strike.immobilized
+tag @s remove switch.stunned
+tag @s remove switch.stun_pending
+scoreboard players reset @s switch.counter
 tag @s remove end_teleport.player
 tag @s remove end_teleport.speed
 scoreboard players reset @s end_teleport.counter
@@ -40,3 +43,5 @@ attribute @s minecraft:movement_speed modifier remove lightning_strike:slow
 attribute @s minecraft:movement_speed modifier remove magnetic_impulse:immobilize
 attribute @s minecraft:movement_speed modifier remove end_teleport:speed
 attribute @s minecraft:jump_strength modifier remove magnetic_impulse:immobilize
+attribute @s minecraft:movement_speed modifier remove switch:stun
+attribute @s minecraft:jump_strength modifier remove switch:stun

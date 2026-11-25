@@ -19,6 +19,9 @@ execute if entity @a[tag=freeze_breath.slowed,distance=..128] as @a[tag=freeze_b
 # Magnetic impulse
 execute if entity @a[tag=magnetic_impulse.immobilized,distance=..128] as @a[tag=magnetic_impulse.immobilized] at @s run function skills:list/utility/magnetic_impulse/remove
 
+# Switch
+execute if entity @a[tag=switch.stunned] as @a[tag=switch.stunned] at @s run function skills:list/utility/switch/remove
+
 # End teleport
 execute if entity @a[tag=end_teleport.speed] as @a[tag=end_teleport.speed] run function skills:list/utility/end_teleport/remove
 
