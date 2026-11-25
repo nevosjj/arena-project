@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:int_value_check",
+  "value": {
+    "type": "minecraft:mod",
+    "left": { "type": "minecraft:score", "score": "duration.support", "target": { "type": "context", "target": "this" }, "fallback": 1 },
+    "right": 20
+  },
+  "test": { "min": 0, "max": 0 }
+}
