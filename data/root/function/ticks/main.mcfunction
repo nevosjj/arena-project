@@ -3,10 +3,14 @@
 ##############################
 
 ## MINECART (Selezione oggetti)
-execute as @a[tag=in_game] run function root:ticks/minecart
+# Solo durante la selezione (tag selecting: match:events/start -> match:events/end_selection)
+execute as @a[tag=in_game,tag=selecting] run function root:ticks/minecart
+# Un tick extra per chi aveva il minecart aperto a fine selezione: end_selection svuota l'inventario
+# e toglie selecting nello stesso tick, così minecart vede 1 -> 0 e uccide minecart e block_display
+execute as @a[tag=in_game,tag=!selecting,scores={inventory_prev.selection=1}] run function root:ticks/minecart
 
 # Controllo antispam
-execute if entity @a[tag=in_game] as @a[tag=in_game] as @s run function root:ticks/antispam
+execute if entity @a[tag=in_game] as @a[tag=in_game] run function root:ticks/antispam
 
 # Controllo stopwatches
 function root:ticks/stopwatches
@@ -15,7 +19,7 @@ function root:ticks/stopwatches
 execute as @a[tag=energy.activated] run function experience:tick
 
 # Controllo danno recente
-execute if entity @e[tag=in_game,scores={recent_damage=1..}] as @a[tag=in_game,scores={recent_damage=1..}] run function health:auxiliary/recent_damage
+execute if entity @a[tag=in_game,scores={recent_damage=1..}] as @a[tag=in_game,scores={recent_damage=1..}] run function health:auxiliary/recent_damage
 
 # Eseguibile ogni 20 tick
 execute if score #match bool matches 1 as @a[tag=in_game,limit=1] if predicate {"type":"minecraft:entity_properties","entity":"this","predicate":{"minecraft:periodic_tick":20}} run function root:ticks/1second
