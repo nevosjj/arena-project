@@ -21,7 +21,7 @@ tag @s remove utility.in_use
 tag @s remove skill.bone_shield
 scoreboard players reset @s counter.support
 scoreboard players reset @s duration.support
-scoreboard players set @s stat.defense 0
+scoreboard players reset @s stat.ability_defense
 
 ## Effetti subiti
 tag @s remove freeze_breath.slowed

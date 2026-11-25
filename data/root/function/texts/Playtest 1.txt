@@ -112,7 +112,7 @@ NOTA: Mela dorata era chiaramente l'abilità support più forte, essendo che si 
 
 Scudo osseo
 > (BUFF) Difesa: -50% danni generali -> -100% danni abilità
-> (NUOVO) Cura: 10HP/teschio
+> (NUOVO) Cura: A fine durata, ti curi di 20HP/teschio rimanente
 > (BUFF) Durata: 4s -> 8s
 > (NERF) Ricarica: 12s -> 32s (vincolata)
 NOTA: Scudo osseo difendeva e basta, senza offrire nulla di interessante. 

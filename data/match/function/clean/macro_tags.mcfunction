@@ -6,6 +6,7 @@
 
 # Owner
 $tag @a remove owner_$(ID).bone_shield
+$data remove storage arenaproject:game_memory bone_shield.id$(ID)
 
 # Condizioni e bersagli dell'attivazione
 $tag @a remove offensive.condition.user_$(ID)
