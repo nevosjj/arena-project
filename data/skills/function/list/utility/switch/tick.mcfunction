@@ -12,10 +12,10 @@ $execute if score @s temp matches $(charge) run function skills:list/utility/swi
 function skills:auxiliary/sound with entity @s data
 
 # Feedback particellare (utente)
-$execute at @e[type=player,limit=1,sort=nearest,tag=switch_user.$(ID)] run particle smoke ~ ~1 ~ 0.5 0.5 0.5 0 1 force
+$execute at @a[limit=1,sort=nearest,tag=switch_user.$(ID)] run particle smoke ~ ~1 ~ 0.5 0.5 0.5 0 1 force
 
 # Feedback particellare (bersaglio)
-$execute at @e[type=player,limit=1,sort=nearest,tag=switch_target.$(ID)] run particle firework ~ ~1 ~ 0.5 0.5 0.5 0 1 force
+$execute at @a[limit=1,sort=nearest,tag=switch_target.$(ID)] run particle firework ~ ~1 ~ 0.5 0.5 0.5 0 1 force
 
 # Scia di scambio (ogni 2 tick)
 scoreboard players add @s temp2 1

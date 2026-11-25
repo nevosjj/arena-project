@@ -32,7 +32,7 @@ function health:regeneration/remove
 # Fine del berserk (potenziamento)
 execute if entity @s[tag=powerup.berserk] run function match:events/powerup/types/berserk/end
 
-# Aggiornamento sidebar (mostra "MORTO", copre anche la morte da void)
+# Aggiornamento sidebar (mostra "MORTO")
 function match:display/update
 
 # Ottenimento cuori giocatori in uno score

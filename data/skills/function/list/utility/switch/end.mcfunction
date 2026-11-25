@@ -3,17 +3,17 @@
 #################################################
 
 # Conserva coordinate bersaglio
-$execute at @e[type=player,limit=1,sort=nearest,tag=switch_target.$(ID)] run summon marker ~ ~1 ~ {Tags:["switch_teleport.marker.$(ID)"]}
+$execute at @a[limit=1,sort=nearest,tag=switch_target.$(ID)] run summon marker ~ ~1 ~ {Tags:["switch_teleport.marker.$(ID)"]}
 
 # Feedback
 playsound entity.enderman.teleport hostile @a ~ ~ ~ 2 1.25
 
 # Stordimento: il bersaglio è ad almeno stunDistance blocchi dall'utente nel momento dello scambio
-$execute as @e[type=player,limit=1,sort=nearest,tag=switch_target.$(ID)] at @s if entity @a[tag=switch_user.$(ID),distance=$(stunDistance)..] run tag @s add switch.stun_pending
+$execute as @a[limit=1,sort=nearest,tag=switch_target.$(ID)] at @s if entity @a[tag=switch_user.$(ID),distance=$(stunDistance)..] run tag @s add switch.stun_pending
 
 # Teletrasporto
-$execute as @e[type=player,limit=1,sort=nearest,tag=switch_target.$(ID)] at @e[type=player,limit=1,sort=nearest,tag=switch_user.$(ID)] run tp @s ~ ~ ~
-$execute as @e[type=player,limit=1,sort=nearest,tag=switch_user.$(ID)] at @e[type=marker,limit=1,sort=nearest,tag=switch_teleport.marker.$(ID)] run tp @s ~ ~ ~
+$execute as @a[limit=1,sort=nearest,tag=switch_target.$(ID)] at @a[limit=1,sort=nearest,tag=switch_user.$(ID)] run tp @s ~ ~ ~
+$execute as @a[limit=1,sort=nearest,tag=switch_user.$(ID)] at @e[type=marker,limit=1,sort=nearest,tag=switch_teleport.marker.$(ID)] run tp @s ~ ~ ~
 
 # Applicazione stordimento (dopo il teletrasporto)
 $execute as @a[tag=switch.stun_pending] at @s run function skills:list/utility/switch/stun {duration:$(duration)}

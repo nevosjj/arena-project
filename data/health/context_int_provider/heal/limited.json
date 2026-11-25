@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:min",
+  "inputs": [
+    { "type": "minecraft:score", "score": "incoming_heal", "target": { "type": "context", "target": "this" }, "fallback": 0 },
+    { "type": "minecraft:sub", "left": { "type": "minecraft:score", "score": "stat.max_health", "target": { "type": "context", "target": "this" }, "fallback": 0 }, "right": { "type": "minecraft:score", "score": "stat.current_health", "target": { "type": "context", "target": "this" }, "fallback": 0 } }
+  ]
+}

@@ -3,7 +3,7 @@
 ################################################################
 
 # Operazione
-scoreboard players operation @s ID = @e[type=player,tag=player.select_request,limit=1,sort=nearest,distance=..2] ID
+scoreboard players operation @s ID = @a[tag=player.select_request,limit=1,sort=nearest,distance=..2] ID
 
 # Immissione dell'ID nel data path
 execute store result entity @s data.ID int 1.0 run scoreboard players get @s ID

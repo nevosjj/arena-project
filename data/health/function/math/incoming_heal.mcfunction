@@ -1,9 +1,5 @@
-# Calcola quanto puoi guarire (max_health - current_health)
-scoreboard players operation @s heal_available = @s stat.max_health
-scoreboard players operation @s heal_available -= @s stat.current_health
-
-# Se la guarigione è più dello spazio disponibile, limita
-execute if score @s incoming_heal > @s heal_available run scoreboard players operation @s incoming_heal = @s heal_available
+# Limite: min(incoming_heal, max_health - current_health) (health:heal/limited)
+execute store result score @s incoming_heal run compute entity @s integer health:heal/limited
 
 # Applica la guarigione limitata
 scoreboard players operation @s stat.current_health += @s incoming_heal

@@ -5,14 +5,14 @@
 #################################################################
 
 ## Teletrasporto (proprietario)
-$tp @s @e[type=player,distance=..2,limit=1,sort=nearest,tag=vampiric_chain_user.$(ID)]
+$tp @s @a[distance=..2,limit=1,sort=nearest,tag=vampiric_chain_user.$(ID)]
 
 ## Durata (score sul marker, preso da data.duration): a 0 la catena si spezza
 execute if score @s duration.support matches ..0 run return run function skills:list/support/vampiric_chain/end with entity @s data
 scoreboard players remove @s duration.support 1
 
 ## Controllo distanza bersaglio
-$execute if entity @e[type=player,distance=$(range)..,limit=1,tag=vampiric_chain_target.$(ID)] run return run function skills:list/support/vampiric_chain/end with entity @s data 
+$execute if entity @a[distance=$(range)..,limit=1,tag=vampiric_chain_target.$(ID)] run return run function skills:list/support/vampiric_chain/end with entity @s data 
 
 ## temp++ 
 scoreboard players add @s temp 1

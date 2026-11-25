@@ -1,0 +1,28 @@
+#####################################################################
+## Chiamata da root:ticks/stopwatches (solo se #match bool vale 1) ##
+## Orologi che esistono solo durante una partita.                  ##
+#####################################################################
+
+# Suono di selezione
+execute if stopwatch match:sound 1.. run function match:events/sound
+
+# Pausa tra un round e l'altro
+execute if stopwatch match:break 10.. run function match:events/end_selection
+
+# Primo timer di selezione (25 qui, poi altri 5 di apertura, totale 30)
+execute if stopwatch match:first_timer 25.. run function match:events/low_timer
+
+# Apertura cancelli
+execute if stopwatch match:map_editor/opening 5.. run function match:events/end_selection
+
+# Check overtime DINAMICO
+execute if stopwatch match:overtime 0.. run function match:events/overtime/check with storage match_data:1v1 list.1v1
+
+# Potenziamenti: attesa -> anteprima (10s) -> in campo (5s) -> attesa
+execute if stopwatch match:powerup/cycle 0.. run function match:events/powerup/logic/cycle with storage match_data:1v1 list.1v1
+execute if stopwatch match:powerup/incoming 10.. run function match:events/powerup/logic/spawn
+execute if stopwatch match:powerup/life 5.. run function match:events/powerup/logic/despawn
+
+# Pausa dopo che un round è finito al seguito della morte di qualcuno
+# Dopo crea un nuovo round, se disponibile
+execute if stopwatch match:round_break 3.. run function match:events/new_round with storage arenaproject:game_memory temporary

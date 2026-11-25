@@ -13,7 +13,6 @@ data modify storage map_data:1v1 list set value [\
                 bars1: "96 -21 23 96 -19 25",\
                 bars2: "132 -19 23 132 -21 25",\
                 powerup_spawns: ["114 -21 9", "114 -21 39"],\
-                immediateDeath: "null",\
             }, \
             { \
                 mapName: "Claydusk", \
@@ -26,7 +25,6 @@ data modify storage map_data:1v1 list set value [\
                 bars1: "132 -22 22 132 -18 18",\
                 bars2: "96 -22 18 96 -18 22",\
                 powerup_spawns: ["114 -26 36", "114 -26 4"],\
-                immediateDeath: "null",\
             } \
         ] \
     } \

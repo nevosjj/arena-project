@@ -28,7 +28,6 @@ scoreboard objectives add stat.hunger food
 
 # Operazioni vita
 scoreboard objectives add incoming_heal dummy
-scoreboard objectives add heal_available dummy
 scoreboard objectives add incoming_damage dummy
 scoreboard objectives add melee_damage dummy
 scoreboard objectives add ability_damage dummy
@@ -104,7 +103,6 @@ scoreboard objectives add multiplier dummy
 scoreboard objectives add sound dummy
 scoreboard objectives add range dummy
 scoreboard objectives add raycast dummy
-scoreboard objectives add void dummy
 
 # Info partita
 scoreboard objectives add player.amount dummy

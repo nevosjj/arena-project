@@ -162,7 +162,9 @@ NOTA: Quality of life e buff generale per renderlo più minaccioso, il raggio di
 - Funzione di bezier quadratica della spada di fiamme
 - Spirale di respiro congelante
 - Percentuale di diminuzione danno del respiro congelante
-3. Migliorata la performance della funzione tick
+- Decisione del motion dei proiettili
+- Limite della cura massima
+3. Migliorata la performance della funzione tick (diverse incoerenze, ridondanze e semplificazioni del codice)
 
 --- QOL ---
 1. Aggiunto il nuovo sistema di recording, da chest-based a dialog-based

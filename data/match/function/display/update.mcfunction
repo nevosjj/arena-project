@@ -9,7 +9,6 @@
 scoreboard players operation @s game_display = @s stat.current_health
 
 # Giocatore morto
-# round.dead copre anche la morte da void (dove la vita non arriva a 0)
 execute if entity @s[tag=round.dead] run return run function match:display/dead
 execute if score @s stat.current_health matches ..0 run return run function match:display/dead
 

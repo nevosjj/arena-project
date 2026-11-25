@@ -18,18 +18,13 @@ execute store result score @s motion.x2 run data get entity @s Pos[0] 1000
 execute store result score @s motion.y2 run data get entity @s Pos[1] 1000
 execute store result score @s motion.z2 run data get entity @s Pos[2] 1000
 
-# Direzione (spostamento in millesimi di blocco: 100 = 0.1 blocchi)
-scoreboard players operation @s motion.x2 -= @s motion.x1
-scoreboard players operation @s motion.y2 -= @s motion.y1
-scoreboard players operation @s motion.z2 -= @s motion.z1
+# Potenza di lancio letta dai provider skills:motion/*
+$data modify storage arenaproject:game_memory motion.power set value $(motion)
 
-# Moltiplicazione per motion (motion.x1 riusato come contenitore)
-$scoreboard players set @s motion.x1 $(motion)
-scoreboard players operation @s motion.x2 *= @s motion.x1
-scoreboard players operation @s motion.y2 *= @s motion.x1
-scoreboard players operation @s motion.z2 *= @s motion.x1
+# Applicazione: (fine - inizio) x motion, in millesimi di blocco (100 = 0.1 blocchi)
+execute store result entity @s Motion[0] double 0.001 run compute entity @s integer skills:motion/x
+execute store result entity @s Motion[1] double 0.001 run compute entity @s integer skills:motion/y
+execute store result entity @s Motion[2] double 0.001 run compute entity @s integer skills:motion/z
 
-# Applicazione (scala fissa, funziona con qualsiasi numero di cifre)
-execute store result entity @s Motion[0] double 0.001 run scoreboard players get @s motion.x2
-execute store result entity @s Motion[1] double 0.001 run scoreboard players get @s motion.y2
-execute store result entity @s Motion[2] double 0.001 run scoreboard players get @s motion.z2
+# Reset
+data remove storage arenaproject:game_memory motion

@@ -11,8 +11,8 @@ execute if score @s temp matches ..0 run return run function skills:activations/
 execute unless block ~ ~ ~ #skills:raycast run return run function skills:activations/trigger/raycast/fail with entity @s data
 
 ## Controllo nemico
-execute if entity @e[type=player,limit=1,sort=nearest,distance=..1.5,tag=in_game] \
-    unless score @s teamID = @e[type=player,limit=1,sort=nearest,distance=..1.5,tag=in_game] teamID run \ 
+execute if entity @a[limit=1,sort=nearest,distance=..1.5,tag=in_game] \
+    unless score @s teamID = @a[limit=1,sort=nearest,distance=..1.5,tag=in_game] teamID run \ 
     return run function skills:activations/trigger/raycast/success with entity @s data
 
 ## Teletrasporto

@@ -3,13 +3,13 @@
 ########################################################
 
 # Crea il bersaglio
-$tag @e[type=player,limit=1,sort=nearest,tag=support.skill_target.$(ID)] add vampiric_chain_target.$(ID)
+$tag @a[limit=1,sort=nearest,tag=support.skill_target.$(ID)] add vampiric_chain_target.$(ID)
 
 # Rimuovi tag al bersaglio
-$tag @e[type=player,limit=1,sort=nearest,tag=support.skill_target.$(ID)] remove support.skill_target.$(ID)
+$tag @a[limit=1,sort=nearest,tag=support.skill_target.$(ID)] remove support.skill_target.$(ID)
 
 # Aggiungi tag utente
-$tag @e[type=player,limit=1,distance=..2,sort=nearest,tag=vampiric_chain_user] add vampiric_chain_user.$(ID)
+$tag @a[limit=1,distance=..2,sort=nearest,tag=vampiric_chain_user] add vampiric_chain_user.$(ID)
 
 # Durata (scala in vampiric_chain/tick)
 $scoreboard players set @s duration.support $(duration)
