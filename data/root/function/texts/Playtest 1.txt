@@ -51,6 +51,11 @@ FLAVOR
 2. Togliere prefernza feedback di testo per quando vieni attaccato o curato
 3. Creare per il dev eventi admin per interferire nella partita (meteore che fanno danni e altre cazzate)
 
+--- CONTENUTI NUOVI ---
+1. Effetto rigenerazione: quando ottieni questo effetto, recuperi salute velocemente. La rigenerazione massima di questo valore può essere erosa se vieni colpito!
+Rigenerazione: 10HP/0,25s
+Erosione: -10HP al colpo (sia corpo a corpo che abilità)
+
 --- BILANCIAMENTO ---
 Il bilanciamento dei danni che si vedono sotto sulle skill sono basate sul sistema attuale di scaling dei danni. In futuro, però per adattare il TTK nuovo, verrà applicato uno scaling di 1.5x circa
 

@@ -3,17 +3,17 @@ data modify storage map_data:1v1 list set value [\
         modeName: "1v1", \
         map: [ \
             { \
-                mapName: "Justice temple", \
+                mapName: "Antithetical", \
                 mapID: 0, \
                 mapItem: "minecraft:quartz_pillar", \
-                mapStructure: "justicetemple",\
-                mapBars: "iron_bars",\
-                spawn1: "97 -16 24 180 0", \
-                spawn2: "131 -16 24 0 0", \
-                bars1: "95 -16 21 99 -13 21",\
-                bars2: "133 -16 27 129 -13 27",\
-                powerup_spawns: ["97 -16 31", "131 -16 17"],\
-                immediateDeath: "-20",\
+                mapStructure: "antithetical",\
+                mapBars: "waxed_oxidized_copper_bars",\
+                spawn1: "94 -21 24 -90 0", \
+                spawn2: "134 -21 24 90 0", \
+                bars1: "96 -21 23 96 -19 25",\
+                bars2: "132 -19 23 132 -21 25",\
+                powerup_spawns: ["114 -21 9", "114 -21 39"],\
+                immediateDeath: "null",\
             }, \
             { \
                 mapName: "Claydusk", \
