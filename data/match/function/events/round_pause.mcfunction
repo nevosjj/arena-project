@@ -13,6 +13,9 @@ function match:events/powerup/logic/clean
 # Registrazione: fine del round
 function recording:rounds/end
 
+# Interazioni con le entità di nuovo normali fino al prossimo round (tolte in match:events/end_selection)
+execute as @a[tag=in_game] run attribute @s minecraft:entity_interaction_range base set 3.0
+
 # Stopwatch
 stopwatch create match:round_break
 

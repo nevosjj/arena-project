@@ -2,7 +2,7 @@
 ## Chiamata da match:events/end_selection e flame_sword (setup/reset) ##
 ## Esecutore: il giocatore | Macro: reach (portata attacco, blocchi)  ##
 ## La portata degli attacchi è data da attack_range sull'oggetto:     ##
-## entity_interaction_range del giocatore è 0 (niente interazioni     ##
+## entity_interaction_range è 0 durante il round (niente interazioni  ##
 ## con le interaction, che bloccavano la guardia della spada).        ##
 ########################################################################
 

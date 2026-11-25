@@ -8,6 +8,11 @@ item replace entity @a hotbar.1 with red_stained_glass_pane[minecraft:attack_ran
 item replace entity @a hotbar.2 with red_stained_glass_pane[minecraft:attack_range={max_reach:3.0f},custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
 item replace entity @a hotbar.3 with red_stained_glass_pane[minecraft:attack_range={max_reach:3.0f},custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
 
+# Niente interazioni con le entità durante il round (le interaction delle evocazioni bloccavano la guardia della spada)
+# La portata degli attacchi viene da attack_range sugli oggetti della hotbar (skills:auxiliary/sword/give)
+# Torna a 3.0 a fine round (match:events/round_pause, match:end/cleanup)
+execute as @a[tag=in_game] run attribute @s minecraft:entity_interaction_range base set 0.0
+
 # Ricarica iniziale
 scoreboard players set @a[tag=in_game] cooldown.support_timer 5
 scoreboard players set @a[tag=in_game] cooldown.utility_timer 5

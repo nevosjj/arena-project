@@ -8,9 +8,9 @@
 # Attacco basso
 attribute @s minecraft:attack_damage base set 0.00000001
 
-# Niente interazioni con le entità (le interaction delle evocazioni bloccavano la guardia della spada)
-# La portata degli attacchi viene da attack_range sugli oggetti della hotbar (skills:auxiliary/sword/give)
-attribute @s minecraft:entity_interaction_range base set 0.0
+# Interazioni con le entità normali fuori dai round (selezione, pause tra i round)
+# Va a 0.0 a inizio round (match:events/end_selection) e torna a 3.0 a fine round (match:events/round_pause)
+attribute @s minecraft:entity_interaction_range base set 3.0
 
 ## Attributi dinamici
 

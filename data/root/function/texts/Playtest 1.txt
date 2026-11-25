@@ -46,11 +46,6 @@ BUGS
 3. A volte i round non vengono resettati, rimanendo in limbo
 3. Bugfix proposto: Si è notato che sto bug succede solo quando la gente cade nel vuoto, con la rimozione del vuoto momentanea si vedrà se il bug si fixa
 
-FLAVOR
-1. Aggiungere firework quando vinci un round: rendere l colore personalizzabile dalla lobby
-2. Togliere prefernza feedback di testo per quando vieni attaccato o curato
-3. Creare per il dev eventi admin per interferire nella partita (meteore che fanno danni e altre cazzate)
-
 --- CONTENUTI NUOVI ---
 1. Effetto rigenerazione: quando ottieni questo effetto, recuperi salute velocemente. La rigenerazione massima di questo valore può essere erosa se vieni colpito!
 Rigenerazione: 10HP/0,25s
@@ -170,9 +165,8 @@ NOTA: Quality of life e buff generale per renderlo più minaccioso, il raggio di
 3. Migliorata la performance della funzione tick
 
 --- QOL ---
-1. Cambiato il modo di selezionare le abilità da minecart_chest-based a dialog-based
-2. Aggiunto il nuovo sistema di recording, da chest-based a dialog-based
-3. Aggiunta la actionbar dinamica. Questo ne permette l'uso nella lobby di un oggetto che permette di impostare preferenze di un giocatore durante la partita, tra cui: Salute attuale, danni recenti, pool di rigenerazione, secondi di durata dei danni recenti, melodia quando si è sotto una certa soglia di HP, soglia di HP, testi di danno e/o cura
+1. Aggiunto il nuovo sistema di recording, da chest-based a dialog-based
+2. Aggiunta la preview per le abilità a selezione bersaglio
 
 --- BUGFIX ---
 - Risolto un bug che non resettava il fuoco estetico della Spada di Fiamme
