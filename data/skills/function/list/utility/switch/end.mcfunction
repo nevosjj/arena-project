@@ -8,8 +8,9 @@ $execute at @a[limit=1,sort=nearest,tag=switch_target.$(ID)] run summon marker ~
 # Feedback
 playsound entity.enderman.teleport hostile @a ~ ~ ~ 2 1.25
 
-# Stordimento: il bersaglio è ad almeno stunDistance blocchi dall'utente nel momento dello scambio
-$execute as @a[limit=1,sort=nearest,tag=switch_target.$(ID)] at @s if entity @a[tag=switch_user.$(ID),distance=$(stunDistance)..] run tag @s add switch.stun_pending
+# Stordimento
+# Deciso dalla distanza dello switch
+$execute as @a[limit=1,sort=nearest,tag=switch_target.$(ID)] at @s if entity @a[tag=switch_user.$(ID),distance=$(distance)..] run tag @s add switch.stun_pending
 
 # Teletrasporto
 $execute as @a[limit=1,sort=nearest,tag=switch_target.$(ID)] at @a[limit=1,sort=nearest,tag=switch_user.$(ID)] run tp @s ~ ~ ~
