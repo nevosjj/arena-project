@@ -175,3 +175,4 @@ NOTA: Quality of life e buff generale per renderlo più minaccioso, il raggio di
 - Risolto un bug che rendeva la durata di Impulso Magnetico 3s invece di 2s, come indicato
 - Risolto un bug che non permetteva ai giocatori di usare le abilità quando guardavano da vicino un marker di una evocazione
 - Risolto un bug che permetteva di attaccare e fare danni corpo a corpo con oggetti che non fossero la spada
+- Risolto un bug che lasciava la superficie di clasydusk sul mondo

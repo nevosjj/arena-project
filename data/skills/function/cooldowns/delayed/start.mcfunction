@@ -16,4 +16,4 @@ $function skills:activations/trigger/general/down {skillTYPE_txt:"$(skillTYPE_tx
 
 # Vetro IN RICARICA al posto di quello IN USO
 # (non flow/unavailable: svuoterebbe la mano principale)
-$item replace entity @s hotbar.$(hotbarIndex) with red_stained_glass_pane[minecraft:attack_range={max_reach:3.0f},custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
+$item replace entity @s hotbar.$(hotbarIndex) with red_stained_glass_pane[custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]

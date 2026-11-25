@@ -4,12 +4,12 @@ function match:map_editor/open with storage map_data:1v1 temporary
 # Distribuzione oggetti da combattimento
 clear @a
 execute as @a run function skills:auxiliary/sword/give {reach:3.0}
-item replace entity @a hotbar.1 with red_stained_glass_pane[minecraft:attack_range={max_reach:3.0f},custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
-item replace entity @a hotbar.2 with red_stained_glass_pane[minecraft:attack_range={max_reach:3.0f},custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
-item replace entity @a hotbar.3 with red_stained_glass_pane[minecraft:attack_range={max_reach:3.0f},custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
+item replace entity @a hotbar.1 with red_stained_glass_pane[custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
+item replace entity @a hotbar.2 with red_stained_glass_pane[custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
+item replace entity @a hotbar.3 with red_stained_glass_pane[custom_name=[{"text":"IN RICARICA","color":"red","bold":true,"italic":false}]]
 
 # Niente interazioni con le entità durante il round (le interaction delle evocazioni bloccavano la guardia della spada)
-# La portata degli attacchi viene da attack_range sugli oggetti della hotbar (skills:auxiliary/sword/give)
+# La portata degli attacchi viene da attack_range solo sulla spada (skills:auxiliary/sword/give): abilità e vetri non colpiscono
 # Torna a 3.0 a fine round (match:events/round_pause, match:end/cleanup)
 execute as @a[tag=in_game] run attribute @s minecraft:entity_interaction_range base set 0.0
 

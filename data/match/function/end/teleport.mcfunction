@@ -14,7 +14,7 @@ execute as @a at @s run playsound block.portal.travel ui @s ~ ~ ~ 0.5 0.8
 tellraw @a [{"text":"\n> ","color":"gray","bold":true},{"text":"Teletrasporto in lobby.","color":"gold","bold":false}]
 
 # Rimozione mappa nelle coordinate giuste
-fill 89 -29 -1 141 16 50 air
+fill 89 -30 -1 141 16 50 air
 
 # Rimozione possibilità spectate
 tag @e[type=interaction,tag=matchmaking.1v1] remove can_spectate
