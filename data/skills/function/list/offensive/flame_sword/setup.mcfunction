@@ -15,11 +15,5 @@ $data modify storage arenaproject:game_memory sword.reach set compute default fl
 execute as @p[limit=1,tag=flame_sword.setup] run function skills:auxiliary/sword/give with storage arenaproject:game_memory sword
 data remove storage arenaproject:game_memory sword
 
-# Distribuzione tag target particelle
-$tag @p[distance=..2,tag=flame_sword.setup] add flame_sword.player$(ID)
-
-# Evocazione marker particelle
-$summon marker ~ ~ ~ {Tags:["flame_sword.particle$(ID)","flame_sword.visual"],data:{ID:$(ID)}}
-
 # Pulizia
 tag @p[distance=..2,tag=flame_sword.setup] remove flame_sword.setup

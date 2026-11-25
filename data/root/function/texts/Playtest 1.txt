@@ -111,18 +111,20 @@ Mela dorata
 NOTA: Mela dorata era chiaramente l'abilità support più forte, essendo che si poteva attivare spessissimo e con poco counterplay. Gli HP rigenerativi costringe i giocatori a pensare meglio quando attivarla.
 
 Scudo osseo
-> (BUFF) Difesa: -50% danni generali -> -50% danni abilità
-> (NUOVO) Cura: 25HP/teschio
-> (BUFF) Durata: 4s -> 10s
-> (NERF) Ricarica: 12s -> 22s (vincolata)
-NOTA: Scudo osseo difendeva e basta, senza offrire nulla di interessante. Ora se usata bene crea una finestra dove ti puoi difendere bene dalle abilità con il giusto timing, ma può essere counterato dai melee
+> (BUFF) Difesa: -50% danni generali -> -100% danni abilità
+> (NUOVO) Cura: 10HP/teschio
+> (BUFF) Durata: 4s -> 8s
+> (NERF) Ricarica: 12s -> 32s (vincolata)
+NOTA: Scudo osseo difendeva e basta, senza offrire nulla di interessante. 
+Ora se usata bene crea una finestra dove ti puoi difendere bene dalle abilità con il giusto timing.
+Tuttavia può essere counterata dai colpi corpo a corpo.
 
 Catena vampirica
 > (BUFF) Cura: 35% -> 50%
 > (NERF) Raggio di distruzione: 12 blocchi -> 10 blocchi
 > (NERF) Raggio di concatenazione: 7 blocchi -> 5 blocchi
 > (NUOVO) (NERF) Durata: 8s
-> (NUOVO) (QOL) Ora si vede un cerchio intorno all'utente, SOLO visibile all'utente, per capire il raggio dell'abilità
+> (NUOVO) (QOL) (GRAFICA) Ora si vede un cerchio intorno all'utente, SOLO visibile all'utente, per capire il raggio dell'abilità
 > (NUOVO) (QOL) Ora prima dell'attivazione puoi vedere la preview della distanza di concatenazione
 NOTA: Cura aumentate per compensare la durata.
 
@@ -131,7 +133,7 @@ Distributore rigenerativo
 > (NERF) Durata: 8s -> 10s
 > (BUFF) Salute: 100HP -> 140 HP
 > (NUOVO) Aggiunto un text_display che mostra la vita del dispenser.
-> (NUOVO) Aggiunto un cerchio di particelle che segnala entro quale distanza può bersagliare un alleato. Visibile SOLO da alleati
+> (NUOVO) (GRAFICA) Aggiunto un cerchio di particelle che segnala entro quale distanza può bersagliare un alleato. Visibile SOLO da alleati
 NOTA: Dispensa sempre le solite cure e la stessa quantità di quest'ultime, ma con un rateo leggermente aumentato
 
 Teletrasporto dell'End
@@ -146,23 +148,34 @@ NOTA: Impulso magnetico con questo set di abilità è un po' troppo dominante
 
 Scambio
 > (BUFF) Carica scambio: 3s -> 2s
-> (NUOVO) (BUFF): Dopo lo scambio la vittima viene stordita per 2s.
+> (NUOVO) (BUFF): Dopo lo scambio, se ci sono almeno 8 blocchi di distanza nel momento dello scambio, la vittima viene stordita per 2s.
 > (NUOVO) (QOL) Ora prima dell'attivazione puoi vedere la preview della distanza di bersagliamento
 > (NERF) Raggio bersagliamento: 36 blocchi -> 16 blocchi
 NOTA: Quality of life e buff generale per renderlo più minaccioso, il raggio di bersagliamento era ingiustificatamente alto
 
 --- MAPPE ---
-1. JusticeTemple: rework della mappa, con rimozione del vuoto momentanea.
+1. JusticeTemple: rimossa.
+2. Antithetical: nuova mappa aggiunta. Ha due livelli di altezza, spawn a livello sotterraneo e un centro sollevato.
 
 --- PERFORMANCE ---
-1. Cambiato il modo in cui un powerup ricerca i propri valori tramite storage
-2. Sostituito alcuni calcoli (calcolo rimozione HP, difesa, funzione quadratica di bezier) con registry folder compute
+1. Cambiato il modo in cui un powerup ricerca i propri valori, da hard-coded a look-up storage
+2. Riscritti alcuni calcoli da score e function-based a compute registry-based. Sono:
+- Aumento danni powerup berserker
+- Aggiunta e rimozione HP di rigenerazione
+- calcolo rimozione HP
+- calcolo diminuzione danni da difesa abilità e corpo a corpo
+- Funzione di bezier quadratica della spada di fiamme
+- Spirale di respiro congelante
+- Percentuale di diminuzione danno del respiro congelante
+3. Migliorata la performance della funzione tick
 
 --- QOL ---
-1. Cambiato il colore del testo di alcune abilità per essere più comprensive
-2. Tolto momentaneamente il feedback di testo della cura e dei danni (era fastidioso)
-3. Aggiunto il nuovo sistema di recording
+1. Cambiato il modo di selezionare le abilità da minecart_chest-based a dialog-based
+2. Aggiunto il nuovo sistema di recording, da chest-based a dialog-based
+3. Aggiunta la actionbar dinamica. Questo ne permette l'uso nella lobby di un oggetto che permette di impostare preferenze di un giocatore durante la partita, tra cui: Salute attuale, danni recenti, pool di rigenerazione, secondi di durata dei danni recenti, melodia quando si è sotto una certa soglia di HP, soglia di HP, testi di danno e/o cura
 
 --- BUGFIX ---
-1. Risolto un bug che non resettava il fuoco estetico della Spada di Fiamme.
-2. Risolto un bug che rendeva la durata di Impulso Magnetico 3s invece di 2s, come indicato.
+- Risolto un bug che non resettava il fuoco estetico della Spada di Fiamme
+- Risolto un bug che rendeva la durata di Impulso Magnetico 3s invece di 2s, come indicato
+- Risolto un bug che non permetteva ai giocatori di usare le abilità quando guardavano da vicino un marker di una evocazione
+- Risolto un bug che permetteva di attaccare e fare danni corpo a corpo con oggetti che non fossero la spada

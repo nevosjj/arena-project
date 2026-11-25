@@ -18,7 +18,6 @@ $tag @a remove support.skill_target.$(ID)
 $tag @a remove ultimate.skill_target.$(ID)
 
 # Offensive
-$tag @a remove flame_sword.player$(ID)
 $tag @a remove freeze_breath_$(ID).victim
 
 # Support

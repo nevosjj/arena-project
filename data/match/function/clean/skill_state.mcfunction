@@ -33,6 +33,7 @@ scoreboard players reset @s end_teleport.counter
 tag @s remove flame_sword.energy
 tag @s remove flame_sword.p0
 tag @s remove flame_sword.p2
+tag @s remove flame_sword.ring_skip
 attribute @s minecraft:movement_speed modifier remove freeze_breath:slow
 attribute @s minecraft:jump_strength modifier remove lightning_strike:jump
 attribute @s minecraft:movement_speed modifier remove lightning_strike:slow

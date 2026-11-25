@@ -13,8 +13,8 @@ execute as @e[type=marker,limit=1,sort=nearest,distance=..2,tag=flame_sword.end_
 function skills:auxiliary/sword/give {reach:3.0}
 
 # Rimozione tag
-execute at @s run function skills:list/offensive/flame_sword/macro_reset with entity @e[type=marker,limit=1,sort=nearest,distance=..3,tag=flame_sword.visual] data
 tag @s remove flame_sword.energy
+tag @s remove flame_sword.ring_skip
 
 # Feedback audio
 playsound entity.blaze.death ambient @a ~ ~ ~ 2 1.55
