@@ -17,6 +17,7 @@ scoreboard objectives add game_display dummy [{"text":"Arena Project","color":"#
 # Statistiche giocatore
 scoreboard objectives add stat.defense dummy
 scoreboard objectives add stat.ability_defense dummy
+scoreboard objectives add stat.melee_defense dummy
 scoreboard objectives add stat.attack dummy
 scoreboard objectives add stat.max_health dummy
 scoreboard objectives add stat.current_health dummy

@@ -14,10 +14,6 @@ scoreboard players operation @s incoming_damage += @s ability_damage
 execute if score @s stat.ability_defense matches 1.. store result score @s poststat.damage_halved run compute entity @s integer health:damage/ability_halved_total
 execute if score @s stat.ability_defense matches 1.. store result score @s incoming_damage run compute entity @s integer health:damage/ability_defense
 
-## Abilità che reagiscono al colpo (dopo la difesa: l'ultimo teschio chiude lo scudo e resetta la difesa)
-# Scudo osseo: consuma un teschio
-execute if entity @s[tag=skill.bone_shield] unless score #round_ended bool matches 1 run function skills:list/support/bone_shield/marker
-
 # Display danno
 damage @s 0.0000001 generic
 
@@ -30,3 +26,7 @@ function health:auxiliary/ability_source with storage arenaproject:game_memory d
 
 # Funzione danni
 function health:math/incoming_damage with storage arenaproject:game_memory damageFeedback
+
+## Abilità che reagiscono al colpo (dopo il danno: la cura del teschio non va sprecata a vita piena)
+# Scudo osseo: consuma un teschio e cura
+execute if entity @s[tag=skill.bone_shield] unless score #round_ended bool matches 1 run function skills:list/support/bone_shield/marker

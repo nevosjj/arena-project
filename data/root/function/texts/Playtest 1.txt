@@ -18,38 +18,20 @@ Nota 3: forceload non sarà più necessario quando si useranno altre dimensioni 
 
 --- OBIETTIVI DOPO IL PLAYTEST ---
 1. Bilanciamento da effettuare, soprattutto su alcune support e utility
-2. QOL su abilità (indicatore HP sulle evocazioni, preview range raycast skills)
+2. QOL su abilità (indicatore HP sulle evocazioni, preview range raycast skills, etc.)
 3. TTK troppo alto. Proposte per il futuro:
+	> Cambiamenti alle statistiche base, e generazione XP
 	> Meno HP massimi (2000 -> 1000)
-	> Danni maggiori sulle abilità ed aumentare generazione XP (le abilità offensive si usavano molto poco con la attuale velocità di generazione)
+	> Danni maggiori globali sulle abilità (moltiplicatore 1,5x circa)
 		> Benefit di danni maggiori mantenendo 2000 HP -> più precisione di valori nei danni e cure
 		> I giocatori erano unanime sulla seconda scelta, danni maggiori
-5. Cambiare JusticeTemple per via dell'exploit di magnetic_impulse / switch: puoi teletrasportare sul vuoto
-	> Proposta Jaco201002: non togliere il vuoto, ma invece di ucciderti, ti fa tornare nell'arena sull'ultimo punto a terra toccato, ricevendo danni
-	> Proposta nevosjj: togliere il vuoto
-6. Aggiungere obiettivi extra
-	> I giocatori stanno troppo concentrati sul combattimento
-	> La sola "distrazione" che allontana i giocatori sono poche abilità e powerup
-	> Per ora il massimo che si può fare per ribilanciare tutto è rendere i powerup più frequenti e impattanti
-7. Performance
+5. Togliere JusticeTemple e sostituirla con una nuova mappa. Il vuoto è un problema
+6. Performance
 	> Controllare come funziona il registry "compute" per migliorare l'efficienza di calcolo
-8. Mettere easter-eggs nella lobby
+7. Mettere easter-eggs nella lobby
 	> A grande richiesta dai giocatori
-9. Spettatori devono vedere layout e ricariche dei giocatori giocanti
 
-
-BUGS
-1. Se provi a usare le abilità guardando i marker delle evocazioni non attiva le abilità (non fa scattare la guardia della spada, che è quello che attiva le skill)
-1. Bugfix proposto: entity_interaction_range a 0.0, ma solo se questo attribute interagisce solo con le interaction
-2. Puoi nascondere il tuo nome con SHIFT, da rendere non possibile
-2. Bugfix proposto: rendere il nametag con il team sempre visibile
-3. A volte i round non vengono resettati, rimanendo in limbo
-3. Bugfix proposto: Si è notato che sto bug succede solo quando la gente cade nel vuoto, con la rimozione del vuoto momentanea si vedrà se il bug si fixa
-
---- CONTENUTI NUOVI ---
-1. Effetto rigenerazione: quando ottieni questo effetto, recuperi salute velocemente. La rigenerazione massima di questo valore può essere erosa se vieni colpito!
-Rigenerazione: 10HP/0,25s
-Erosione: -10HP al colpo (sia corpo a corpo che abilità)
+----- CAMBIAMENTI EFFETTUATI -----
 
 --- BILANCIAMENTO ---
 Il bilanciamento dei danni che si vedono sotto sulle skill sono basate sul sistema attuale di scaling dei danni. In futuro, però per adattare il TTK nuovo, verrà applicato uno scaling di 1.5x circa
@@ -62,11 +44,7 @@ Generazione XP:
 	Corpo a corpo: 2XP/Corpo a corpo -> 4XP/Corpo a corpo
 NOTA: Una cosa importante da notare è che l'XP veniva generata troppo lentamente nel sistema attuale.
 
-Vite giocatore: 3 -> 2
-NOTA: Questo cambiamento serve a far finire le partite un po' prima, a renderle più decisive e a completare i playtest più in fretta con quante più partite da analizzare.
-
 Knockback: Resistenza +60%x -> Resistenza +50%
-NOTA: Cambiamento di prova, andava bene anche prima ma potrebbe essere meglio.
 
 Attacco base corpo a corpo: 10 -> 20
 
@@ -83,14 +61,15 @@ Power-ups:
 
 -ABILITà-
 Respiro congelante
-> Danni: 125 -> 125, Danno da ostruito: 80 -> -50%
-> Range: 9 -> 6 blocchi
-NOTA: L'abilità aveva un un modo di ridurre il danno troppo affidabile. Questo aiuta ad applicare meglio qualsiasi altro cambiamento al danno base
+> Danni: 125 -> 125, Danno da ostruito: 80 danni flat -> -50% danni
+> Raggio: 9 blocchi -> 6 blocchi
+NOTA: Il danno diminuito era troppo affidabile
 
 Spara biscotto
 > (BUFF) Danni per biscotto: 9 -> 12
 > (BUFF) Gradi di spread casuale: 8° -> 7° 
-NOTA: Spara biscotto non è troppo affidabile per fare danni per via del suo range e bassa precisione
+NOTA: Spara biscotto non era troppo affidabile per fare danni per via del suo range e bassa precisione.
+Ora mancare qualche colpo sarà meno penalizzante
 
 Colpo folgorante
 > (BUFF) Danni: 80 -> 100
@@ -98,59 +77,70 @@ Colpo folgorante
 > (BUFF) Carica: 1,25s -> 1s
 > (BUFF) Raggio: 2 blocchi -> 3 blocchi
 > (NUOVO) Ora prima dell'attivazione puoi vedere la preview della distanza di bersagliamento
-NOTA: Non si è mai vista una partita seria dove Colpo folgorante colpisse, i danni erano inoltre poco affidabili.
+NOTA: Non si è mai vista una partita seria dove Colpo folgorante colpisse e competesse con altre le altre abilità offensive
+
+Spada di fiamme
+> (NUOVO) (GRAFICA) Nuova grafica durante l'uso, del fuoco si scatena sui tuoi piedi
 
 Mela dorata
 > (REWORK) Cura: 200HP istantanei -> 250 HP rigenerativi
 > (NERF) Ricarica: 20s -> 25s
-NOTA: Mela dorata era chiaramente l'abilità support più forte, essendo che si poteva attivare spessissimo e con poco counterplay. Gli HP rigenerativi costringe i giocatori a pensare meglio quando attivarla.
+NOTA: Mela dorata era chiaramente l'abilità support più forte, essendo che si poteva attivare spessissimo e con poco counterplay.
+Ora può curare potenzialmente di più ma ha una ricarica più lunga.
+Gli HP rigenerativi costringe i giocatori a pensare meglio quando attivarla.
 
 Scudo osseo
 > (BUFF) Difesa: -50% danni generali -> -100% danni abilità
-> (NUOVO) Cura: A fine durata, ti curi di 20HP/teschio rimanente
+> (NUOVO) Cura: Quando finisce l'abilità, ti curi di 20HP/teschio rimanente
 > (BUFF) Durata: 4s -> 8s
 > (NERF) Ricarica: 12s -> 32s (vincolata)
+> (NUOVO) (AUDIO): Ogni secondo si sente il rumore di ossa dall'utente dell'abilità
 NOTA: Scudo osseo difendeva e basta, senza offrire nulla di interessante. 
-Ora se usata bene crea una finestra dove ti puoi difendere bene dalle abilità con il giusto timing.
-Tuttavia può essere counterata dai colpi corpo a corpo.
+Ora se usata bene crea una finestra dove ti puoi difendere bene dalle abilità con il giusto timing, ma può essere counterato dai melee.
+Se lo usi in modo difensivo, ti puoi curare, ma con un valore poco affidabile, per evitare di creare la vecchia Mela dorata 2.0
 
 Catena vampirica
 > (BUFF) Cura: 35% -> 50%
 > (NERF) Raggio di distruzione: 12 blocchi -> 10 blocchi
 > (NERF) Raggio di concatenazione: 7 blocchi -> 5 blocchi
 > (NUOVO) (NERF) Durata: 8s
-> (NUOVO) (QOL) (GRAFICA) Ora si vede un cerchio intorno all'utente, SOLO visibile all'utente, per capire il raggio dell'abilità
+> (NUOVO) (QOL) Ora si vede un cerchio intorno all'utente, SOLO visibile all'utente, per capire il raggio dell'abilità
 > (NUOVO) (QOL) Ora prima dell'attivazione puoi vedere la preview della distanza di concatenazione
-NOTA: Cura aumentate per compensare la durata.
+NOTA: Cura aumentate per compensare alla durata aggiunta. 
+Il QOL dovrebbe aiutare anche con i bilanciamenti futuri.
 
 Distributore rigenerativo
 > (NERF) Intervallo spari: 2s -> 2.5s
 > (NERF) Durata: 8s -> 10s
 > (BUFF) Salute: 100HP -> 140 HP
 > (NUOVO) Aggiunto un text_display che mostra la vita del dispenser.
-> (NUOVO) (GRAFICA) Aggiunto un cerchio di particelle che segnala entro quale distanza può bersagliare un alleato. Visibile SOLO da alleati
-NOTA: Dispensa sempre le solite cure e la stessa quantità di quest'ultime, ma con un rateo leggermente aumentato
+> (NUOVO) Aggiunto un cerchio di particelle che segnala entro quale distanza può bersagliare un alleato. Visibile SOLO da alleati
+NOTA: Dispensa sempre la solità quantità di cura e la stessa quantità di quest'ultime, ma con un rateo leggermente aumentato.
 
 Teletrasporto dell'End
 > (NUOVO) (BUFF) +20% di Velocità di movimento extra per 3s
+NOTA: Piccolo buff per contrastare eventuali effetti di controllo.
 
 Impulso magnetico
 > (NERF) Ricarica: 30s -> 35s
 > (NERF) Durata immobilizzazione: 3s -> 2s
 > (NERF) Raggio: 8 blocchi -> 6 blocchi
 > (GRAFICA) Rifatta la grafica dell'abilità
-NOTA: Impulso magnetico con questo set di abilità è un po' troppo dominante
+NOTA: Impulso magnetico era un po' troppo dominate ma soprattutto affidabile.
+Con la ricarica maggiorata, i giocatori dovranno pensare un po' di più, ma soprattutto avrà meno impatto per ogni attivazione.
 
 Scambio
 > (BUFF) Carica scambio: 3s -> 2s
-> (NUOVO) (BUFF): Dopo lo scambio, se ci sono almeno 8 blocchi di distanza nel momento dello scambio, la vittima viene stordita per 2s.
+> (NUOVO) (BUFF): Appena avviene lo scambio, se c'è una distanza di almeno 8 blocchi tra te e la vittima, quest'ultima viene immobilizzata per 2s.
 > (NUOVO) (QOL) Ora prima dell'attivazione puoi vedere la preview della distanza di bersagliamento
 > (NERF) Raggio bersagliamento: 36 blocchi -> 16 blocchi
-NOTA: Quality of life e buff generale per renderlo più minaccioso, il raggio di bersagliamento era ingiustificatamente alto
+NOTA: Quality of life e buff generale per renderlo più minaccioso, il raggio di bersagliamento era ingiustificatamente alto.
 
 --- MAPPE ---
 1. JusticeTemple: rimossa.
-2. Antithetical: nuova mappa aggiunta. Ha due livelli di altezza, spawn a livello sotterraneo e un centro sollevato.
+2. Antithetical: nuova mappa aggiunta. 
+Ha due livelli di altezza, spawn a livello sotterraneo e un centro sollevato.
+Riprende il tema di JusticeTemple, a tratti.
 
 --- PERFORMANCE ---
 1. Cambiato il modo in cui un powerup ricerca i propri valori, da hard-coded a look-up storage
@@ -167,8 +157,7 @@ NOTA: Quality of life e buff generale per renderlo più minaccioso, il raggio di
 3. Migliorata la performance della funzione tick (diverse incoerenze, ridondanze e semplificazioni del codice)
 
 --- QOL ---
-1. Aggiunto il nuovo sistema di recording, da chest-based a dialog-based
-2. Aggiunta la preview per le abilità a selezione bersaglio
+1. Aggiunta la preview per le abilità a selezione bersaglio
 
 --- BUGFIX ---
 - Risolto un bug che non resettava il fuoco estetico della Spada di Fiamme

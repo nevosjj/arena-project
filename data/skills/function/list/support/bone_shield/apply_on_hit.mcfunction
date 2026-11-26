@@ -4,6 +4,9 @@ $execute as @e[type=block_display,tag=bone_shield.id$(ID),sort=random,limit=1,di
 # Iterazione --counter.support
 $scoreboard players remove @p[tag=owner_$(ID).bone_shield,limit=1,distance=..5] counter.support 1
 
+# Cura per il teschio consumato (solo se vivo; prima di end, che rimuove lo storage)
+$execute as @p[tag=owner_$(ID).bone_shield,tag=!round.dead,limit=1,distance=..5] run function skills:list/support/bone_shield/heal with storage arenaproject:game_memory bone_shield.id$(ID)
+
 # Controllo per reset
 $execute as @p[tag=owner_$(ID).bone_shield,limit=1,distance=..5] if score @s counter.support matches ..0 \
     at @s run return run function skills:list/support/bone_shield/end with entity @e[type=marker,tag=bone_shield.finder,limit=1,distance=..3] data

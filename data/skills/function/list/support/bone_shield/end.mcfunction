@@ -4,14 +4,12 @@
 ## Esecutore: il caster                         ##
 ## Macro: data del marker finder/ender (ID)     ##
 ## Unica fine dello scudo osseo                 ##
-## Cura: heal x teschi rimasti, prima del reset ##
 ##################################################
 
 # Ricarica
 function skills:cooldowns/delayed/start {skillTYPE_txt:"support",hotbarIndex:2}
 
-# Cura per ogni teschio rimasto (solo se vivo)
-$execute if entity @s[tag=!round.dead] run function skills:list/support/bone_shield/heal with storage arenaproject:game_memory bone_shield.id$(ID)
+# Dati della cura per teschio (usati da bone_shield/apply_on_hit)
 $data remove storage arenaproject:game_memory bone_shield.id$(ID)
 
 # Resetta quantità teschi
@@ -30,8 +28,9 @@ $execute as @e[type=block_display,tag=bone_shield.id$(ID),distance=..5] \
 # Rimuovi tag specifico dell'ID
 $tag @s remove owner_$(ID).bone_shield
 
-# Rimuovi difesa abilità
+# Rimuovi difesa abilità e melee
 scoreboard players reset @s stat.ability_defense
+scoreboard players reset @s stat.melee_defense
 
 # Feedback
 playsound entity.skeleton.death player @a ~ ~ ~ 2 0.8

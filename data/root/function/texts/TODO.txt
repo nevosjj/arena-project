@@ -1,32 +1,30 @@
----
-PRIO #1
-4. Implementare broodmother + doom_shrom
----
+Ultimate - Implementarne tre
 
-DIALOGUE - Selezione abilità: tenere la griglia nel chest_minecart, ma usare un dialogue per descrizione dettagliata + conferma abilità (pulsante Conferma con /trigger)
+Selezione abilità - usare un dialogue per descrizione abilità, scelta e conferma abilità
 
-Melodie
-	- Suoni di feeback custom per
+Melodie - Suoni di feeback custom
 		- Ricarica abilità
 		- Bassa vita
 		- Fasi della partita
 
-USCITA PARTITA:
+Uscita partita -
 	- Creare un sistema che detecta quando un giocatore esce dalla partita
 	- Una volta che esce dalla partita, fa vincere colui che non ha quittato, e appena rientra l'altro giocatore entra e gli fa sapere che ha perso per il quit
 	- Lo tippa ovviamente in lobby e resetta tutto ciò che aveva
 
-FLAVOR E SPETTATORI:
+Flavour
 1. Aggiungere firework quando vinci un round: rendere l colore personalizzabile dalla lobby
-2. Togliere prefernza feedback di testo per quando vieni attaccato o curato
-3. Creare per il dev eventi admin per interferire nella partita (meteore che fanno danni e altre cazzate)
+2. Creare per il dev eventi admin per interferire nella partita (meteore che fanno danni e altre cazzate)
 
-Dimensioni,
+QOL
+1. Togliere momentaneamente i tellraw di feedback dei danni e delle cure
+
+Dimensioni -
 	- Le partite vengono sviluppate in dimensioni apposite
 	- Non mi ricordo se si potessero creare dimensioni extra in modo dinamico
 	- Se così fosse si potrebbero creare più dimensioni per permettere il cycle di più partite alla volta
 
-Stanza preparazione, spectate
+Stanza preparazione & spectate -
 	- Aggiungere la stanza di preparazione partita (con modalità prefatte)
 	- I giocatori possono modificare gran parte delle statistiche di una partita, consultabile in matchmaking/modes/1v1
 	- Fixare "Unquoted strings cannot start with `[0-9.+-]` in data pack format 71+ / minecraft 1.21.5" sul suddetto file

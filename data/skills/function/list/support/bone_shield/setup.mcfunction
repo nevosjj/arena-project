@@ -9,7 +9,10 @@ $scoreboard players set @p counter.support $(count)
 # Inserimento difesa abilità (applicata da health:types/ability_damage).
 $scoreboard players set @p stat.ability_defense $(power)
 
-# Dati per la cura a fine scudo (letti da bone_shield/end, il marker muore in recursion_end)
+# Inserimento difesa melee (applicata da health:types/melee_damage).
+$scoreboard players set @p stat.melee_defense $(meleePower)
+
+# Dati per la cura per teschio (letti da bone_shield/apply_on_hit, il marker muore in recursion_end)
 $data modify storage arenaproject:game_memory bone_shield.id$(ID) set value {heal:$(heal),name:"$(name)",playerName:"$(playerName)"}
 
 # Inserimento durata.

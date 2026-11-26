@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:div",
+  "left": {
+    "type": "minecraft:mul",
+    "inputs": [
+      { "type": "minecraft:score", "score": "incoming_damage", "target": { "type": "context", "target": "this" }, "fallback": 0 },
+      { "type": "minecraft:max", "inputs": [ 0, { "type": "minecraft:sub", "left": 100, "right": { "type": "minecraft:score", "score": "stat.melee_defense", "target": { "type": "context", "target": "this" }, "fallback": 0 } } ] }
+    ]
+  },
+  "right": 100
+}
