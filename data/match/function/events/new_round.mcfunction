@@ -48,8 +48,8 @@ kill @e[type=block_display,tag=bone_shield.visual]
 execute as @a[tag=in_game,tag=flame_sword.energy] run function skills:auxiliary/sword/give {reach:3.0}
 execute as @a[tag=in_game] run function match:clean/skill_state
 
-# Cleanup temporary game_memory
-data remove storage arenaproject:game_memory temporary
+# Cleanup roundbreakTemp game_memory
+data remove storage arenaproject:game_memory roundbreakTemp
 
 # Reset
 scoreboard players reset #round_ended

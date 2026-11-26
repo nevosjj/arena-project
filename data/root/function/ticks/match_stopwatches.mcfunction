@@ -25,4 +25,4 @@ execute if stopwatch match:powerup/life 5.. run function match:events/powerup/lo
 
 # Pausa dopo che un round è finito al seguito della morte di qualcuno
 # Dopo crea un nuovo round, se disponibile
-execute if stopwatch match:round_break 3.. run function match:events/new_round with storage arenaproject:game_memory temporary
+execute if stopwatch match:round_break 3.. run function match:events/new_round with storage arenaproject:game_memory roundbreakTemp

@@ -7,7 +7,7 @@
 scoreboard players remove @s player.hearts 2
 
 # Nel caso che la partita debba continuare, si inserisce lo score in uno storage per applicare la nuova vita
-execute store result storage arenaproject:game_memory temporary.newLives float 1.0 run scoreboard players get @s player.hearts
+execute store result storage arenaproject:game_memory roundbreakTemp.newLives float 1.0 run scoreboard players get @s player.hearts
 
 # Caso in cui il giocatore ha ancora vita
 execute if score @s player.hearts matches 1.. run return run function match:events/round_pause
