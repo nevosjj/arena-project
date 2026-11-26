@@ -91,13 +91,13 @@ Gli HP rigenerativi costringe i giocatori a pensare meglio quando attivarla.
 
 Scudo osseo
 > (BUFF) Difesa: -50% danni generali -> -100% danni abilità
-> (NUOVO) Cura: Quando finisce l'abilità, ti curi di 20HP/teschio rimanente
-> (BUFF) Durata: 4s -> 8s
-> (NERF) Ricarica: 12s -> 32s (vincolata)
+> (BUFF) Difesa: -50% danni da corpo a corpo
+> (NUOVO) Cura: 30HP/teschio distrutto
+> (BUFF) Durata: 4s -> 7s
+> (NERF) Ricarica: 12s -> 17s (vincolata)
 > (NUOVO) (AUDIO): Ogni secondo si sente il rumore di ossa dall'utente dell'abilità
 NOTA: Scudo osseo difendeva e basta, senza offrire nulla di interessante. 
-Ora se usata bene crea una finestra dove ti puoi difendere bene dalle abilità con il giusto timing, ma può essere counterato dai melee.
-Se lo usi in modo difensivo, ti puoi curare, ma con un valore poco affidabile, per evitare di creare la vecchia Mela dorata 2.0
+Ora se usata bene crea una finestra dove ti puoi difendere bene dalle abilità con il giusto timing
 
 Catena vampirica
 > (BUFF) Cura: 35% -> 50%
