@@ -1,5 +1,8 @@
 # Feedback audio
-playsound entity.blaze.death player @a ~ ~ ~ 2 2
+playsound entity.player.hurt player @a ~ ~ ~ 5 0
+playsound entity.breeze.hurt player @a ~ ~ ~ 5 0.75
+particle flash{color:[0.769,0.169,0.388,1.00]} ~ ~ ~ 0 0 0 0 0 force
+playsound minecraft:weather.end_flash voice @a ~ ~ ~ 5 2
 
 # Feedback testo
 tellraw @a [\

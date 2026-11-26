@@ -4,7 +4,7 @@
 ###############################
 
 # Timer di 3s (SEMPRE)
-scoreboard players set @s animation 60
+scoreboard players set @s animation 40
 
 # Rimozione tag di protezione per il bersagliamento del giusto manichino ogni volta che si chiama da create_mannequin questa f(x)
 tag @s remove new_death_mannequin

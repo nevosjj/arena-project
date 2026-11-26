@@ -8,11 +8,11 @@ data modify storage map_data:1v1 list set value [\
                 mapItem: "minecraft:quartz_pillar", \
                 mapStructure: "antithetical",\
                 mapBars: "waxed_oxidized_copper_bars",\
-                spawn1: "94 -21 24 -90 0", \
-                spawn2: "134 -21 24 90 0", \
-                bars1: "96 -21 23 96 -19 25",\
-                bars2: "132 -19 23 132 -21 25",\
-                powerup_spawns: ["114 -21 9", "114 -21 39"],\
+                spawn1: "94 -29 24 -90 0", \
+                spawn2: "134 -29 24 90 0", \
+                bars1: "96 -29 23 96 -27 25",\
+                bars2: "132 -27 23 132 -29 25",\
+                powerup_spawns: ["114 -29 9", "114 -29 39"],\
             }, \
             { \
                 mapName: "Claydusk", \
